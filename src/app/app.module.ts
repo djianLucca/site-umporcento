@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoWrapperComponent } from './components/molecules/video-wrapper/video-wrapper.component';
 import { DefaultIconPageComponent } from './components/templates/default-icon-page/default-icon-page.component';
-import { MorgingPageComponent } from './components/pages/morging-page/morging-page.component';
 import { PageBackgroundComponent } from './components/organisms/page-background/page-background.component';
 import { VideoTagComponent } from './components/atoms/video-tag/video-tag.component';
 
@@ -14,7 +13,6 @@ import { VideoTagComponent } from './components/atoms/video-tag/video-tag.compon
     AppComponent,
     VideoWrapperComponent,
     DefaultIconPageComponent,
-    MorgingPageComponent,
     PageBackgroundComponent,
     VideoTagComponent
   ],
