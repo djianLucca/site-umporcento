@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DefaultIconPageComponent } from './default-icon-page.component';
-import { PageBackgroundComponent } from '../../organisms/page-background/page-background.component';
 import { Component } from '@angular/core';
 
 @Component({

@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoWrapperComponent } from './video-wrapper.component';
-import { VideoTagComponent } from '../../atoms/video-tag/video-tag.component';
 import { Component } from '@angular/core';
 
 

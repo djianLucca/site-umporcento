@@ -1,6 +1,4 @@
 import { Component, OnInit, Inject, NgModule } from '@angular/core';
-import { isNgContent } from '@angular/compiler';
-import { inject } from '@angular/core/testing';
 import { DOCUMENT } from '@angular/common';
 import { DefaultIconPageComponent } from './components/templates/default-icon-page/default-icon-page.component';
 
@@ -15,7 +13,7 @@ import { DefaultIconPageComponent } from './components/templates/default-icon-pa
 export class AppComponent implements OnInit {
   title = 'site-umporcento';
 
-  constructor(@Inject(DOCUMENT) private document, ) {
+  constructor(@Inject(DOCUMENT) private document : Document) {
 
   }
 
