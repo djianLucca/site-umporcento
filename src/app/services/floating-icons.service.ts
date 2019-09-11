@@ -20,12 +20,12 @@ import {
 export class FloatingIconsService implements IFloatingIcon {
   private _image: FloatingIconImage;
   private _title: FloatingIconTitle;
-  public url: FloatingIconUrl;
+  public _url: FloatingIconUrl;
 
   constructor(image: FloatingIconImage, title: FloatingIconTitle, url: FloatingIconUrl) {
     this._image = image;
     this.title = title;
-    this.url = url;
+    this._url = url;
   }
 
   public get image(): FloatingIconImage {
@@ -42,6 +42,14 @@ export class FloatingIconsService implements IFloatingIcon {
 
   public set title(value: FloatingIconTitle) {
     this._title = value;
+  }
+
+  public get url(): FloatingIconUrl {
+    return this._url;
+  }
+
+  public set url(value: FloatingIconUrl) {
+    this._url = value;
   }
 
 }
