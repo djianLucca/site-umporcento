@@ -3,7 +3,7 @@ import {FloatingIconTitle} from '../enums/floatingicontitleenum';
 import {FloatingIconUrl} from '../enums/floatingiconurlenum';
 
 export interface IFloatingIcon {
-    image: FloatingIconImage;
-    title: FloatingIconTitle;
-    url: FloatingIconUrl;
+    _image: FloatingIconImage;
+    _title: FloatingIconTitle;
+    _url: FloatingIconUrl;
 }

@@ -18,13 +18,13 @@ import {
   providedIn: 'root'
 })
 export class FloatingIconsService implements IFloatingIcon {
-  private _image: FloatingIconImage;
-  private _title: FloatingIconTitle;
-  public _url: FloatingIconUrl;
+  _image: FloatingIconImage;
+  _title: FloatingIconTitle;
+  _url: FloatingIconUrl;
 
   constructor(image: FloatingIconImage, title: FloatingIconTitle, url: FloatingIconUrl) {
     this._image = image;
-    this.title = title;
+    this._title = title;
     this._url = url;
   }
 
@@ -51,5 +51,6 @@ export class FloatingIconsService implements IFloatingIcon {
   public set url(value: FloatingIconUrl) {
     this._url = value;
   }
+
 
 }
