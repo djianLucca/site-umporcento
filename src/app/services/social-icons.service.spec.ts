@@ -43,4 +43,34 @@ describe('SocialIconsService', () => {
         SocialIconUrl.Instagram);
     expect(service.url).toBe(SocialIconUrl.Instagram);
   });
+
+  it('should set Email title', () => {
+    const service: SocialIconsService =
+      new SocialIconsService(
+        SocialIconTitle.Instagram,
+        SocialIconClass.Instagram,
+        SocialIconUrl.Instagram);
+    service.title = SocialIconTitle.Email;
+    expect(service.title).toBe(SocialIconTitle.Email);
+  });
+
+  it('should set facebook css class', () => {
+    const service: SocialIconsService =
+      new SocialIconsService(
+        SocialIconTitle.Instagram,
+        SocialIconClass.Instagram,
+        SocialIconUrl.Instagram);
+    service.cssClass = SocialIconClass.Facebook;
+    expect(service.cssClass).toBe(SocialIconClass.Facebook);
+  });
+
+  it('should set vimeo url', () => {
+    const service: SocialIconsService =
+      new SocialIconsService(
+        SocialIconTitle.Instagram,
+        SocialIconClass.Instagram,
+        SocialIconUrl.Instagram);
+    service.url = SocialIconUrl.Vimeo;
+    expect(service.url).toBe(SocialIconUrl.Vimeo);
+  });
 });
