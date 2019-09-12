@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoTagComponent } from './video-tag.component';
 import { DebugElement } from '@angular/core';
-import { By } from 'protractor';
 
 describe('VideoTagComponent', () => {
   let component: VideoTagComponent;
