@@ -22,4 +22,13 @@ export class MenuService implements Imenu {
 
     return this._open;
   }
+
+  public get open(): boolean {
+    return this._open;
+  }
+
+  public get items(): MenuItemService[] {
+    return this._items;
+  }
+
 }
