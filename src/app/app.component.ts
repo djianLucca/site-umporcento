@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject, NgModule } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { DefaultIconPageComponent } from './components/templates/default-icon-page/default-icon-page.component';
+import { StateService } from './services/state.service';
+import { StateInitialiserService } from './services/state-initialiser.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +13,12 @@ import { DefaultIconPageComponent } from './components/templates/default-icon-pa
   imports: [DefaultIconPageComponent]
 })
 export class AppComponent implements OnInit {
-  title = 'site-umporcento';
+  title: string;
+  state: StateService;
 
-  constructor(@Inject(DOCUMENT) private document : Document) {
-
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    this.state = new StateInitialiserService().getState();
+    this.title = this.state.title;
   }
 
   ngOnInit() {
