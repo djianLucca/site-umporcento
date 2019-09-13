@@ -9,7 +9,7 @@ export interface IState {
     title: string;
     pageSection: PageSectionStatus;
     pageBackground: PageSectionBackground;
-    floatingIcons: FloatingIconsService[];
-    socialIcons: SocialIconsService[];
+    floatingIcons: FloatingIconsService[] | undefined;
+    socialIcons: SocialIconsService[] | undefined;
     menu: MenuService;
 }
