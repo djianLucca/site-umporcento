@@ -1,14 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DefaultIconPageComponent } from './default-icon-page.component';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgroundenum';
 
 @Component({
   selector: 'app-page-background',
   template: ''
 })
 class MockPageBackgroundComponent {
-
+  @Input() backgroundVideo: PageSectionBackground;
+  constructor(){
+    this.backgroundVideo = PageSectionBackground.Afternoon;
+  }
 }
 @Component({
   // tslint:disable-next-line: component-selector
@@ -16,7 +20,7 @@ class MockPageBackgroundComponent {
   template: ''
 })
 class MockRouterOutletComponent {
-
+ 
 }
 describe('DefaultIconPageComponent', () => {
   let component: DefaultIconPageComponent;

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoWrapperComponent } from './video-wrapper.component';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 describe('VideoWrapperComponent', () => {
@@ -13,7 +13,11 @@ describe('VideoWrapperComponent', () => {
     template: ''
   })
   class MockVideoTagComponent {
+   @Input() video : string;
 
+   constructor(){
+     this.video = ''
+   }
   }
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,6 +31,7 @@ describe('VideoWrapperComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(VideoWrapperComponent);
+
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
