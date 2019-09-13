@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgroundenum';
 
 @Component({
   selector: 'app-page-background',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-background.component.sass']
 })
 export class PageBackgroundComponent implements OnInit {
-
+  @Input() backgroundVideo: PageSectionBackground | undefined;
   constructor() { }
 
   ngOnInit() {

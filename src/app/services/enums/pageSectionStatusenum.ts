@@ -1,5 +1,7 @@
+import { Page } from './pageenum';
+
 export enum PageSectionStatus {
-    Morning = 0,
-    Afternoon = 1,
-    Night = 2
+    Morning = Page.Morning,
+    Afternoon = Page.Afternoon,
+    Night = Page.Night,
 }
