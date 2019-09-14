@@ -7,7 +7,7 @@ import { StateInitialiserService } from './services/state-initialiser.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 @NgModule({
   imports: [DefaultIconPageComponent]

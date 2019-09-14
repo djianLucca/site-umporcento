@@ -1,1 +1,5 @@
-<video src={{video}}></video>
+<video
+    src={{video}}
+    [attr.loop]="this.loop ? 'true': null"
+    id={{id}}
+></video>

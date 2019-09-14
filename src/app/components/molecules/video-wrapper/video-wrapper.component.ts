@@ -4,12 +4,15 @@ import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgro
 @Component({
   selector: 'app-video-wrapper',
   templateUrl: './video-wrapper.component.html',
-  styleUrls: ['./video-wrapper.component.sass']
+  styleUrls: ['./video-wrapper.component.scss']
 })
 export class VideoWrapperComponent implements OnInit {
   @Input() backgroundVideo: PageSectionBackground | undefined;
   videoToBeShown: string | undefined;
-  constructor() { }
+  bgVideoId: string;
+  constructor() {
+    this.bgVideoId = 'backgroundVideo';
+  }
 
   ngOnInit() {
     this.videoToBeShown = 'assets/video/' + this.backgroundVideo + '.mp4';

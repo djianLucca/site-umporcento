@@ -4,7 +4,7 @@ import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgro
 @Component({
   selector: 'app-page-background',
   templateUrl: './page-background.component.html',
-  styleUrls: ['./page-background.component.sass']
+  styleUrls: ['./page-background.component.scss']
 })
 export class PageBackgroundComponent implements OnInit {
   @Input() backgroundVideo: PageSectionBackground | undefined;
