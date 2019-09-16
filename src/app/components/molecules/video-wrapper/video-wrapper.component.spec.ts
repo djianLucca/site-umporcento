@@ -13,10 +13,11 @@ describe('VideoWrapperComponent', () => {
     template: ''
   })
   class MockVideoTagComponent {
-   @Input() video : string;
-
-   constructor(){
-     this.video = ''
+   @Input() video: string;
+   @Input() loop: boolean;
+   constructor() {
+     this.video = '';
+     this.loop = false;
    }
   }
   beforeEach(async(() => {
