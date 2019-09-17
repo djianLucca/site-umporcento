@@ -1,0 +1,14 @@
+<button 
+    *ngIf="this.btnText !== '' && this.btnContent === undefined" 
+    id={{this.id}} 
+    class={{this.class}} 
+    (click)="this.btnAction()"> 
+        {{this.btnText}} 
+</button>
+<button 
+    *ngIf="this.btnText === '' && this.btnContent !== undefined" 
+    id={{this.id}} 
+    class={{this.class}} 
+    (click)="this.btnAction()"> 
+        {{this.btnContent}} 
+</button>
