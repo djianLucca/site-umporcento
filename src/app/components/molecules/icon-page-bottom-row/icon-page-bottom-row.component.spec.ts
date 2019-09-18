@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconPageWrapperComponent } from './icon-page-wrapper.component';
+import { IconPageBottomRowComponent } from './icon-page-bottom-row.component';
 
-describe('IconPageWrapperComponent', () => {
-  let component: IconPageWrapperComponent;
-  let fixture: ComponentFixture<IconPageWrapperComponent>;
+describe('IconPageBottomRowComponent', () => {
+  let component: IconPageBottomRowComponent;
+  let fixture: ComponentFixture<IconPageBottomRowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconPageWrapperComponent ]
+      declarations: [ IconPageBottomRowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconPageWrapperComponent);
+    fixture = TestBed.createComponent(IconPageBottomRowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

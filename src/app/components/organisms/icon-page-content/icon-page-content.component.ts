@@ -9,8 +9,11 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
 export class IconPageContentComponent implements OnInit {
 
   @Input() pageSection: PageSectionStatus | undefined;
+  sectionId: string;
 
-  constructor() { }
+  constructor() {
+    this.sectionId = 'IconWrapper';
+   }
 
   ngOnInit() {
   }

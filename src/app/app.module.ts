@@ -10,10 +10,13 @@ import { DefaultIconPageComponent } from './components/templates/default-icon-pa
 import { PageBackgroundComponent } from './components/organisms/page-background/page-background.component';
 import { VideoTagComponent } from './components/atoms/video-tag/video-tag.component';
 import { ImageTagComponent } from './components/atoms/image-tag/image-tag.component';
-import { IconPageWrapperComponent } from './components/molecules/icon-page-wrapper/icon-page-wrapper.component';
 import { IconPageContentComponent } from './components/organisms/icon-page-content/icon-page-content.component';
 import { ButtonTagComponent } from './components/atoms/button-tag/button-tag.component';
 import { IconTagComponent } from './components/atoms/icon-tag/icon-tag.component';
+import { SvgTagComponent } from './components/atoms/svg-tag/svg-tag.component';
+import { IconPageTopRowComponent } from './components/molecules/icon-page-top-row/icon-page-top-row.component';
+import { IconPageMidleRowComponent } from './components/molecules/icon-page-midle-row/icon-page-midle-row.component';
+import { IconPageBottomRowComponent } from './components/molecules/icon-page-bottom-row/icon-page-bottom-row.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +26,13 @@ import { IconTagComponent } from './components/atoms/icon-tag/icon-tag.component
     PageBackgroundComponent,
     VideoTagComponent,
     ImageTagComponent,
-    IconPageWrapperComponent,
     IconPageContentComponent,
     ButtonTagComponent,
-    IconTagComponent
+    IconTagComponent,
+    SvgTagComponent,
+    IconPageTopRowComponent,
+    IconPageMidleRowComponent,
+    IconPageBottomRowComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

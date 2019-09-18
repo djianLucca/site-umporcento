@@ -1,3 +1,11 @@
-<app-icon-page-wrapper
-[pageLayout]="this.pageSection"
-></app-icon-page-wrapper>
+<section id={{this.sectionId}}>
+    <div class='flex-row'>
+        <app-icon-page-top-row></app-icon-page-top-row>
+    </div>
+    <div class='flex-row'>
+        <app-icon-page-midle-row></app-icon-page-midle-row>
+    </div>
+    <div class='flex-row'>
+        <app-icon-page-bottom-row></app-icon-page-bottom-row>
+    </div>
+</section>
