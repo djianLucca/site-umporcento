@@ -11,10 +11,12 @@ export class IconPageMidleRowComponent implements OnInit {
   menuIconName: string;
   menuIconId: string;
   menuIconClass: string;
+  imageSrc: string;
   constructor() {
     this.menuIconName = 'bars';
     this.menuIconId = 'menuIcon';
     this.menuIconClass = 'menuIcon';
+    this.imageSrc = '/assets/img/selo.jpg';
   }
 
   ngOnInit() {

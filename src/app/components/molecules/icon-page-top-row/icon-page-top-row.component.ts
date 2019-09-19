@@ -12,14 +12,14 @@ export class IconPageTopRowComponent implements OnInit {
   lineWidth: string;
   svgHeight: number;
   elementX: number;
-  elementYtransform: number;
+  elementYTransform: number;
   constructor() {
     this.logoUmporcento = '/assets/img/logo_umporcento.png';
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
-    this.lineWidth = '90%';
+    this.lineWidth = '95%';
     this.svgHeight = 54;
-    this.elementYtransform = this.svgHeight / 2;
+    this.elementYTransform = this.svgHeight / 2;
     this.elementX = 55;
   }
 

@@ -1,12 +1,22 @@
-<app-svg-tag
-    [svgWidth]= 1
-    [elementHeight]= 100
-    [svgHeight]=100
-    [elementWidth]= 1
-></app-svg-tag>
-<app-icon-tag [name]='this.menuIconName' [id]='this.menuIconId' [class]="this.menuIconClass"></app-icon-tag>
-<app-svg-tag
-    [svgWidth]= 2
-    [elementHeight]= 100
-    [elementWidth]= 2
-></app-svg-tag>
+    <app-svg-tag
+        [svgWidth]=55
+        [elementXTransform]=27
+        [y]=36
+        [elementHeight]="'100%'"
+        [svgHeight]="'100%'"
+        [elementWidth]= 1
+    ></app-svg-tag>
+    <app-image-tag
+        [imgSrc]="this.imageSrc"
+        [ngClass]="'floating_icon'"
+    ></app-image-tag>
+    <app-icon-tag [name]='this.menuIconName' [id]='this.menuIconId' [class]="this.menuIconClass"></app-icon-tag>
+    <app-svg-tag
+        [svgWidth]=55
+        [elementXTransform]=27
+        [y]=36
+        [elementHeight]="'100%'"
+        [svgHeight]="'100%'"
+        [elementWidth]= 1
+        id="endLineSvg"
+    ></app-svg-tag>

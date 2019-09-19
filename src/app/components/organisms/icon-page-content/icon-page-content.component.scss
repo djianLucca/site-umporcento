@@ -3,10 +3,17 @@
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    width: 100%;
 }
 .flex-row{
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    width: 100%;
+}
+app-icon-page-midle-row{
+    height: 630px;
+    width: 100%;
+}
+app-icon-page-top-row{
+    height: 100%;
 }
