@@ -10,11 +10,17 @@ export class IconPageTopRowComponent implements OnInit {
   logoUmporcentoAlt: string;
   logoUmporcentoId: string;
   lineWidth: string;
+  svgHeight: number;
+  elementX: number;
+  elementYtransform: number;
   constructor() {
     this.logoUmporcento = '/assets/img/logo_umporcento.png';
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
     this.lineWidth = '90%';
+    this.svgHeight = 54;
+    this.elementYtransform = this.svgHeight / 2;
+    this.elementX = 55;
   }
 
   ngOnInit() {

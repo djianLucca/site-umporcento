@@ -14,6 +14,8 @@ export class SvgTagComponent implements OnInit {
   @Input() y: number;
   @Input() elementWidth: string;
   @Input() elementHeight: string;
+  @Input() elementYTransform: number;
+  gTransform: string | undefined;
 
   constructor() {
     this.svgWidth = '100%';
@@ -23,10 +25,13 @@ export class SvgTagComponent implements OnInit {
     this.y = 0;
     this.color = 'rgb(256,256,256)';
     this.elementWidth = '100%';
-    this.elementHeight = '2';
+    this.elementHeight = '1';
+    this.elementYTransform = 0;
+    this.elementYTransform = Number(this.svgHeight) / 2;
   }
 
   ngOnInit() {
+    this.gTransform = `translate(0, ${this.elementYTransform}px)`;
   }
 
 }

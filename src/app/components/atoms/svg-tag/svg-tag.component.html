@@ -1,5 +1,5 @@
 <svg *ngIf="this.svgType === 'line'" [attr.width]="this.svgWidth" [attr.height]="this.svgHeight">
-    <g>
+    <g [ngStyle]="{transform:this.gTransform}">
       <rect [attr.x]="this.x" [attr.y]="this.y" [attr.width]="this.elementWidth" [attr.height]="this.elementHeight" [attr.fill]="color"/>
     </g>
 </svg>
