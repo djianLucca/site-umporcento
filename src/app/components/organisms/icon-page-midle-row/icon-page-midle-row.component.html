@@ -1,3 +1,4 @@
+<div id="midle_content__wrapper">
     <app-svg-tag
         [svgWidth]=55
         [elementXTransform]=27
@@ -6,17 +7,15 @@
         [svgHeight]="'100%'"
         [elementWidth]= 1
     ></app-svg-tag>
-    <app-image-tag
-        [imgSrc]="this.imageSrc"
-        [ngClass]="'floating_icon'"
-    ></app-image-tag>
-    <app-icon-tag [name]='this.menuIconName' [id]='this.menuIconId' [class]="this.menuIconClass"></app-icon-tag>
+    <app-floating-icons-wrapper></app-floating-icons-wrapper>
+    <app-icon-tag id="menuIconWrapper" [name]='this.menuIconName' [id]='this.menuIconId' [class]="this.menuIconClass"></app-icon-tag>
     <app-svg-tag
         [svgWidth]=55
         [elementXTransform]=27
-        [y]=36
+        [y]=0
         [elementHeight]="'100%'"
         [svgHeight]="'100%'"
         [elementWidth]= 1
         id="endLineSvg"
     ></app-svg-tag>
+</div>

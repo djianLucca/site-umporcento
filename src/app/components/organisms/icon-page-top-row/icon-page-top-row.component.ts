@@ -17,7 +17,7 @@ export class IconPageTopRowComponent implements OnInit {
     this.logoUmporcento = '/assets/img/logo_umporcento.png';
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
-    this.lineWidth = '95%';
+    this.lineWidth = '95.75%';
     this.svgHeight = 54;
     this.elementYTransform = this.svgHeight / 2;
     this.elementX = 55;

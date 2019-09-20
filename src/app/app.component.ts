@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, NgModule } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { DefaultIconPageComponent } from './components/templates/default-icon-page/default-icon-page.component';
+import { DefaultIconPageComponent } from './components/pages/default-icon-page/default-icon-page.component';
 import { StateService } from './services/state.service';
 import { StateInitialiserService } from './services/state-initialiser.service';
 
