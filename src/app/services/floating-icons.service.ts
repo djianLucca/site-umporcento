@@ -21,7 +21,7 @@ export class FloatingIconsService implements IFloatingIcon {
   _image: FloatingIconImage;
   _title: FloatingIconTitle;
   _url: FloatingIconUrl;
-  _labelStyle: {};
+  _labelStyle: {visibility: string};
   constructor(image: FloatingIconImage, title: FloatingIconTitle, url: FloatingIconUrl) {
     this._image = image;
     this._title = title;
@@ -53,11 +53,11 @@ export class FloatingIconsService implements IFloatingIcon {
     this._url = value;
   }
 
-  public get labelStyle(): {} {
+  public get labelStyle(): {visibility: string} {
     return this._labelStyle;
   }
 
-  public set labelStyle(value: {}) {
+  public set labelStyle(value: {visibility: string}) {
     this._labelStyle = value;
   }
 
