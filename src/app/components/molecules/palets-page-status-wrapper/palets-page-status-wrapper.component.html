@@ -1,0 +1,20 @@
+<div id="palets_status__wrapper">
+    <app-palet-page-status
+        [name]="this.nameCircleIcon"
+        [paletPageStatus]="this.pageStatusMorning"
+        [pageStatus]="this.pageStatus"
+        [class]="'morning'"
+    ></app-palet-page-status>
+    <app-palet-page-status
+        [name]="this.nameCircleIcon"
+        [paletPageStatus]="this.pageStatusAfternoon"
+        [pageStatus]="this.pageStatus"
+        [class]="'afternoon'"
+    ></app-palet-page-status>
+    <app-palet-page-status
+        [name]="this.nameCircleIcon"
+        [paletPageStatus]="this.pageStatusNight"
+        [pageStatus]="this.pageStatus"
+        [class]="'night'"
+    ></app-palet-page-status>
+</div>

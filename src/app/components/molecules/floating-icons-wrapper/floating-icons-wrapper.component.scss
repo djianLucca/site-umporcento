@@ -1,0 +1,48 @@
+#floating_icons__wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.contianer_icon{
+    height: 100%;
+    display: flex;
+    label{
+        align-self: center;
+        margin-left: 10px;
+    }
+}
+#floating_icons_0__icon{
+    order: 0;
+    flex-grow: 2;
+    margin-top:13%;
+    margin-left: 20%;
+}
+
+#floating_icons_1__icon{
+    order: 1;
+    flex-grow: 1;
+    margin-top:30%;
+}
+#floating_icons_2__icon{
+    order: 2;
+    flex-grow: 1;
+    margin-top:8%;
+}
+#floating_icons_3__icon{
+    order: 3;
+    flex-grow: 1;
+    margin-top:25%;
+}
+#floating_icons_4__icon{
+    order: 4;
+    flex-grow: 1;
+    margin-top:10%;
+}
+#floating_icons_5__icon{
+    order: 5;
+    flex-grow: 1;
+    margin-top:25%;
+}
+
+.night, .afternoon{
+    color: white;
+}

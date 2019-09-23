@@ -1,0 +1,12 @@
+<div *ngIf="this.socialIcons !== []" id="social_icons__wrapper">
+    <div *ngFor="let item of this.socialIcons">
+            <a href="{{item.url}}">
+                <app-icon-tag 
+                    id="menuIconWrapper" 
+                    [name]='item.cssClass' 
+                    [id]="item.title" 
+                    [class]="this.socialIconClass"
+                ></app-icon-tag>
+            </a>
+    </div>
+</div>
