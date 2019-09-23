@@ -1,22 +1,18 @@
-<div id="floating_icons__wrapper">
-    <app-image-tag
-        [imgSrc]="this.imageSrc"
-        [ngClass]="'floating_icon'"
-    ></app-image-tag>
-    <app-image-tag
-        [imgSrc]="this.imageSrc"
-        [ngClass]="'floating_icon'"
-    ></app-image-tag>
-    <app-image-tag
-        [imgSrc]="this.imageSrc"
-        [ngClass]="'floating_icon'"
-    ></app-image-tag>
-    <app-image-tag
-        [imgSrc]="this.imageSrc"
-        [ngClass]="'floating_icon'"
-    ></app-image-tag>
-    <app-image-tag
-        [imgSrc]="this.imageSrc"
-        [ngClass]="'floating_icon'"
-    ></app-image-tag>
+<div *ngIf="this.floatingIcons !== []" id="floating_icons__wrapper" class="{{this.pageStatus}}">
+    <div 
+        *ngFor="let item of this.floatingIcons;index as i" 
+        id="floating_icons_{{i}}__icon" 
+        class="contianer_icon"
+        (mouseover)="this.toggleLabel(item.image, 'visible')"
+        (mouseleave)="this.toggleLabel(item.image, 'hidden')"
+        >
+            <app-image-tag 
+                [imgSrc]="item.image"
+                [class]="'floatingIconImage'"
+                [ngClass]="'floating_icon'"
+                data-title={{item.title}}
+            ></app-image-tag>
+            <label [ngStyle]="item.labelStyle">{{item.title}}</label>
+    </div>
+    
 </div>

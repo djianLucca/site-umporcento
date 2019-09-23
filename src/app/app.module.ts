@@ -20,6 +20,7 @@ import { IconPageBottomRowComponent } from './components/organisms/icon-page-bot
 import { PaletPageStatusComponent } from './components/atoms/palet-page-status/palet-page-status.component';
 import { FloatingIconsWrapperComponent } from './components/molecules/floating-icons-wrapper/floating-icons-wrapper.component';
 import { PaletsPageStatusWrapperComponent } from './components/molecules/palets-page-status-wrapper/palets-page-status-wrapper.component';
+import { SocialIconsWrapperComponent } from './components/molecules/social-icons-wrapper/social-icons-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PaletsPageStatusWrapperComponent } from './components/molecules/palets-
     IconPageBottomRowComponent,
     PaletPageStatusComponent,
     FloatingIconsWrapperComponent,
-    PaletsPageStatusWrapperComponent
+    PaletsPageStatusWrapperComponent,
+    SocialIconsWrapperComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

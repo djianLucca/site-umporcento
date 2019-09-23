@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgroundenum';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
+import { FloatingIconsService } from 'src/app/services/floating-icons.service';
+import { SocialIconsService } from 'src/app/services/social-icons.service';
 
 @Component({
   selector: 'app-default-icon-page',
@@ -10,7 +12,12 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
 export class DefaultIconPageComponent implements OnInit {
   @Input() backgroundVideo: PageSectionBackground | undefined;
   @Input() pageSection: PageSectionStatus | undefined;
-  constructor() { }
+  @Input() floatingIcons: FloatingIconsService[];
+  @Input() socialIcons: SocialIconsService[];
+  constructor() {
+    this.floatingIcons = [];
+    this.socialIcons = [];
+  }
 
   ngOnInit() {
   }

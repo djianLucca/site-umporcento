@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) {
     this.state = new StateInitialiserService().getState();
     this.title = this.state.title;
-    console.log(this.state.pageSection);
   }
 
   ngOnInit() {

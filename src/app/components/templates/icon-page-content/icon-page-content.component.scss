@@ -12,10 +12,20 @@
     flex-flow: row wrap;
     width: 100%;
 }
+#social{
+    justify-content: flex-end;
+}
+#contianer_icon{
+    display: flex;
+    justify-content: space-between;
+}
 app-icon-page-midle-row{
     height: 650px;
     width: 100%;
 }
 app-icon-page-top-row{
     height: 100%;
+}
+app-social-icons-wrapper{
+    padding-right: 1.5%;
 }
