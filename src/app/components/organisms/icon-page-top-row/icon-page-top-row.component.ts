@@ -17,12 +17,20 @@ export class IconPageTopRowComponent implements OnInit {
     this.logoUmporcento = '/assets/img/logo_umporcento.png';
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
-    this.lineWidth = '95.75%';
+    this.lineWidth = this.getLineWidthBasedOnScreenSize(window.outerWidth);
+    
     this.svgHeight = 54;
     this.elementYTransform = this.svgHeight / 2;
     this.elementX = 55;
   }
 
+  getLineWidthBasedOnScreenSize(screenWidth: number): string{
+    if(screenWidth <= 1280){
+      return '93.08%';
+
+    }
+    return '95.75%';
+  }
   ngOnInit() {
   }
 

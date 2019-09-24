@@ -27,4 +27,5 @@ export class IconPageMidleRowComponent implements OnInit {
     this.menuIconClass += this.pageLayout;
   }
 
+
 }

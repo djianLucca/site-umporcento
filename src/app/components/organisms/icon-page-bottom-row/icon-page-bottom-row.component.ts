@@ -16,7 +16,7 @@ export class IconPageBottomRowComponent implements OnInit {
   elementYTransform: number;
   constructor() {
     this.lineWidthStart = '88%';
-    this.lineWidthEnd = '96.3%';
+    this.lineWidthEnd = this.getLineWidthBasedOnScreenSize(window.outerWidth);
     this.svgHeight = 1;
     this.elementYTransform = 0;
     this.elementXStart = 28;
@@ -24,6 +24,14 @@ export class IconPageBottomRowComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  getLineWidthBasedOnScreenSize(screenWidth: number): string{
+    if(screenWidth <= 1280){
+      return '94%';
+
+    }
+    return '96.3%';
   }
 
 }

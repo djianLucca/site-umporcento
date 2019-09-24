@@ -29,3 +29,9 @@ app-icon-page-top-row{
 app-social-icons-wrapper{
     padding-right: 1.5%;
 }
+
+@media only screen and (max-width : 1280px) {
+    app-icon-page-midle-row{
+        height: 450px;
+    }
+}
