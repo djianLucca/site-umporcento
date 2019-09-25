@@ -18,14 +18,15 @@ export class IconPageTopRowComponent implements OnInit {
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
     this.lineWidth = this.getLineWidthBasedOnScreenSize(window.outerWidth);
-    
+
+
     this.svgHeight = 54;
     this.elementYTransform = this.svgHeight / 2;
     this.elementX = 55;
   }
 
-  getLineWidthBasedOnScreenSize(screenWidth: number): string{
-    if(screenWidth <= 1280){
+  getLineWidthBasedOnScreenSize(screenWidth: number): string {
+    if (screenWidth <= 1280) {
       return '93.08%';
 
     }

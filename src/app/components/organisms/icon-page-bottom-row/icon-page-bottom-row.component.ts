@@ -26,8 +26,8 @@ export class IconPageBottomRowComponent implements OnInit {
   ngOnInit() {
   }
 
-  getLineWidthBasedOnScreenSize(screenWidth: number): string{
-    if(screenWidth <= 1280){
+  getLineWidthBasedOnScreenSize(screenWidth: number): string {
+    if (screenWidth <= 1280) {
       return '94%';
 
     }
