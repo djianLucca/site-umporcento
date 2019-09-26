@@ -46,7 +46,7 @@ export class IconPageBottomRowComponent implements OnInit {
     if (screenWidth <= 1280) {
       return '94%';
 
-    } else if(screenWidth >= 3000){
+    } else if (screenWidth >= 3000) {
       return '98.2%';
     }
     return '96.3%';
