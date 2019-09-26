@@ -12,3 +12,20 @@
 app-floating-icons-wrapper{
     width: 90%;
 }
+
+@media only screen and (max-width : 1280px) {
+    #midle_content__wrapper{
+        height: 450px;        
+    }
+    #endLineSvg{
+        margin-top: -3.1%;
+    }
+}
+@media only screen and (min-width : 3000px) {
+    #midle_content__wrapper{
+        height:  1150px;       
+    }
+    #endLineSvg{
+        margin-top: -1%;
+    }
+}

@@ -11,3 +11,11 @@
   background-size: cover;
   transition: 1s opacity;
 }
+
+@media only screen and (min-width : 3000px) {
+  #backgroundVideo{
+    top: 0%;
+    left: 0%;
+    transform: translateX(0%) translateY(0%);
+  }
+}
