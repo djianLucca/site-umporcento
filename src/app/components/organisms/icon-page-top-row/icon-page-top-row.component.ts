@@ -11,6 +11,7 @@ export class IconPageTopRowComponent implements OnInit {
   logoUmporcentoId: string;
   lineWidth: string;
   svgHeight: number;
+  svgWidth: string;
   elementX: number;
   elementYTransform: number;
   constructor() {
@@ -18,6 +19,7 @@ export class IconPageTopRowComponent implements OnInit {
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
     this.lineWidth = this.getLineWidthBasedOnScreenSize(window.outerWidth);
+    this.svgWidth = this.getSvgWidthBasedOnScreenSize(window.outerWidth);
 
 
     this.svgHeight = 54;
@@ -29,8 +31,17 @@ export class IconPageTopRowComponent implements OnInit {
     if (screenWidth <= 1280) {
       return '93.08%';
 
+    } else if(screenWidth >= 3000){
+      return '97.74%';
     }
     return '95.75%';
+  }
+
+  getSvgWidthBasedOnScreenSize(screenWidth: number): string {
+    if(screenWidth >= 3000){
+      return '97.76%';
+    }
+    return this.lineWidth;
   }
   ngOnInit() {
   }

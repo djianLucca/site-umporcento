@@ -14,6 +14,7 @@ export class IconPageMidleRowComponent implements OnInit {
   menuIconId: string;
   menuIconClass: string;
   imageSrc: string;
+  svgHeight: string;
   constructor() {
     this.menuIconName = 'bars';
     this.menuIconId = 'menuIcon';
@@ -21,6 +22,14 @@ export class IconPageMidleRowComponent implements OnInit {
     this.imageSrc = '/assets/img/selo.jpg';
     this.pageLayout = PageSectionStatus.Night;
     this.floatingIcons = [];
+    this.svgHeight = this.getSvgHeightBasedOnScreenSize(window.outerWidth);
+  }
+
+  getSvgHeightBasedOnScreenSize(screenWidth: number): string {
+    if(screenWidth >= 3000){
+      return '98.6%';
+    }
+    return '100%';
   }
 
   ngOnInit() {
