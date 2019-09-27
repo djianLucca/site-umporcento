@@ -31,14 +31,14 @@ export class IconPageTopRowComponent implements OnInit {
     if (screenWidth <= 1280) {
       return '93.08%';
 
-    } else if(screenWidth >= 3000){
+    } else if (screenWidth >= 3000) {
       return '97.74%';
     }
     return '95.75%';
   }
 
   getSvgWidthBasedOnScreenSize(screenWidth: number): string {
-    if(screenWidth >= 3000){
+    if (screenWidth >= 3000) {
       return '97.76%';
     }
     return this.lineWidth;

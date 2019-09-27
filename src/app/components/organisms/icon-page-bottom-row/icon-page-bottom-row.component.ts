@@ -7,7 +7,8 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
   styleUrls: ['./icon-page-bottom-row.component.scss']
 })
 export class IconPageBottomRowComponent implements OnInit {
-  @Input() pageSection: PageSectionStatus | undefined;
+  @Input() pageSection!: PageSectionStatus;
+  @Input() changeSection!: (pageSection: PageSectionStatus) => void;
   lineWidthStart: string;
   lineWidthEnd: string;
   svgHeight: number;

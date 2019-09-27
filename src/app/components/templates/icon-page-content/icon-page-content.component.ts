@@ -10,9 +10,10 @@ import { SocialIconsService } from 'src/app/services/social-icons.service';
 })
 export class IconPageContentComponent implements OnInit {
 
-  @Input() pageSection: PageSectionStatus | undefined;
+  @Input() pageSection!: PageSectionStatus;
   @Input() socialIcons: SocialIconsService[];
   @Input() floatingIcons: FloatingIconsService[];
+  @Input() changeSection!: (pageSection: PageSectionStatus) => void;
   sectionId: string;
 
   constructor() {
@@ -22,7 +23,6 @@ export class IconPageContentComponent implements OnInit {
    }
 
   ngOnInit() {
-    console.log(this.socialIcons);
   }
 
 }

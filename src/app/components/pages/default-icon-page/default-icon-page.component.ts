@@ -14,6 +14,8 @@ export class DefaultIconPageComponent implements OnInit {
   @Input() pageSection: PageSectionStatus | undefined;
   @Input() floatingIcons: FloatingIconsService[];
   @Input() socialIcons: SocialIconsService[];
+  @Input() changeSection!: (pageSection: PageSectionStatus) => void;
+
   constructor() {
     this.floatingIcons = [];
     this.socialIcons = [];
