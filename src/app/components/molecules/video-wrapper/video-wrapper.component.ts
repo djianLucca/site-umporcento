@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgroundenum';
 
 @Component({
@@ -6,7 +6,7 @@ import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgro
   templateUrl: './video-wrapper.component.html',
   styleUrls: ['./video-wrapper.component.scss']
 })
-export class VideoWrapperComponent implements OnInit {
+export class VideoWrapperComponent implements OnInit, OnChanges {
   @Input() backgroundVideo: PageSectionBackground | undefined;
   videoToBeShown: string | undefined;
   bgVideoId: string;
@@ -15,7 +15,13 @@ export class VideoWrapperComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.videoToBeShown = 'assets/video/' + this.backgroundVideo + '.mp4';
+  }
+  ngOnChanges() {
+    this.videoToBeShown = this.updateVideo();
+  }
+
+  updateVideo(): string {
+     return 'assets/video/' + this.backgroundVideo + '.mp4';
   }
 
 }

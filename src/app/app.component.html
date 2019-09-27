@@ -4,5 +4,6 @@
     [pageSection]="this.state.pageSection"
     [floatingIcons]="this.state.floatingIcons"
     [socialIcons]="this.state.socialIcons"
+    [changeSection]="this.callChangePageSection.bind(this)"
 ></app-default-icon-page>
 <router-outlet></router-outlet>

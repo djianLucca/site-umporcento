@@ -10,6 +10,7 @@
     ></app-svg-tag>
     <app-palets-page-status-wrapper
         [pageStatus]="this.pageSection"
+        [changeSection]="this.changeSection.bind(this)"
     ></app-palets-page-status-wrapper>
     <app-svg-tag
         class="bottom_svg__line"
