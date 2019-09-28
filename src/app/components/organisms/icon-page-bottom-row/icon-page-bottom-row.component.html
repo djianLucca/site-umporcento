@@ -7,6 +7,7 @@
         [svgHeight]="this.svgHeight"
         [elementYTransform]="this.elementYTransform"
         [x]="this.elementXStart"
+        [color]="this.changeLineColorBasedOnPageSection()"
     ></app-svg-tag>
     <app-palets-page-status-wrapper
         [pageStatus]="this.pageSection"
@@ -20,5 +21,6 @@
         [svgHeight]="this.svgHeight"
         [elementYTransform]="this.elementYTransform"
         [x]="this.elementXend"
+        [color]="this.changeLineColorBasedOnPageSection()"
     ></app-svg-tag>
 </section>

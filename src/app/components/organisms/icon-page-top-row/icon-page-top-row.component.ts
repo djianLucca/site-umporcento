@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 
 @Component({
   selector: 'app-icon-page-top-row',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon-page-top-row.component.scss']
 })
 export class IconPageTopRowComponent implements OnInit {
+  @Input() pageSection!: PageSectionStatus;
   logoUmporcento: string;
   logoUmporcentoAlt: string;
   logoUmporcentoId: string;
@@ -44,6 +46,13 @@ export class IconPageTopRowComponent implements OnInit {
     return this.lineWidth;
   }
   ngOnInit() {
+  }
+
+  changeLineColorBasedOnPageSection(): string {
+    if (this.pageSection === PageSectionStatus.Morning) {
+      return 'rgba(0,0,0, 1)';
+    }
+    return 'rgba(256,256,256, 1)';
   }
 
 }

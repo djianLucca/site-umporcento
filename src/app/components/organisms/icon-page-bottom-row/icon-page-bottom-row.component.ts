@@ -27,6 +27,13 @@ export class IconPageBottomRowComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeLineColorBasedOnPageSection(): string {
+    if (this.pageSection === PageSectionStatus.Morning) {
+      return 'rgba(0,0,0, 1)';
+    }
+    return 'rgba(256,256,256, 1)';
+  }
+
   getXEndBasedOnScreenSize(screenWidth: number): number {
     if (screenWidth >= 3000) {
       return 150;

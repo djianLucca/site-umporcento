@@ -1,6 +1,8 @@
 <section id={{this.sectionId}}>
     <div class='flex-row'>
-        <app-icon-page-top-row></app-icon-page-top-row>
+        <app-icon-page-top-row
+        [pageSection]="this.pageSection"
+        ></app-icon-page-top-row>
     </div>
     <div class='flex-row'>
         <app-icon-page-midle-row
@@ -17,6 +19,7 @@
     <div class='flex-row' id='social'>
         <app-social-icons-wrapper
             [socialIcons]="this.socialIcons"
+            [pageStatus]="this.pageSection"
         ></app-social-icons-wrapper>
     </div>
 </section>

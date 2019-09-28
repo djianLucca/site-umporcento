@@ -6,6 +6,7 @@
         [elementHeight]="'100%'"
         [svgHeight]="this.svgHeight"
         [elementWidth]= 1
+        [color]="this.changeLineColorBasedOnPageSection()"
     ></app-svg-tag>
     <app-floating-icons-wrapper
         [floatingIcons]="this.floatingIcons"
@@ -15,7 +16,7 @@
         id="menuIconWrapper" 
         [name]='this.menuIconName' 
         [id]='this.menuIconId' 
-        [class]="this.menuIconClass"
+        [class]="this.menuIconClassBuilt"
     ></app-icon-tag>
     <app-svg-tag
         [svgWidth]=55
@@ -25,5 +26,6 @@
         [svgHeight]="this.svgHeight"
         [elementWidth]= 1
         id="endLineSvg"
+        [color]="this.changeLineColorBasedOnPageSection()"
     ></app-svg-tag>
 </div>

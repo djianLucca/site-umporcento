@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { FloatingIconsService } from 'src/app/services/floating-icons.service';
 
@@ -7,7 +7,7 @@ import { FloatingIconsService } from 'src/app/services/floating-icons.service';
   templateUrl: './icon-page-midle-row.component.html',
   styleUrls: ['./icon-page-midle-row.component.scss']
 })
-export class IconPageMidleRowComponent implements OnInit {
+export class IconPageMidleRowComponent implements OnInit, OnChanges {
   @Input() pageLayout: PageSectionStatus;
   @Input() floatingIcons: FloatingIconsService[];
   menuIconName: string;
@@ -15,6 +15,7 @@ export class IconPageMidleRowComponent implements OnInit {
   menuIconClass: string;
   imageSrc: string;
   svgHeight: string;
+  menuIconClassBuilt!: string;
   constructor() {
     this.menuIconName = 'bars';
     this.menuIconId = 'menuIcon';
@@ -26,15 +27,23 @@ export class IconPageMidleRowComponent implements OnInit {
   }
 
   getSvgHeightBasedOnScreenSize(screenWidth: number): string {
-    if(screenWidth >= 3000){
+    if (screenWidth >= 3000) {
       return '98.6%';
     }
     return '100%';
   }
 
   ngOnInit() {
-    this.menuIconClass += this.pageLayout;
+  }
+  ngOnChanges() {
+    this.menuIconClassBuilt = this.menuIconClass + this.pageLayout;
   }
 
+  changeLineColorBasedOnPageSection(): string {
+    if (this.pageLayout === PageSectionStatus.Morning) {
+      return 'rgba(0,0,0, 1)';
+    }
+    return 'rgba(256,256,256, 1)';
+  }
 
 }
