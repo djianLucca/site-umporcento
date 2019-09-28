@@ -10,6 +10,21 @@
         margin-left: 10px;
     }
 }
+.floating_icon__bg{
+    background-color: #020102;
+    border-radius: 50%;
+    display: flex;
+    width: 85px;
+    height: 85px;
+}
+
+.floating_icon__bg > app-load-svg {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
 #floating_icons_0__icon{
     order: 0;
     flex-grow: 2;

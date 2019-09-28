@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15.4204mm" height="12.9131mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 436.29 365.35"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="684" font-variant="normal" class="str0" style="fill-rule:nonzero" font-style="normal" font-weight="500">
+	<font-face 
+		font-family="Ubuntu Light">
+		<font-face-src>
+			<font-face-name name="Ubuntu Medium"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="0" horiz-adv-x="567" d="M525 346.998c0,-116.664 -21.3326,-206.163 -63.9977,-268.497 -42.6709,-62.3337 -101.671,-93.5006 -177,-93.5006 -75.3348,0 -134.335,31.1669 -177,93.5006 -42.6709,62.3337 -64.0035,151.833 -64.0035,268.497 0,58.0039 5.49868,109.501 16.5018,154.504 10.9974,44.9971 26.9982,82.8314 47.9969,113.497 21.0044,30.6659 46.3329,54.0022 76.0027,69.9974 29.6641,16.0009 63.1686,24.0042 100.502,24.0042 75.3291,0 134.329,-31.1669 177,-93.5006 42.6652,-62.3337 63.9977,-151.833 63.9977,-268.503zm-125.001 0c0,36.0034 -1.99795,69.6692 -5.99961,101.003 -4.00166,31.3338 -10.4964,58.4991 -19.5016,81.5014 -8.99941,22.9966 -20.8317,41.1624 -35.4967,54.4974 -14.6651,13.335 -33.0036,20.0025 -54.9983,20.0025 -22.0005,0 -40.5002,-6.66751 -55.505,-20.0025 -14.999,-13.335 -26.9982,-31.5008 -35.9977,-54.4974 -8.99941,-23.0023 -15.333,-50.1676 -19.0007,-81.5014 -3.66771,-31.3338 -5.49868,-64.9996 -5.49868,-101.003 0,-35.9977 1.83097,-69.6634 5.49868,-100.997 3.66771,-31.3338 10.0013,-58.4991 19.0007,-81.5014 8.99941,-23.0023 20.9986,-41.1681 35.9977,-54.4974 15.0048,-13.335 33.5045,-20.0025 55.505,-20.0025 21.9947,0 40.3333,6.66751 54.9983,20.0025 14.6651,13.3293 26.4973,31.4951 35.4967,54.4974 9.00517,23.0023 15.4999,50.1676 19.5016,81.5014 4.00166,31.3338 5.99961,64.9996 5.99961,100.997z"/>
+   <glyph unicode="1" horiz-adv-x="567" d="M89.9999 548.999c38.6693,15.333 77.4997,35.0016 116.503,59 38.9975,24.0042 73.4981,52.3325 103.496,85.0021l85.0021 0 0 -693.001 -121 0 0 531c-17.9988,-13.9972 -40.6672,-27.6661 -67.9994,-41.0012 -27.3379,-13.3293 -53.6683,-24.3324 -79.0025,-32.9978l-36.9995 91.9978z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Ubuntu Light";font-variant:normal;font-style:normal;font-weight:500;src:url("#FontID0") format(svg)}
+    .str0 {stroke-width:19.5;stroke-miterlimit:22.9256}
+    .str1 {stroke:black;stroke-width:9.58;stroke-miterlimit:22.9256}
+    .fil0 {fill:white}
+    .fnt0 {font-weight:500;font-size:491.39px;font-family:'Ubuntu Light'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g transform="matrix(1 0 0 1 -809.006 -626.379)">
+   <text x="771.02" y="979.57"  class="fil0 str1 fnt0">10</text>
+  </g>
+ </g>
+</svg>

@@ -6,13 +6,12 @@
         (mouseover)="this.toggleLabel(item.image, 'visible')"
         (mouseleave)="this.toggleLabel(item.image, 'hidden')"
         >
-            <app-image-tag 
-                [imgSrc]="item.image"
-                [class]="'floatingIconImage'"
-                [ngClass]="'floating_icon'"
-                data-title={{item.title}}
-            ></app-image-tag>
-            <label [ngStyle]="item.labelStyle">{{item.title}}</label>
+        <div class="floating_icon__bg">
+            <app-load-svg
+                [svg]="item.image"
+            ></app-load-svg>
+        </div>
+        <label [ngStyle]="item.labelStyle">{{item.title}}</label>
     </div>
     
 </div>
