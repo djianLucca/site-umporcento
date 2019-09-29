@@ -7,11 +7,11 @@ import { InternalRoutesService } from 'src/app/services/internal-routes.service'
 import { InternalRoutesHandlerService } from 'src/app/services/internal-routes-handler.service';
 
 @Component({
-  selector: 'app-default-icon-page',
-  templateUrl: './default-icon-page.component.html',
-  styleUrls: ['./default-icon-page.component.scss']
+  selector: 'app-default-page',
+  templateUrl: './default-page.component.html',
+  styleUrls: ['./default-page.component.scss']
 })
-export class DefaultIconPageComponent implements OnInit {
+export class DefaultPageComponent implements OnInit {
   state: StateService;
   stateManipulator: StateManipulatorService;
   internalRouter: InternalRoutesHandlerService;
@@ -21,7 +21,7 @@ export class DefaultIconPageComponent implements OnInit {
     this.internalRouter = new InternalRoutesHandlerService([
       new InternalRoutesService('/manha', this.sitchToMorning.bind(this)),
       new InternalRoutesService('/tarde', this.sitchToAfternoon.bind(this)),
-      new InternalRoutesService('/night', this.sitchToNight.bind(this))
+      new InternalRoutesService('/noite', this.sitchToNight.bind(this))
     ]);
   }
 

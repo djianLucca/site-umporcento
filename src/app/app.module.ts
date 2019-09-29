@@ -8,7 +8,7 @@ import { InlineSVGModule } from 'ng-inline-svg';
 
 import { AppComponent } from './app.component';
 import { VideoWrapperComponent } from './components/molecules/video-wrapper/video-wrapper.component';
-import { DefaultIconPageComponent } from './components/pages/default-icon-page/default-icon-page.component';
+import { DefaultPageComponent } from './components/pages/default-page/default-page.component';
 import { PageBackgroundComponent } from './components/organisms/page-background/page-background.component';
 import { VideoTagComponent } from './components/atoms/video-tag/video-tag.component';
 import { ImageTagComponent } from './components/atoms/image-tag/image-tag.component';
@@ -30,7 +30,7 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
   declarations: [
     AppComponent,
     VideoWrapperComponent,
-    DefaultIconPageComponent,
+    DefaultPageComponent,
     PageBackgroundComponent,
     VideoTagComponent,
     ImageTagComponent,

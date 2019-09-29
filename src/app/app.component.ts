@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 
-import { DefaultIconPageComponent } from './components/pages/default-icon-page/default-icon-page.component';
+import { DefaultPageComponent } from './components/pages/default-page/default-page.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { DefaultIconPageComponent } from './components/pages/default-icon-page/d
   styleUrls: ['./app.component.scss']
 })
 @NgModule({
-  imports: [DefaultIconPageComponent]
+  imports: [DefaultPageComponent]
 })
 export class AppComponent implements OnInit {
 

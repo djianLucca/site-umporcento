@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DefaultIconPageComponent } from './default-icon-page.component';
+import { DefaultPageComponent } from './default-page.component';
 import { Component, Input } from '@angular/core';
 import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgroundenum';
 
@@ -23,13 +23,13 @@ class MockRouterOutletComponent {
  
 }
 describe('DefaultIconPageComponent', () => {
-  let component: DefaultIconPageComponent;
-  let fixture: ComponentFixture<DefaultIconPageComponent>;
+  let component: DefaultPageComponent;
+  let fixture: ComponentFixture<DefaultPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        DefaultIconPageComponent,
+        DefaultPageComponent,
         MockPageBackgroundComponent,
         MockRouterOutletComponent
       ]
