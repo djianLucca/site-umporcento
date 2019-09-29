@@ -2,16 +2,16 @@
     <div 
         *ngFor="let item of this.floatingIcons;index as i" 
         id="floating_icons_{{i}}__icon" 
-        class="contianer_icon"
+        class={{this.defaultClassBuilt}}
         (mouseover)="this.toggleLabel(item.image, 'visible')"
         (mouseleave)="this.toggleLabel(item.image, 'hidden')"
         >
         <div class="floating_icon__bg">
             <app-load-svg
                 [svg]="item.image"
+                [class]="this.pageStatus"
             ></app-load-svg>
         </div>
         <label [ngStyle]="item.labelStyle">{{item.title}}</label>
     </div>
-    
 </div>

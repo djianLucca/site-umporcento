@@ -14,3 +14,8 @@ body{
     stroke: #3AA3AC;
     fill: none;
 }
+
+.floating_icon__bg > app-load-svg:nth-child(1) > div.afternoon:nth-child(1) > svg:nth-child(1){
+    width: 200px;
+    height: 200px;
+}

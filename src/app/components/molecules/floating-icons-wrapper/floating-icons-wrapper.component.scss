@@ -10,6 +10,7 @@
         margin-left: 10px;
     }
 }
+
 .floating_icon__bg{
     background-color: #020102;
     border-radius: 50%;
@@ -17,19 +18,31 @@
     width: 85px;
     height: 85px;
 }
+div.contianer_icon.afternoon > .floating_icon__bg{
+    margin-left: 45%;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+}
+
 
 .floating_icon__bg > app-load-svg {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
-    
-    
 }
+
 #floating_icons_0__icon{
     order: 0;
     flex-grow: 2;
     margin-top:13%;
     margin-left: 20%;
+}
+#floating_icons_0__icon.afternoon{
+    margin-left: 0;
+}
+#floating_icons_0__icon.afternoon > label{
+    margin-right: auto;
 }
 
 #floating_icons_1__icon{
@@ -60,4 +73,10 @@
 
 .night, .afternoon{
     color: white;
+}
+
+@media only screen and (max-width : 1280px) {
+    div.contianer_icon.afternoon > .floating_icon__bg{
+        margin-left: 42%
+    }
 }
