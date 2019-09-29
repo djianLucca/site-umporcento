@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { FloatingIconsService } from 'src/app/services/floating-icons.service';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { FloatingIconImage } from 'src/app/services/enums/floatingiconimageenum';
@@ -8,20 +8,24 @@ import { FloatingIconImage } from 'src/app/services/enums/floatingiconimageenum'
   templateUrl: './floating-icons-wrapper.component.html',
   styleUrls: ['./floating-icons-wrapper.component.scss']
 })
-export class FloatingIconsWrapperComponent implements OnInit {
+export class FloatingIconsWrapperComponent implements OnChanges {
   imageSrc: string;
   @Input() floatingIcons: FloatingIconsService[];
   @Input() pageStatus: PageSectionStatus;
   showLabel: boolean;
+  defaultClass: string;
+  defaultClassBuilt!: string;
 
   constructor() {
     this.imageSrc = '/assets/img/selo.jpg';
     this.floatingIcons = [];
     this.pageStatus = PageSectionStatus.Night;
     this.showLabel = false;
+    this.defaultClass = 'contianer_icon';
   }
 
-  ngOnInit() {
+  ngOnChanges() {
+    this.defaultClassBuilt = this.defaultClass + ' ' + this.pageStatus;
   }
   toggleLabel(image: FloatingIconImage, value: string) {
     this.floatingIcons.forEach(element => {

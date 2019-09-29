@@ -6,9 +6,7 @@ import { PageSectionBackground } from './enums/pageSectionbackgroundenum';
 import { FloatingIconsService } from './floating-icons.service';
 import { SocialIconsService } from './social-icons.service';
 import { MenuService } from './menu.service';
-import { FloatingIconImage } from './enums/floatingiconimageenum';
-import { FloatingIconTitle } from './enums/floatingicontitleenum';
-import { FloatingIconUrl } from './enums/floatingiconurlenum';
+import { FloatingIconBuilderService } from './floating-icon-builder.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +19,10 @@ export class StateService implements IState {
   floatingIcons: FloatingIconsService[];
   socialIcons: SocialIconsService[];
   menu: MenuService;
+  floatingIconBuilder: FloatingIconBuilderService;
 
   constructor(now: number, menu: MenuService, socialIcons: SocialIconsService[]) {
+    this.floatingIconBuilder = new FloatingIconBuilderService();
     this.page = this.getPageBasedOnTime(now);
     this.title = '[1%] Um por Cento';
     this.pageSection = this.getPageSectionBasedOnPage(this.page);
@@ -68,108 +68,17 @@ export class StateService implements IState {
     }
     return Page.Night;
   }
-
-  // TODO: Return this to default
   getFloatingIconsBasedOnPage(page: Page): FloatingIconsService[] {
     switch (page) {
-      // case Page.Morning:
-      //   return this.buildFloatingIconsMorning();
-      //   break;
-      // case Page.Afternoon:
-      //   return this.buildFloatingIconsAfternoon();
+      case Page.Morning:
+        return this.floatingIconBuilder.buildFloatingIconsMorning();
+      case Page.Afternoon:
+        return this.floatingIconBuilder.buildFloatingIconsAfternoon();
       default:
-        return this.buildFloatingIconsNight();
-        break;
+        return this.floatingIconBuilder.buildFloatingIconsNight();
     }
   }
 
-  buildFloatingIconsMorning(): FloatingIconsService[] {
-    return [
-      this.buildFloatingIcon(
-        FloatingIconImage.CultureGuide,
-        FloatingIconTitle.CultureGuide,
-        FloatingIconUrl.CultureGuide
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.BrandManual,
-        FloatingIconTitle.BrandManual,
-        FloatingIconUrl.BrandManual
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Compass,
-        FloatingIconTitle.Compass,
-        FloatingIconUrl.Compass
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Tree,
-        FloatingIconTitle.Tree,
-        FloatingIconUrl.Tree
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Guardians,
-        FloatingIconTitle.Guardians,
-        FloatingIconUrl.Guardians
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Magazine,
-        FloatingIconTitle.Magazine,
-        FloatingIconUrl.Magazine
-      )
-    ];
-  }
-
-  buildFloatingIconsAfternoon(): FloatingIconsService[] {
-    return [
-      this.buildFloatingIcon(
-        FloatingIconImage.Timeline,
-        FloatingIconTitle.Timeline,
-        FloatingIconUrl.Timeline
-      )
-    ];
-  }
-
-  buildFloatingIconsNight(): FloatingIconsService[] {
-    return [
-      this.buildFloatingIcon(
-        FloatingIconImage.Colab,
-        FloatingIconTitle.Colab,
-        FloatingIconUrl.Colab
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Us,
-        FloatingIconTitle.Us,
-        FloatingIconUrl.Us
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Stamp,
-        FloatingIconTitle.Stamp,
-        FloatingIconUrl.Stamp
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Network,
-        FloatingIconTitle.Network,
-        FloatingIconUrl.Network
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Talks,
-        FloatingIconTitle.Talks,
-        FloatingIconUrl.Talks
-      ),
-      this.buildFloatingIcon(
-        FloatingIconImage.Gabw,
-        FloatingIconTitle.Gabw,
-        FloatingIconUrl.Gabw
-      )
-    ];
-  }
-
-  buildFloatingIcon(image: FloatingIconImage, title: FloatingIconTitle, url: FloatingIconUrl): FloatingIconsService {
-    return new FloatingIconsService(
-      image,
-      title,
-      url
-    );
-  }
   isMorning(now: number): boolean {
     if (now >= 5 && now <= 12) {
       return true;

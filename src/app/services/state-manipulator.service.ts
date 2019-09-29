@@ -4,6 +4,8 @@ import { StateService } from './state.service';
 import { Page } from './enums/pageenum';
 import { PageSectionStatus } from './enums/pageSectionStatusenum';
 import { PageSectionBackground } from './enums/pageSectionbackgroundenum';
+import { FloatingIconBuilderService } from './floating-icon-builder.service';
+import { FloatingIconsService } from './floating-icons.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,10 @@ import { PageSectionBackground } from './enums/pageSectionbackgroundenum';
 export class StateManipulatorService implements IstateManipulator {
 
   state: StateService;
+  floatingIconBuilder: FloatingIconBuilderService;
   constructor(state: StateService) {
     this.state = state;
+    this.floatingIconBuilder = new FloatingIconBuilderService();
   }
 
   changePage(page: Page): StateService {
@@ -37,7 +41,7 @@ export class StateManipulatorService implements IstateManipulator {
   public changePageSection(pageSection: PageSectionStatus): StateService {
     this.state.pageSection = pageSection;
     this.changePageBackground(pageSection);
-    console.log(this.state);
+    this.state.floatingIcons = this.changeFloatingIconsBasedOnSection(pageSection);
     return this.state;
   }
 
@@ -49,6 +53,16 @@ export class StateManipulatorService implements IstateManipulator {
         return Page.Afternoon;
       default:
           return Page.Night;
+    }
+  }
+  changeFloatingIconsBasedOnSection(pageSection: PageSectionStatus): FloatingIconsService[]{
+    switch (pageSection) {
+      case PageSectionStatus.Morning:
+        return this.floatingIconBuilder.buildFloatingIconsMorning();
+      case PageSectionStatus.Afternoon:
+        return this.floatingIconBuilder.buildFloatingIconsAfternoon();
+      default:
+        return this.floatingIconBuilder.buildFloatingIconsNight();
     }
   }
 }

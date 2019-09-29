@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { HttpClientModule } from '@angular/common/http';
 import { InlineSVGModule } from 'ng-inline-svg';
 
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { FloatingIconsWrapperComponent } from './components/molecules/floating-i
 import { PaletsPageStatusWrapperComponent } from './components/molecules/palets-page-status-wrapper/palets-page-status-wrapper.component';
 import { SocialIconsWrapperComponent } from './components/molecules/social-icons-wrapper/social-icons-wrapper.component';
 import { LoadSvgComponent } from './components/atoms/load-svg/load-svg.component';
+import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { LoadSvgComponent } from './components/atoms/load-svg/load-svg.component
     FloatingIconsWrapperComponent,
     PaletsPageStatusWrapperComponent,
     SocialIconsWrapperComponent,
-    LoadSvgComponent
+    LoadSvgComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

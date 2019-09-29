@@ -8,7 +8,6 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
 })
 export class IconPageBottomRowComponent implements OnInit {
   @Input() pageSection!: PageSectionStatus;
-  @Input() changeSection!: (pageSection: PageSectionStatus) => void;
   lineWidthStart: string;
   lineWidthEnd: string;
   svgHeight: number;

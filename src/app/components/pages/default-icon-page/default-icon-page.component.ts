@@ -1,8 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { PageSectionBackground } from 'src/app/services/enums/pageSectionbackgroundenum';
+import { Component, OnInit} from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
-import { FloatingIconsService } from 'src/app/services/floating-icons.service';
-import { SocialIconsService } from 'src/app/services/social-icons.service';
+import { StateService } from 'src/app/services/state.service';
+import { StateManipulatorService } from 'src/app/services/state-manipulator.service';
+import { StateInitialiserService } from 'src/app/services/state-initialiser.service';
+import { InternalRoutesService } from 'src/app/services/internal-routes.service';
+import { InternalRoutesHandlerService } from 'src/app/services/internal-routes-handler.service';
 
 @Component({
   selector: 'app-default-icon-page',
@@ -10,18 +12,36 @@ import { SocialIconsService } from 'src/app/services/social-icons.service';
   styleUrls: ['./default-icon-page.component.scss']
 })
 export class DefaultIconPageComponent implements OnInit {
-  @Input() backgroundVideo: PageSectionBackground | undefined;
-  @Input() pageSection: PageSectionStatus | undefined;
-  @Input() floatingIcons: FloatingIconsService[];
-  @Input() socialIcons: SocialIconsService[];
-  @Input() changeSection!: (pageSection: PageSectionStatus) => void;
-
+  state: StateService;
+  stateManipulator: StateManipulatorService;
+  internalRouter: InternalRoutesHandlerService;
   constructor() {
-    this.floatingIcons = [];
-    this.socialIcons = [];
+    this.state = new StateInitialiserService().getState();
+    this.stateManipulator = new StateManipulatorService(this.state);
+    this.internalRouter = new InternalRoutesHandlerService([
+      new InternalRoutesService('/manha', this.sitchToMorning.bind(this)),
+      new InternalRoutesService('/tarde', this.sitchToAfternoon.bind(this)),
+      new InternalRoutesService('/night', this.sitchToNight.bind(this))
+    ]);
   }
 
   ngOnInit() {
+    this.internalRouter.takeAction(window.location.pathname);
+  }
+
+  changeSection(pageSection: PageSectionStatus) {
+    this.state = this.stateManipulator.changePageSection(pageSection);
+  }
+
+  sitchToMorning() {
+    this.changeSection(PageSectionStatus.Morning);
+  }
+
+  sitchToAfternoon() {
+    this.changeSection(PageSectionStatus.Afternoon);
+  }
+  sitchToNight() {
+    this.changeSection(PageSectionStatus.Night);
   }
 
 }

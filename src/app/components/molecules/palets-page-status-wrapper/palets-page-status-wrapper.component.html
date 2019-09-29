@@ -4,14 +4,14 @@
         [paletPageStatus]="this.pageStatusMorning"
         [pageStatus]="this.pageStatus"
         [class]="'morning'"
-        (click)="this.callChangeSection(this.pageStatusMorning)"
+        routerLink="/manha"
     ></app-palet-page-status>
     <app-palet-page-status
         [name]="this.nameCircleIcon"
         [paletPageStatus]="this.pageStatusAfternoon"
         [pageStatus]="this.pageStatus"
         [class]="'afternoon'"
-        (click)="this.callChangeSection(this.pageStatusAfternoon)"
+        routerLink="/tarde"
     ></app-palet-page-status>
     <app-palet-page-status
         [name]="this.nameCircleIcon"
@@ -19,5 +19,6 @@
         [pageStatus]="this.pageStatus"
         [class]="'night'"
         (click)="this.callChangeSection(this.pageStatusNight)"
+        routerLink="/noite"
     ></app-palet-page-status>
 </div>
