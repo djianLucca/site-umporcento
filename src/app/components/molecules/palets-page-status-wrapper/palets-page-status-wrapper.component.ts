@@ -8,7 +8,6 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
 })
 export class PaletsPageStatusWrapperComponent implements OnInit {
   @Input() pageStatus!: PageSectionStatus;
-  @Input() changeSection!: (pageSection: PageSectionStatus) => void;
 
   nameCircleIcon: string;
   pageStatusMorning: PageSectionStatus;
@@ -24,10 +23,6 @@ export class PaletsPageStatusWrapperComponent implements OnInit {
 
   ngOnInit() {
 
-  }
-
-  callChangeSection(pageSection: PageSectionStatus) {
-    this.changeSection(pageSection);
   }
 
 }
