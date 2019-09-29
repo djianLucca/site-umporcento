@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { FloatingIconsService } from 'src/app/services/floating-icons.service';
 
@@ -7,19 +7,12 @@ import { FloatingIconsService } from 'src/app/services/floating-icons.service';
   templateUrl: './icon-page-midle-row.component.html',
   styleUrls: ['./icon-page-midle-row.component.scss']
 })
-export class IconPageMidleRowComponent implements OnInit, OnChanges {
+export class IconPageMidleRowComponent implements OnChanges {
   @Input() pageLayout: PageSectionStatus;
   @Input() floatingIcons: FloatingIconsService[];
-  menuIconName: string;
-  menuIconId: string;
-  menuIconClass: string;
   imageSrc: string;
   svgHeight: string;
-  menuIconClassBuilt!: string;
   constructor() {
-    this.menuIconName = 'bars';
-    this.menuIconId = 'menuIcon';
-    this.menuIconClass = 'menuIcon';
     this.imageSrc = '/assets/img/selo.jpg';
     this.pageLayout = PageSectionStatus.Night;
     this.floatingIcons = [];
@@ -33,10 +26,7 @@ export class IconPageMidleRowComponent implements OnInit, OnChanges {
     return '100%';
   }
 
-  ngOnInit() {
-  }
   ngOnChanges() {
-    this.menuIconClassBuilt = this.menuIconClass + this.pageLayout;
   }
 
   changeLineColorBasedOnPageSection(): string {

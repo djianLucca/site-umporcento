@@ -25,6 +25,11 @@ import { PaletsPageStatusWrapperComponent } from './components/molecules/palets-
 import { SocialIconsWrapperComponent } from './components/molecules/social-icons-wrapper/social-icons-wrapper.component';
 import { LoadSvgComponent } from './components/atoms/load-svg/load-svg.component';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
+import { InformativePageContentComponent } from './components/templates/informative-page-content/informative-page-content.component';
+import { InformativePageMidleRowComponent } from './components/organisms/informative-page-midle-row/informative-page-midle-row.component';
+import { MenuIconComponent } from './components/atoms/menu-icon/menu-icon.component';
+import { InformativeTextWrapperComponent } from './components/molecules/informative-text-wrapper/informative-text-wrapper.component';
+import { ImageSliderComponent } from './components/molecules/image-slider/image-slider.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,12 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
     PaletsPageStatusWrapperComponent,
     SocialIconsWrapperComponent,
     LoadSvgComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    InformativePageContentComponent,
+    InformativePageMidleRowComponent,
+    MenuIconComponent,
+    InformativeTextWrapperComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

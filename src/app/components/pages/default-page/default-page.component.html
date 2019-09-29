@@ -1,9 +1,13 @@
 <app-page-background 
     [backgroundVideo]="this.state.pageBackground"
 ></app-page-background>
-<app-icon-page-content
+<app-icon-page-content *ngIf="this.isFloatingIconPage()"
 [pageSection]="this.state.pageSection"
 [floatingIcons]="this.state.floatingIcons"
 [socialIcons]="this.state.socialIcons"
 ></app-icon-page-content>
+<app-informative-page-content *ngIf="!this.isFloatingIconPage()"
+    [pageSection]="this.morningPage"
+    [socialIcons]="this.state.socialIcons"
+></app-informative-page-content>
 <router-outlet></router-outlet>
