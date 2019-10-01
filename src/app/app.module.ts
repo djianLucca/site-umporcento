@@ -30,6 +30,7 @@ import { InformativePageMidleRowComponent } from './components/organisms/informa
 import { MenuIconComponent } from './components/atoms/menu-icon/menu-icon.component';
 import { InformativeTextWrapperComponent } from './components/molecules/informative-text-wrapper/informative-text-wrapper.component';
 import { ImageSliderComponent } from './components/molecules/image-slider/image-slider.component';
+import { DownloadBtnComponent } from './components/atoms/download-btn/download-btn.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ImageSliderComponent } from './components/molecules/image-slider/image-
     InformativePageMidleRowComponent,
     MenuIconComponent,
     InformativeTextWrapperComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    DownloadBtnComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { MenuService } from './menu.service';
 import { MenuItemService } from './menu-item.service';
-import { MenuItemTitle } from './enums/menuitemtitleenum  copy';
+import { MenuItemTitle } from './enums/menuitemtitleenum';
 import { MenuItemUrl } from './enums/menuitemurlnum ';
 
 describe('MenuService', () => {

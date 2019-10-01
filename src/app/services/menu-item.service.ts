@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ImenuItem } from './interfaces/imenu-item';
-import { MenuItemTitle } from './enums/menuitemtitleenum  copy';
+import { MenuItemTitle } from './enums/menuitemtitleenum';
 import { MenuItemUrl } from './enums/menuitemurlnum ';
 
 @Injectable({

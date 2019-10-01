@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-informative-text-wrapper',
@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./informative-text-wrapper.component.scss']
 })
 export class InformativeTextWrapperComponent implements OnInit {
-
-  constructor() { }
+  @Input() sectionTitle: string;
+  @Input() sectionText: string;
+  constructor() {
+    this.sectionTitle = 'No title';
+    this.sectionText = '<p>No text</p>';
+  }
 
   ngOnInit() {
   }

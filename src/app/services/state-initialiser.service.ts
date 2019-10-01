@@ -3,7 +3,7 @@ import { IStateInitialiser } from './interfaces/istate-initialiser';
 import { MenuItemService } from './menu-item.service';
 import { SocialIconsService } from './social-icons.service';
 import { StateService } from './state.service';
-import { MenuItemTitle } from './enums/menuitemtitleenum  copy';
+import { MenuItemTitle } from './enums/menuitemtitleenum';
 import { MenuService } from './menu.service';
 import { MenuItemUrl } from './enums/menuitemurlnum ';
 import { SocialIconTitle } from './enums/socialicontitleenum ';
