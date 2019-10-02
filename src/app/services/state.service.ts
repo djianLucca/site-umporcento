@@ -7,7 +7,6 @@ import { FloatingIconsService } from './floating-icons.service';
 import { SocialIconsService } from './social-icons.service';
 import { MenuService } from './menu.service';
 import { FloatingIconBuilderService } from './floating-icon-builder.service';
-import { PageSectionTitle } from './enums/pagesectiontileenum';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +20,6 @@ export class StateService implements IState {
   socialIcons: SocialIconsService[];
   menu: MenuService;
   floatingIconBuilder: FloatingIconBuilderService;
-  pageSectionTitle: PageSectionTitle;
 
   constructor(now: number, menu: MenuService, socialIcons: SocialIconsService[]) {
     this.floatingIconBuilder = new FloatingIconBuilderService();

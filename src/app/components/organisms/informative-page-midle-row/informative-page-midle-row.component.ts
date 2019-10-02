@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
+import { Page } from 'src/app/services/enums/pageenum';
 
 @Component({
   selector: 'app-informative-page-midle-row',
@@ -7,6 +8,7 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
   styleUrls: ['./informative-page-midle-row.component.scss']
 })
 export class InformativePageMidleRowComponent {
+  @Input() page!: Page;
   @Input() pageLayout!: PageSectionStatus;
   @Input() pageTitle: string;
   svgHeight: string;
