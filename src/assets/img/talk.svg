@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2019 (64-Bit) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="13.6152mm" height="13.6151mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 167.05 167.05"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="7.3801mm" height="7.3799mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 46.47 46.47"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:4.16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
-    .fil0 {fill:none}
+    .fil0 {fill:black;fill-rule:nonzero}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0 str0" d="M141.11 25.93c31.81,31.81 31.81,83.38 0,115.19 -22.26,22.26 -54.21,28.94 -82.28,20.04l-52.94 0 0 -52.94c-8.9,-28.07 -2.23,-60.02 20.04,-82.28 31.81,-31.81 83.38,-31.81 115.18,0z"/>
+  <path class="fil0" d="M39.66 6.81c4.54,4.54 6.81,10.48 6.81,16.43 0,5.95 -2.27,11.89 -6.81,16.43 -3.12,3.12 -6.91,5.17 -10.91,6.14 -4.11,1 -8.43,0.87 -12.48,-0.4l-14.64 0c-0.32,0 -0.58,-0.26 -0.58,-0.58l0 -14.64c-1.27,-4.04 -1.4,-8.37 -0.4,-12.47 0.97,-4 3.02,-7.79 6.14,-10.91 4.54,-4.54 10.48,-6.81 16.43,-6.81 5.95,0 11.89,2.27 16.43,6.81zm-0.82 0.82c-4.31,-4.31 -9.96,-6.47 -15.61,-6.47 -5.65,0 -11.3,2.16 -15.61,6.47 -2.97,2.97 -4.92,6.57 -5.84,10.37 -0.96,3.92 -0.82,8.06 0.4,11.93 0.02,0.06 0.03,0.12 0.03,0.19l0 14.15 14.15 0c0.06,0 0.12,0.01 0.17,0.03 3.87,1.23 8.02,1.36 11.94,0.41 3.8,-0.92 7.4,-2.87 10.36,-5.84 4.31,-4.31 6.47,-9.96 6.47,-15.61 0,-5.65 -2.16,-11.3 -6.47,-15.61z"/>
  </g>
 </svg>
