@@ -1,7 +1,7 @@
 #Informative_wrapper{
-    padding: 10%;
-    padding-top: 7%;
-    padding-bottom: 3%;
+    padding: 192px;
+    padding-top: 134px;
+    padding-bottom: 57px;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -21,6 +21,9 @@
 }
 app-informative-page-midle-row{
     height: 650px;
+    width: 100%;
+}
+app-icon-page-bottom-row{
     width: 100%;
 }
 app-icon-page-top-row{

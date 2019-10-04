@@ -11,19 +11,33 @@ export class IconPageMidleRowComponent implements OnChanges {
   @Input() pageLayout: PageSectionStatus;
   @Input() floatingIcons: FloatingIconsService[];
   imageSrc: string;
-  svgHeight: string;
+  svgHeightEnd: string;
+  svgHeightStart: string;
+  elementXtransformEnd: number;
+  svgWidthEnd: number;
   constructor() {
     this.imageSrc = '/assets/img/selo.jpg';
     this.pageLayout = PageSectionStatus.Night;
     this.floatingIcons = [];
-    this.svgHeight = this.getSvgHeightBasedOnScreenSize(window.outerWidth);
+    this.svgHeightEnd = this.getSvgHeightBasedOnScreenSizeEnd(window.outerWidth);
+    this.svgWidthEnd = this.getsvgWidthEndBasedOnScreen(window.outerWidth);
+    this.svgHeightStart = this.getSvgHeightBasedOnScreenSizeStart(window.outerWidth);
+    this.elementXtransformEnd = this.getElementXtransformEndBasedOnScreen(window.outerWidth);
   }
 
-  getSvgHeightBasedOnScreenSize(screenWidth: number): string {
-    if (screenWidth >= 3000) {
-      return '98.6%';
-    }
-    return '100%';
+  getElementXtransformEndBasedOnScreen(screenWidth: number): number {
+    return (54 * screenWidth) / 1920;
+  }
+  getsvgWidthEndBasedOnScreen(screenWidth: number): number {
+    return (55 * screenWidth) / 1920;
+  }
+  getSvgHeightBasedOnScreenSizeEnd(screenWidth: number): string {
+    const value = (682 * screenWidth) / 1920;
+    return `${value}px`;
+  }
+  getSvgHeightBasedOnScreenSizeStart(screenWidth: number): string {
+    const value = (650 * screenWidth) / 1920;
+    return `${value}px`;
   }
 
   ngOnChanges() {

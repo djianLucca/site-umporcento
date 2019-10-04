@@ -79,4 +79,20 @@ div.contianer_icon.afternoon > .floating_icon__bg{
     div.contianer_icon.afternoon > .floating_icon__bg{
         margin-left: 42%
     }
+
+    .contianer_icon{
+        height: 100%;
+        display: flex;
+        label{
+            align-self: center;
+            margin-left: 0px;
+        }
+    }
+
+    #floating_icons_0__icon{
+        order: 0;
+        flex-grow: 2;
+        margin-top:13%;
+        margin-left: 4%;
+    }
 }

@@ -4,7 +4,7 @@
         [elementXTransform]=27
         [y]=36
         [elementHeight]="'100%'"
-        [svgHeight]="this.svgHeight"
+        [svgHeight]="this.svgHeightStart"
         [elementWidth]= 1
         [color]="this.changeLineColorBasedOnPageSection()"
     ></app-svg-tag>
@@ -16,11 +16,11 @@
         [pageLayout]="this.pageLayout"
     ></app-menu-icon>
     <app-svg-tag
-        [svgWidth]=55
-        [elementXTransform]=27
+        [svgWidth]="this.svgWidthEnd"
+        [elementXTransform]="this.elementXtransformEnd"
         [y]=0
         [elementHeight]="'100%'"
-        [svgHeight]="this.svgHeight"
+        [svgHeight]="this.svgHeightEnd"
         [elementWidth]= 1
         id="endLineSvg"
         [color]="this.changeLineColorBasedOnPageSection()"
