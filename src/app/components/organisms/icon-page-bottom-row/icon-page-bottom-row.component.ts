@@ -24,7 +24,7 @@ export class IconPageBottomRowComponent implements OnInit {
     this.svgHeight = 1;
     this.elementYTransform = 0;
     this.elementXStart = 28;
-    this.elementXend = this.getXEndBasedOnScreenSize(window.outerWidth);
+    this.elementXend = 21;
   }
 
   ngOnInit() {

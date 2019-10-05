@@ -2,3 +2,37 @@ svg{
     width: calc(100% - 100px);
     margin-left: 45px;
 }
+.midle-svg{
+    width: 55px;
+    height: calc(100% - 45px);
+    margin-left: 0px;
+    margin-top: 45px;
+}
+.midle-svg.end{
+    height: 100%;
+    margin-top: 0;
+}
+.bottom_svg__line{
+    width: 100%;
+    margin-left: 0px;
+}
+#bottom_svg_line__end{
+    width: 100%;
+    margin-left: 0px;
+}
+@media only screen and (max-width : 1366px) {
+    .midle-svg.start{
+        //height: 399px;
+        height: 89%;
+        margin-top: 55px;
+        margin-left: 0px;    
+    }
+    .midle-svg.end{
+        height: 486px;
+    }
+}
+@media only screen and (min-width : 3000px) {
+    .midle-svg{
+        height:  1150px;       
+    }
+}

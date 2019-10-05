@@ -5,8 +5,10 @@
         [y]=36
         [elementHeight]="'100%'"
         [svgHeight]="this.svgHeight"
+        [svgWidth]="this.svgWidth"
         [elementWidth]= 1
         [color]="this.changeLineColorBasedOnPageSection()"
+        [class]="'midle-svg'"
     ></app-svg-tag>
     <app-informative-text-wrapper
         [page]="this.page"
@@ -29,5 +31,6 @@
         [elementWidth]= 1
         id="endLineSvg"
         [color]="this.changeLineColorBasedOnPageSection()"
+        [class]="'midle-svg'"
     ></app-svg-tag>
 </div>

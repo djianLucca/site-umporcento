@@ -16,6 +16,7 @@ export class SvgTagComponent implements OnInit {
   @Input() elementHeight: string;
   @Input() elementYTransform: number;
   @Input() elementXTransform: number;
+  @Input() class: string;
   gTransform: string | undefined;
 
   constructor() {
@@ -30,6 +31,7 @@ export class SvgTagComponent implements OnInit {
     this.elementYTransform = 0;
     this.elementXTransform = 0;
     this.elementYTransform = Number(this.svgHeight) / 2;
+    this.class = '';
   }
 
   ngOnInit() {
