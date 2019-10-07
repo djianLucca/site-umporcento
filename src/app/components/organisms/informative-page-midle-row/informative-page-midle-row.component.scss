@@ -6,6 +6,15 @@
     display: flex;
     justify-content: space-between;
 }
+#midle_page_content__wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    max-height: 425px;
+    padding: 1em;
+    margin: 1em;
+    margin-top: 0px;
+}
 app-menu-icon{
    margin-left: auto;
 }
@@ -15,8 +24,10 @@ app-menu-icon{
 app-informative-text-wrapper{
     width: 40%;
 }
-
-@media only screen and (max-width : 1280px) {
+app-image-slider{
+    width: 100%;
+}
+@media only screen and (max-width : 1366px) {
     #midle_content__wrapper{
         height: 450px;        
     }

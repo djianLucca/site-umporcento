@@ -32,6 +32,7 @@ import { MenuIconComponent } from './components/atoms/menu-icon/menu-icon.compon
 import { InformativeTextWrapperComponent } from './components/molecules/informative-text-wrapper/informative-text-wrapper.component';
 import { ImageSliderComponent } from './components/molecules/image-slider/image-slider.component';
 import { DownloadBtnComponent } from './components/atoms/download-btn/download-btn.component';
+import { InformativeNavigationComponent } from './components/molecules/informative-navigation/informative-navigation.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { DownloadBtnComponent } from './components/atoms/download-btn/download-b
     MenuIconComponent,
     InformativeTextWrapperComponent,
     ImageSliderComponent,
-    DownloadBtnComponent
+    DownloadBtnComponent,
+    InformativeNavigationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

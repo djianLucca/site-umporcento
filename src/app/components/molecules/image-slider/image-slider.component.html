@@ -1,1 +1,7 @@
-<ng-image-slider [images]="this.imageObject" [imageSize]='this.imageSize'  #nav></ng-image-slider>
+<div id="image_slider__wrapper">
+    <app-icon-tag (click)="prevImageClick()" [name]="'angle-left'"></app-icon-tag>
+    <div id='image_slider_image__wrapper'>
+        <ng-image-slider [showArrow]=false [images]="this.imageObject" [imageSize]='this.imageSize'  #nav></ng-image-slider>
+    </div>
+    <app-icon-tag (click)="nextImageClick()" [name]="'angle-right'"></app-icon-tag>
+</div>
