@@ -12,4 +12,8 @@ export class DownloadBtnComponent implements OnInit {
   ngOnInit() {
   }
 
+  downloadFile() {
+    window.open('/assets/pdf/BUUSSOLA_2019.pdf', '_blank');
+  }
+
 }
