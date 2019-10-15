@@ -10,7 +10,7 @@
             <app-load-svg
                 [svg]="item.image"
                 [class]="this.pageStatus + ' floatingIcon'" 
-                routerLink="/manha/bussola"
+                routerLink={{this.getRouterLinkPasedOnLabel(item.title)}}
             ></app-load-svg>
         </div>
         <label [ngStyle]="item.labelStyle">{{item.title}}</label>

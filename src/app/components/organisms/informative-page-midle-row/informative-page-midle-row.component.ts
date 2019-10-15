@@ -1,23 +1,29 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { Page } from 'src/app/services/enums/pageenum';
+import { FloatingIconTitle } from 'src/app/services/enums/floatingicontitleenum';
 
 @Component({
   selector: 'app-informative-page-midle-row',
   templateUrl: './informative-page-midle-row.component.html',
   styleUrls: ['./informative-page-midle-row.component.scss']
 })
-export class InformativePageMidleRowComponent {
+export class InformativePageMidleRowComponent implements OnInit {
   @Input() page!: Page;
   @Input() pageLayout!: PageSectionStatus;
   @Input() pageTitle: string;
+  imageObjectsSlider: Object[]
   svgHeight: string;
 
   constructor() {
     this.svgHeight = this.getSvgHeightBasedOnScreenSize(window.outerWidth);
     this.pageTitle = 'No Title';
+    this.imageObjectsSlider = [];
   }
-
+  ngOnInit() {
+    this.imageObjectsSlider = this.getImagesBasedOnPage(this.page);
+  }
+  
   getSvgHeightBasedOnScreenSize(screenWidth: number): string {
     if (screenWidth >= 3000) {
       return '98.6%';
@@ -32,4 +38,37 @@ export class InformativePageMidleRowComponent {
     return 'rgba(256,256,256, 1)';
   }
 
+  getImagesBasedOnPage(page: Page): Array<Object>{
+    switch (page) {
+      case Page.Compass:
+        return this.getCompassImages();
+    }
+
+    return [];
+  }
+
+  getPageLabelBasedOnPage(page: Page): string{
+    switch (page) {
+      case Page.Compass:
+        return FloatingIconTitle.Compass;
+    }
+    return '';
+  }
+
+  getCompassImages(): Array<Object>{
+    return [{
+      image: 'assets/img/image_1.jpg',
+      thumbImage: 'assets/img/image_1.jpg',
+      alt: 'alt of image',
+    }, {
+      image: 'assets/img/image_2.jpg',
+      thumbImage: 'assets/img/image_2.jpg',
+      alt: 'Image alt'
+    }, {
+      image: 'assets/img/image_3.jpg',
+      thumbImage: 'assets/img/image_3.jpg',
+      alt: 'Image alt'
+    }
+    ];
+  }
 }
