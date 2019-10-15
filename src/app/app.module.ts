@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { AppComponent } from './app.component';
 import { VideoWrapperComponent } from './components/molecules/video-wrapper/video-wrapper.component';
@@ -25,6 +26,13 @@ import { PaletsPageStatusWrapperComponent } from './components/molecules/palets-
 import { SocialIconsWrapperComponent } from './components/molecules/social-icons-wrapper/social-icons-wrapper.component';
 import { LoadSvgComponent } from './components/atoms/load-svg/load-svg.component';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
+import { InformativePageContentComponent } from './components/templates/informative-page-content/informative-page-content.component';
+import { InformativePageMidleRowComponent } from './components/organisms/informative-page-midle-row/informative-page-midle-row.component';
+import { MenuIconComponent } from './components/atoms/menu-icon/menu-icon.component';
+import { InformativeTextWrapperComponent } from './components/molecules/informative-text-wrapper/informative-text-wrapper.component';
+import { ImageSliderComponent } from './components/molecules/image-slider/image-slider.component';
+import { DownloadBtnComponent } from './components/atoms/download-btn/download-btn.component';
+import { InformativeNavigationComponent } from './components/molecules/informative-navigation/informative-navigation.component';
 
 @NgModule({
   declarations: [
@@ -46,14 +54,22 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
     PaletsPageStatusWrapperComponent,
     SocialIconsWrapperComponent,
     LoadSvgComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    InformativePageContentComponent,
+    InformativePageMidleRowComponent,
+    MenuIconComponent,
+    InformativeTextWrapperComponent,
+    ImageSliderComponent,
+    DownloadBtnComponent,
+    InformativeNavigationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     AngularFontAwesomeModule,
     HttpClientModule,
-    InlineSVGModule.forRoot()
+    InlineSVGModule.forRoot(),
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

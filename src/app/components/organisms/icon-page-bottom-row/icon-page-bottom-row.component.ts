@@ -10,17 +10,21 @@ export class IconPageBottomRowComponent implements OnInit {
   @Input() pageSection!: PageSectionStatus;
   lineWidthStart: string;
   lineWidthEnd: string;
+  svgWidthStart: string;
+  svgWidthEnd: string;
   svgHeight: number;
   elementXStart: number;
   elementXend: number;
   elementYTransform: number;
   constructor() {
-    this.lineWidthStart = '88%';
+    this.lineWidthStart = this.getLineWidthBasedOnScreenSizeStart(window.outerWidth);
     this.lineWidthEnd = this.getLineWidthBasedOnScreenSizeEnd(window.outerWidth);
+    this.svgWidthStart = this.getsvgWidthBasedOnScreenSizeStart(window.outerWidth);
+    this.svgWidthEnd = this.getsvgWidthBasedOnScreenSizeEnd(window.outerWidth);
     this.svgHeight = 1;
     this.elementYTransform = 0;
     this.elementXStart = 28;
-    this.elementXend = this.getXEndBasedOnScreenSize(window.outerWidth);
+    this.elementXend = 21;
   }
 
   ngOnInit() {
@@ -34,29 +38,29 @@ export class IconPageBottomRowComponent implements OnInit {
   }
 
   getXEndBasedOnScreenSize(screenWidth: number): number {
-    if (screenWidth >= 3000) {
-      return 150;
-
-    }
-    return 68;
+    const value = (73 * screenWidth) / 1542;
+    return value;
   }
 
-  getLineWidthBasedOnScreenSize(screenWidth: number): string {
-    if (screenWidth <= 1280) {
-      return '94%';
 
-    }
-    return '96.3%';
+  getLineWidthBasedOnScreenSizeStart(screenWidth: number): string {
+    const value = (500 * screenWidth) / 1542;
+    return `${value}px`;
+  }
+
+  getsvgWidthBasedOnScreenSizeStart(screenWidth: number): string {
+    const value = (573 * screenWidth) / 1542;
+    return `${value}px`;
   }
 
   getLineWidthBasedOnScreenSizeEnd(screenWidth: number): string {
-    if (screenWidth <= 1280) {
-      return '94%';
+    const value = (577 * screenWidth) / 1542;
+    return `${value}px`;
+  }
 
-    } else if (screenWidth >= 3000) {
-      return '98.2%';
-    }
-    return '96.3%';
+  getsvgWidthBasedOnScreenSizeEnd(screenWidth: number): string {
+    const value = (582 * screenWidth) / 1542;
+    return `${value}px`;
   }
 
 }

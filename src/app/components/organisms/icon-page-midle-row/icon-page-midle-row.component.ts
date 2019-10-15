@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { FloatingIconsService } from 'src/app/services/floating-icons.service';
 
@@ -7,36 +7,40 @@ import { FloatingIconsService } from 'src/app/services/floating-icons.service';
   templateUrl: './icon-page-midle-row.component.html',
   styleUrls: ['./icon-page-midle-row.component.scss']
 })
-export class IconPageMidleRowComponent implements OnInit, OnChanges {
+export class IconPageMidleRowComponent implements OnChanges {
   @Input() pageLayout: PageSectionStatus;
   @Input() floatingIcons: FloatingIconsService[];
-  menuIconName: string;
-  menuIconId: string;
-  menuIconClass: string;
   imageSrc: string;
-  svgHeight: string;
-  menuIconClassBuilt!: string;
+  svgHeightEnd: string;
+  svgHeightStart: string;
+  elementXtransformEnd: number;
+  svgWidthEnd: number;
   constructor() {
-    this.menuIconName = 'bars';
-    this.menuIconId = 'menuIcon';
-    this.menuIconClass = 'menuIcon';
     this.imageSrc = '/assets/img/selo.jpg';
     this.pageLayout = PageSectionStatus.Night;
     this.floatingIcons = [];
-    this.svgHeight = this.getSvgHeightBasedOnScreenSize(window.outerWidth);
+    this.svgHeightEnd = this.getSvgHeightBasedOnScreenSizeEnd(window.outerWidth);
+    this.svgWidthEnd = this.getsvgWidthEndBasedOnScreen(window.outerWidth);
+    this.svgHeightStart = this.getSvgHeightBasedOnScreenSizeStart(window.outerWidth);
+    this.elementXtransformEnd = this.getElementXtransformEndBasedOnScreen(window.outerWidth);
   }
 
-  getSvgHeightBasedOnScreenSize(screenWidth: number): string {
-    if (screenWidth >= 3000) {
-      return '98.6%';
-    }
-    return '100%';
+  getElementXtransformEndBasedOnScreen(screenWidth: number): number {
+    return (54 * screenWidth) / 1920;
+  }
+  getsvgWidthEndBasedOnScreen(screenWidth: number): number {
+    return (55 * screenWidth) / 1920;
+  }
+  getSvgHeightBasedOnScreenSizeEnd(screenWidth: number): string {
+    const value = (682 * screenWidth) / 1920;
+    return `${value}px`;
+  }
+  getSvgHeightBasedOnScreenSizeStart(screenWidth: number): string {
+    const value = (650 * screenWidth) / 1920;
+    return `${value}px`;
   }
 
-  ngOnInit() {
-  }
   ngOnChanges() {
-    this.menuIconClassBuilt = this.menuIconClass + this.pageLayout;
   }
 
   changeLineColorBasedOnPageSection(): string {

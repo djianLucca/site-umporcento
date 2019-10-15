@@ -1,0 +1,36 @@
+<div id="midle_content__wrapper">
+    <app-svg-tag
+        [elementHeight]="'100%'"
+        [elementWidth]= 1
+        [elementXTransform]=27
+        [svgWidth]="'55px'"
+        [ngClass]="'side_svg'"
+        [color]="this.changeLineColorBasedOnPageSection()"
+        [class]="'midle-svg start'"
+    ></app-svg-tag>
+    <div id="midle_page_content__wrapper">
+        <app-informative-text-wrapper
+            [page]="this.page"
+        ></app-informative-text-wrapper>
+        <div id="slider_download__wrapper">
+            <app-informative-navigation
+                [title]="'Bussola'"
+            >/</app-informative-navigation>
+            <app-image-slider></app-image-slider>
+            <app-download-btn></app-download-btn>
+        </div>
+    </div>
+    <app-menu-icon
+        [pageLayout]="this.pageLayout"
+    ></app-menu-icon>
+    <app-svg-tag
+        [elementHeight]="'100%'"
+        [elementWidth]= 1
+        [svgWidth]=1
+        [x]=54
+        [ngClass]="'side_svg'"
+        id="endLineSvg"
+        [color]="this.changeLineColorBasedOnPageSection()"
+        [class]="'midle-svg end'"
+    ></app-svg-tag>
+</div>

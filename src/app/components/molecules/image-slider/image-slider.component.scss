@@ -1,0 +1,26 @@
+ng-image-slider{
+    width: 100%;
+}
+#image_slider__wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+}
+app-icon-tag{
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    color: #CCCCCC;
+}
+#image_slider_image__wrapper{
+    margin-top: 1em;
+    width: 569px;
+}
+
+@media only screen and (max-width : 1366px) {
+    #image_slider_image__wrapper{
+        width: 390px;
+    }    
+}
