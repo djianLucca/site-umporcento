@@ -27,6 +27,14 @@ export class FloatingIconsWrapperComponent implements OnChanges {
   ngOnChanges() {
     this.defaultClassBuilt = this.defaultClass + ' ' + this.pageStatus;
   }
+
+  getRouterLinkPasedOnLabel(label: string){
+    switch (label) {
+      case 'Bússola':
+        return '/manha/bussola'
+    }
+    return '/';
+  }
   toggleLabel(image: FloatingIconImage, value: string) {
     this.floatingIcons.forEach(element => {
       if (image === element.image) {
@@ -34,4 +42,5 @@ export class FloatingIconsWrapperComponent implements OnChanges {
       }
     });
   }
+
 }
