@@ -34,6 +34,7 @@ import { ImageSliderComponent } from './components/molecules/image-slider/image-
 import { DownloadBtnComponent } from './components/atoms/download-btn/download-btn.component';
 import { InformativeNavigationComponent } from './components/molecules/informative-navigation/informative-navigation.component';
 import { TimelinePageContentComponent } from './components/templates/timeline-page-content/timeline-page-content.component';
+import { TimelinePageMidleRowComponent } from './components/organisms/timeline-page-midle-row/timeline-page-midle-row.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { TimelinePageContentComponent } from './components/templates/timeline-pa
     ImageSliderComponent,
     DownloadBtnComponent,
     InformativeNavigationComponent,
-    TimelinePageContentComponent
+    TimelinePageContentComponent,
+    TimelinePageMidleRowComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
