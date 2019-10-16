@@ -32,6 +32,8 @@ export class FloatingIconsWrapperComponent implements OnChanges {
     switch (label) {
       case 'Bússola':
         return '/manha/bussola'
+      case 'Linha do Tempo':
+        return '/tarde/linha-do-tempo'
     }
     return '/';
   }

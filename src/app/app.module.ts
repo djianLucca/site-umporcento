@@ -33,6 +33,7 @@ import { InformativeTextWrapperComponent } from './components/molecules/informat
 import { ImageSliderComponent } from './components/molecules/image-slider/image-slider.component';
 import { DownloadBtnComponent } from './components/atoms/download-btn/download-btn.component';
 import { InformativeNavigationComponent } from './components/molecules/informative-navigation/informative-navigation.component';
+import { TimelinePageContentComponent } from './components/templates/timeline-page-content/timeline-page-content.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { InformativeNavigationComponent } from './components/molecules/informati
     InformativeTextWrapperComponent,
     ImageSliderComponent,
     DownloadBtnComponent,
-    InformativeNavigationComponent
+    InformativeNavigationComponent,
+    TimelinePageContentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

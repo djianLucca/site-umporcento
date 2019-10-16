@@ -6,9 +6,11 @@
 [floatingIcons]="this.state.floatingIcons"
 [socialIcons]="this.state.socialIcons"
 ></app-icon-page-content>
-<app-informative-page-content *ngIf="!this.isFloatingIconPage()"
+<app-informative-page-content *ngIf="this.isInformativePage()"
     [pageSection]="this.morningPage"
     [socialIcons]="this.state.socialIcons"
     [page]="this.state.page"
 ></app-informative-page-content>
+<app-timeline-page-content *ngIf="this.isTimelinePage()">
+</app-timeline-page-content>
 <router-outlet></router-outlet>
