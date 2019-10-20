@@ -9,20 +9,21 @@
 #midle_page_content__wrapper{
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    max-height: 525px;
+    max-height: 100%;
     padding: 1em;
     margin: 1em;
     margin-top: 0px;
+    width: 100%;
 }
 app-menu-icon{
    margin-left: auto;
 }
-#slider_download__wrapper{
-    width: 60%;
+app-timeline-wrapper{
+    width: 85%;
 }
-app-informative-text-wrapper{
-    width: 40%;
+app-timeline-icons-menu{
+    width: 15%;
+    padding-top: 10%;
 }
 app-image-slider{
     width: 100%;
