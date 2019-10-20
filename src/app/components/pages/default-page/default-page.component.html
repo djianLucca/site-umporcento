@@ -14,6 +14,9 @@
 <app-timeline-page-content *ngIf="this.isTimelinePage()"
     [pageSection]="this.morningPage"
     [socialIcons]="this.state.socialIcons"
+    [timelineYears]="this.state.timelineYears"
+    [tinelineItems]="this.state.timelineItems"
+    [updateApi]="this.updateTimeline.bind(this)"
 >
 </app-timeline-page-content>
 <router-outlet></router-outlet>

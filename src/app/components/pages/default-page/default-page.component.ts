@@ -6,6 +6,7 @@ import { StateInitialiserService } from 'src/app/services/state-initialiser.serv
 import { InternalRoutesService } from 'src/app/services/internal-routes.service';
 import { InternalRoutesHandlerService } from 'src/app/services/internal-routes-handler.service';
 import { Page } from 'src/app/services/enums/pageenum';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-default-page',
@@ -17,9 +18,9 @@ export class DefaultPageComponent implements OnInit {
   stateManipulator: StateManipulatorService;
   internalRouter: InternalRoutesHandlerService;
   morningPage: PageSectionStatus;
-  constructor() {
+  constructor(private http: HttpClient) {
     this.state = new StateInitialiserService().getState();
-    this.stateManipulator = new StateManipulatorService(this.state);
+    this.stateManipulator = new StateManipulatorService(this.state, this.http);
     this.morningPage = PageSectionStatus.Morning;
     this.internalRouter = new InternalRoutesHandlerService([
       new InternalRoutesService('/manha', this.sitchToMorning.bind(this)),
@@ -32,6 +33,10 @@ export class DefaultPageComponent implements OnInit {
 
   ngOnInit() {
     this.internalRouter.takeAction(window.location.pathname);
+  }
+
+  updateTimeline(){
+    this.stateManipulator.setTimelineInitalStatus()
   }
 
   isFloatingIconPage(): boolean {

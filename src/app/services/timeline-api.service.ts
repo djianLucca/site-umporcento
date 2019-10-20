@@ -10,14 +10,13 @@ import { TimelineItemService } from './timeline-item.service';
 })
 export class TimelineApiService implements ItimelineApi {
   apiUrl: string;
-  httpService: HttpClient;
 
-  constructor(httpService: HttpClient) {
+  constructor(private httpService: HttpClient) {
     this.apiUrl = "http://localhost:3000";
-    this.httpService = httpService;
   }
 
   getYears(): Observable<YearService[]> {
+    console.log('teste');
     return this.httpService.get<YearService[]>(this.apiUrl + "/get_years");
   }
   getItems(): Observable<TimelineItemService[]> {
