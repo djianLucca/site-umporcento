@@ -7,6 +7,8 @@ import { FloatingIconsService } from './floating-icons.service';
 import { SocialIconsService } from './social-icons.service';
 import { MenuService } from './menu.service';
 import { FloatingIconBuilderService } from './floating-icon-builder.service';
+import { YearService } from './year.service';
+import { TimelineItemService } from './timeline-item.service';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +22,8 @@ export class StateService implements IState {
   socialIcons: SocialIconsService[];
   menu: MenuService;
   floatingIconBuilder: FloatingIconBuilderService;
+  timelineYears: YearService[];
+  timelineItems: TimelineItemService[];
 
   constructor(now: number, menu: MenuService, socialIcons: SocialIconsService[]) {
     this.floatingIconBuilder = new FloatingIconBuilderService();
@@ -30,6 +34,8 @@ export class StateService implements IState {
     this.floatingIcons = this.getFloatingIconsBasedOnPage(this.page);
     this.menu = menu;
     this.socialIcons = socialIcons;
+    this.timelineItems = [];
+    this.timelineYears = [];
   }
 
   getPageSectionBasedOnPage(page: Page): PageSectionStatus {

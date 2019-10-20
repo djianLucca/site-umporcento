@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
@@ -78,6 +78,7 @@ import { TimelineWrapperComponent } from './components/organisms/timeline-wrappe
     AppRoutingModule,
     AngularFontAwesomeModule,
     HttpClientModule,
+    HttpClient,
     InlineSVGModule.forRoot(),
     NgImageSliderModule
   ],
