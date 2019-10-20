@@ -1,0 +1,8 @@
+<div class="timeline_menu_icon__wrapper"  
+(mouseenter)="this.toggleLabel()"
+(mouseleave)="this.toggleLabel()">
+    <div  class="palet__wrapper {{this.isOn ? 'on' : 'off'}} {{this.class}}">
+        <div class="circle" id={{this.id}}>&nbsp;</div>
+    </div>
+    <label [ngStyle]="this.labelStyle" for="">{{this.label}}</label>
+</div>

@@ -1,0 +1,45 @@
+.timeline_menu_icon__wrapper{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    label{
+        margin-left: 10px;
+    }
+
+    .circle{
+        border: 3px solid #fff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    #stamp{
+        background-color: #837DBA;
+    }
+
+    #mensage{
+        background-color: #374A89;
+    }
+
+    #talks{
+        background-color: #60B6E6;
+    }
+
+    #network{
+        background-color: #8FC96B;
+    }
+
+    #colab{
+        background-color: #FFC62A;
+    }
+
+    #partnnership{
+        background-color: #F47D35;
+    }
+
+    #projects{
+        background-color: #d63135;
+    }
+}

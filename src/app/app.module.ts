@@ -33,6 +33,11 @@ import { InformativeTextWrapperComponent } from './components/molecules/informat
 import { ImageSliderComponent } from './components/molecules/image-slider/image-slider.component';
 import { DownloadBtnComponent } from './components/atoms/download-btn/download-btn.component';
 import { InformativeNavigationComponent } from './components/molecules/informative-navigation/informative-navigation.component';
+import { TimelinePageContentComponent } from './components/templates/timeline-page-content/timeline-page-content.component';
+import { TimelinePageMidleRowComponent } from './components/organisms/timeline-page-midle-row/timeline-page-midle-row.component';
+import { TimelineIconsMenuComponent } from './components/molecules/timeline-icons-menu/timeline-icons-menu.component';
+import { TimelineMenuIconComponent } from './components/atoms/timeline-menu-icon/timeline-menu-icon.component';
+import { TimelineWrapperComponent } from './components/organisms/timeline-wrapper/timeline-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +66,12 @@ import { InformativeNavigationComponent } from './components/molecules/informati
     InformativeTextWrapperComponent,
     ImageSliderComponent,
     DownloadBtnComponent,
-    InformativeNavigationComponent
+    InformativeNavigationComponent,
+    TimelinePageContentComponent,
+    TimelinePageMidleRowComponent,
+    TimelineIconsMenuComponent,
+    TimelineMenuIconComponent,
+    TimelineWrapperComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
