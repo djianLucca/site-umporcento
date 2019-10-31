@@ -16,5 +16,4 @@ export class TimelinePageMidleRowComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

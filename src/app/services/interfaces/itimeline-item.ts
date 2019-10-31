@@ -10,6 +10,7 @@ export interface ITimelineItem {
     text: string;
     type: TimelineItemType[];
     flag: TimelineItemFlag | undefined;
-    position: 0 | 1 | 2;
     idYear: number;
+    linePosition: -2 | -1 | 0 | 1 | 2;
+    rowPosition: -2 | -1 | 0 | 1 | 2;
 }

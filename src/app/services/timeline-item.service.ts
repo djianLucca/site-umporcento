@@ -15,8 +15,9 @@ export class TimelineItemService implements ITimelineItem {
   text: string;
   type: TimelineItemType[];
   flag: TimelineItemFlag | undefined;
-  position: 0 | 1 | 2;
   idYear: number;
+  linePosition: -2 | -1 | 0 | 1 | 2;
+  rowPosition: -2 | -1 | 0 | 1 | 2;
 
   constructor(
     id: number,
@@ -26,8 +27,9 @@ export class TimelineItemService implements ITimelineItem {
     text: string,
     type: TimelineItemType[],
     flag: TimelineItemFlag | undefined,
-    position: 0 | 1 | 2,
-    idYear: number
+    idYear: number,
+    linePosition: -2 | -1 | 0 | 1 | 2,
+    rowPosition: -2 | -1 | 0 | 1 | 2
   ) {
     this.id = id;
     this.images = images;
@@ -36,7 +38,8 @@ export class TimelineItemService implements ITimelineItem {
     this.text = text;
     this.type = type;
     this.flag = flag;
-    this.position = position;
+    this.linePosition = linePosition;
+    this.rowPosition = rowPosition;
     this.idYear = idYear;
   }
 }

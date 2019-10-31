@@ -16,7 +16,6 @@ export class TimelineApiService implements ItimelineApi {
   }
 
   getYears(): Observable<YearService[]> {
-    console.log('teste');
     return this.httpService.get<YearService[]>(this.apiUrl + "/get_years");
   }
   getItems(): Observable<TimelineItemService[]> {

@@ -34,7 +34,6 @@ export class DefaultPageComponent implements OnInit {
   ngOnInit() {
     this.internalRouter.takeAction(window.location.pathname);
   }
-
   updateTimeline(){
     this.stateManipulator.setTimelineInitalStatus()
   }
