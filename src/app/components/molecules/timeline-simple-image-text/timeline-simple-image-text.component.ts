@@ -16,8 +16,12 @@ export class TimelineSimpleImageTextComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.timelineIconType = '/assets/img/timeline/icons/'+ this.timelineItem.type + '.jpg';
+    this.timelineIconType = '/assets/img/timeline/'+ this.timelineItem.type + '.jpg';
     this.timelineItemsImages = JSON.parse(this.timelineItem.images);
+  }
+
+  ecodeToUrl(text:string):string{
+    return encodeURI(text);
   }
 
 }

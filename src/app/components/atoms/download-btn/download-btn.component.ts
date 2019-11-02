@@ -24,7 +24,7 @@ export class DownloadBtnComponent implements OnInit {
   getFileBasedOnPage(page: Page): string{
     switch (page) {
       case Page.Compass:
-        return '/assets/pdf/BUUSSOLA_2019.pdf';
+        return '/assets/pdf/BUSSOLA_2019.pdf';
     }
     return '';
   }
