@@ -42,10 +42,8 @@ export class TimelineService implements ITimeline {
   _isolateItemByRow(items: TimelineItemService[], maxRow: number):TimelineItemService[][]{
     let tempArray = [];
     let result = [];
-    console.log('_isolateItemByRow1', items, 'max', maxRow);
     for (let index = 0; index <= maxRow; index++) {
       tempArray = items.filter((item)=> item.rowPosition === index);
-      console.log('_isolateItemByRow2', tempArray, index);
       if(tempArray.length > 0){
         result.push(this.orderItemsByLine(tempArray));
       }

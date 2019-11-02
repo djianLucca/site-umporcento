@@ -4,7 +4,7 @@ import { TimelineItemFlag } from '../enums/timelineitemflag';
 
 export interface ITimelineItem {
     id: number;
-    images: string[];
+    images: string;
     style: TimelineItemStyle;
     title: string;
     text: string;

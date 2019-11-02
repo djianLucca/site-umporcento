@@ -1,4 +1,9 @@
 <div id='timeline_wrapper'>
+    <div *ngIf="this.testItem !== undefined">
+        <app-timeline-simple-image-text 
+            [timelineItem]=this.testItem
+        ></app-timeline-simple-image-text>
+    </div>
     <div *ngFor="let year of this.timelineYears;index as i" >
         {{year.year}}
     </div>

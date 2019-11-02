@@ -9,7 +9,7 @@ import { TimelineItemFlag } from "./enums/timelineitemflag";
 })
 export class TimelineItemService implements ITimelineItem {
   id: number;
-  images: string[];
+  images: string;
   style: TimelineItemStyle;
   title: string;
   text: string;
@@ -21,7 +21,7 @@ export class TimelineItemService implements ITimelineItem {
 
   constructor(
     id: number,
-    images: string[],
+    images: string,
     style: TimelineItemStyle,
     title: string,
     text: string,
