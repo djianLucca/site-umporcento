@@ -1,3 +1,4 @@
 export enum TimelineItemType {
-    RecivedMessage = "Mensagem recebida"
+    RecivedMessage = "Mensagem recebida",
+    Project="project"
 }

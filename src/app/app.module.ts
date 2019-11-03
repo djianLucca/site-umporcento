@@ -39,6 +39,8 @@ import { TimelineIconsMenuComponent } from './components/molecules/timeline-icon
 import { TimelineMenuIconComponent } from './components/atoms/timeline-menu-icon/timeline-menu-icon.component';
 import { TimelineWrapperComponent } from './components/organisms/timeline-wrapper/timeline-wrapper.component';
 import { TimelineSimpleImageTextComponent } from './components/molecules/timeline-simple-image-text/timeline-simple-image-text.component';
+import { TimelineSimpleImageLeftTextComponent } from './components/molecules/timeline-simple-image-left-text/timeline-simple-image-left-text.component';
+import { TimelineItemIconsWrapperComponent } from './components/molecules/timeline-item-icons-wrapper/timeline-item-icons-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { TimelineSimpleImageTextComponent } from './components/molecules/timelin
     TimelineIconsMenuComponent,
     TimelineMenuIconComponent,
     TimelineWrapperComponent,
-    TimelineSimpleImageTextComponent
+    TimelineSimpleImageTextComponent,
+    TimelineSimpleImageLeftTextComponent,
+    TimelineItemIconsWrapperComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

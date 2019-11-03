@@ -8,15 +8,14 @@ import { TimelineItemService } from 'src/app/services/timeline-item.service';
 })
 export class TimelineSimpleImageTextComponent implements OnInit {
   @Input() timelineItem!: TimelineItemService;
-  timelineIconType: string;
+  timelineIconType: string[];
   timelineItemsImages: string[];
   constructor() {
-    this.timelineIconType = '';
+    this.timelineIconType = [];
     this.timelineItemsImages = [];
   }
 
   ngOnInit() {
-    this.timelineIconType = '/assets/img/timeline/'+ this.timelineItem.type + '.jpg';
     this.timelineItemsImages = JSON.parse(this.timelineItem.images);
   }
 

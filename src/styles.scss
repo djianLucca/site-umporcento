@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap');
 body{
     margin: 0px;
     overflow: hidden;
-    font-family: Helvetica, Arial, Sans-Serif;
+    font-family: 'Ubuntu', Helvetica, Sans-Serif;
 }
 #floating_icons_2__icon > div:nth-child(1) > app-load-svg:nth-child(1) > div:nth-child(1) > svg:nth-child(1) > g:nth-child(2) > path,
 #floating_icons_4__icon > div:nth-child(1) > app-load-svg:nth-child(1) > div:nth-child(1) > svg:nth-child(1) > g:nth-child(2) > path,

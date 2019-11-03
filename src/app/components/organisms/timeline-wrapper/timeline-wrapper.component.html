@@ -1,10 +1,35 @@
 <div id='timeline_wrapper'>
-    <div *ngIf="this.testItem !== undefined">
-        <app-timeline-simple-image-text 
-            [timelineItem]=this.testItem
-        ></app-timeline-simple-image-text>
-    </div>
-    <div *ngFor="let year of this.timelineYears;index as i" >
-        {{year.year}}
+    <div *ngIf="this.testItem !== undefined" >
+        <div id="timeline_top_year_items__wrapper">
+            <div *ngFor="let year of this.timelineYears">
+                <div *ngFor="let orderedItems of year.orderedItems">
+                    <div *ngFor="let item of orderedItems" id="timeline_top_items__wrapper">
+                        <div *ngIf="item.linePosition < 0" class="row">
+                            <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'"
+                                [timelineItem]=this.item
+                            ></app-timeline-simple-image-text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="timeline_midle_year__wrapper">
+            <div *ngFor="let year of this.timelineYears;index as i" >
+                {{year.year}}
+            </div>
+        </div>
+        <div id="timeline_bottom_year_items__wrapper">
+            <div *ngFor="let year of this.timelineYears">
+                <div *ngFor="let orderedItems of year.orderedItems">
+                    <div *ngFor="let item of orderedItems">
+                        <div *ngIf="item.linePosition > 0">
+                            <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'"
+                                [timelineItem]=this.item
+                            ></app-timeline-simple-image-text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

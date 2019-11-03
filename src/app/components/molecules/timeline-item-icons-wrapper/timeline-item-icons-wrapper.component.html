@@ -1,0 +1,10 @@
+<div *ngIf="this.itemType !== 'none'" class="timeline_item_icons_wrapper">
+        <div *ngFor="let image of this.timelineIconType">
+            <app-image-tag
+                [imgSrc]="image"
+                [imgAlt]="image"
+                [class]="'icon'"
+            >
+            </app-image-tag>
+        </div>
+    </div>
