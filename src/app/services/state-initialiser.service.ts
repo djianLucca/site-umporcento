@@ -45,9 +45,9 @@ export class StateInitialiserService implements IStateInitialiser {
         SocialIconUrl.Instagram
       ),
       new SocialIconsService(
-        SocialIconTitle.Vimeo,
-        SocialIconClass.Vimeo,
-        SocialIconUrl.Vimeo
+        SocialIconTitle.Spotify,
+        SocialIconClass.Spotify,
+        SocialIconUrl.Spotify
       ),
       new SocialIconsService(
         SocialIconTitle.Email,

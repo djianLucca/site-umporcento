@@ -1,6 +1,6 @@
 export enum SocialIconTitle {
     Facebook = 'Facebook',
     Instagram = 'Instagram',
-    Vimeo = 'Vimeo',
+    Spotify = 'spotify',
     Email = 'Email'
 }

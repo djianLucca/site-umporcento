@@ -4,7 +4,7 @@ export enum FloatingIconTitle {
     Compass = 'Bússola',
     Tree = 'Árvore',
     Guardians = 'Guardiões',
-    Magazine = 'Revista 10 anos',
+    Magazine = '10 anos',
     Colab = 'Co.lab',
     Us = 'Nós',
     Stamp = 'Selo',
