@@ -12,7 +12,7 @@ export class TimelineApiService implements ItimelineApi {
   apiUrl: string;
 
   constructor(private httpService: HttpClient) {
-    this.apiUrl = "http://localhost:3000";
+    this.apiUrl = "http://52.67.190.78:3000";
   }
 
   getYears(): Observable<YearService[]> {
