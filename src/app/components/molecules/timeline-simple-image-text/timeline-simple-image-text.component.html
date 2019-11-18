@@ -3,6 +3,8 @@
         <app-timeline-item-icons-wrapper
         [itemType]="this.timelineItem.type"
         ></app-timeline-item-icons-wrapper>
+        {{this.timelineItem.idYear}}
+        {{this.timelineItem.rowPosition}}
         <p class="timeline_item__title">{{this.timelineItem.title}}</p>
         <p class="timeline_item__text">{{this.timelineItem.text}}</p>
         <div class="timeline_item__images">

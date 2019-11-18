@@ -10,13 +10,38 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 10000px;
-    max-height: 1000px;
+    width: 20000px;
+}
+#timeline_items__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+#timeline_year__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20000px;
 }
 #timeline_midle_year__wrapper{
     display: flex;
     height: 200px;
     width: 10000px;
+}
+#timeline_midle_year_item__wrapper{
+    display: flex;
+    p{
+        margin-top: 0px;
+        color: #12d9e1;
+        font-size: 2.5em;
+    }
+    div{
+        width: 500px;
+        hr{
+            border: 1px dashed #000;
+            width: 50%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
 }
 .row {
     display: flex;
