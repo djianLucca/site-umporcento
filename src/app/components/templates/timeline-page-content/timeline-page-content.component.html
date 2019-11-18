@@ -1,5 +1,8 @@
 <section id="timeline_wrapper">
   <div class="flex-row">
+    <app-menu-icon
+      [pageLayout]="this.pageSection"
+    ></app-menu-icon>
     <app-icon-page-top-row
       [pageSection]="this.pageSection"
     ></app-icon-page-top-row>
@@ -7,6 +10,8 @@
   <div class="flex-row">
     <app-timeline-page-midle-row
         [pageSection]="this.pageSection"
+        [timelineYears]="this.timelineYears"
+        [tinelineItems]="this.tinelineItems"
     >
     </app-timeline-page-midle-row>
   </div>

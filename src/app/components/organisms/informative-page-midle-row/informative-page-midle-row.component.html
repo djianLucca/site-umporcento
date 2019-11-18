@@ -17,17 +17,16 @@
                 [title]="this.getPageLabelBasedOnPage(this.page)"
                 [pageSection]="this.pageLayout"
             >/</app-informative-navigation>
-            <app-image-slider
-                [page]=this.page
-            ></app-image-slider>
+            <app-image-tag
+                [imgSrc]="'/assets/img/bussola_2019.jpg'" 
+                [imgAlt]="'Bússola 1%'"
+                [class]="'inforativePageImage'">
+            </app-image-tag>
             <app-download-btn
                 [page]=this.page
             ></app-download-btn>
         </div>
     </div>
-    <app-menu-icon
-        [pageLayout]="this.pageLayout"
-    ></app-menu-icon>
     <app-svg-tag
         [elementHeight]="'100%'"
         [elementWidth]= 1

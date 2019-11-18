@@ -6,6 +6,10 @@ import { PageSectionStatus } from './enums/pageSectionStatusenum';
 import { PageSectionBackground } from './enums/pageSectionbackgroundenum';
 import { FloatingIconBuilderService } from './floating-icon-builder.service';
 import { FloatingIconsService } from './floating-icons.service';
+import { YearService } from './year.service';
+import { TimelineApiService } from './timeline-api.service';
+import { HttpClient } from '@angular/common/http';
+import { TimelineItemService } from './timeline-item.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +18,11 @@ export class StateManipulatorService implements IstateManipulator {
 
   state: StateService;
   floatingIconBuilder: FloatingIconBuilderService;
-  constructor(state: StateService) {
+  timelineApi: TimelineApiService;
+  constructor(state: StateService, private http: HttpClient ) {
     this.state = state;
     this.floatingIconBuilder = new FloatingIconBuilderService();
+    this.timelineApi = new TimelineApiService(this.http);
   }
 
   changePage(page: Page): StateService {
@@ -64,5 +70,25 @@ export class StateManipulatorService implements IstateManipulator {
       default:
         return this.floatingIconBuilder.buildFloatingIconsNight();
     }
+  }
+
+  setTimelineInitalStatus(){
+    this.setTimelineYears();
+    this.setTimelineItems();
+  }
+
+  setTimelineYears(){
+    this.timelineApi
+    .getYears()
+    .subscribe((years: YearService[]) =>{
+      this.state.timelineYears = years
+    });
+  }
+  setTimelineItems(){
+    this.timelineApi
+    .getItems()
+    .subscribe((items: TimelineItemService[]) =>{
+      this.state.timelineItems = items;
+    });
   }
 }

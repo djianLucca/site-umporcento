@@ -27,6 +27,10 @@ app-informative-text-wrapper{
 app-image-slider{
     width: 100%;
 }
+app-image-tag{
+    display: flex;
+    width: 100%;
+}
 @media only screen and (max-width : 1366px) {
     #midle_content__wrapper{
         height: 450px;        

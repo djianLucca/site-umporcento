@@ -10,11 +10,11 @@
         ></app-svg-tag>
         <div id="midle_page_content__wrapper">
             <app-timeline-icons-menu></app-timeline-icons-menu>
-            <app-timeline-wrapper></app-timeline-wrapper>
+            <app-timeline-wrapper
+                [timelineItems]="this.tinelineItems"
+                [timelineYears]="this.timelineYears"
+            ></app-timeline-wrapper>
         </div>
-        <app-menu-icon
-            [pageLayout]="this.pageSection"
-        ></app-menu-icon>
         <app-svg-tag
             [elementHeight]="'100%'"
             [elementWidth]= 1

@@ -1,6 +1,6 @@
 export enum SocialIconClass {
     Facebook = 'facebook-f',
     Instagram = 'instagram',
-    Vimeo = 'vimeo',
+    Spotify = 'spotify',
     Email = 'envelope'
 }
