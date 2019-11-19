@@ -9,6 +9,10 @@
                 *ngIf="item.style === 'simple-image-text'"
                 [timelineItem]="this.item"
               ></app-timeline-simple-image-text>
+              <app-timeline-simple-image-left-text
+                *ngIf="item.style === 'simple-image-left-text'"
+                [timelineItem]="this.item"
+              ></app-timeline-simple-image-left-text>
             </div>
           </div>
         </div>
