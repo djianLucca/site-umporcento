@@ -1,0 +1,14 @@
+<div *ngIf="this.timelineItem !== undefined">
+  <div class="timeline_item simple_image_text__wrapper" id={{this.timelineItem.id}}>
+    <div id="timeline_item_content">
+      <div id="timeline_item__images">
+        <img *ngFor="let image of this.timelineItemsImages" src="/assets/img/timeline/{{ecodeToUrl(image)}}.jpg" alt="">
+        <app-timeline-item-icons-wrapper [itemType]="this.timelineItem.type"></app-timeline-item-icons-wrapper>
+      </div>
+      {{this.timelineItem.idYear}}
+      {{this.timelineItem.rowPosition}}
+      <p class="timeline_item__title">{{this.timelineItem.title}}</p>
+      <p class="timeline_item__text">{{this.timelineItem.text}}</p>
+    </div>
+  </div>
+</div>

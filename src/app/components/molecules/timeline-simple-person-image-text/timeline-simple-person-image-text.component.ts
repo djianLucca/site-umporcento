@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TimelineItemService } from 'src/app/services/timeline-item.service';
 
 @Component({
-  selector: 'app-timeline-simple-image-left-text',
-  templateUrl: './timeline-simple-image-left-text.component.html',
-  styleUrls: ['./timeline-simple-image-left-text.component.scss']
+  selector: 'app-timeline-simple-person-image-text',
+  templateUrl: './timeline-simple-person-image-text.component.html',
+  styleUrls: ['./timeline-simple-person-image-text.component.scss']
 })
-export class TimelineSimpleImageLeftTextComponent implements OnInit {
+export class TimelineSimplePersonImageTextComponent implements OnInit {
   @Input() timelineItem!: TimelineItemService;
   timelineIconType: string[];
   timelineItemsImages: string[];

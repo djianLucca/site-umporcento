@@ -1,0 +1,30 @@
+.simple_image_text__wrapper{
+    p.timeline_item__title{
+        font-weight: bold;
+    }
+    p.timeline_item__text{
+        font-weight: 100;
+    }
+    #timeline_item__images{
+        width: 50%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        img{
+            width: 80%;
+            border-radius: 50%;
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        app-timeline-item-icons-wrapper{
+            align-self: center;
+            margin-left: -10%;
+        }
+    }
+    #timeline_item_content{
+        width: 50%;
+    }
+    max-width: 600px;
+    display: flex;
+}
