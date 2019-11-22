@@ -10,8 +10,8 @@ export class YearService implements Iyear {
   mantra: string;
   year: number;
   yearItems: TimelineItemService[];
-  orderedItems:  TimelineItemService[][];
-  constructor(id: number, mantra: string, year: number) { 
+  orderedItems: TimelineItemService[][];
+  constructor(id: number, mantra: string, year: number) {
     this.id = id;
     this.mantra = mantra;
     this.year = year;

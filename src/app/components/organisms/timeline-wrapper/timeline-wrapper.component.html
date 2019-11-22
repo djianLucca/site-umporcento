@@ -5,29 +5,24 @@
         <div *ngFor="let orderedItems of year.orderedItems">
           <div *ngFor="let item of orderedItems">
             <div *ngIf="item.linePosition < 0" class="row">
-              <app-timeline-simple-image-text
-                *ngIf="item.style === 'simple-image-text'"
-                [timelineItem]="this.item"
-              ></app-timeline-simple-image-text>
-              <app-timeline-simple-image-left-text
-                *ngIf="item.style === 'simple-image-left-text'"
-                [timelineItem]="this.item"
-              ></app-timeline-simple-image-left-text>
-              <app-timeline-simple-person-image-text
-                *ngIf="item.style === 'simple-person-image-text'"
-                [timelineItem]="this.item"
-              >
-                </app-timeline-simple-person-image-text>
+              <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'" [timelineItem]="this.item">
+              </app-timeline-simple-image-text>
+              <app-timeline-simple-image-left-text *ngIf="item.style === 'simple-image-left-text'"
+                [timelineItem]="this.item"></app-timeline-simple-image-left-text>
+              <app-timeline-simple-person-image-text *ngIf="item.style === 'simple-person-image-text'"
+                [timelineItem]="this.item">
+              </app-timeline-simple-person-image-text>
+              <app-timeline-galery-item *ngIf="item.style === 'galery'"
+              [timelineItem]="this.item">
+              </app-timeline-galery-item>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div id="timeline_midle_year__wrapper">
-      <div
-        *ngFor="let year of this.timelineYears; index as i"
-      >
-        <div  id="timeline_midle_year_item__wrapper">
+      <div *ngFor="let year of this.timelineYears; index as i">
+        <div id="timeline_midle_year_item__wrapper">
           <p>
             <strong>{{ year.year }}</strong>
           </p>
@@ -43,10 +38,8 @@
         <div *ngFor="let orderedItems of year.orderedItems">
           <div *ngFor="let item of orderedItems">
             <div *ngIf="item.linePosition >= 0">
-              <app-timeline-simple-image-text
-                *ngIf="item.style === 'simple-image-text'"
-                [timelineItem]="this.item"
-              ></app-timeline-simple-image-text>
+              <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'" [timelineItem]="this.item">
+              </app-timeline-simple-image-text>
             </div>
           </div>
         </div>

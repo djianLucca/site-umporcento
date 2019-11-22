@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { ITimelineItem } from "./interfaces/itimeline-item";
-import { TimelineItemStyle } from "./enums/timelineitemstyleenum";
-import { TimelineItemFlag } from "./enums/timelineitemflag";
+import { Injectable } from '@angular/core';
+import { ITimelineItem } from './interfaces/itimeline-item';
+import { TimelineItemStyle } from './enums/timelineitemstyleenum';
+import { TimelineItemFlag } from './enums/timelineitemflag';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class TimelineItemService implements ITimelineItem {
   id: number;
@@ -17,6 +17,10 @@ export class TimelineItemService implements ITimelineItem {
   idYear: number;
   linePosition: -2 | -1 | 0 | 1 | 2;
   rowPosition: -2 | -1 | 0 | 1 | 2;
+  galeryImagesLeft: number;
+  galeryImagesUp: number;
+  galeryImagesDown: number;
+  galeryImagesRight: number;
 
   constructor(
     id: number,
@@ -28,7 +32,11 @@ export class TimelineItemService implements ITimelineItem {
     flag: TimelineItemFlag | undefined,
     idYear: number,
     linePosition: -2 | -1 | 0 | 1 | 2,
-    rowPosition: -2 | -1 | 0 | 1 | 2
+    rowPosition: -2 | -1 | 0 | 1 | 2,
+    galeryImagesLeft: number,
+    galeryImagesUp: number,
+    galeryImagesDown: number,
+    galeryImagesRight: number
   ) {
     this.id = id;
     this.images = images;
@@ -40,5 +48,9 @@ export class TimelineItemService implements ITimelineItem {
     this.linePosition = linePosition;
     this.rowPosition = rowPosition;
     this.idYear = idYear;
+    this.galeryImagesLeft = galeryImagesLeft;
+    this.galeryImagesUp = galeryImagesUp;
+    this.galeryImagesDown = galeryImagesDown;
+    this.galeryImagesRight = galeryImagesRight;
   }
 }

@@ -13,21 +13,21 @@ export class TimelineWrapperComponent implements OnChanges {
   @Input() timelineItems!: TimelineItemService[];
   timeline: TimelineService;
   testItem: TimelineItemService | undefined;
-  constructor() { 
+  constructor() {
     this.timeline = new TimelineService();
   }
-  orderItems(){
+  orderItems() {
     this.timelineYears = this.timeline.orderItems(this.timelineItems, this.timelineYears);
   }
   ngOnChanges() {
     this.orderItems();
-    console.log('ngOnChanges timeline-wrapper',this.timelineYears);
-    if(this.timelineYears[1] !== undefined && this.timelineYears[1].orderedItems !== undefined){
+    console.log('ngOnChanges timeline-wrapper', this.timelineYears);
+    if (this.timelineYears[1] !== undefined && this.timelineYears[1].orderedItems !== undefined) {
       this.testItem = this.timelineYears[1].orderedItems[0][0];
     }
     console.log('teste', this.testItem);
 
-    
+
   }
 
 }

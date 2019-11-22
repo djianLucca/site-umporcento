@@ -19,7 +19,7 @@ export class TimelineSimpleImageTextComponent implements OnInit {
     this.timelineItemsImages = JSON.parse(this.timelineItem.images);
   }
 
-  ecodeToUrl(text:string):string{
+  ecodeToUrl(text: string): string {
     return encodeURI(text);
   }
 
