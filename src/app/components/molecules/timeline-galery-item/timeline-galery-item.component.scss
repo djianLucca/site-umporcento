@@ -1,6 +1,9 @@
-.simple_image_text__wrapper{
+.galery_image_text__wrapper{
     img{
         max-width: 50%;
+    }
+    img.left, img.right{
+        max-width: 100%;
     }
     p.timeline_item__title{
         font-weight: bold;
@@ -8,5 +11,12 @@
     p.timeline_item__text{
         font-weight: 100;
     }
+    #midle_column{
+        display: flex;
+        flex-direction: column;
+    }
+    display: flex;
+    flex-direction: row;
     max-width: 300px;
+    padding: 2em 1em;
 }

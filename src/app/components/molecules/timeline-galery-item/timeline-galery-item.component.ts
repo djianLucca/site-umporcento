@@ -14,6 +14,7 @@ export class TimelineGaleryItemComponent implements OnInit {
   galeryImagesUp: string[];
   galeryImagesRight: string[];
   galeryImagesDown: string[];
+  lastUsedImage : number;
   constructor() {
     this.timelineIconType = [];
     this.timelineItemsImages = [];
@@ -21,11 +22,15 @@ export class TimelineGaleryItemComponent implements OnInit {
     this.galeryImagesUp = [];
     this.galeryImagesRight = [];
     this.galeryImagesDown = [];
+    this.lastUsedImage = -1;
   }
 
   ngOnInit() {
     this.timelineItemsImages = JSON.parse(this.timelineItem.images);
     this.filterImagesByLocation(this.timelineItemsImages );
+    if(this.timelineItem.title === '1ª Consultoria Social: Soñar Despierto (Monterrey, Mexico).'){
+      console.log('Mexico', this.timelineItem, this.timelineItem.galeryImagesLeft);
+    }
   }
 
   ecodeToUrl(text: string): string {
@@ -37,64 +42,73 @@ export class TimelineGaleryItemComponent implements OnInit {
       return;
     }
     if (this.timelineItem.galeryImagesLeft > 0) {
+
       this.galeryImagesLeft = this.filterLeftImages();
     }
 
     if (this.timelineItem.galeryImagesUp > 0) {
       this.galeryImagesUp = this.filterUpImages();
     }
-
-    if (this.timelineItem.galeryImagesRight > 0) {
-      this.galeryImagesRight = this.filterRightImages();
-    }
-
     if (this.timelineItem.galeryImagesDown > 0) {
       this.galeryImagesDown = this.filterDownImages();
     }
+    if (this.timelineItem.galeryImagesRight > 0) {
+      this.galeryImagesRight = this.filterRightImages();
+    }
   }
   filterLeftImages(): string[] {
-    const numberOfElements = (this.timelineItem.galeryImagesLeft < 1) ?
-      this.timelineItem.galeryImagesLeft - 1 :
-      this.timelineItem.galeryImagesLeft;
+    this.lastUsedImage = this.lastUsedImage + 1;
+    const numberOfElements = this.timelineItem.galeryImagesLeft + this.lastUsedImage;
+
     const tempArray = [];
-    for (let index = 0; index < numberOfElements; index++) {
+    if(this.timelineItem.title === '1ª Consultoria Social: Soñar Despierto (Monterrey, Mexico).'){
+      console.log('last used left', this.lastUsedImage, numberOfElements);
+    }
+    for (let index = this.lastUsedImage; index < numberOfElements; index++) {
       tempArray.push(this.timelineItemsImages[index]);
+      this.lastUsedImage = index;
     }
 
     return tempArray;
   }
 
   filterUpImages(): string[] {
-    const numberOfElements = (this.timelineItem.galeryImagesUp < 1) ?
-      this.timelineItem.galeryImagesUp - 1 :
-      this.timelineItem.galeryImagesUp;
+    this.lastUsedImage = this.lastUsedImage + 1;
+    const numberOfElements = this.timelineItem.galeryImagesUp + this.lastUsedImage;
+
     const tempArray = [];
-    for (let index = 0; index < numberOfElements; index++) {
+    for (let index = this.lastUsedImage; index < numberOfElements; index++) {
       tempArray.push(this.timelineItemsImages[index]);
+      this.lastUsedImage = index;
     }
 
     return tempArray;
   }
 
   filterRightImages(): string[] {
-    const numberOfElements = (this.timelineItem.galeryImagesRight < 1) ?
-      this.timelineItem.galeryImagesRight - 1 :
-      this.timelineItem.galeryImagesRight;
+    this.lastUsedImage = this.lastUsedImage + 1;
+    const numberOfElements = this.timelineItem.galeryImagesRight + this.lastUsedImage;
+
     const tempArray = [];
-    for (let index = 0; index < numberOfElements; index++) {
+    for (let index = this.lastUsedImage; index < numberOfElements; index++) {
       tempArray.push(this.timelineItemsImages[index]);
+      this.lastUsedImage = index;
     }
 
     return tempArray;
   }
 
   filterDownImages(): string[] {
-    const numberOfElements = (this.timelineItem.galeryImagesDown < 1) ?
-      this.timelineItem.galeryImagesDown - 1 :
-      this.timelineItem.galeryImagesDown;
+    this.lastUsedImage = this.lastUsedImage + 1;
+    const numberOfElements = this.timelineItem.galeryImagesDown + this.lastUsedImage;
     const tempArray = [];
-    for (let index = 0; index < numberOfElements; index++) {
+
+    if(this.timelineItem.title === '1ª Consultoria Social: Soñar Despierto (Monterrey, Mexico).'){
+      console.log('last used down', this.lastUsedImage, numberOfElements);
+    }
+    for (let index = this.lastUsedImage; index < numberOfElements; index++) {
       tempArray.push(this.timelineItemsImages[index]);
+      this.lastUsedImage = index;
     }
 
     return tempArray;

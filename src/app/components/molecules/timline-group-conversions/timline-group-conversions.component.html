@@ -1,0 +1,69 @@
+<div *ngIf="this.timelineItem !== undefined">
+  <div id="conversions_wrapper">
+    <div class="conversions">
+      <div class="convertion_text_wrapper">
+        <p class="title">{{ this.timelineIconTitle[0] }}</p>
+        <p>{{ this.timelineIconText[0] }}</p>
+      </div>
+      <div class="image_wrapper">
+        <img
+          src="/assets/img/timeline/{{
+            ecodeToUrl(this.timelineItemsImages[0])
+          }}.jpg"
+          alt=""
+        />
+        <img
+          src="/assets/img/timeline/{{
+            ecodeToUrl(this.timelineItemsImages[1])
+          }}.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="conversions">
+      <div class="convertion_text_wrapper">
+        <p class="title">{{ this.timelineIconTitle[1] }}</p>
+        <p>{{ this.timelineIconText[1] }}</p>
+      </div>
+      <div class="image_wrapper">
+        <img
+          src="/assets/img/timeline/{{
+            ecodeToUrl(this.timelineItemsImages[2])
+          }}.jpg"
+          alt=""
+        />
+        <img
+          src="/assets/img/timeline/{{
+            ecodeToUrl(this.timelineItemsImages[3])
+          }}.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="conversions">
+      <div class="convertion_text_wrapper">
+        <p class="title">{{ this.timelineIconTitle[2] }}</p>
+        <p>{{ this.timelineIconText[2] }}</p>
+      </div>
+      <div class="image_wrapper">
+        <img
+          src="/assets/img/timeline/{{
+            ecodeToUrl(this.timelineItemsImages[4])
+          }}.jpg"
+          alt=""
+        />
+        <img
+          src="/assets/img/timeline/{{
+            ecodeToUrl(this.timelineItemsImages[5])
+          }}.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class='icon'>
+        <app-timeline-item-icons-wrapper
+            [itemType]="this.timelineItem.type"
+        ></app-timeline-item-icons-wrapper>
+    </div>
+  </div>
+</div>

@@ -43,6 +43,8 @@ import { TimelineSimpleImageLeftTextComponent } from './components/molecules/tim
 import { TimelineItemIconsWrapperComponent } from './components/molecules/timeline-item-icons-wrapper/timeline-item-icons-wrapper.component';
 import { TimelineSimplePersonImageTextComponent } from './components/molecules/timeline-simple-person-image-text/timeline-simple-person-image-text.component';
 import { TimelineGaleryItemComponent } from './components/molecules/timeline-galery-item/timeline-galery-item.component';
+import { TimelineGroupGalerySectionComponent } from './components/molecules/timeline-group-galery-section/timeline-group-galery-section.component';
+import { TimlineGroupConversionsComponent } from './components/molecules/timline-group-conversions/timline-group-conversions.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +83,9 @@ import { TimelineGaleryItemComponent } from './components/molecules/timeline-gal
     TimelineSimpleImageLeftTextComponent,
     TimelineItemIconsWrapperComponent,
     TimelineSimplePersonImageTextComponent,
-    TimelineGaleryItemComponent
+    TimelineGaleryItemComponent,
+    TimelineGroupGalerySectionComponent,
+    TimlineGroupConversionsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

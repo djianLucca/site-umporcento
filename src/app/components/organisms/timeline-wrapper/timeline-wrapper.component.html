@@ -15,6 +15,9 @@
               <app-timeline-galery-item *ngIf="item.style === 'galery'"
               [timelineItem]="this.item">
               </app-timeline-galery-item>
+              <app-timeline-group-galery-section *ngIf="item.style === 'group-galery-section'"
+              [timelineItem]="this.item">
+              </app-timeline-group-galery-section>
             </div>
           </div>
         </div>
@@ -40,6 +43,17 @@
             <div *ngIf="item.linePosition >= 0">
               <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'" [timelineItem]="this.item">
               </app-timeline-simple-image-text>
+              <app-timeline-simple-image-left-text *ngIf="item.style === 'simple-image-left-text'"
+                [timelineItem]="this.item"></app-timeline-simple-image-left-text>
+              <app-timeline-simple-person-image-text *ngIf="item.style === 'simple-person-image-text'"
+                [timelineItem]="this.item">
+              </app-timeline-simple-person-image-text>
+              <app-timeline-galery-item *ngIf="item.style === 'galery'"
+              [timelineItem]="this.item">
+              </app-timeline-galery-item>
+              <app-timline-group-conversions *ngIf="item.style === 'group-conversions'"
+              [timelineItem]="this.item">
+              </app-timline-group-conversions>
             </div>
           </div>
         </div>
