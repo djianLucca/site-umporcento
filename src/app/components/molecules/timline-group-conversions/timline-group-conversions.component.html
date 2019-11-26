@@ -60,10 +60,20 @@
         />
       </div>
     </div>
-    <div class='icon'>
-        <app-timeline-item-icons-wrapper
-            [itemType]="this.timelineItem.type"
-        ></app-timeline-item-icons-wrapper>
-    </div>
+  </div>
+  <div id='svg_wrapper'>
+    <app-svg-tag
+    [elementHeight]="'30px'"
+    [elementWidth]= 1
+    [svgWidth]=1
+    [svgHeight]="'30px'"
+    [class]="'midle_conversion__timeline'"
+    [color]="'RGBA(128, 128, 128, 1)'"
+></app-svg-tag>
+  </div>
+  <div class="icon">
+    <app-timeline-item-icons-wrapper
+      [itemType]="this.timelineItem.type"
+    ></app-timeline-item-icons-wrapper>
   </div>
 </div>
