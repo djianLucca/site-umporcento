@@ -16,9 +16,9 @@ export class TimelineItemIconsWrapperComponent implements OnInit {
   ngOnInit() {
     try {
       this.timelineIconType = JSON.parse(this.itemType);
-      this.timelineIconType = this.timelineIconType.map(element => '/assets/img/timeline/icon/'+element+'.jpg')
+      this.timelineIconType = this.timelineIconType.map(element => '/assets/img/timeline/icon/'+element+'.png')
     } catch (error) {
-      this.timelineIconType = ['/assets/img/timeline/icon/'+this.itemType+'.jpg'];
+      this.timelineIconType = ['/assets/img/timeline/icon/'+this.itemType+'.png'];
     }
   }
 

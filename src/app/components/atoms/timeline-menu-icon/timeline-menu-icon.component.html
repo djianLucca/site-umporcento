@@ -2,7 +2,7 @@
 (mouseenter)="this.toggleLabel()"
 (mouseleave)="this.toggleLabel()">
     <div  class="palet__wrapper {{this.isOn ? 'on' : 'off'}} {{this.class}}">
-        <div class="circle" id={{this.id}}>&nbsp;</div>
+        <img src="/assets/img/timeline/icon/{{this.id}}.png" alt="">
     </div>
     <label [ngStyle]="this.labelStyle" for="">{{this.label}}</label>
 </div>
