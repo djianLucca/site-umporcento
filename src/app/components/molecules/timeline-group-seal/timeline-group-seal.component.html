@@ -1,0 +1,19 @@
+<div *ngIf="this.timelineItem !== undefined">
+  <div id="timeline_item__wrapper">
+    <div *ngFor="let titles of this.timelineIconTitle; index as i" class='item'>
+      <img
+        src="/assets/img/timeline/{{
+          ecodeToUrl(this.timelineItemsImages[i])
+        }}.jpg"
+        alt=""
+      />
+      <p>{{ titles }}</p>
+      <p>{{ this.timelineIconText[i] }}</p>
+    </div>
+  </div>
+  <div class="icon">
+    <app-timeline-item-icons-wrapper
+      [itemType]="this.timelineItem.type"
+    ></app-timeline-item-icons-wrapper>
+  </div>
+</div>

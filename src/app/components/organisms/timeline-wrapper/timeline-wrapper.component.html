@@ -18,6 +18,8 @@
               <app-timeline-group-galery-section *ngIf="item.style === 'group-galery-section'"
               [timelineItem]="this.item">
               </app-timeline-group-galery-section>
+              <app-timeline-group-seal *ngIf="item.style === 'group-seal'"
+              [timelineItem]="this.item"></app-timeline-group-seal>
             </div>
           </div>
         </div>
@@ -54,6 +56,8 @@
               <app-timline-group-conversions *ngIf="item.style === 'group-conversions'"
               [timelineItem]="this.item">
               </app-timline-group-conversions>
+              <app-timeline-group-seal *ngIf="item.style === 'group-seal'"
+              [timelineItem]="this.item"></app-timeline-group-seal>
             </div>
           </div>
         </div>
