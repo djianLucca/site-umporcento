@@ -1,7 +1,30 @@
 #timeline_item__wrapper{
     display: flex;
-    max-width: 1200px;
-    .item img{
-        max-width: 100%;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    .title{
+        font-weight: bold;
     }
+    .item{
+        width: 200px;
+        padding: 0em 1em;
+        border-right: 1px dashed grey;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+.icon{
+    display: flex;
+    div{
+        width: 100%;
+        hr{
+            border: 1px dashed grey;
+            margin-top: 0px;
+            margin-bottom: 5%;
+        }
+    }
+}
+#timeline_item__wrapper.id151{
+    max-width: 1200px; 
 }
