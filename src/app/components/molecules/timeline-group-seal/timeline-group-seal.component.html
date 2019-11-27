@@ -1,13 +1,13 @@
 <div *ngIf="this.timelineItem !== undefined">
-  <div id="timeline_item__wrapper">
-    <div *ngFor="let titles of this.timelineIconTitle; index as i" class='item'>
+  <div id="timeline_item__wrapper" class="id{{this.timelineItem.id}}">
+    <div *ngFor="let title of this.timelineIconTitle; index as i" class='item'>
       <img
         src="/assets/img/timeline/{{
           ecodeToUrl(this.timelineItemsImages[i])
         }}.jpg"
         alt=""
       />
-      <p>{{ titles }}</p>
+      <p class="title">{{ title }}</p>
       <p>{{ this.timelineIconText[i] }}</p>
     </div>
   </div>
@@ -15,5 +15,8 @@
     <app-timeline-item-icons-wrapper
       [itemType]="this.timelineItem.type"
     ></app-timeline-item-icons-wrapper>
+    <div>
+      <hr />
+    </div>
   </div>
 </div>
