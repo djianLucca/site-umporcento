@@ -11,12 +11,14 @@
 
   <div id="midle_page_content__wrapper">
     <div id="top_identifier__wrapper">
-      <app-top-bar-identifier-informative-page [page]="this.page"
-      [getPageLabelBasedOnPage]="this.getPageLabelBasedOnPage.bind(this)">
+      <app-top-bar-identifier-informative-page
+        [page]="this.page"
+        [getPageLabelBasedOnPage]="this.getPageLabelBasedOnPage.bind(this)"
+      >
       </app-top-bar-identifier-informative-page>
     </div>
     <div id="section-title">
-      <h2>{{this.getThisSectionTitle()}}</h2>
+      <app-section-title [page]="this.page"> </app-section-title>
     </div>
     <app-informative-text-wrapper
       [page]="this.page"
@@ -31,6 +33,7 @@
       <app-download-btn [page]="this.page"></app-download-btn>
     </div>
   </div>
+  <app-menu-icon [pageLayout]="this.pageLayout"></app-menu-icon>
   <app-svg-tag
     [elementHeight]="'100%'"
     [elementWidth]="1"
