@@ -23,7 +23,7 @@ export class InformativePageMidleRowComponent implements OnInit {
   ngOnInit() {
     this.imageObjectsSlider = this.getImagesBasedOnPage(this.page);
   }
-  
+
   getSvgHeightBasedOnScreenSize(screenWidth: number): string {
     if (screenWidth >= 3000) {
       return '98.6%';

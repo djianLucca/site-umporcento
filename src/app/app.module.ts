@@ -46,6 +46,7 @@ import { TimelineGaleryItemComponent } from './components/molecules/timeline-gal
 import { TimelineGroupGalerySectionComponent } from './components/molecules/timeline-group-galery-section/timeline-group-galery-section.component';
 import { TimlineGroupConversionsComponent } from './components/molecules/timline-group-conversions/timline-group-conversions.component';
 import { TimelineGroupSealComponent } from './components/molecules/timeline-group-seal/timeline-group-seal.component';
+import { TopBarIdentifierInformativePageComponent } from './components/molecules/top-bar-identifier-informative-page/top-bar-identifier-informative-page.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { TimelineGroupSealComponent } from './components/molecules/timeline-grou
     TimelineGaleryItemComponent,
     TimelineGroupGalerySectionComponent,
     TimlineGroupConversionsComponent,
-    TimelineGroupSealComponent
+    TimelineGroupSealComponent,
+    TopBarIdentifierInformativePageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
