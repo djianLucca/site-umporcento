@@ -1,40 +1,41 @@
 <div id="midle_content__wrapper">
-    <app-svg-tag
-        [elementHeight]="'100%'"
-        [elementWidth]= 1
-        [elementXTransform]=27
-        [svgWidth]="'55px'"
-        [ngClass]="'side_svg'"
-        [color]="this.changeLineColorBasedOnPageSection()"
-        [class]="'midle-svg start'"
-    ></app-svg-tag>
-    <div id="midle_page_content__wrapper">
-        <app-informative-text-wrapper
-            [page]="this.page"
-        ></app-informative-text-wrapper>
-        <div id="slider_download__wrapper">
-            <app-informative-navigation
-                [title]="this.getPageLabelBasedOnPage(this.page)"
-                [pageSection]="this.pageLayout"
-            >/</app-informative-navigation>
-            <app-image-tag
-                [imgSrc]="'/assets/img/bussola_2019.jpg'" 
-                [imgAlt]="'Bússola 1%'"
-                [class]="'inforativePageImage'">
-            </app-image-tag>
-            <app-download-btn
-                [page]=this.page
-            ></app-download-btn>
-        </div>
+  <app-svg-tag
+    [elementHeight]="'100%'"
+    [elementWidth]="1"
+    [elementXTransform]="27"
+    [svgWidth]="'55px'"
+    [ngClass]="'side_svg'"
+    [color]="this.changeLineColorBasedOnPageSection()"
+    [class]="'midle-svg start'"
+  ></app-svg-tag>
+
+  <div id="midle_page_content__wrapper">
+    <div id="top_identifier__wrapper">
+      <app-top-bar-identifier-informative-page [page]="this.page"
+      [getPageLabelBasedOnPage]="this.getPageLabelBasedOnPage.bind(this)">
+      </app-top-bar-identifier-informative-page>
     </div>
-    <app-svg-tag
-        [elementHeight]="'100%'"
-        [elementWidth]= 1
-        [svgWidth]=1
-        [x]=54
-        [ngClass]="'side_svg'"
-        id="endLineSvg"
-        [color]="this.changeLineColorBasedOnPageSection()"
-        [class]="'midle-svg end'"
-    ></app-svg-tag>
+    <app-informative-text-wrapper
+      [page]="this.page"
+    ></app-informative-text-wrapper>
+    <div id="slider_download__wrapper">
+      <app-image-tag
+        [imgSrc]="'/assets/img/bussola_2019.jpg'"
+        [imgAlt]="'Bússola 1%'"
+        [class]="'inforativePageImage'"
+      >
+      </app-image-tag>
+      <app-download-btn [page]="this.page"></app-download-btn>
+    </div>
+  </div>
+  <app-svg-tag
+    [elementHeight]="'100%'"
+    [elementWidth]="1"
+    [svgWidth]="1"
+    [x]="54"
+    [ngClass]="'side_svg'"
+    id="endLineSvg"
+    [color]="this.changeLineColorBasedOnPageSection()"
+    [class]="'midle-svg end'"
+  ></app-svg-tag>
 </div>
