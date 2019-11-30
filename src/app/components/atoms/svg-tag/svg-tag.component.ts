@@ -17,21 +17,22 @@ export class SvgTagComponent implements OnInit {
   @Input() elementYTransform: number;
   @Input() elementXTransform: number;
   @Input() class: string;
+  @Input() id: string;
   gTransform: string | undefined;
 
   constructor() {
     this.svgWidth = '100%';
-    this.svgHeight = '2';
+    this.svgHeight = '1';
     this.svgType = 'line';
     this.x = 0;
     this.y = 0;
     this.color = 'rgb(256,256,256)';
     this.elementWidth = '100%';
     this.elementHeight = '1';
-    this.elementYTransform = 0;
     this.elementXTransform = 0;
     this.elementYTransform = Number(this.svgHeight) / 2;
     this.class = '';
+    this.id = '';
   }
 
   ngOnInit() {

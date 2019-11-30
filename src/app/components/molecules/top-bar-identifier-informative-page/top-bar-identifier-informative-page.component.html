@@ -1,0 +1,19 @@
+<div id="top_identifier__wrapper">
+  <app-image-tag
+  [imgSrc]="'/assets/img/compass.svg'"
+  [id]="'topIconInformativePage'"></app-image-tag>
+  <app-svg-tag
+    [elementWidth]="'100%'"
+    [svgWidth]="'100%'"
+    [svgHeight]=55
+    [elementHeight]=1
+    [y]=28
+    [color]="'#12D9E1'"
+    [id]="'topInformativePageSvg'"
+    
+  ></app-svg-tag>
+  <app-informative-navigation
+    [title]="this.getPageLabelBasedOnPage(this.page)"
+    [pageSection]="this.pageLayout"
+  ></app-informative-navigation>
+</div>

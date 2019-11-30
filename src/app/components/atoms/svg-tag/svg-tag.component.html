@@ -1,4 +1,4 @@
-<svg *ngIf="this.svgType === 'line'" [ngClass]="this.class" [attr.height]="this.svgHeight">
+<svg *ngIf="this.svgType === 'line'" [ngClass]="this.class" [attr.height]="this.svgHeight" id={{this.id}}>
     <g [ngStyle]="{transform:this.gTransform}">
       <rect [attr.y]="this.y" [attr.x]="this.x" [attr.width]="this.elementWidth" [attr.height]="this.elementHeight" [attr.fill]="color"/>
     </g>
