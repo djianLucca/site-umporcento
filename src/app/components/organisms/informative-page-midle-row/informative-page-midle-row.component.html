@@ -15,6 +15,9 @@
       [getPageLabelBasedOnPage]="this.getPageLabelBasedOnPage.bind(this)">
       </app-top-bar-identifier-informative-page>
     </div>
+    <div id="section-title">
+      <h2>{{this.getThisSectionTitle()}}</h2>
+    </div>
     <app-informative-text-wrapper
       [page]="this.page"
     ></app-informative-text-wrapper>

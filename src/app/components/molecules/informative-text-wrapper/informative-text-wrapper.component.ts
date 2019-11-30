@@ -8,34 +8,21 @@ import { Page } from 'src/app/services/enums/pageenum';
 })
 export class InformativeTextWrapperComponent implements OnInit {
   @Input() page!: Page;
-  @Input() sectionTitle: string;
   @Input() sectionText: string;
   constructor() {
-    this.sectionTitle = 'No title';
     this.sectionText = '<p>No text</p>';
   }
 
   ngOnInit() {
-    this.sectionTitle = this.getThisSectionTitle();
     this.sectionText = this.getCompassText();
   }
 
-  getThisSectionTitle(): string {
-    switch (this.page) {
-      case Page.Compass:
-        return this.getCompassTitle();
-    }
-    return 'No Title';
-  }
   getThisSectionText(): string {
     switch (this.page) {
       case Page.Compass:
         return this.getCompassText();
     }
     return 'No Title';
-  }
-  getCompassTitle(): string {
-    return 'Integração de corpo, alma e destino.';
   }
   getCompassText(): string {
     // tslint:disable-next-line: max-line-length

@@ -2,8 +2,8 @@
   <div *ngIf="this.testItem !== undefined">
     <div id="timeline_year__wrapper">
       <div *ngFor="let year of this.timelineYears" id="timeline_items__wrapper">
-        <div *ngFor="let orderedItems of year.orderedItems">
-          <div *ngFor="let item of orderedItems">
+        <div *ngFor="let orderedItems of year.orderedItems" id="orderedItems">
+          <div *ngFor="let item of orderedItems" id="item">
             <div *ngIf="item.linePosition < 0" class="row">
               <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'" [timelineItem]="this.item">
               </app-timeline-simple-image-text>

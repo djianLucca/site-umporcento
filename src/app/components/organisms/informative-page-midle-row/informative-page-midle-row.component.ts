@@ -55,6 +55,16 @@ export class InformativePageMidleRowComponent implements OnInit {
     return '';
   }
 
+  getThisSectionTitle(): string {
+    switch (this.page) {
+      case Page.Compass:
+        return this.getCompassTitle();
+    }
+    return 'No Title';
+  }
+  getCompassTitle(): string {
+    return 'Integração de corpo, alma e destino.';
+  }
   getCompassImages(): Array<Object>{
     return [{
       image: 'assets/img/image_1.jpg',
