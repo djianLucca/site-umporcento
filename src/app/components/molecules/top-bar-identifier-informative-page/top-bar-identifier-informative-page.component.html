@@ -1,6 +1,6 @@
 <div id="top_identifier__wrapper">
   <app-image-tag
-  [imgSrc]="'/assets/img/compass.svg'"
+  [imgSrc]="this.getImageLogoBasedOnPage(this.page)"
   [id]="'topIconInformativePage'"></app-image-tag>
   <app-svg-tag
     [elementWidth]="'100%'"

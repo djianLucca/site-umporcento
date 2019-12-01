@@ -27,6 +27,7 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/tarde', this.sitchToAfternoon.bind(this)),
       new InternalRoutesService('/noite', this.sitchToNight.bind(this)),
       new InternalRoutesService('/manha/bussola', this.switchToCompass.bind(this)),
+      new InternalRoutesService('/manha/manual-da-marca', this.switchToBrandManual.bind(this)),
       new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this))
     ]);
   }
@@ -47,10 +48,7 @@ export class DefaultPageComponent implements OnInit {
     return false;
   }
   isInformativePage(): boolean{
-    if(this.state.page === Page.Compass){
-      return true;
-    }
-    return false;
+    return this.state.page === Page.Compass || this.state.page === Page.BrandManual;
   }
 
   isTimelinePage(): boolean{
@@ -79,6 +77,11 @@ export class DefaultPageComponent implements OnInit {
   }
   switchToCompass() {
     this.changePage(Page.Compass);
+    this.changeBackground(PageSectionStatus.Morning);
+  }
+
+  switchToBrandManual() {
+    this.changePage(Page.BrandManual);
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToTimeline() {

@@ -1,7 +1,7 @@
 export enum FloatingIconTitle {
     CultureGuide = 'Guia de cultura',
     BrandManual = 'Manual da marca',
-    Compass = 'Bússola',
+    Compass = 'bússola',
     Tree = 'Árvore',
     Guardians = 'Guardiões',
     Magazine = '10 anos',

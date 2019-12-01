@@ -15,10 +15,11 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
   ngOnInit() {}
 
   getImageLogoBasedOnPage(page: Page): string {
-    console.log(page);
     switch (page) {
       case Page.Compass:
         return 'assets/img/compass.svg';
+      case Page.BrandManual:
+        return 'assets/img/brand_manual.svg';
     }
     return 'assets/img/compass.svg';
   }

@@ -12,16 +12,16 @@ export class InformativePageMidleRowComponent implements OnInit {
   @Input() page!: Page;
   @Input() pageLayout!: PageSectionStatus;
   @Input() pageTitle: string;
-  imageObjectsSlider: Object[]
+  sectionImage: string;
   svgHeight: string;
 
   constructor() {
     this.svgHeight = this.getSvgHeightBasedOnScreenSize(window.outerWidth);
     this.pageTitle = 'No Title';
-    this.imageObjectsSlider = [];
+    this.sectionImage = '';
   }
   ngOnInit() {
-    this.imageObjectsSlider = this.getImagesBasedOnPage(this.page);
+    this.sectionImage = this.getImagesBasedOnPage(this.page);
   }
 
   getSvgHeightBasedOnScreenSize(screenWidth: number): string {
@@ -38,36 +38,24 @@ export class InformativePageMidleRowComponent implements OnInit {
     return 'rgba(256,256,256, 1)';
   }
 
-  getImagesBasedOnPage(page: Page): Array<Object>{
+  getImagesBasedOnPage(page: Page): string{
+    console.log(page);
     switch (page) {
       case Page.Compass:
-        return this.getCompassImages();
+        return '/assets/img/bussola_2019.jpg';
+      case Page.BrandManual:
+        return '/assets/img/manual_2019.jpg';
     }
-
-    return [];
+    return '';
   }
 
   getPageLabelBasedOnPage(page: Page): string{
     switch (page) {
       case Page.Compass:
         return FloatingIconTitle.Compass;
+      case Page.BrandManual:
+        return FloatingIconTitle.BrandManual;
     }
     return '';
-  }
-  getCompassImages(): Array<Object>{
-    return [{
-      image: 'assets/img/image_1.jpg',
-      thumbImage: 'assets/img/image_1.jpg',
-      alt: 'alt of image',
-    }, {
-      image: 'assets/img/image_2.jpg',
-      thumbImage: 'assets/img/image_2.jpg',
-      alt: 'Image alt'
-    }, {
-      image: 'assets/img/image_3.jpg',
-      thumbImage: 'assets/img/image_3.jpg',
-      alt: 'Image alt'
-    }
-    ];
   }
 }

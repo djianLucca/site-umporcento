@@ -25,8 +25,8 @@
     ></app-informative-text-wrapper>
     <div id="slider_download__wrapper">
       <app-image-tag
-        [imgSrc]="'/assets/img/bussola_2019.jpg'"
-        [imgAlt]="'Bússola 1%'"
+        [imgSrc]="this.getImagesBasedOnPage(this.page)"
+        [imgAlt]="this.getPageLabelBasedOnPage(this.page)"
         [class]="'inforativePageImage'"
       >
       </app-image-tag>

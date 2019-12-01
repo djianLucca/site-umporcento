@@ -14,15 +14,15 @@ export class InformativeTextWrapperComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sectionText = this.getCompassText();
   }
 
   getThisSectionText(): string {
+    console.log(this.page);
     switch (this.page) {
       case Page.Compass:
         return this.getCompassText();
     }
-    return 'No Title';
+    return '<p>No Text</p>';
   }
   getCompassText(): string {
     // tslint:disable-next-line: max-line-length

@@ -30,10 +30,12 @@ export class FloatingIconsWrapperComponent implements OnChanges {
 
   getRouterLinkPasedOnLabel(label: string){
     switch (label) {
-      case 'Bússola':
-        return '/manha/bussola'
+      case 'bússola':
+        return '/manha/bussola';
+      case 'Manual da marca':
+        return '/manha/manual-da-marca';
       case 'Linha do Tempo':
-        return '/tarde/linha-do-tempo'
+        return '/tarde/linha-do-tempo';
     }
     return '/';
   }
