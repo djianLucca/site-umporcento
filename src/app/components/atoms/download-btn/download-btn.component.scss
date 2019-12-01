@@ -5,12 +5,15 @@
         align-self: center;
         margin-left: 10px;
         margin-right: 15%;
+        cursor: pointer;
     }
     p{
         margin-left: auto;
+        cursor: pointer;
     }
 }
-// fa{
-//     margin-top: 15px;
-//     margin-left: 10px;
-// }
+
+.disabled fa, .disabled p{
+    color: grey;
+    cursor: default !important;
+}

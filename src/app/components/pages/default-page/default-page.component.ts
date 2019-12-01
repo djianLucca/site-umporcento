@@ -28,6 +28,9 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/noite', this.sitchToNight.bind(this)),
       new InternalRoutesService('/manha/bussola', this.switchToCompass.bind(this)),
       new InternalRoutesService('/manha/manual-da-marca', this.switchToBrandManual.bind(this)),
+      new InternalRoutesService('/manha/dez-anos', this.switchToTenYears.bind(this)),
+      new InternalRoutesService('/manha/guia-de-cultura', this.switchToCultureGuide.bind(this)),
+      new InternalRoutesService('/manha/arvore', this.switchToTree.bind(this)),
       new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this))
     ]);
   }
@@ -48,7 +51,7 @@ export class DefaultPageComponent implements OnInit {
     return false;
   }
   isInformativePage(): boolean{
-    return this.state.page === Page.Compass || this.state.page === Page.BrandManual;
+    return this.state.page === Page.Compass || this.state.page === Page.BrandManual || this.state.page === Page.Magazine || this.state.page === Page.CultureGuide || this.state.page === Page.Tree;
   }
 
   isTimelinePage(): boolean{
@@ -82,6 +85,19 @@ export class DefaultPageComponent implements OnInit {
 
   switchToBrandManual() {
     this.changePage(Page.BrandManual);
+    this.changeBackground(PageSectionStatus.Morning);
+  }
+
+  switchToTenYears() {
+    this.changePage(Page.Magazine);
+    this.changeBackground(PageSectionStatus.Morning);
+  }
+  switchToCultureGuide(){
+    this.changePage(Page.CultureGuide);
+    this.changeBackground(PageSectionStatus.Morning);
+  }
+  switchToTree(){
+    this.changePage(Page.Tree);
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToTimeline() {

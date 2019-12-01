@@ -14,6 +14,7 @@ export class InformativeTextWrapperComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.sectionText = this.getThisSectionText();
   }
 
   getThisSectionText(): string {

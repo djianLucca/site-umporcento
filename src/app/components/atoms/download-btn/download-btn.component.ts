@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Page } from 'src/app/services/enums/pageenum';
+import { ifStmt } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-download-btn',
@@ -18,13 +19,24 @@ export class DownloadBtnComponent implements OnInit {
   }
 
   downloadFile() {
-    window.open(this.file, '_blank');
+    if(this.file !== ''){
+      window.open(this.file, '_blank');
+    }
   }
-
+  getDisabledClass(): string{
+    if(this.page === Page.CultureGuide || this.page === Page.Tree){
+      return 'disabled';
+    }
+    return '';
+  }
   getFileBasedOnPage(page: Page): string{
     switch (page) {
       case Page.Compass:
         return '/assets/pdf/BUSSOLA_2019.pdf';
+      case Page.BrandManual:
+        return '/assets/pack/umporcento_ManualDaMarca.zip';
+      case Page.Magazine:
+        return '/assets/pdf/umporcento_dez_anos.pdf';
     }
     return '';
   }

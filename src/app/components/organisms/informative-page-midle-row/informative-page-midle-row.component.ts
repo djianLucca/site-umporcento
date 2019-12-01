@@ -45,6 +45,12 @@ export class InformativePageMidleRowComponent implements OnInit {
         return '/assets/img/bussola_2019.jpg';
       case Page.BrandManual:
         return '/assets/img/manual_2019.jpg';
+      case Page.Magazine:
+        return '/assets/img/dez_anos_2019.jpg'
+      case Page.CultureGuide:
+        return '/assets/img/guia_cultura_2019.jpg'
+      case Page.Tree:
+        return '/assets/img/arvore_2019.jpg'
     }
     return '';
   }
@@ -55,6 +61,12 @@ export class InformativePageMidleRowComponent implements OnInit {
         return FloatingIconTitle.Compass;
       case Page.BrandManual:
         return FloatingIconTitle.BrandManual;
+      case Page.Magazine:
+        return  FloatingIconTitle.Magazine;
+      case Page.CultureGuide:
+        return FloatingIconTitle.CultureGuide;
+      case Page.Tree:
+        return FloatingIconTitle.Tree;
     }
     return '';
   }

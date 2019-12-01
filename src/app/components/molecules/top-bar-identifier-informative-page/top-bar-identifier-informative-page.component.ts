@@ -8,11 +8,13 @@ import { Page } from 'src/app/services/enums/pageenum';
 })
 export class TopBarIdentifierInformativePageComponent implements OnInit {
   @Input() page!: Page;
-  @Input()   getPageLabelBasedOnPage!: () => string;
+  @Input()   getPageLabelBasedOnPage!: (page: string) => string;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.getPageLabelBasedOnPage(this.page));
+  }
 
   getImageLogoBasedOnPage(page: Page): string {
     switch (page) {
@@ -20,7 +22,13 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
         return 'assets/img/compass.svg';
       case Page.BrandManual:
         return 'assets/img/brand_manual.svg';
+      case Page.Magazine:
+            return 'assets/img/magazine.svg';
+      case Page.CultureGuide:
+            return 'assets/img/culture_guide.svg';
+      case Page.Tree:
+        return 'assets/img/tree.svg';
     }
-    return 'assets/img/compass.svg';
+    return '';
   }
 }
