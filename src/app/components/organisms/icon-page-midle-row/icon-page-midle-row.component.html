@@ -1,28 +1,12 @@
 <div id="midle_content__wrapper">
-    <app-svg-tag
-        [elementHeight]="'100%'"
-        [elementWidth]= 1
-        [elementXTransform]=27
-        [x]=27
-        [svgWidth]="'55px'"
-        [svgHeight]="'auto'"
-        [ngClass]="'side_svg'"
-        [color]="this.changeLineColorBasedOnPageSection()"
-        [class]="'midle-svg start'"
-    ></app-svg-tag>
+    <div class="side-line">
+        
+    </div>
     <app-floating-icons-wrapper
         [floatingIcons]="this.floatingIcons"
         [pageStatus]="this.pageLayout"
     ></app-floating-icons-wrapper>
-    <app-svg-tag
-        [elementHeight]="'100%'"
-        [elementWidth]= 1
-        [svgWidth]=1
-        [svgHeight]="'auto'"
-        [x]=54
-        [ngClass]="'side_svg'"
-        id="endLineSvg"
-        [color]="this.changeLineColorBasedOnPageSection()"
-        [class]="'midle-svg end'"
-    ></app-svg-tag>
+    <div class="side-line end">
+        
+    </div>
 </div>

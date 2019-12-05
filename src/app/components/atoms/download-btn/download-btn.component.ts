@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Page } from 'src/app/services/enums/pageenum';
-import { ifStmt } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-download-btn',
@@ -10,7 +9,7 @@ import { ifStmt } from '@angular/compiler/src/output/output_ast';
 export class DownloadBtnComponent implements OnInit {
   @Input() page!: Page;
   file: string;
-  constructor() { 
+  constructor() {
     this.file = '';
   }
 

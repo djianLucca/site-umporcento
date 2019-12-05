@@ -1,11 +1,29 @@
 #icon_page_bottom__wrapper{
     display: flex;
     justify-content: space-between;
-    margin-top: -1%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 }
-
+.bottom-line{
+    width: 100%;
+    align-self: flex-end;
+    position: relative;
+}
+.bottom-line::before{
+    content: '';
+    background-color: black;
+    position: absolute;
+    white-space: pre;
+    width: calc(100% - 55px);
+    height: 1px;
+    top: 0;
+    left: 0;
+}
+.bottom-line.end::before{
+    left: 55px;
+}
+app-palets-page-status-wrapper{
+    margin-bottom: -1%;
+}
 @media only screen and (max-width : 1366px) {
-    #icon_page_bottom__wrapper{
-        margin-top: -1.4%;
-    }
 }

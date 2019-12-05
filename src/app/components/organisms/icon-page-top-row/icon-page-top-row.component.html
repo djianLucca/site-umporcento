@@ -1,10 +1,7 @@
-<app-image-tag [imgSrc]="this.logoUmporcento" [imgAlt]="this.logoUmporcentoAlt" [id]="this.logoUmporcentoId">
-</app-image-tag>
-<app-svg-tag
-    [elementWidth]= "this.lineWidth"
-    [svgHeight]="this.svgHeight"
-    [elementYTransform]="this.elementYTransform"
-    [color]="this.changeLineColorBasedOnPageSection()"
-    [id]="'topSvgLine'"
-></app-svg-tag>
+<div id="top-wrapper">
+    <app-image-tag [imgSrc]="this.logoUmporcento" [imgAlt]="this.logoUmporcentoAlt" [id]="this.logoUmporcentoId">
+    </app-image-tag>
+    <div id='top-line'>
+    </div>
+</div>
 
