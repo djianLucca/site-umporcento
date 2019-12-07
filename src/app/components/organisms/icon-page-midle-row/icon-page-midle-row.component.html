@@ -1,12 +1,12 @@
 <div id="midle_content__wrapper">
-    <div class="side-line">
-        
-    </div>
+    <app-side-line-midle-page>   
+    </app-side-line-midle-page>
     <app-floating-icons-wrapper
         [floatingIcons]="this.floatingIcons"
         [pageStatus]="this.pageLayout"
     ></app-floating-icons-wrapper>
-    <div class="side-line end">
-        
-    </div>
+    <app-menu-icon [pageLayout]="this.pageLayout"></app-menu-icon>
+    <app-side-line-midle-page
+    [endLine]=true>   
+    </app-side-line-midle-page>
 </div>

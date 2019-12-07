@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { ITimeline } from './interfaces/itimeline';
-import { TimelineItemService } from './timeline-item.service';
-import { YearService } from './year.service';
+import { Injectable } from "@angular/core";
+import { ITimeline } from "./interfaces/itimeline";
+import { TimelineItemService } from "./timeline-item.service";
+import { YearService } from "./year.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class TimelineService implements ITimeline {
   yearItems: TimelineItemService[];
@@ -12,12 +12,25 @@ export class TimelineService implements ITimeline {
     this.yearItems = [];
   }
 
-  orderItems(items: TimelineItemService[], years: YearService[]): YearService[] {
+  orderItems(
+    items: TimelineItemService[],
+    years: YearService[]
+  ): YearService[] {
     const orderedYears = this.orderItemsByYear(items, years);
-    orderedYears.forEach((orderedYear) => {
+    orderedYears.forEach(orderedYear => {
       if (orderedYear.yearItems.length > 0) {
-        orderedYear.orderedItems = this._isolateItemByRow(orderedYear.yearItems, this._highestRow(orderedYear.yearItems));
-        orderedYear.orderedItems.forEach((orderedItem) => {
+        orderedYear.upperItems = this._isolateItemByRow(
+          this.isolateUpperItems(orderedYear.yearItems),
+          this._highestRow(orderedYear.yearItems)
+        );
+        orderedYear.lowerItems = this._isolateItemByRow(
+          this.isolateLowerItems(orderedYear.yearItems),
+          this._highestRow(orderedYear.yearItems)
+        );
+        orderedYear.upperItems.forEach(orderedItem => {
+          orderedItem = this.orderItemsByLine(orderedItem);
+        });
+        orderedYear.lowerItems.forEach(orderedItem => {
           orderedItem = this.orderItemsByLine(orderedItem);
         });
       }
@@ -25,11 +38,21 @@ export class TimelineService implements ITimeline {
 
     return orderedYears;
   }
+  isolateUpperItems(items: TimelineItemService[]): TimelineItemService[] {
+    return items.filter(item => item.linePosition < 0);
+  }
 
-  orderItemsByYear(items: TimelineItemService[], years: YearService[]): YearService[] {
+  isolateLowerItems(items: TimelineItemService[]): TimelineItemService[] {
+    return items.filter(item => item.linePosition >= 0);
+  }
+
+  orderItemsByYear(
+    items: TimelineItemService[],
+    years: YearService[]
+  ): YearService[] {
     years.forEach(year => {
       this.yearItems = [];
-      this.yearItems = items.filter((item) => item.idYear === year.id);
+      this.yearItems = items.filter(item => item.idYear === year.id);
       year.yearItems = this.yearItems;
     });
     return years;
@@ -39,11 +62,14 @@ export class TimelineService implements ITimeline {
     items = items.sort(this._compareByLine);
     return items;
   }
-  _isolateItemByRow(items: TimelineItemService[], maxRow: number): TimelineItemService[][] {
+  _isolateItemByRow(
+    items: TimelineItemService[],
+    maxRow: number
+  ): TimelineItemService[][] {
     let tempArray = [];
     const result = [];
     for (let index = 0; index <= maxRow; index++) {
-      tempArray = items.filter((item) => item.rowPosition === index);
+      tempArray = items.filter(item => item.rowPosition === index);
       if (tempArray.length > 0) {
         result.push(this.orderItemsByLine(tempArray));
       }
@@ -52,19 +78,18 @@ export class TimelineService implements ITimeline {
   }
 
   _compareByLine(a: TimelineItemService, b: TimelineItemService): number {
-    if ( a.linePosition < b.linePosition ) {
+    if (a.linePosition < b.linePosition) {
       return -1;
     }
-    if ( a.linePosition > b.linePosition ) {
+    if (a.linePosition > b.linePosition) {
       return 1;
     }
     return 0;
   }
 
-
   _highestRow(items: TimelineItemService[]): number {
     let highest = 0;
-    items.forEach((item) => {
+    items.forEach(item => {
       if (item.rowPosition > highest) {
         highest = item.rowPosition;
       }
@@ -72,5 +97,4 @@ export class TimelineService implements ITimeline {
 
     return highest;
   }
-
 }

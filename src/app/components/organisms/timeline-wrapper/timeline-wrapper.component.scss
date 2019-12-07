@@ -3,43 +3,30 @@
     background-color: white;
     height: calc(100% - 20px);
     overflow: auto;
-    max-width: 1160px;
 }
-#timeline_top_year_items__wrapper, #timeline_bottom_year_items__wrapper{
+#internal_timeline_wrapper{
+    width: 100%;
+    max-width: 20000px;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 20000px;
 }
-#timeline_items__wrapper{
+app-timeline-item-row{
     display: flex;
     flex-wrap: wrap;
 }
-#timeline_year__wrapper{
+.timeline_midle_year_item__wrapper{
     display: flex;
-    flex-wrap: wrap;
-    width: 20000px;
-}
-#timeline_midle_year__wrapper{
-    display: flex;
-    height: 200px;
-    width: 10000px;
-}
-#timeline_midle_year_item__wrapper{
-    display: flex;
-    p{
-        margin-top: 0px;
+    .year{
+        align-self: center;
         color: #12d9e1;
         font-size: 2.5em;
     }
-    div{
-        width: 500px;
+    .hr_div{
+        width: 100%;
+        display: flex;
         hr{
             border: 1px dashed #000;
-            width: 50%;
-            margin-top: 5%;
-            margin-bottom: 5%;
+            width: 90%;
+            align-self: center;
         }
     }
     #teste{

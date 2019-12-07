@@ -1,13 +1,6 @@
 <div id="midle_content__wrapper">
-  <app-svg-tag
-    [elementHeight]="'100%'"
-    [elementWidth]="1"
-    [elementXTransform]="27"
-    [svgWidth]="'55px'"
-    [ngClass]="'side_svg'"
-    [color]="this.changeLineColorBasedOnPageSection()"
-    [class]="'midle-svg start'"
-  ></app-svg-tag>
+    <app-side-line-midle-page>   
+    </app-side-line-midle-page>
 
   <div id="midle_page_content__wrapper">
     <div id="top_identifier__wrapper">
@@ -34,14 +27,7 @@
     </div>
   </div>
   <app-menu-icon [pageLayout]="this.pageLayout"></app-menu-icon>
-  <app-svg-tag
-    [elementHeight]="'100%'"
-    [elementWidth]="1"
-    [svgWidth]="1"
-    [x]="54"
-    [ngClass]="'side_svg'"
-    id="endLineSvg"
-    [color]="this.changeLineColorBasedOnPageSection()"
-    [class]="'midle-svg end'"
-  ></app-svg-tag>
+  <app-side-line-midle-page
+  [endLine]=true>   
+  </app-side-line-midle-page>
 </div>

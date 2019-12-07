@@ -1,0 +1,26 @@
+.side-line{
+    width: 1px;
+    height: calc(100% - 30px);
+    position: relative;
+    margin-top: auto;
+}
+.end{
+    height: 100%;
+}
+.side-line::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    white-space: pre;
+    width: 1px;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+.side-line.night::before, .side-line.afternoon::before{
+    background-color: white;
+}
+.sideline_wrapper{
+    height: 100%;
+    display: flex;
+}

@@ -25,3 +25,10 @@ app-image-tag {
     margin-top: -2%;
     margin-left: -2%;
 }
+
+#top-line.night::before, #top-line.afternoon::before{
+  background-color: white;
+}
+#top-wrapper.night, #top-wrapper.afternoon{
+  border-right: 1px solid white;
+}

@@ -5,4 +5,6 @@ export interface Iyear {
     mantra: string;
     year: number;
     yearItems: TimelineItemService[] | TimelineItemService[][]
+    upperItems: TimelineItemService[][];
+    lowerItems: TimelineItemService[][];
 }
