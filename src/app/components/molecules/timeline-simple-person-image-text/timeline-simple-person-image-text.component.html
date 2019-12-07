@@ -5,8 +5,6 @@
         <img *ngFor="let image of this.timelineItemsImages" src="/assets/img/timeline/{{ecodeToUrl(image)}}.jpg" alt="">
         <app-timeline-item-icons-wrapper [itemType]="this.timelineItem.type"></app-timeline-item-icons-wrapper>
       </div>
-      {{this.timelineItem.idYear}}
-      {{this.timelineItem.rowPosition}}
       <p class="timeline_item__title">{{this.timelineItem.title}}</p>
       <p class="timeline_item__text">{{this.timelineItem.text}}</p>
     </div>

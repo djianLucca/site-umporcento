@@ -2,8 +2,18 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: 350px;
+    min-width: 550px;
 }
 .year_row__wrapper{
     display: flex;
+    height: 1522px;
+}
+.item.line-3,.item.line-2,.item.line-1{
+    margin-top: auto;
+}
+.row26, .row26.item{
+    width: 750px;
+}
+.row27{
+    margin-left: 500px;
 }

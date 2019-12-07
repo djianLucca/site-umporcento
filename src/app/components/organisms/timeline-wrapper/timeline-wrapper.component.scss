@@ -15,12 +15,12 @@ app-timeline-item-row{
 }
 .timeline_midle_year_item__wrapper{
     display: flex;
-    p{
+    .year{
         align-self: center;
         color: #12d9e1;
         font-size: 2.5em;
     }
-    div{
+    .hr_div{
         width: 100%;
         display: flex;
         hr{

@@ -5,13 +5,16 @@
         [row]="year.upperItems">
         </app-timeline-item-row>
         <div class="timeline_midle_year_item__wrapper">
-          <p>
-            <strong>{{ year.year }}</strong>
-          </p>
-          <div>
+          <div class="text_div">
+            <p class="year">
+              <strong>{{ year.year }}</strong>
+            </p>
+          </div>
+          <div class="hr_div">
             <hr />
           </div>
         </div>
+        <p class="mantra"><i>{{year.mantra}}</i></p>
         <app-timeline-item-row class="timeline_lower_items"
         [row]="year.lowerItems">
         </app-timeline-item-row>
