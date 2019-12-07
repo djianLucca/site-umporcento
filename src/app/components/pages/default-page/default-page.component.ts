@@ -60,6 +60,7 @@ export class DefaultPageComponent implements OnInit {
 
   changeSection(pageSection: PageSectionStatus) {
     this.state = this.stateManipulator.changePageSection(pageSection);
+    console.log(this.state);
   }
   changePage(page: Page) {
     this.state = this.stateManipulator.changePage(page);
@@ -85,23 +86,28 @@ export class DefaultPageComponent implements OnInit {
 
   switchToBrandManual() {
     this.changePage(Page.BrandManual);
+    this.sitchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
 
   switchToTenYears() {
     this.changePage(Page.Magazine);
+    this.sitchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToCultureGuide(){
     this.changePage(Page.CultureGuide);
+    this.sitchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToTree(){
     this.changePage(Page.Tree);
+    this.sitchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToTimeline() {
     this.changePage(Page.Timeline);
+    this.sitchToAfternoon();
     this.changeBackground(PageSectionStatus.Afternoon);
   }
 

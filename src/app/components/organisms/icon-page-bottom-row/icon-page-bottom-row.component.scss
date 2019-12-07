@@ -4,6 +4,10 @@
     border-right: 1px solid black;
     border-left: 1px solid black;
 }
+#icon_page_bottom__wrapper.night, #icon_page_bottom__wrapper.afternoon{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
 .bottom-line{
     width: 100%;
     align-self: flex-end;
@@ -25,5 +29,7 @@
 app-palets-page-status-wrapper{
     margin-bottom: -1%;
 }
-@media only screen and (max-width : 1366px) {
-}
+
+.bottom-line.night::before, .bottom-line.afternoon::before{
+    background-color: white;
+  }

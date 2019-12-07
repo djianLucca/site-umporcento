@@ -10,12 +10,14 @@ export class YearService implements Iyear {
   mantra: string;
   year: number;
   yearItems: TimelineItemService[];
-  orderedItems: TimelineItemService[][];
+  upperItems: TimelineItemService[][];
+  lowerItems: TimelineItemService[][];
   constructor(id: number, mantra: string, year: number) {
     this.id = id;
     this.mantra = mantra;
     this.year = year;
     this.yearItems = [];
-    this.orderedItems = [];
+    this.upperItems = [];
+    this.lowerItems = [];
   }
 }

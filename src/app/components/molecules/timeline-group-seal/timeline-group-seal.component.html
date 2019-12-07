@@ -1,4 +1,4 @@
-<div *ngIf="this.timelineItem !== undefined">
+<div *ngIf="this.timelineItem !== undefined" class="id{{this.timelineItem.id}}">
   <div id="timeline_item__wrapper" class="id{{this.timelineItem.id}}">
     <div *ngFor="let title of this.timelineIconTitle; index as i" class='item'>
       <img
