@@ -1,5 +1,6 @@
 <div id="midle_content__wrapper">
-    <app-side-line-midle-page>   
+    <app-side-line-midle-page
+    [pageSection]="this.pageLayout">   
     </app-side-line-midle-page>
 
   <div id="midle_page_content__wrapper">
@@ -28,6 +29,7 @@
   </div>
   <app-menu-icon [pageLayout]="this.pageLayout"></app-menu-icon>
   <app-side-line-midle-page
-  [endLine]=true>   
+  [endLine]=true
+  [pageSection]="this.pageLayout">   
   </app-side-line-midle-page>
 </div>

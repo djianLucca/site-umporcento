@@ -13,7 +13,7 @@
     background-color: white;
     max-height: 100%;
     padding: 1em;
-    margin: 4em;
+    margin: 3.2em;
     margin-top: 0px;
 }
 #top_identifier__wrapper{
@@ -36,12 +36,11 @@ app-menu-icon{
 app-informative-text-wrapper{
     width: 40%;
 }
-app-image-slider{
-    width: 100%;
-}
 app-image-tag{
     display: flex;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 #section-title{
     width: 100%;
@@ -52,6 +51,9 @@ app-image-tag{
     }
     #endLineSvg{
         margin-top: -3.1%;
+    }
+    app-image-tag{
+        max-width: 55%;
     }
 }
 @media only screen and (min-width : 3000px) {
