@@ -24,7 +24,7 @@ app-timeline-wrapper{
 }
 app-timeline-icons-menu{
     width: 15%;
-    padding-top: 10%;
+    align-self: center;
 }
 app-image-slider{
     width: 100%;
@@ -37,11 +37,19 @@ app-image-slider{
         margin-top: -3.1%;
     }
 }
+@media only screen and (min-width : 2000px) {
+    app-timeline-wrapper{
+        max-width: 1700px;
+    }
+}
 @media only screen and (min-width : 3000px) {
     #midle_content__wrapper{
         height:  1150px;       
     }
     #endLineSvg{
         margin-top: -1%;
+    }
+    app-timeline-wrapper{
+        max-width: 2630px;
     }
 }
