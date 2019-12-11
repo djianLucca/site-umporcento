@@ -7,7 +7,7 @@
     <div id="top_identifier__wrapper">
       <app-top-bar-identifier-informative-page
         [page]="this.page"
-        [getPageLabelBasedOnPage]="this.getPageLabelBasedOnPage.bind(this)"
+        [getPageLabelBasedOnPage]="this.pageLocationHelper.getPageLabelBasedOnPage.bind(this)"
       >
       </app-top-bar-identifier-informative-page>
     </div>
@@ -20,7 +20,7 @@
     <div id="slider_download__wrapper">
       <app-image-tag
         [imgSrc]="this.getImagesBasedOnPage(this.page)"
-        [imgAlt]="this.getPageLabelBasedOnPage(this.page)"
+        [imgAlt]="this.pageLocationHelper.getPageLabelBasedOnPage(this.page)"
         [class]="'inforativePageImage'"
       >
       </app-image-tag>

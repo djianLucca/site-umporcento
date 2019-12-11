@@ -15,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'manha/guia-de-cultura', component: DefaultPageComponent },
   { path: 'manha/arvore', component: DefaultPageComponent },
   { path: 'tarde/linha-do-tempo', component: DefaultPageComponent },
+  { path: 'noite/contato', component: DefaultPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 

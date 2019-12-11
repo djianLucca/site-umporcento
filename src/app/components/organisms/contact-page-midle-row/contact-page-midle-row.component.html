@@ -1,0 +1,25 @@
+<div id="midle_content__wrapper">
+        <app-side-line-midle-page
+        [pageSection]="this.pageSection">   
+        </app-side-line-midle-page>
+    
+      <div id="midle_page_content__wrapper">
+        <div id="top_identifier__wrapper">
+          <app-top-bar-identifier-informative-page
+            [page]="this.page"
+            [getPageLabelBasedOnPage]="this.pageLocationHelper.getPageLabelBasedOnPage.bind(this)"
+          >
+          </app-top-bar-identifier-informative-page>
+        </div>
+        <div id="contact_form__wrapper">
+          <app-contact-form>
+          </app-contact-form>
+        </div>
+      </div>
+      <app-menu-icon [pageLayout]="this.pageSection"></app-menu-icon>
+      <app-side-line-midle-page
+      [endLine]=true
+      [pageSection]="this.pageSection">   
+      </app-side-line-midle-page>
+    </div>
+    

@@ -42,6 +42,8 @@ export class FloatingIconsWrapperComponent implements OnChanges {
         return '/manha/guia-de-cultura'
       case 'Linha do Tempo':
         return '/tarde/linha-do-tempo';
+      case 'Contato':
+        return '/noite/contato';
     }
     return '/';
   }

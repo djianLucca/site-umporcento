@@ -28,6 +28,8 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
             return 'assets/img/culture_guide.svg';
       case Page.Tree:
         return 'assets/img/tree.svg';
+      case Page.Contact:
+        return 'assets/img/contact.svg';
     }
     return '';
   }

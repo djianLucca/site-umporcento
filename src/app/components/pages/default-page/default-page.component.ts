@@ -23,15 +23,16 @@ export class DefaultPageComponent implements OnInit {
     this.stateManipulator = new StateManipulatorService(this.state, this.http);
     this.morningPage = PageSectionStatus.Morning;
     this.internalRouter = new InternalRoutesHandlerService([
-      new InternalRoutesService('/manha', this.sitchToMorning.bind(this)),
-      new InternalRoutesService('/tarde', this.sitchToAfternoon.bind(this)),
-      new InternalRoutesService('/noite', this.sitchToNight.bind(this)),
+      new InternalRoutesService('/manha', this.switchToMorning.bind(this)),
+      new InternalRoutesService('/tarde', this.switchToAfternoon.bind(this)),
+      new InternalRoutesService('/noite', this.switchToNight.bind(this)),
       new InternalRoutesService('/manha/bussola', this.switchToCompass.bind(this)),
       new InternalRoutesService('/manha/manual-da-marca', this.switchToBrandManual.bind(this)),
       new InternalRoutesService('/manha/dez-anos', this.switchToTenYears.bind(this)),
       new InternalRoutesService('/manha/guia-de-cultura', this.switchToCultureGuide.bind(this)),
       new InternalRoutesService('/manha/arvore', this.switchToTree.bind(this)),
-      new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this))
+      new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this)),
+      new InternalRoutesService('/noite/contato', this.switchToContact.bind(this))
     ]);
   }
 
@@ -58,6 +59,10 @@ export class DefaultPageComponent implements OnInit {
     return this.state.page === Page.Timeline;
   }
 
+  isContactPage(): boolean{
+    return this.state.page === Page.Contact;
+  }
+  
   changeSection(pageSection: PageSectionStatus) {
     this.state = this.stateManipulator.changePageSection(pageSection);
     console.log(this.state);
@@ -69,14 +74,14 @@ export class DefaultPageComponent implements OnInit {
     this.state = this.stateManipulator.changePageBackground(pageSection);
   }
 
-  sitchToMorning() {
+  switchToMorning() {
     this.changeSection(PageSectionStatus.Morning);
   }
 
-  sitchToAfternoon() {
+  switchToAfternoon() {
     this.changeSection(PageSectionStatus.Afternoon);
   }
-  sitchToNight() {
+  switchToNight() {
     this.changeSection(PageSectionStatus.Night);
   }
   switchToCompass() {
@@ -86,29 +91,34 @@ export class DefaultPageComponent implements OnInit {
 
   switchToBrandManual() {
     this.changePage(Page.BrandManual);
-    this.sitchToMorning();
+    this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
 
   switchToTenYears() {
     this.changePage(Page.Magazine);
-    this.sitchToMorning();
+    this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToCultureGuide(){
     this.changePage(Page.CultureGuide);
-    this.sitchToMorning();
+    this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToTree(){
     this.changePage(Page.Tree);
-    this.sitchToMorning();
+    this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
   switchToTimeline() {
     this.changePage(Page.Timeline);
-    this.sitchToAfternoon();
+    this.switchToAfternoon();
     this.changeBackground(PageSectionStatus.Afternoon);
+  }
+  switchToContact() {
+    this.changePage(Page.Contact);
+    this.switchToNight();
+    this.changeBackground(PageSectionStatus.Night)
   }
 
 }

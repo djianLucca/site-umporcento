@@ -88,6 +88,11 @@ export class FloatingIconBuilderService implements IFloattingIconBuilder {
         FloatingIconImage.Gabw,
         FloatingIconTitle.Gabw,
         FloatingIconUrl.Gabw
+      ),
+      this.buildFloatingIcon(
+        FloatingIconImage.Contact,
+        FloatingIconTitle.Contact,
+        FloatingIconUrl.Contact
       )
     ];
   }

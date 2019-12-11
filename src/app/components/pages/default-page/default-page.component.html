@@ -19,4 +19,7 @@
     [updateApi]="this.updateTimeline.bind(this)"
 >
 </app-timeline-page-content>
+<app-contact-page-content *ngIf="this.isContactPage()"
+[socialIcons]="this.state.socialIcons"
+></app-contact-page-content>
 <router-outlet></router-outlet>

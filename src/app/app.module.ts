@@ -50,6 +50,9 @@ import { TopBarIdentifierInformativePageComponent } from './components/molecules
 import { SectionTitleComponent } from './components/atoms/section-title/section-title.component';
 import { TimelineItemRowComponent } from './components/organisms/timeline-item-row/timeline-item-row.component';
 import { SideLineMidlePageComponent } from './components/atoms/side-line-midle-page/side-line-midle-page.component';
+import { ContactPageContentComponent } from './components/templates/contact-page-content/contact-page-content.component';
+import { ContactPageMidleRowComponent } from './components/organisms/contact-page-midle-row/contact-page-midle-row.component';
+import { ContactFormComponent } from './components/molecules/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +98,10 @@ import { SideLineMidlePageComponent } from './components/atoms/side-line-midle-p
     TopBarIdentifierInformativePageComponent,
     SectionTitleComponent,
     TimelineItemRowComponent,
-    SideLineMidlePageComponent
+    SideLineMidlePageComponent,
+    ContactPageContentComponent,
+    ContactPageMidleRowComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

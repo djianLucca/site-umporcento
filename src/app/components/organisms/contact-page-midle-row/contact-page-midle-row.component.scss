@@ -1,0 +1,31 @@
+#endLineSvg{
+    margin-top: -2.1%;
+}
+#midle_content__wrapper{
+    height: 74vh;
+    display: flex;
+    justify-content: space-between;
+}
+#midle_page_content__wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: white;
+    max-height: 100%;
+    padding: 1em;
+    margin: 3.2em;
+    margin-top: 0px;
+}
+#top_identifier__wrapper{
+  display:flex;
+  width:100%;
+}
+app-side-line-midle-page{
+    height: 100%;
+}
+app-top-bar-identifier-informative-page{
+    width: 100%;
+}
+app-menu-icon{
+   margin-left: auto;
+}
