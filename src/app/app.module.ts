@@ -53,6 +53,7 @@ import { SideLineMidlePageComponent } from './components/atoms/side-line-midle-p
 import { ContactPageContentComponent } from './components/templates/contact-page-content/contact-page-content.component';
 import { ContactPageMidleRowComponent } from './components/organisms/contact-page-midle-row/contact-page-midle-row.component';
 import { ContactFormComponent } from './components/molecules/contact-form/contact-form.component';
+import { InputComponent } from './components/atoms/input/input.component';
 
 @NgModule({
   declarations: [
@@ -102,6 +103,7 @@ import { ContactFormComponent } from './components/molecules/contact-form/contac
     ContactPageContentComponent,
     ContactPageMidleRowComponent,
     ContactFormComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
