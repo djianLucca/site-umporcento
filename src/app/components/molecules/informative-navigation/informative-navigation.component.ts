@@ -16,14 +16,15 @@ export class InformativeNavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  getRouterLinkBasedOnPageSection(pageSection: PageSectionStatus): string{
+  getRouterLinkBasedOnPageSection(pageSection: PageSectionStatus): string {
+    console.log('section', pageSection);
     switch (pageSection) {
       case PageSectionStatus.Morning:
-        return '/manha'
+        return '/manha';
       case PageSectionStatus.Afternoon:
-          return '/tarde'
+          return '/tarde';
+      default:
+        return '/noite';
     }
-
-    return '/noite';
   }
 }

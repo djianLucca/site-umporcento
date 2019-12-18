@@ -8,8 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InputComponent implements OnInit {
   @Input() type!: 'text' | 'text-area';
   @Input() name!: string;
-  @Input() label!;
-  constructor() { 
+  @Input() label!: string;
+  constructor() {
   }
 
   ngOnInit() {

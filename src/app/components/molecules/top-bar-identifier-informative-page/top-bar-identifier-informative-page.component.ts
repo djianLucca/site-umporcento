@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Page } from 'src/app/services/enums/pageenum';
+import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 
 @Component({
   selector: 'app-top-bar-identifier-informative-page',
@@ -8,9 +9,12 @@ import { Page } from 'src/app/services/enums/pageenum';
 })
 export class TopBarIdentifierInformativePageComponent implements OnInit {
   @Input() page!: Page;
-  @Input()   getPageLabelBasedOnPage!: (page: string) => string;
+  @Input() getPageLabelBasedOnPage!: (page: string) => string;
+  @Input() pageLayout: PageSectionStatus;
 
-  constructor() {}
+  constructor() {
+    this.pageLayout = PageSectionStatus.Morning;
+  }
 
   ngOnInit() {
     console.log(this.getPageLabelBasedOnPage(this.page));

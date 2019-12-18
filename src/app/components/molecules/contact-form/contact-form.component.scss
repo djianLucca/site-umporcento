@@ -1,4 +1,8 @@
 #contact__wrapper{
     display: flex;
-    direction: column;
+    flex-direction: column;
+}
+app-input{
+    width: 100%;
+    margin-bottom: 1em;
 }
