@@ -1,0 +1,18 @@
+#container{
+    display: flex;
+    div{
+        border-right: 1px solid #12D9E1;
+        display: flex;
+    }
+    div:last-child{
+        border-right: 0px solid black;
+    }
+}
+p{
+    font-size: 12px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+}

@@ -1,14 +1,7 @@
 <button 
-    *ngIf="this.btnText !== '' && this.btnContent === undefined" 
+    *ngIf="this.btnText !== ''" 
     id={{this.id}} 
     class={{this.class}} 
     (click)="this.btnAction()"> 
-        {{this.btnText}} 
-</button>
-<button 
-    *ngIf="this.btnText === '' && this.btnContent !== undefined" 
-    id={{this.id}} 
-    class={{this.class}} 
-    (click)="this.btnAction()"> 
-        {{this.btnContent}} 
+        {{this.btnText}}
 </button>

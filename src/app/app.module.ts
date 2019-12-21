@@ -54,6 +54,7 @@ import { ContactPageContentComponent } from './components/templates/contact-page
 import { ContactPageMidleRowComponent } from './components/organisms/contact-page-midle-row/contact-page-midle-row.component';
 import { ContactFormComponent } from './components/molecules/contact-form/contact-form.component';
 import { InputComponent } from './components/atoms/input/input.component';
+import { UmporcentoInfoComponent } from './components/atoms/umporcento-info/umporcento-info.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import { InputComponent } from './components/atoms/input/input.component';
     ContactPageMidleRowComponent,
     ContactFormComponent,
     InputComponent,
+    UmporcentoInfoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

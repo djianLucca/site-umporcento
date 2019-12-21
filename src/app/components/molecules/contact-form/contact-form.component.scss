@@ -1,8 +1,15 @@
 #contact__wrapper{
     display: flex;
     flex-direction: column;
+    min-height: 320px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 app-input{
-    width: 100%;
+    width: 99%;
     margin-bottom: 1em;
+}
+app-button-tag{
+    display: flex;
+    margin-top: -14%;
 }
