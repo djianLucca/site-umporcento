@@ -27,4 +27,20 @@ export class PageLocationHelperService implements IPageLocationHelper{
     }
     return '';
   }
+
+  public getImagesBasedOnPage(page: Page): string{
+    switch (page) {
+      case Page.Compass:
+        return '/assets/img/bussola_2019.jpg';
+      case Page.BrandManual:
+        return '/assets/img/manual_2019.jpg';
+      case Page.Magazine:
+        return '/assets/img/dez_anos_2019.jpg';
+      case Page.CultureGuide:
+        return '/assets/img/guia_cultura_2019.jpg';
+      case Page.Tree:
+        return '/assets/img/arvore_2019.jpg';
+    }
+    return '';
+  }
 }

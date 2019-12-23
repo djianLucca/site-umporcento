@@ -19,7 +19,7 @@
     ></app-informative-text-wrapper>
     <div id="slider_download__wrapper">
       <app-image-tag
-        [imgSrc]="this.getImagesBasedOnPage(this.page)"
+        [imgSrc]="this.pageLocationHelper.getImagesBasedOnPage(this.page)"
         [imgAlt]="this.pageLocationHelper.getPageLabelBasedOnPage(this.page)"
         [class]="'inforativePageImage'"
       >
