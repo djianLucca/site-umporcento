@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { NgImageSliderModule } from 'ng-image-slider';
-
 import { AppComponent } from './app.component';
 import { VideoWrapperComponent } from './components/molecules/video-wrapper/video-wrapper.component';
 import { DefaultPageComponent } from './components/pages/default-page/default-page.component';

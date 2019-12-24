@@ -25,4 +25,7 @@ export class TimelineApiService implements ItimelineApi {
   getItems(): Observable<TimelineItemService[]> {
     return this.httpService.get<TimelineItemService[]>(this.apiUrl + '/get_items');
   }
+  sendMail(email: string, body:string): Observable<Object>{
+   return this.httpService.post(this.apiUrl + '/send_mail',{"email":email, "text":body});
+  }
 }

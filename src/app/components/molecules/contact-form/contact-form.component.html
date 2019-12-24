@@ -3,25 +3,34 @@
     [type]="'text'"
     [name]="'nome'"
     [label]="'nome'"
+    [value]="this.name"
+    [callOnKeyUp]="this.handleNameInput.bind(this)"
     ></app-input>
     <app-input
         [type]="'text'"
         [name]="'email'"
         [label]="'email'"
+        [value]="this.email"
+        [callOnKeyUp]="this.handleEmailInput.bind(this)"
     ></app-input>
     <app-input
         [type]="'text'"
         [name]="'celular'"
         [label]="'celular'"
+        [value]="this.phone"
+        [callOnKeyUp]="this.handlePhoneInput.bind(this)"
     ></app-input>
     <app-input
         [type]="'text-area'"
         [name]="'mensagem'"
         [label]="'mensagem'"
+        [value]="this.message"
+        [callOnKeyUp]="this.handleMessageInput.bind(this)"
     ></app-input>
     <app-button-tag
         [btnText]="'enviar'"
         [class]="'right'"
+        [btnAction]="this.sendContact.bind(this)"
     >
     </app-button-tag>
 </div>

@@ -2,6 +2,6 @@
     *ngIf="this.btnText !== ''" 
     id={{this.id}} 
     class={{this.class}} 
-    (click)="this.btnAction()"> 
+    (click)="this.btnAction($event)"> 
         {{this.btnText}}
 </button>

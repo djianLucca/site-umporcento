@@ -9,7 +9,11 @@ export class InputComponent implements OnInit {
   @Input() type!: 'text' | 'text-area';
   @Input() name!: string;
   @Input() label!: string;
+  @Input() value: string;
+  @Input() callOnKeyUp!: (event: Event) => {};
+  
   constructor() {
+    this.value = '';
   }
 
   ngOnInit() {

@@ -7,6 +7,7 @@ import { InternalRoutesService } from 'src/app/services/internal-routes.service'
 import { InternalRoutesHandlerService } from 'src/app/services/internal-routes-handler.service';
 import { Page } from 'src/app/services/enums/pageenum';
 import { HttpClient } from '@angular/common/http';
+import { ContactFormService } from 'src/app/services/contact-form.service';
 
 @Component({
   selector: 'app-default-page',
@@ -18,10 +19,12 @@ export class DefaultPageComponent implements OnInit {
   stateManipulator: StateManipulatorService;
   internalRouter: InternalRoutesHandlerService;
   morningPage: PageSectionStatus;
+  contactForm: ContactFormService;
   constructor(private http: HttpClient) {
     this.state = new StateInitialiserService().getState();
     this.stateManipulator = new StateManipulatorService(this.state, this.http);
     this.morningPage = PageSectionStatus.Morning;
+    this.contactForm = new ContactFormService(http);
     this.internalRouter = new InternalRoutesHandlerService([
       new InternalRoutesService('/manha', this.switchToMorning.bind(this)),
       new InternalRoutesService('/tarde', this.switchToAfternoon.bind(this)),

@@ -10,7 +10,8 @@ import { PageLocationHelperService } from 'src/app/services/helper/page-location
 })
 export class ContactPageContentComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
-  @Input() socialIcons: SocialIconsService[]; 
+  @Input() socialIcons: SocialIconsService[];
+  @Input() contactFormAction!: (email:string, text: string) => {};
   pageLocationHelper: PageLocationHelperService;
   constructor() { 
     this.pageSection = PageSectionStatus.Night;

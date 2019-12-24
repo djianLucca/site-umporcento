@@ -22,5 +22,6 @@
 <app-contact-page-content *ngIf="this.isContactPage()"
 [socialIcons]="this.state.socialIcons"
 [pageSection]="this.state.pageSection"
+[contactFormAction]="this.contactForm.sendMessage.bind(this)"
 ></app-contact-page-content>
 <router-outlet></router-outlet>
