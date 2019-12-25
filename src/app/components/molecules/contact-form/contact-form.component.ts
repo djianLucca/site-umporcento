@@ -35,9 +35,14 @@ export class ContactFormComponent implements OnInit {
      .subscribe((response) =>{
        
        if(response.status === 'OK'){
-         alert('OK')
+        const passarito = document.getElementById('passarito_contact') as HTMLObjectElement;
+        passarito.classList = `${passarito.classList} animateFadeIn`;
+        target.innerHTML = 'enviado';
+        target.className = 'right sucess'
        }else{
-         alert('FAIL');
+        alert('Sentimos muito. Houve um erro ao enviar sua mensagem.')
+        target.innerHTML = 'enviar';
+        target.className = 'right';
        }
      });
   }

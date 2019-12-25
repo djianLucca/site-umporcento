@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxMaskModule } from 'ngx-mask'
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
@@ -116,7 +117,8 @@ import { ErrorPageComponentComponent } from './components/organisms/error-page-c
     AngularFontAwesomeModule,
     HttpClientModule,
     InlineSVGModule.forRoot(),
-    NgImageSliderModule
+    NgImageSliderModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

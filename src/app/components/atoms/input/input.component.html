@@ -1,2 +1,4 @@
 <input *ngIf="this.type === 'text'" (keyup)="this.callOnKeyUp($event)" value={{this.value}} type={{this.type}} name={{this.name}} placeholder={{this.label}} id={{this.name}}>
+<input *ngIf="this.type === 'celular'" mask="(99) 9999-99999"  (keyup)="this.callOnKeyUp($event)" value={{this.value}} type={{this.type}} name={{this.name}} placeholder={{this.label}} id={{this.name}}>
+
 <textarea *ngIf="this.type === 'text-area'" placeholder={{this.label}} id={{this.name}}></textarea>
