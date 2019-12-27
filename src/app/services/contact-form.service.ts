@@ -8,7 +8,7 @@ import { TimelineApiService } from './timeline-api.service';
 export class ContactFormService {
   themeApi: TimelineApiService
   constructor(private http: HttpClient) { 
-    this.themeApi = new TimelineApiService(http);
+    this.themeApi = new TimelineApiService(this.http);
   }
 
   async sendMessage(email:string, body:string){

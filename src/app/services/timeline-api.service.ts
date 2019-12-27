@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { YearService } from './year.service';
 import { Observable } from 'rxjs';
 import { TimelineItemService } from './timeline-item.service';
+import { EmailResponseApiService } from './email-response-api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class TimelineApiService implements ItimelineApi {
   getItems(): Observable<TimelineItemService[]> {
     return this.httpService.get<TimelineItemService[]>(this.apiUrl + '/get_items');
   }
-  sendMail(email: string, body:string): Observable<Object>{
-   return this.httpService.post(this.apiUrl + '/send_mail',{"email":email, "text":body});
+  sendMail(email: string, body:string): Observable<EmailResponseApiService>{
+   return this.httpService.post<EmailResponseApiService>(this.apiUrl + '/send_mail',{"email":email, "text":body});
   }
 }

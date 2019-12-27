@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TimelineApiService } from 'src/app/services/timeline-api.service';
+import { EmailResponseApiService } from 'src/app/services/email-response-api.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,6 +15,11 @@ export class ContactFormComponent implements OnInit {
   email: string;
   phone: string;
   message: string;
+  nameValidated: boolean;
+  emailValidated: boolean;
+  phoneValidated: boolean;
+  messageValidated: boolean;
+  btnDisabled: boolean;
 
   constructor(private http: HttpClient) {
     this.apiService = new TimelineApiService(this.http);
@@ -21,6 +27,11 @@ export class ContactFormComponent implements OnInit {
     this.email = '';
     this.phone = '';
     this.message = '';
+    this.nameValidated = false;
+    this.emailValidated = false;
+    this.phoneValidated = false;
+    this.messageValidated = false;
+    this.btnDisabled = true;
   }
 
   ngOnInit() {
@@ -32,11 +43,12 @@ export class ContactFormComponent implements OnInit {
     target.innerHTML = `<img style="max-width:25px;" src="/assets/img/loading.svg"/>`;
     const text = `Nome: ${this.name}\n Email: ${this.email}\n Telefone: ${this.phone}\n Mensagem: ${this.message}`
     this.apiService.sendMail(this.email, text)
-     .subscribe((response) =>{
-       
+     .subscribe((response: EmailResponseApiService) => {
+       console.log(response);
        if(response.status === 'OK'){
         const passarito = document.getElementById('passarito_contact') as HTMLObjectElement;
-        passarito.classList = `${passarito.classList} animateFadeIn`;
+        passarito.classList.remove('loading');
+        passarito.classList.add('animateFadeIn');
         target.innerHTML = 'enviado';
         target.className = 'right sucess'
        }else{
@@ -65,5 +77,31 @@ export class ContactFormComponent implements OnInit {
   handleMessageInput(event: KeyboardEvent){
     const target = event.target as HTMLTextAreaElement;
     this.message = target.value;
+  }
+  nameReady(event: boolean){
+    this.nameValidated = event;
+    console.log(this.isFormReady());
+    this.btnDisabled = !this.isFormReady();
+  }
+  
+  emailReady(event: boolean){
+    this.emailValidated = event;
+    console.log(this.isFormReady());
+    this.btnDisabled = !this.isFormReady();
+  }
+
+  phoneReady(event: boolean){
+    this.phoneValidated = event;
+    console.log(this.isFormReady());
+    this.btnDisabled = !this.isFormReady();
+  }
+
+  messageReady(event: boolean){
+    this.messageValidated = event;
+    console.log(this.isFormReady());
+    this.btnDisabled = !this.isFormReady();
+  }
+  isFormReady(): boolean{
+    return this.nameValidated && this.emailValidated && this.phoneValidated && this.messageValidated;
   }
 }

@@ -10,11 +10,13 @@ export class ButtonTagComponent implements OnInit {
   @Input() btnAction: () => void;
   @Input() id: string | undefined;
   @Input() class: string;
+  @Input() disabled: boolean;
 
   constructor() {
     this.btnAction = this.noDefinedFunction;
     this.class = 'btn';
     this.btnText = '';
+    this.disabled = false;
   }
 
   ngOnInit() {
@@ -23,5 +25,6 @@ export class ButtonTagComponent implements OnInit {
   noDefinedFunction() {
     console.log('No function defined for this button.');
   }
+  
 
 }
