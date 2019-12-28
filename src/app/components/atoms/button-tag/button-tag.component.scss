@@ -8,3 +8,10 @@ button{
 button.loading{
     padding: 0.1em 1.35em
 }
+
+button.sucess{
+    padding: .5em 1em;
+    background-color: #12d9e1;
+    font-weight: bold;
+    border: 1px solid  #12d9e1;
+}

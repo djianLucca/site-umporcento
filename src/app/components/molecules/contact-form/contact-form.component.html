@@ -5,6 +5,7 @@
     [label]="'nome'"
     [value]="this.name"
     [callOnKeyUp]="this.handleNameInput.bind(this)"
+    (ready)="this.nameReady($event)"
     ></app-input>
     <app-input
         [type]="'text'"
@@ -12,6 +13,7 @@
         [label]="'email'"
         [value]="this.email"
         [callOnKeyUp]="this.handleEmailInput.bind(this)"
+        (ready)="this.emailReady($event)"
     ></app-input>
     <app-input
         [type]="'text'"
@@ -19,6 +21,7 @@
         [label]="'celular'"
         [value]="this.phone"
         [callOnKeyUp]="this.handlePhoneInput.bind(this)"
+        (ready)="this.phoneReady($event)"
     ></app-input>
     <app-input
         [type]="'text-area'"
@@ -26,11 +29,19 @@
         [label]="'mensagem'"
         [value]="this.message"
         [callOnKeyUp]="this.handleMessageInput.bind(this)"
+        (ready)="this.messageReady($event)"
     ></app-input>
+    <app-image-tag
+        [imgSrc]="'/assets/img/passarito_black.png'"
+        id="passarito_contact"
+    >
+    </app-image-tag
+    >
     <app-button-tag
         [btnText]="'enviar'"
         [class]="'right'"
         [btnAction]="this.sendContact.bind(this)"
+        [disabled]=this.btnDisabled
     >
     </app-button-tag>
 </div>

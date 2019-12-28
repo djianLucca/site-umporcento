@@ -11,5 +11,42 @@ app-input{
 }
 app-button-tag{
     display: flex;
-    margin-top: -14%;
+    margin-top: -1%;
+}
+app-image-tag{
+    margin-left: auto;
+    margin-top: -30%;
+    opacity: 0;
+    margin-right: 3%;
+}
+
+.animateFadeIn{
+    animation: fadeInFromNone 1s ease-out;
+    opacity: 1;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: .1;
+    }
+
+    
+    20% {
+
+        opacity: .2;
+    }
+    
+    30% {
+
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
