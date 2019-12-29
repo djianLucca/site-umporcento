@@ -28,6 +28,8 @@ export class PageLocationHelperService implements IPageLocationHelper{
         return FloatingIconTitle.Guardians;
       case Page.Us:
         return FloatingIconTitle.Us;
+      case Page.Network:
+        return FloatingIconTitle.Network;
     }
     return '';
   }

@@ -18,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'tarde/linha-do-tempo', component: DefaultPageComponent },
   { path: 'noite/contato', component: DefaultPageComponent },
   { path: 'noite/nos', component: DefaultPageComponent },
+  { path: 'noite/rede', component: DefaultPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 

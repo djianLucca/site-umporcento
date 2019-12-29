@@ -37,7 +37,8 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/manha/guardioes', this.switchToGuardians.bind(this)),
       new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this)),
       new InternalRoutesService('/noite/contato', this.switchToContact.bind(this)),
-      new InternalRoutesService('/noite/nos', this.switchToUs.bind(this))
+      new InternalRoutesService('/noite/nos', this.switchToUs.bind(this)),
+      new InternalRoutesService('/noite/rede', this.switchToNetwork.bind(this)),
     ]);
   }
 
@@ -73,8 +74,11 @@ export class DefaultPageComponent implements OnInit {
   }
 
   isUsPage(): boolean{
-    console.log(this.state.page);
     return this.state.page === Page.Us;
+  }
+
+  isNetworkPage(): boolean{
+    return this.state.page === Page.Network;
   }
   
   changeSection(pageSection: PageSectionStatus) {
@@ -145,6 +149,12 @@ export class DefaultPageComponent implements OnInit {
 
   switchToUs() {
     this.changePage(Page.Us);
+    this.switchToNight();
+    this.changeBackground(PageSectionStatus.Night);
+  }
+
+  switchToNetwork(){
+    this.changePage(Page.Network);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night);
   }

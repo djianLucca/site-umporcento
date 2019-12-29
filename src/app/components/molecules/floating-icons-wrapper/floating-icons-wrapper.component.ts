@@ -48,6 +48,8 @@ export class FloatingIconsWrapperComponent implements OnChanges {
         return '/noite/contato';
       case 'Nós':
         return '/noite/nos';
+      case 'Rede':
+        return '/noite/rede';
     }
     return '/';
   }

@@ -62,6 +62,9 @@ import { GuardiansPageMidleRowComponent } from './components/organisms/guardians
 import { PersonImageInstagramComponent } from './components/molecules/person-image-instagram/person-image-instagram.component';
 import { UsPageContentComponent } from './components/templates/us-page-content/us-page-content.component';
 import { UsPageMidleRowComponent } from './components/organisms/us-page-midle-row/us-page-midle-row.component';
+import { NetworkPageContentComponent } from './components/templates/network-page-content/network-page-content.component';
+import { NetworkPageMidleRowComponent } from './components/organisms/network-page-midle-row/network-page-midle-row.component';
+import { BrandingImageInformationComponent } from './components/molecules/branding-image-information/branding-image-information.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +123,9 @@ import { UsPageMidleRowComponent } from './components/organisms/us-page-midle-ro
     PersonImageInstagramComponent,
     UsPageContentComponent,
     UsPageMidleRowComponent,
+    NetworkPageContentComponent,
+    NetworkPageMidleRowComponent,
+    BrandingImageInformationComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
