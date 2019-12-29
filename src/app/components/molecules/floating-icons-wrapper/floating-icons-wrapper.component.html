@@ -7,11 +7,16 @@
         (mouseleave)="this.toggleLabel(item.image, 'hidden')"
         >
         <div class="floating_icon__bg">
-            <app-load-svg
+            <app-load-svg *ngIf="item.title !== 'GABW'"
                 [svg]="item.image"
                 [class]="this.pageStatus + ' floatingIcon'" 
                 routerLink={{this.getRouterLinkPasedOnLabel(item.title)}}
             ></app-load-svg>
+            <app-load-svg *ngIf="item.title === 'GABW'"
+            [svg]="item.image"
+            [class]="this.pageStatus + ' floatingIcon'" 
+            (click)="this.openGabw();"
+        ></app-load-svg>
         </div>
         <label [ngStyle]="item.labelStyle">{{item.title}}</label>
     </div>

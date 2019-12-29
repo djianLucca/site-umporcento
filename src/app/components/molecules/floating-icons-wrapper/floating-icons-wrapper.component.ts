@@ -61,4 +61,8 @@ export class FloatingIconsWrapperComponent implements OnChanges {
     });
   }
 
+  openGabw(){
+    window.open('https://gabw.cc/', "_blank");
+  }
+
 }
