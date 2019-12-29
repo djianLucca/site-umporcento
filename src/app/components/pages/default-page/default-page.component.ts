@@ -34,8 +34,9 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/manha/dez-anos', this.switchToTenYears.bind(this)),
       new InternalRoutesService('/manha/guia-de-cultura', this.switchToCultureGuide.bind(this)),
       new InternalRoutesService('/manha/arvore', this.switchToTree.bind(this)),
+      new InternalRoutesService('/manha/guardioes', this.switchToGuardians.bind(this)),
       new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this)),
-      new InternalRoutesService('/noite/contato', this.switchToContact.bind(this))
+      new InternalRoutesService('/noite/contato', this.switchToContact.bind(this)),
     ]);
   }
 
@@ -66,6 +67,9 @@ export class DefaultPageComponent implements OnInit {
     return this.state.page === Page.Contact;
   }
   
+  isGuardiansPage(): boolean{
+    return this.state.page === Page.Guardians;
+  }
   changeSection(pageSection: PageSectionStatus) {
     this.state = this.stateManipulator.changePageSection(pageSection);
     console.log(this.state);
@@ -122,6 +126,12 @@ export class DefaultPageComponent implements OnInit {
     this.changePage(Page.Contact);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night)
+  }
+
+  switchToGuardians() {
+    this.changePage(Page.Guardians);
+    this.switchToMorning();
+    this.changeBackground(PageSectionStatus.Morning)
   }
 
 }

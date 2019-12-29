@@ -24,4 +24,9 @@
 [pageSection]="this.state.pageSection"
 [contactFormAction]="this.contactForm.sendMessage.bind(this)"
 ></app-contact-page-content>
+<app-guardians-page-content *ngIf="this.isGuardiansPage()"
+    [pageSection]="this.morningPage"
+    [socialIcons]="this.state.socialIcons"
+    [page]="this.state.page"
+></app-guardians-page-content>
 <router-outlet></router-outlet>

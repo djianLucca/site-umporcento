@@ -24,6 +24,8 @@ export class PageLocationHelperService implements IPageLocationHelper{
         return FloatingIconTitle.Tree;
       case Page.Contact:
         return FloatingIconTitle.Contact
+      case Page.Guardians:
+        return FloatingIconTitle.Guardians;
     }
     return '';
   }

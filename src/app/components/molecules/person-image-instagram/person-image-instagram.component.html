@@ -1,0 +1,12 @@
+<div class="person_instagam_image_wrapper" (mouseover)="changeLabelVisibility('show')" (mouseleave)="changeLabelVisibility('hide')">
+    <app-image-tag
+        [imgSrc]="'/assets/img/'+this.image"
+        [imgAlt]="this.instagram"
+        [class]="'person_instagram_image'"
+    ></app-image-tag>
+    <div class="instagram_name__wrapper" [ngStyle]="{'visibility':isLabelVisible ? 'visible' : 'hidden'}">
+        <div class="instagam_wrapper_interno">
+            <a href="{{this.instagramLink}}" target="_blank" rel="noopener noreferrer">@{{this.instagram}}</a>
+        </div>
+    </div>
+</div>

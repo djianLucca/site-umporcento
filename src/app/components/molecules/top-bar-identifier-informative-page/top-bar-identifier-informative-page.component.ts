@@ -17,7 +17,6 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.getPageLabelBasedOnPage(this.page));
   }
 
   getImageLogoBasedOnPage(page: Page): string {
@@ -34,6 +33,8 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
         return 'assets/img/tree.svg';
       case Page.Contact:
         return 'assets/img/contact.svg';
+      case Page.Guardians:
+        return 'assets/img/guardians.svg';
     }
     return '';
   }
