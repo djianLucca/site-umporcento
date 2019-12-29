@@ -1,0 +1,36 @@
+.brand_information__wrapper{
+    position: relative;
+    margin-top: -101%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.brand_information_internal__wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 277px;
+    height: 261px;
+    border: 2px solid #12D9E1;
+    padding-left: 1em;
+    padding-top: 2em;
+}
+.brand_image__wrapper{
+    margin-bottom: 100%;
+}
+.brand_information_internal__wrapper .title{
+    color: #12D9E1;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brand_information_internal__wrapper .brand_name{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brand_information_internal__wrapper .social{
+    text-decoration: none;
+    color: black;
+}

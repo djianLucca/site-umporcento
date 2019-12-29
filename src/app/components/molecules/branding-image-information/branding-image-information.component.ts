@@ -10,11 +10,27 @@ export class BrandingImageInformationComponent implements OnInit {
   @Input() imageAlt!: string;
   @Input() title!: string;
   @Input() brandName!: string;
-  @Input() instagram!: string;
+  @Input() social!: string;
+  @Input() site!: string;
+  @Input() socialUrl!: string;
+  isLabelVisible: boolean;
 
-  constructor() { }
+  constructor() { 
+    this.isLabelVisible = false;
+  }
 
   ngOnInit() {
   }
 
+  navigateTo(url :string){
+    window.open(url, "_blank");
+  }
+  
+  changeLabelVisibility(action: string){
+    if(action === 'hide'){
+      this.isLabelVisible = false;
+    }else{
+      this.isLabelVisible = true;
+    }
+  }
 }
