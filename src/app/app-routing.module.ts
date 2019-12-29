@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'manha/guardioes', component: DefaultPageComponent},
   { path: 'tarde/linha-do-tempo', component: DefaultPageComponent },
   { path: 'noite/contato', component: DefaultPageComponent },
+  { path: 'noite/nos', component: DefaultPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 

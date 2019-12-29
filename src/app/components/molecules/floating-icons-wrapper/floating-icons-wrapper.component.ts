@@ -39,13 +39,15 @@ export class FloatingIconsWrapperComponent implements OnChanges {
       case 'árvore':
             return '/manha/arvore'
       case 'guia de cultura':
-        return '/manha/guia-de-cultura'
+        return '/manha/guia-de-cultura';
+      case 'Guardiões':
+        return '/manha/guardioes';
       case 'Linha do Tempo':
         return '/tarde/linha-do-tempo';
       case 'Contato':
         return '/noite/contato';
-      case 'Guardiões':
-        return '/manha/guardioes';
+      case 'Nós':
+        return '/noite/nos';
     }
     return '/';
   }

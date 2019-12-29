@@ -60,6 +60,8 @@ import { ErrorPageComponentComponent } from './components/organisms/error-page-c
 import { GuardiansPageContentComponent } from './components/templates/guardians-page-content/guardians-page-content.component';
 import { GuardiansPageMidleRowComponent } from './components/organisms/guardians-page-midle-row/guardians-page-midle-row.component';
 import { PersonImageInstagramComponent } from './components/molecules/person-image-instagram/person-image-instagram.component';
+import { UsPageContentComponent } from './components/templates/us-page-content/us-page-content.component';
+import { UsPageMidleRowComponent } from './components/organisms/us-page-midle-row/us-page-midle-row.component';
 
 @NgModule({
   declarations: [
@@ -116,6 +118,8 @@ import { PersonImageInstagramComponent } from './components/molecules/person-ima
     GuardiansPageContentComponent,
     GuardiansPageMidleRowComponent,
     PersonImageInstagramComponent,
+    UsPageContentComponent,
+    UsPageMidleRowComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
