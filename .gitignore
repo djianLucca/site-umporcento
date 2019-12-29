@@ -46,3 +46,4 @@ testem.log
 Thumbs.db
 .env
 packages.microsoft.gpg
+*.Identifier

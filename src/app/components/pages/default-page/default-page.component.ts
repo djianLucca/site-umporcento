@@ -37,6 +37,7 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/manha/guardioes', this.switchToGuardians.bind(this)),
       new InternalRoutesService('/tarde/linha-do-tempo', this.switchToTimeline.bind(this)),
       new InternalRoutesService('/noite/contato', this.switchToContact.bind(this)),
+      new InternalRoutesService('/noite/nos', this.switchToUs.bind(this))
     ]);
   }
 
@@ -70,11 +71,18 @@ export class DefaultPageComponent implements OnInit {
   isGuardiansPage(): boolean{
     return this.state.page === Page.Guardians;
   }
+
+  isUsPage(): boolean{
+    console.log(this.state.page);
+    return this.state.page === Page.Us;
+  }
+  
   changeSection(pageSection: PageSectionStatus) {
     this.state = this.stateManipulator.changePageSection(pageSection);
     console.log(this.state);
   }
   changePage(page: Page) {
+    console.log('changePage',page);
     this.state = this.stateManipulator.changePage(page);
   }
   changeBackground(pageSection: PageSectionStatus) {
@@ -122,16 +130,23 @@ export class DefaultPageComponent implements OnInit {
     this.switchToAfternoon();
     this.changeBackground(PageSectionStatus.Afternoon);
   }
+
+  switchToGuardians() {
+    this.changePage(Page.Guardians);
+    this.switchToMorning();
+    this.changeBackground(PageSectionStatus.Morning)
+  }
+
   switchToContact() {
     this.changePage(Page.Contact);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night)
   }
 
-  switchToGuardians() {
-    this.changePage(Page.Guardians);
-    this.switchToMorning();
-    this.changeBackground(PageSectionStatus.Morning)
+  switchToUs() {
+    this.changePage(Page.Us);
+    this.switchToNight();
+    this.changeBackground(PageSectionStatus.Night);
   }
 
 }

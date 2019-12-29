@@ -29,4 +29,10 @@
     [socialIcons]="this.state.socialIcons"
     [page]="this.state.page"
 ></app-guardians-page-content>
+<app-us-page-content *ngIf="this.isUsPage()"
+[socialIcons]="this.state.socialIcons"
+[pageSection]="this.state.pageSection"
+[page]="this.state.page"
+>
+</app-us-page-content>
 <router-outlet></router-outlet>

@@ -35,6 +35,8 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
         return 'assets/img/contact.svg';
       case Page.Guardians:
         return 'assets/img/guardians.svg';
+      case Page.Us:
+        return 'assets/img/us.svg';
     }
     return '';
   }
