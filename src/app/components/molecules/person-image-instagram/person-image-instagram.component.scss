@@ -1,0 +1,32 @@
+.person_instagam_image_wrapper{
+    max-width: 100%;
+}
+.instagram_name__wrapper{
+    display: flex;
+    
+    font-weight: bold;
+    margin-top: -8.6%;
+    position: relative;
+    .instagam_wrapper_interno{
+        position: absolute;
+        display: flex;
+        top: 0;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: .8);
+    }
+    a{
+        margin-left: auto;
+        margin-right: auto;
+        padding: .6em;
+        color: #12D9E1;
+    }
+}
+
+@media only screen and (max-width : 1366px) {
+    .person_instagam_image_wrapper{
+        max-width: 330px;
+    }
+    .instagram_name__wrapper{
+        margin-top: -13%; 
+    }
+}

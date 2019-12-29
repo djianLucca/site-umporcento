@@ -57,6 +57,9 @@ import { InputComponent } from './components/atoms/input/input.component';
 import { UmporcentoInfoComponent } from './components/atoms/umporcento-info/umporcento-info.component';
 import { ErrorPageComponent } from './components/templates/error-page/error-page.component';
 import { ErrorPageComponentComponent } from './components/organisms/error-page-component/error-page-component.component';
+import { GuardiansPageContentComponent } from './components/templates/guardians-page-content/guardians-page-content.component';
+import { GuardiansPageMidleRowComponent } from './components/organisms/guardians-page-midle-row/guardians-page-midle-row.component';
+import { PersonImageInstagramComponent } from './components/molecules/person-image-instagram/person-image-instagram.component';
 
 @NgModule({
   declarations: [
@@ -110,6 +113,9 @@ import { ErrorPageComponentComponent } from './components/organisms/error-page-c
     UmporcentoInfoComponent,
     ErrorPageComponent,
     ErrorPageComponentComponent,
+    GuardiansPageContentComponent,
+    GuardiansPageMidleRowComponent,
+    PersonImageInstagramComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
