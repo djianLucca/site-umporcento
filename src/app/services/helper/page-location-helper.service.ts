@@ -30,6 +30,8 @@ export class PageLocationHelperService implements IPageLocationHelper{
         return FloatingIconTitle.Us;
       case Page.Network:
         return FloatingIconTitle.Network;
+      case Page.Stamp:
+        return FloatingIconTitle.Stamp;
     }
     return '';
   }

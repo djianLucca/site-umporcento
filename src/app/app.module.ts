@@ -65,6 +65,8 @@ import { UsPageMidleRowComponent } from './components/organisms/us-page-midle-ro
 import { NetworkPageContentComponent } from './components/templates/network-page-content/network-page-content.component';
 import { NetworkPageMidleRowComponent } from './components/organisms/network-page-midle-row/network-page-midle-row.component';
 import { BrandingImageInformationComponent } from './components/molecules/branding-image-information/branding-image-information.component';
+import { StampPageContentComponent } from './components/templates/stamp-page-content/stamp-page-content.component';
+import { StampPageMidleRowComponent } from './components/organisms/stamp-page-midle-row/stamp-page-midle-row.component';
 
 @NgModule({
   declarations: [
@@ -126,6 +128,8 @@ import { BrandingImageInformationComponent } from './components/molecules/brandi
     NetworkPageContentComponent,
     NetworkPageMidleRowComponent,
     BrandingImageInformationComponent,
+    StampPageContentComponent,
+    StampPageMidleRowComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

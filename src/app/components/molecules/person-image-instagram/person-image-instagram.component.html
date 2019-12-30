@@ -1,8 +1,8 @@
-<div class="person_instagam_image_wrapper" (mouseover)="changeLabelVisibility('show')" (mouseleave)="changeLabelVisibility('hide')">
+<div class="person_instagam_image_wrapper {{this.class}}" (mouseover)="changeLabelVisibility('show')" (mouseleave)="changeLabelVisibility('hide')">
     <app-image-tag
         [imgSrc]="'/assets/img/'+this.image"
         [imgAlt]="this.instagram"
-        [class]="'person_instagram_image'"
+        [class]="'person_instagram_image active'+this.active"
     ></app-image-tag>
     <div class="instagram_name__wrapper" [ngStyle]="{'visibility':isLabelVisible ? 'visible' : 'hidden'}">
         <div class="instagam_wrapper_interno">

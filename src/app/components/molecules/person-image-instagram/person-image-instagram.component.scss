@@ -1,5 +1,6 @@
 .person_instagam_image_wrapper{
     max-width: 100%;
+    margin-bottom: 8.6%;
 }
 .instagram_name__wrapper{
     display: flex;
@@ -20,6 +21,16 @@
         padding: .6em;
         color: #12D9E1;
     }
+}
+
+.us .instagram_name__wrapper{
+    margin-top: -19%;
+    a{
+        font-size: 10px;
+    }
+}
+app-image-tag{
+    margin-bottom: 8.6%;
 }
 
 @media only screen and (max-width : 1366px) {

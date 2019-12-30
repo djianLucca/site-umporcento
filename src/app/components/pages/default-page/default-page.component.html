@@ -35,11 +35,16 @@
 [page]="this.state.page"
 >
 </app-us-page-content>
-<app-network-page-content
+<app-network-page-content *ngIf="this.isNetworkPage()"
     [socialIcons]="this.state.socialIcons"
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
 >
-</app-network-page-content
+</app-network-page-content>
+<app-stamp-page-content *ngIf="this.isStampPage()"
+    [socialIcons]="this.state.socialIcons"
+    [pageSection]="this.state.pageSection"
+    [page]="this.state.page"
 >
+</app-stamp-page-content>
 <router-outlet></router-outlet>

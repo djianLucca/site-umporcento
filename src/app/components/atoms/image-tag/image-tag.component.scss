@@ -9,6 +9,9 @@
     width: 55px;
     height: 55px;
 }
+.activefalse{
+    opacity: .3;
+}
 @media only screen and (max-width : 1366px) {
     .person_instagram_image{
         max-width: 350px;

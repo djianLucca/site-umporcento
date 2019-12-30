@@ -8,11 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PersonImageInstagramComponent implements OnInit {
   @Input() image!: string;
   @Input() instagram!: string;
+  @Input() active: boolean;
+  @Input() class!: string;
   instagramLink: string;
   isLabelVisible: boolean;
+
   constructor() { 
     this.instagramLink = 'https://instagram.com/';
     this.isLabelVisible = false;
+    this.active = true;
   }
 
   ngOnInit() {
@@ -20,6 +24,9 @@ export class PersonImageInstagramComponent implements OnInit {
   }
 
   changeLabelVisibility(action: string){
+    if(!this.active){
+      return;
+    }
     if(action === 'hide'){
       this.isLabelVisible = false;
     }else{

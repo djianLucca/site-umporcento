@@ -19,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'noite/contato', component: DefaultPageComponent },
   { path: 'noite/nos', component: DefaultPageComponent },
   { path: 'noite/rede', component: DefaultPageComponent },
+  { path: 'noite/selo', component: DefaultPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 
