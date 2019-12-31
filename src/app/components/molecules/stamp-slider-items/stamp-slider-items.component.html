@@ -1,0 +1,11 @@
+<div class="slider_item__wrapper" (click)="this.navigateTo(this.redirectTo);" (mouseover)="changeLabelVisibility('show')" (mouseleave)="changeLabelVisibility('hide')">
+    <app-image-tag
+    [imgSrc]="this.image"
+    [imgAlt]="this.social"
+    [class]="'stamp_slider__item'"
+    >
+    </app-image-tag>
+    <div class="stamp_slider_social_info" [ngStyle]="{'visibility':showLabel ? 'visible' : 'hidden'}">
+        <p class="social_handle"><strong>@{{this.social}}</strong></p>
+    </div>
+</div>

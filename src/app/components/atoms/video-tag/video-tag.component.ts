@@ -9,8 +9,10 @@ export class VideoTagComponent implements OnInit {
   @Input() video: string | undefined;
   @Input() loop: boolean;
   @Input() id: string | undefined;
+  @Input() controled: boolean;
   constructor() {
     this.loop = false;
+    this.controled = false;
   }
 
   ngOnInit() {

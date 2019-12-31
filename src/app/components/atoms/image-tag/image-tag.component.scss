@@ -12,6 +12,9 @@
 .activefalse{
     opacity: .3;
 }
+.stamp_slider__item{
+    border: 1px solid black;
+}
 @media only screen and (max-width : 1366px) {
     .person_instagram_image{
         max-width: 350px;

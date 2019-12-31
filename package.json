@@ -34,7 +34,9 @@
     "ng-image-slider": "^2.0.3",
     "ng-inline-svg": "^9.0.1",
     "ngx-mask": "^8.1.6",
+    "ngx-useful-swiper": "^9.0.0",
     "rxjs": "~6.4.0",
+    "swiper": "^5.2.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
@@ -46,6 +48,7 @@
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "@types/swiper": "^5.2.0",
     "codelyzer": "^5.0.0",
     "html-loader": "^0.5.5",
     "jasmine-core": "~3.4.0",

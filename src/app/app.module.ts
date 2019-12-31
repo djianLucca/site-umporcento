@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
@@ -67,6 +68,8 @@ import { NetworkPageMidleRowComponent } from './components/organisms/network-pag
 import { BrandingImageInformationComponent } from './components/molecules/branding-image-information/branding-image-information.component';
 import { StampPageContentComponent } from './components/templates/stamp-page-content/stamp-page-content.component';
 import { StampPageMidleRowComponent } from './components/organisms/stamp-page-midle-row/stamp-page-midle-row.component';
+import { StampImageSliderComponent } from './components/organisms/stamp-image-slider/stamp-image-slider.component';
+import { StampSliderItemsComponent } from './components/molecules/stamp-slider-items/stamp-slider-items.component';
 
 @NgModule({
   declarations: [
@@ -130,6 +133,8 @@ import { StampPageMidleRowComponent } from './components/organisms/stamp-page-mi
     BrandingImageInformationComponent,
     StampPageContentComponent,
     StampPageMidleRowComponent,
+    StampImageSliderComponent,
+    StampSliderItemsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -138,7 +143,8 @@ import { StampPageMidleRowComponent } from './components/organisms/stamp-page-mi
     HttpClientModule,
     InlineSVGModule.forRoot(),
     NgImageSliderModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    NgxUsefulSwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
