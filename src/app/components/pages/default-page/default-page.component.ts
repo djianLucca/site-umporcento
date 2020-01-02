@@ -40,6 +40,7 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/noite/nos', this.switchToUs.bind(this)),
       new InternalRoutesService('/noite/rede', this.switchToNetwork.bind(this)),
       new InternalRoutesService('/noite/selo', this.switchToStamp.bind(this)),
+      new InternalRoutesService('/noite/palestras', this.switchToTalks.bind(this)),
     ]);
   }
 
@@ -84,6 +85,10 @@ export class DefaultPageComponent implements OnInit {
 
   isStampPage(): boolean{
     return this.state.page === Page.Stamp;
+  }
+
+  isTalksPage(): boolean{
+    return this.state.page === Page.Talks;
   }
   
   changeSection(pageSection: PageSectionStatus) {
@@ -170,4 +175,9 @@ export class DefaultPageComponent implements OnInit {
     this.changeBackground(PageSectionStatus.Night);
   }
 
+  switchToTalks(){
+    this.changePage(Page.Talks);
+    this.switchToNight();
+    this.changeBackground(PageSectionStatus.Night);
+  }
 }

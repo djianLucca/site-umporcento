@@ -15,8 +15,14 @@
 .stamp_slider__item{
     border: 1px solid black;
 }
+.slider_talk_images{
+    max-height: 400px;
+}
 @media only screen and (max-width : 1366px) {
     .person_instagram_image{
         max-width: 350px;
+    }
+    .slider_talk_images{
+        max-height: 250px;
     }
 }

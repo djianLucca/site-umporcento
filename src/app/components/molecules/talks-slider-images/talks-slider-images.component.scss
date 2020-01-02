@@ -1,0 +1,20 @@
+.swiper-wrapper{
+    max-width: 1300px;
+}
+.swiper-slide{
+    display: flex;
+    width: 1300px;
+    app-image-tag{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: black;
+}
+@media only screen and (max-width : 1366px) {
+    .swiper-wrapper{
+        max-width: 800px;
+    }
+}

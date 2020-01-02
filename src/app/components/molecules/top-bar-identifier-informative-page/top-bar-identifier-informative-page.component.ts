@@ -41,6 +41,8 @@ export class TopBarIdentifierInformativePageComponent implements OnInit {
         return 'assets/img/network.svg';
       case Page.Stamp:
         return 'assets/img/stamp.svg';
+      case Page.Talks:
+        return 'assets/img/talk.svg';
     }
     return '';
   }

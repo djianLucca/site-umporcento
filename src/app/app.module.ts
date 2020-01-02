@@ -70,6 +70,10 @@ import { StampPageContentComponent } from './components/templates/stamp-page-con
 import { StampPageMidleRowComponent } from './components/organisms/stamp-page-midle-row/stamp-page-midle-row.component';
 import { StampImageSliderComponent } from './components/organisms/stamp-image-slider/stamp-image-slider.component';
 import { StampSliderItemsComponent } from './components/molecules/stamp-slider-items/stamp-slider-items.component';
+import { TalksPageContentComponent } from './components/templates/talks-page-content/talks-page-content.component';
+import { TalksPageMidleRowComponent } from './components/organisms/talks-page-midle-row/talks-page-midle-row.component';
+import { TalksSliderImagesComponent } from './components/molecules/talks-slider-images/talks-slider-images.component';
+import { DropdownCounterComponent } from './components/molecules/dropdown-counter/dropdown-counter.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +139,10 @@ import { StampSliderItemsComponent } from './components/molecules/stamp-slider-i
     StampPageMidleRowComponent,
     StampImageSliderComponent,
     StampSliderItemsComponent,
+    TalksPageContentComponent,
+    TalksPageMidleRowComponent,
+    TalksSliderImagesComponent,
+    DropdownCounterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

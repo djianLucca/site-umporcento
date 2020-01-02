@@ -47,4 +47,10 @@
     [page]="this.state.page"
 >
 </app-stamp-page-content>
+<app-talks-page-content *ngIf="this.isTalksPage()"
+    [socialIcons]="this.state.socialIcons"
+    [pageSection]="this.state.pageSection"
+    [page]="this.state.page"
+>
+</app-talks-page-content>
 <router-outlet></router-outlet>

@@ -1,0 +1,56 @@
+#midle_content__wrapper{
+    height: 74vh;
+    display: flex;
+    justify-content: flex-start;
+}
+#midle_page_content__wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    max-height: 100%;
+    padding: 1em;
+    margin: 3.2em;
+    margin-top: 0px;
+}
+#top_identifier__wrapper{
+  display:flex;
+  width:100%;
+  max-height: 59px;
+}
+app-side-line-midle-page{
+    height: 100%;
+}
+app-top-bar-identifier-informative-page{
+    width: 100%;
+}
+app-menu-icon{
+   margin-left: auto;
+   margin-right: 20px;
+}
+
+.talk_slider__wrapper{
+    display: flex;
+    width: 100%;
+    app-talks-slider-images{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.talk_number__wrapper{
+    display: flex;
+    width: 100%;
+    .talk_number_content__wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        app-dropdown-counter{
+            align-self: center;
+        }
+        p{
+            align-self: center;
+            font-size: 1.5em;
+            font-weight: lighter;
+        }
+    }
+}

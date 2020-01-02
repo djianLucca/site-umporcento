@@ -1,0 +1,40 @@
+<div id="midle_content__wrapper">
+    <app-side-line-midle-page
+    [pageSection]="this.pageSection">   
+    </app-side-line-midle-page>
+    <div id="midle_page_content__wrapper">
+      <div id="top_identifier__wrapper">
+        <app-top-bar-identifier-informative-page
+          [page]="this.page"
+          [getPageLabelBasedOnPage]="this.pageLocationHelper.getPageLabelBasedOnPage.bind(this)"
+          [pageLayout]="this.pageSection"
+        >
+        </app-top-bar-identifier-informative-page>
+      </div>
+      <div class="talk_slider__wrapper">
+        <app-talks-slider-images>
+        </app-talks-slider-images>
+      </div>
+      <div class="talk_number__wrapper">
+        <div class="talk_number_content__wrapper">
+          <p>Desde 2007, somam-se  </p>
+          <app-dropdown-counter
+            [maxCounter]=74
+          >
+          </app-dropdown-counter>
+          <p>oportunidades de compartilhar nossas histórias em </p>
+          <app-dropdown-counter
+            [maxCounter]=3
+          >
+          </app-dropdown-counter>
+          <p> países.</p>
+        </div>
+      </div>
+    </div>
+    <app-menu-icon [pageLayout]="this.pageSection"></app-menu-icon>
+    <app-side-line-midle-page
+    [endLine]=true
+    [pageSection]="this.pageSection">   
+    </app-side-line-midle-page>
+  </div>
+  
