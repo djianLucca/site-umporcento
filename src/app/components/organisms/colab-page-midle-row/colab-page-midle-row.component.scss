@@ -1,0 +1,35 @@
+#midle_content__wrapper{
+    height: 74vh;
+    display: flex;
+    justify-content: flex-start;
+}
+#midle_page_content__wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    max-height: 100%;
+    padding: 1em;
+    margin: 3.2em;
+    margin-top: 0px;
+}
+#top_identifier__wrapper{
+  display:flex;
+  width:100%;
+  max-height: 59px;
+}
+#informative_section__wrapper{
+    width: 40%;
+}
+#slider_art_section__wrappper{
+    width: 60%;
+}
+app-side-line-midle-page{
+    height: 100%;
+}
+app-top-bar-identifier-informative-page{
+    width: 100%;
+}
+app-menu-icon{
+   margin-left: auto;
+   margin-right: 20px;
+}

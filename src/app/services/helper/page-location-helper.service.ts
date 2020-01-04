@@ -34,6 +34,8 @@ export class PageLocationHelperService implements IPageLocationHelper{
         return FloatingIconTitle.Stamp;
       case Page.Talks:
         return FloatingIconTitle.Talks;
+      case Page.Colab:
+        return FloatingIconTitle.Colab;
     }
     return '';
   }

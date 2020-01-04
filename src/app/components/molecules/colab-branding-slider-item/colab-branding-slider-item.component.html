@@ -1,0 +1,8 @@
+<div class="branding_slider_item {{this.class}}" (mouseover)="changeLabelVisibility('show')" (mouseleave)="changeLabelVisibility('hide')">
+    <app-image-tag
+        [imgSrc]="this.image"
+        [imgAlt]="this.imageAlt"
+    >
+    </app-image-tag>
+    <p [ngStyle]="{'visibility':isLabelVisible ? 'visible' : 'hidden'}"><strong>@{{this.instagram}}</strong></p>
+</div>

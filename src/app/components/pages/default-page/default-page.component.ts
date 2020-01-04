@@ -41,6 +41,7 @@ export class DefaultPageComponent implements OnInit {
       new InternalRoutesService('/noite/rede', this.switchToNetwork.bind(this)),
       new InternalRoutesService('/noite/selo', this.switchToStamp.bind(this)),
       new InternalRoutesService('/noite/palestras', this.switchToTalks.bind(this)),
+      new InternalRoutesService('/noite/colab', this.switchToColab.bind(this)),
     ]);
   }
 
@@ -89,6 +90,10 @@ export class DefaultPageComponent implements OnInit {
 
   isTalksPage(): boolean{
     return this.state.page === Page.Talks;
+  }
+
+  isColabPage() :boolean{
+    return this.state.page === Page.Colab;
   }
   
   changeSection(pageSection: PageSectionStatus) {
@@ -177,6 +182,12 @@ export class DefaultPageComponent implements OnInit {
 
   switchToTalks(){
     this.changePage(Page.Talks);
+    this.switchToNight();
+    this.changeBackground(PageSectionStatus.Night);
+  }
+
+  switchToColab(){
+    this.changePage(Page.Colab);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night);
   }

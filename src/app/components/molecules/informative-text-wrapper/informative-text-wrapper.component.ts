@@ -24,6 +24,8 @@ export class InformativeTextWrapperComponent implements OnInit {
         return this.getCompassText();
       case Page.Stamp:
         return this.getStampText();
+      case Page.Colab:
+        return this.getColabtext();
     }
     return '<p>No Text</p>';
   }
@@ -37,6 +39,10 @@ export class InformativeTextWrapperComponent implements OnInit {
     <p>O principal dom da consciência é o dom da criação. Como não temos consciência divina, acabamos criando situações e fatos que nos desequilibram, os ventos que nos tiram do nosso destino.</p>
     <p>A purificação da consciência, é uma correção, um alinhamento para que possamos entregar ao mundo os nossos do ns e talentos , a nossa luz . </p>
     <p>Esse é o motivo pelo qual criamos a 'Bússola'. Uma ferramenta simples e profunda.Um resgate ao verdadeiro compromisso que cada Ser veio entregar ao mundo.</p>`;
+  }
+  getColabtext(): string{
+    return `<p>A mesma (e única consciência) que opera no macrocosmo, opera no microcosmo. Essa uma só consciência (a do universo), se repete em cada desdobramento dela mesma. Cada 'coisa viva' possui o mesmo padrão inteligente e natural de operar, e os antigos descobriram isso observando a natureza. Se você contemplar a natureza, você poderá começar a entender como sua <strong>consciência natural</strong> opera.</p>
+    <p>O principal dom da consciência é o dom da criação. Como não temos consciência divina,acabamoscriando situações e fatos que nos desequilibram, os ventos que nos tiram do nosso destino</p>`;
   }
 
 }

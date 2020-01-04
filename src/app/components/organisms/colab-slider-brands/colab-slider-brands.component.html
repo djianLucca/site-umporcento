@@ -1,0 +1,44 @@
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <app-colab-branding-slider-item
+            [image]="'assets/img/ohohlele.jpg'"
+            [imageAlt]="'ohohlele'"
+            [instagram]="'ohohlele'"
+            (click)="this.itemAction('ohohlele')"
+          >
+          </app-colab-branding-slider-item>
+      </div>
+      <div class="swiper-slide">
+        <app-colab-branding-slider-item
+            [image]="'assets/img/pedroemcb.jpg'"
+            [imageAlt]="'pedroemcb'"
+            [instagram]="'pedroemcb'"
+            (click)="this.itemAction('pedroemcb')"
+        >
+        </app-colab-branding-slider-item>
+      </div>
+      <div class="swiper-slide">
+        <app-colab-branding-slider-item
+            [image]="'assets/img/projetosomosinstantes.jpg'"
+            [imageAlt]="'projetosomosinstantes'"
+            [instagram]="'projetosomosinstantes'"
+            (click)="this.itemAction('projetosomosinstantes')"
+        >
+        </app-colab-branding-slider-item>
+      </div>
+      <div class="swiper-slide">
+        <app-colab-branding-slider-item
+            [image]="'assets/img/umcartao.jpg'"
+            [imageAlt]="'umcartao'"
+            [instagram]="'umcartao'"
+            [class]="'inactive'"
+        >
+        </app-colab-branding-slider-item>
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+  

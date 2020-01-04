@@ -1,0 +1,18 @@
+<section id="slider_section">
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let item of this.getImages()">
+        <app-image-tag
+          [imgSrc]="item"
+          [class]="'art_slider'"
+        ></app-image-tag>
+      </div>
+    </div>
+  </swiper>
+  <div id="pagination" class="swiper-pagination"></div>
+</section>
+<section id="download_section">
+  <app-download-btn 
+  [page]="this.page"
+  [colab]="this.artist"></app-download-btn>
+</section>

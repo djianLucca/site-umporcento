@@ -1,0 +1,16 @@
+.branding_slider_item{
+    max-width: 200px;
+    cursor: pointer;
+    app-image-tag{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    p{
+        text-align: center;
+        width: 100%;
+    }
+}
+.branding_slider_item.inactive{
+    cursor: default;
+}

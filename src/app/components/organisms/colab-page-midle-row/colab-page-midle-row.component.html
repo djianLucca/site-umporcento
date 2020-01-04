@@ -1,0 +1,34 @@
+<div id="midle_content__wrapper">
+  <app-side-line-midle-page [pageSection]="this.pageSection">
+  </app-side-line-midle-page>
+  <div id="midle_page_content__wrapper">
+    <div id="top_identifier__wrapper">
+      <app-top-bar-identifier-informative-page
+        [page]="this.page"
+        [getPageLabelBasedOnPage]="this.pageLocationHelper.getPageLabelBasedOnPage.bind(this)"
+        [pageLayout]="this.pageSection"
+      >
+      </app-top-bar-identifier-informative-page>
+    </div>
+    <div id="informative_section__wrapper">
+        <app-informative-text-wrapper
+            [page]="this.page"
+        >           
+        </app-informative-text-wrapper>
+        <app-colab-slider-brands
+          [itemAction]="this.changeArtSlider.bind(this)"
+        >
+        </app-colab-slider-brands
+        >
+    </div>
+    <div id="slider_art_section__wrappper">
+      <app-colab-art-slider
+        [artist]="this.activeColab"
+      >
+      </app-colab-art-slider>
+    </div>
+  </div>
+  <app-menu-icon [pageLayout]="this.pageSection"></app-menu-icon>
+  <app-side-line-midle-page [endLine]="true" [pageSection]="this.pageSection">
+  </app-side-line-midle-page>
+</div>

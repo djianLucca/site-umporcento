@@ -1,0 +1,15 @@
+.swiper-wrapper{
+    width: 500px;
+}
+swiper{
+    display: flex;
+    .swiper-wrapper{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+#pagination{
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}

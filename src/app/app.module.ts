@@ -74,6 +74,11 @@ import { TalksPageContentComponent } from './components/templates/talks-page-con
 import { TalksPageMidleRowComponent } from './components/organisms/talks-page-midle-row/talks-page-midle-row.component';
 import { TalksSliderImagesComponent } from './components/molecules/talks-slider-images/talks-slider-images.component';
 import { DropdownCounterComponent } from './components/molecules/dropdown-counter/dropdown-counter.component';
+import { ColabPageContentComponent } from './components/templates/colab-page-content/colab-page-content.component';
+import { ColabPageMidleRowComponent } from './components/organisms/colab-page-midle-row/colab-page-midle-row.component';
+import { ColabSliderBrandsComponent } from './components/organisms/colab-slider-brands/colab-slider-brands.component';
+import { ColabBrandingSliderItemComponent } from './components/molecules/colab-branding-slider-item/colab-branding-slider-item.component';
+import { ColabArtSliderComponent } from './components/organisms/colab-art-slider/colab-art-slider.component';
 
 @NgModule({
   declarations: [
@@ -143,6 +148,11 @@ import { DropdownCounterComponent } from './components/molecules/dropdown-counte
     TalksPageMidleRowComponent,
     TalksSliderImagesComponent,
     DropdownCounterComponent,
+    ColabPageContentComponent,
+    ColabPageMidleRowComponent,
+    ColabSliderBrandsComponent,
+    ColabBrandingSliderItemComponent,
+    ColabArtSliderComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

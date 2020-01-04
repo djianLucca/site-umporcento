@@ -8,9 +8,11 @@ import { Page } from 'src/app/services/enums/pageenum';
 })
 export class DownloadBtnComponent implements OnInit {
   @Input() page!: Page;
+  @Input() colab: string;
   file: string;
   constructor() {
     this.file = '';
+    this.colab = '';
   }
 
   ngOnInit() {
@@ -36,8 +38,22 @@ export class DownloadBtnComponent implements OnInit {
         return '/assets/pack/umporcento_ManualDaMarca.zip';
       case Page.Magazine:
         return '/assets/pdf/umporcento_dez_anos.pdf';
+      case Page.Colab:
+        return this.getFileBasedOnColab();
     }
     return '';
+  }
+  getFileBasedOnColab(): string {
+    switch (this.colab) {
+      case 'ohohlele':
+        return '/assets/pack/colab_ohohlele.zip';
+      case 'pedroemcb':
+        return '/assets/pack/colab_pedro_emcb.zip';
+      case 'projetosomosinstantes':
+        return '/assets/pdf/colab_somos_instantes.pdf';
+      default:
+        return '';
+    }
   }
 
 }
