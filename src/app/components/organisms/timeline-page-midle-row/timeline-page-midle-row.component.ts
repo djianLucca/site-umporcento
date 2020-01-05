@@ -12,6 +12,7 @@ export class TimelinePageMidleRowComponent implements OnInit {
   @Input() pageSection!: PageSectionStatus;
   @Input() timelineYears!: YearService[];
   @Input() tinelineItems!: TimelineItemService[];
+  @Input() menuAction!: () => void;
   constructor() { }
 
   ngOnInit() {

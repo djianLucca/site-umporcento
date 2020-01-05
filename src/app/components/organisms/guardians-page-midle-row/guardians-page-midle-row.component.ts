@@ -12,6 +12,7 @@ export class GuardiansPageMidleRowComponent implements OnInit {
 
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
+  @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
   
   constructor() { 

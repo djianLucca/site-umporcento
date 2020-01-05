@@ -1,15 +1,16 @@
-<section id="contact_page__wrapper">
+<section id="menu_section__wrapper">
     <div class='flex-row'>
         <app-icon-page-top-row
         [pageSection]="this.pageSection"
         ></app-icon-page-top-row>
     </div>
     <div class='flex-row'>
-        <app-contact-page-midle-row
-            [action]="this.contactFormAction"
+        <app-menu-midle-row
+            [pageSection]="this.pageSection"
             [menuAction]="this.menuAction"
+            [menuContent]="this.menuContent"
         >
-        </app-contact-page-midle-row>
+        </app-menu-midle-row>
     </div>
     <div class='flex-row'>
         <app-icon-page-bottom-row

@@ -12,6 +12,8 @@ export class ColabPageContentComponent implements OnInit {
   @Input() socialIcons!: SocialIconsService[];
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
+  @Input() menuAction!: () => void;
+  
   constructor() {
     this.pageSection = PageSectionStatus.Night;
     this.page = Page.Colab;

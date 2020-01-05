@@ -13,6 +13,7 @@ export class IconPageContentComponent implements OnInit {
   @Input() pageSection!: PageSectionStatus;
   @Input() socialIcons: SocialIconsService[];
   @Input() floatingIcons: FloatingIconsService[];
+  @Input() menuAction!: () => void;
   sectionId: string;
 
   constructor() {

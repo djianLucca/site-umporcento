@@ -10,6 +10,8 @@ import { FloatingIconsService } from 'src/app/services/floating-icons.service';
 export class IconPageMidleRowComponent implements OnChanges {
   @Input() pageLayout: PageSectionStatus;
   @Input() floatingIcons: FloatingIconsService[];
+  @Input() menuAction!: () => void;
+  
   imageSrc: string;
   svgHeightEnd: string;
   svgHeightStart: string;

@@ -5,10 +5,10 @@ import { PageSectionStatus } from './enums/pageSectionStatusenum';
 import { PageSectionBackground } from './enums/pageSectionbackgroundenum';
 import { FloatingIconsService } from './floating-icons.service';
 import { SocialIconsService } from './social-icons.service';
-import { MenuService } from './menu.service';
 import { FloatingIconBuilderService } from './floating-icon-builder.service';
 import { YearService } from './year.service';
 import { TimelineItemService } from './timeline-item.service';
+import { MenuGroupService } from './menu-group.service';
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +20,13 @@ export class StateService implements IState {
   pageBackground: PageSectionBackground;
   floatingIcons: FloatingIconsService[];
   socialIcons: SocialIconsService[];
-  menu: MenuService;
+  menu: MenuGroupService[];
   floatingIconBuilder: FloatingIconBuilderService;
   timelineYears: YearService[];
   timelineItems: TimelineItemService[];
+  isMenuOpen: boolean;
 
-  constructor(now: number, menu: MenuService, socialIcons: SocialIconsService[]) {
+  constructor(now: number, menu: MenuGroupService[], socialIcons: SocialIconsService[]) {
     this.floatingIconBuilder = new FloatingIconBuilderService();
     this.page = this.getPageBasedOnTime(now);
     this.title = '[1%] Um por Cento';
@@ -36,6 +37,7 @@ export class StateService implements IState {
     this.socialIcons = socialIcons;
     this.timelineItems = [];
     this.timelineYears = [];
+    this.isMenuOpen = false;
   }
 
   getPageSectionBasedOnPage(page: Page): PageSectionStatus {

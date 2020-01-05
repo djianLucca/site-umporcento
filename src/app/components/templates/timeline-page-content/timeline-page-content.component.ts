@@ -15,6 +15,7 @@ export class TimelinePageContentComponent implements OnInit {
   @Input() timelineYears!: YearService[];
   @Input() tinelineItems!: TimelineItemService[];
   @Input() updateApi!: () => {};
+  @Input() menuAction!: () => void;
   constructor() { 
     this.socialIcons = [];
   }

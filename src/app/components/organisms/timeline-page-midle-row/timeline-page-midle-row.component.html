@@ -8,7 +8,10 @@
                 [timelineYears]="this.timelineYears"
             ></app-timeline-wrapper>
         </div>
-        <app-menu-icon [pageLayout]="this.pageSection"></app-menu-icon>
+        <app-menu-icon 
+            [pageLayout]="this.pageSection"
+            [action]="this.menuAction"
+        ></app-menu-icon>
         <app-side-line-midle-page
         [endLine]=true>   
         </app-side-line-midle-page>

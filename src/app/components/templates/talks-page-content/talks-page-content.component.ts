@@ -12,6 +12,7 @@ export class TalksPageContentComponent implements OnInit {
   @Input() socialIcons!: SocialIconsService[];
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
+  @Input() menuAction!: () => void;
   
   constructor() { 
     this.pageSection = PageSectionStatus.Night;

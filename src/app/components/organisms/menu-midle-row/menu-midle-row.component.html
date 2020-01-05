@@ -1,0 +1,29 @@
+<div id="midle_content__wrapper">
+    <app-side-line-midle-page [pageSection]="this.pageSection">
+    </app-side-line-midle-page>
+    <div id="midle_page_content__wrapper">
+        <div class="menu_row" *ngFor="let group of this.menuContent">
+            <div class="group_identifier">
+                <h2>{{this.group.title}}</h2>
+                <p class="label" [innerHTML]="this.group.label"></p>
+            </div>
+            <div class="group_items" >
+                <div *ngFor="let item of group.items">
+                    <a class="item" *ngIf="item.title !== 'gabw'"  routerLink={{item.url}}><span class="line_wrapper"><span class="line"></span>{{item.title}}</span></a>
+                    <a class="item" *ngIf="item.title === 'gabw'"  (click)="this.openGabw()"><span class="line_wrapper"><span class="line"></span>{{item.title}}</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="umporcento_info">
+            <app-umporcento-info></app-umporcento-info>
+        </div>
+    </div>
+    <app-menu-icon 
+        [pageLayout]="this.pageSection"
+        [open]="true"
+        [action]="this.menuAction"
+    ></app-menu-icon>
+    <app-side-line-midle-page [endLine]="true" [pageSection]="this.pageSection">
+    </app-side-line-midle-page>
+  </div>
+  

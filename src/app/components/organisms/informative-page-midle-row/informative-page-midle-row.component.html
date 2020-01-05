@@ -24,10 +24,14 @@
         [class]="'inforativePageImage'"
       >
       </app-image-tag>
-      <app-download-btn [page]="this.page"></app-download-btn>
+      <app-download-btn 
+      [page]="this.page"></app-download-btn>
     </div>
   </div>
-  <app-menu-icon [pageLayout]="this.pageLayout"></app-menu-icon>
+  <app-menu-icon 
+    [pageLayout]="this.pageLayout"
+    [action]="this.menuAction"  
+  ></app-menu-icon>
   <app-side-line-midle-page
   [endLine]=true
   [pageSection]="this.pageLayout">   

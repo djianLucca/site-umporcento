@@ -11,7 +11,9 @@ import { PageLocationHelperService } from 'src/app/services/helper/page-location
 export class TalksPageMidleRowComponent implements OnInit {
   @Input() page: Page;
   @Input() pageSection: PageSectionStatus;
+  @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
+  
   constructor() {
     this.page = Page.Talks;
     this.pageSection = PageSectionStatus.Night;

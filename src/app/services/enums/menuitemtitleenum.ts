@@ -1,4 +1,16 @@
 export enum MenuItemTitle {
-    Test = 'Test',
-    Test1 = 'Test1',
+    CultureGuide = 'guia de cultura',
+    BrandManual = 'manual da marca',
+    Compass = 'bussola',
+    Tree = 'árvore',
+    Guardians = 'guardioes',
+    Magazine = 'dez-anos',
+    Colab = 'colab',
+    Us = 'nos',
+    Stamp = 'selo',
+    Network = 'rede',
+    Talks = 'palestras',
+    Gabw = 'gabw',
+    Contact = 'contato',
+    Timeline = 'linha do tempo'
 }

@@ -9,9 +9,12 @@ import { PageLocationHelperService } from 'src/app/services/helper/page-location
   styleUrls: ['./network-page-midle-row.component.scss']
 })
 export class NetworkPageMidleRowComponent implements OnInit {
+  
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
+  @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
+  
   constructor() { 
     this.pageSection = PageSectionStatus.Night;
     this.page = Page.Network;

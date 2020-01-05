@@ -1,13 +1,13 @@
 import { SocialIconsService } from '../social-icons.service';
 import { StateService } from '../state.service';
-import { MenuService } from '../menu.service';
+import { MenuGroupService } from '../menu-group.service';
 
 export interface IStateInitialiser {
-    menu: MenuService;
+    menu: MenuGroupService[];
     socialIcons: SocialIconsService[];
     _state: StateService;
 
-    menuDefaultState(): MenuService;
+    menuDefaultState(): MenuGroupService[];
     socialIconsDefaultState(): SocialIconsService[];
     getState(): StateService;
 }

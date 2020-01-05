@@ -13,6 +13,7 @@ export class InformativePageContentComponent implements OnInit {
   @Input() page!: Page;
   @Input() pageSection!: PageSectionStatus;
   @Input() socialIcons: SocialIconsService[];
+  @Input() menuAction!: () => void;
   sectionId: string;
   constructor(private router: Router) {
     this.socialIcons = [];

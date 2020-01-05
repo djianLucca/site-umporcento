@@ -1,63 +1,79 @@
 <app-page-background 
     [backgroundVideo]="this.state.pageBackground"
 ></app-page-background>
-<app-icon-page-content *ngIf="this.isFloatingIconPage()"
-[pageSection]="this.state.pageSection"
-[floatingIcons]="this.state.floatingIcons"
-[socialIcons]="this.state.socialIcons"
+<app-open-menu-content *ngIf="this.state.isMenuOpen"
+    [pageSection]="this.state.pageSection"
+    [socialIcons]="this.state.socialIcons"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [menuContent]="this.state.menu"
+>
+</app-open-menu-content>
+<app-icon-page-content *ngIf="this.isFloatingIconPage() && !this.state.isMenuOpen"
+    [pageSection]="this.state.pageSection"
+    [floatingIcons]="this.state.floatingIcons"
+    [socialIcons]="this.state.socialIcons"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 ></app-icon-page-content>
-<app-informative-page-content *ngIf="this.isInformativePage()"
+<app-informative-page-content *ngIf="this.isInformativePage() && !this.state.isMenuOpen"
     [pageSection]="this.morningPage"
     [socialIcons]="this.state.socialIcons"
     [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 ></app-informative-page-content>
-<app-timeline-page-content *ngIf="this.isTimelinePage()"
+<app-timeline-page-content *ngIf="this.isTimelinePage() && !this.state.isMenuOpen"
     [pageSection]="this.state.pageSection"
     [socialIcons]="this.state.socialIcons"
     [timelineYears]="this.state.timelineYears"
     [tinelineItems]="this.state.timelineItems"
     [updateApi]="this.updateTimeline.bind(this)"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 >
 </app-timeline-page-content>
-<app-contact-page-content *ngIf="this.isContactPage()"
-[socialIcons]="this.state.socialIcons"
-[pageSection]="this.state.pageSection"
-[contactFormAction]="this.contactForm.sendMessage.bind(this)"
+<app-contact-page-content *ngIf="this.isContactPage() && !this.state.isMenuOpen"
+    [socialIcons]="this.state.socialIcons"
+    [pageSection]="this.state.pageSection"
+    [contactFormAction]="this.contactForm.sendMessage.bind(this)"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 ></app-contact-page-content>
-<app-guardians-page-content *ngIf="this.isGuardiansPage()"
+<app-guardians-page-content *ngIf="this.isGuardiansPage() && !this.state.isMenuOpen"
     [pageSection]="this.morningPage"
     [socialIcons]="this.state.socialIcons"
     [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 ></app-guardians-page-content>
-<app-us-page-content *ngIf="this.isUsPage()"
-[socialIcons]="this.state.socialIcons"
-[pageSection]="this.state.pageSection"
-[page]="this.state.page"
+<app-us-page-content *ngIf="this.isUsPage() && !this.state.isMenuOpen"
+    [socialIcons]="this.state.socialIcons"
+    [pageSection]="this.state.pageSection"
+    [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 >
 </app-us-page-content>
-<app-network-page-content *ngIf="this.isNetworkPage()"
+<app-network-page-content *ngIf="this.isNetworkPage() && !this.state.isMenuOpen"
     [socialIcons]="this.state.socialIcons"
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 >
 </app-network-page-content>
-<app-stamp-page-content *ngIf="this.isStampPage()"
+<app-stamp-page-content *ngIf="this.isStampPage() && !this.state.isMenuOpen"
     [socialIcons]="this.state.socialIcons"
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 >
 </app-stamp-page-content>
-<app-talks-page-content *ngIf="this.isTalksPage()"
+<app-talks-page-content *ngIf="this.isTalksPage() && !this.state.isMenuOpen"
     [socialIcons]="this.state.socialIcons"
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 >
 </app-talks-page-content>
-<app-colab-page-content
+<app-colab-page-content *ngIf="this.isColabPage() && !this.state.isMenuOpen"
     [socialIcons]="this.state.socialIcons"
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
+    [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
 >
-</app-colab-page-content
->
+</app-colab-page-content>
 <router-outlet></router-outlet>

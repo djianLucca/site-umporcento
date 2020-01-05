@@ -91,4 +91,12 @@ export class StateManipulatorService implements IstateManipulator {
       this.state.timelineItems = items;
     });
   }
+
+  toggleMenu(){
+    if(this.state.isMenuOpen){
+      this.state.isMenuOpen = false;
+    }else{
+      this.state.isMenuOpen = true;
+    }
+  }
 }

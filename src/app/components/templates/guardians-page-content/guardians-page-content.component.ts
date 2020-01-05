@@ -13,6 +13,7 @@ export class GuardiansPageContentComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
   @Input() socialIcons: SocialIconsService[];
   @Input() page: Page;
+  @Input() menuAction!: () => void;
   
   constructor() { 
     this.pageSection = PageSectionStatus.Morning;

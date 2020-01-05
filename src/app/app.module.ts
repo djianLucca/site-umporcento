@@ -79,6 +79,8 @@ import { ColabPageMidleRowComponent } from './components/organisms/colab-page-mi
 import { ColabSliderBrandsComponent } from './components/organisms/colab-slider-brands/colab-slider-brands.component';
 import { ColabBrandingSliderItemComponent } from './components/molecules/colab-branding-slider-item/colab-branding-slider-item.component';
 import { ColabArtSliderComponent } from './components/organisms/colab-art-slider/colab-art-slider.component';
+import { OpenMenuContentComponent } from './components/templates/open-menu-content/open-menu-content.component';
+import { MenuMidleRowComponent } from './components/organisms/menu-midle-row/menu-midle-row.component';
 
 @NgModule({
   declarations: [
@@ -153,6 +155,8 @@ import { ColabArtSliderComponent } from './components/organisms/colab-art-slider
     ColabSliderBrandsComponent,
     ColabBrandingSliderItemComponent,
     ColabArtSliderComponent,
+    OpenMenuContentComponent,
+    MenuMidleRowComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

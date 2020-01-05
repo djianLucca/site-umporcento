@@ -11,6 +11,7 @@ import { PageLocationHelperService } from 'src/app/services/helper/page-location
 export class ColabPageMidleRowComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
+  @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
   activeColab: string;
   constructor() { 

@@ -12,6 +12,7 @@ export class StampPageMidleRowComponent implements OnInit {
   
   @Input() page: Page;
   @Input() pageSection: PageSectionStatus;
+  @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
 
   constructor() {

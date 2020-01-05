@@ -12,6 +12,7 @@ export class InformativePageMidleRowComponent implements OnInit {
   @Input() page!: Page;
   @Input() pageLayout!: PageSectionStatus;
   @Input() pageTitle: string;
+  @Input() menuAction!: () => void;
   sectionImage: string;
   svgHeight: string;
   pageLocationHelper: PageLocationHelperService;

@@ -13,6 +13,7 @@ export class ContactPageMidleRowComponent implements OnInit {
   @Input() page: Page;
   @Input() pageSection: PageSectionStatus;
   @Input() action = (email:string, text: string) => {};
+  @Input() menuAction!: () => void;
   constructor() {
     this.pageLocationHelper = new PageLocationHelperService();
     this.page = Page.Contact;
