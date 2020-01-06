@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
@@ -159,14 +161,15 @@ import { MenuMidleRowComponent } from './components/organisms/menu-midle-row/men
     MenuMidleRowComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+  BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     AngularFontAwesomeModule,
     HttpClientModule,
     InlineSVGModule.forRoot(),
     NgImageSliderModule,
     NgxMaskModule.forRoot(),
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

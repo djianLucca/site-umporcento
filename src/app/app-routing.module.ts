@@ -6,9 +6,9 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
 
 const appRoutes: Routes = [
   { path: '', component: DefaultPageComponent },
-  { path: 'manha', component: DefaultPageComponent },
-  { path: 'tarde', component: DefaultPageComponent },
-  { path: 'noite', component: DefaultPageComponent },
+  { path: 'manha', component: DefaultPageComponent, data: { animation: 'isLeft' } },
+  { path: 'tarde', component: DefaultPageComponent, data: { animation: 'isCenter' } },
+  { path: 'noite', component: DefaultPageComponent, data: { animation: 'isRight' } },
   { path: 'manha/bussola', component: DefaultPageComponent },
   { path: 'manha/manual-da-marca', component: DefaultPageComponent },
   { path: 'manha/dez-anos', component: DefaultPageComponent },
