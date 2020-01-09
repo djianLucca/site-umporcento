@@ -44,7 +44,6 @@ export class ContactFormComponent implements OnInit {
     const text = `Nome: ${this.name}\n Email: ${this.email}\n Telefone: ${this.phone}\n Mensagem: ${this.message}`
     this.apiService.sendMail(this.email, text)
      .subscribe((response: EmailResponseApiService) => {
-       console.log(response);
        if(response.status === 'OK'){
         const passarito = document.getElementById('passarito_contact') as HTMLObjectElement;
         passarito.classList.remove('loading');
@@ -80,25 +79,21 @@ export class ContactFormComponent implements OnInit {
   }
   nameReady(event: boolean){
     this.nameValidated = event;
-    console.log(this.isFormReady());
     this.btnDisabled = !this.isFormReady();
   }
   
   emailReady(event: boolean){
     this.emailValidated = event;
-    console.log(this.isFormReady());
     this.btnDisabled = !this.isFormReady();
   }
 
   phoneReady(event: boolean){
     this.phoneValidated = event;
-    console.log(this.isFormReady());
     this.btnDisabled = !this.isFormReady();
   }
 
   messageReady(event: boolean){
     this.messageValidated = event;
-    console.log(this.isFormReady());
     this.btnDisabled = !this.isFormReady();
   }
   isFormReady(): boolean{

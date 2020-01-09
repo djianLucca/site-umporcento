@@ -98,10 +98,8 @@ export class DefaultPageComponent implements OnInit {
   
   changeSection(pageSection: PageSectionStatus) {
     this.state = this.stateManipulator.changePageSection(pageSection);
-    console.log(this.state);
   }
   changePage(page: Page) {
-    console.log('changePage',page);
     this.state = this.stateManipulator.changePage(page);
   }
   changeBackground(pageSection: PageSectionStatus) {

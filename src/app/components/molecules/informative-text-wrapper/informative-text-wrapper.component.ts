@@ -18,7 +18,6 @@ export class InformativeTextWrapperComponent implements OnInit {
   }
 
   getThisSectionText(): string {
-    console.log(this.page);
     switch (this.page) {
       case Page.Compass:
         return this.getCompassText();

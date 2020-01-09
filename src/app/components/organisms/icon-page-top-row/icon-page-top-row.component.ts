@@ -25,7 +25,6 @@ export class IconPageTopRowComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('top', this.pageSection);
   }
 
   changeLineColorBasedOnPageSection(): string {

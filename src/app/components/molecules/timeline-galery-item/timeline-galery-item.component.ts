@@ -28,9 +28,6 @@ export class TimelineGaleryItemComponent implements OnInit {
   ngOnInit() {
     this.timelineItemsImages = JSON.parse(this.timelineItem.images);
     this.filterImagesByLocation(this.timelineItemsImages );
-    if(this.timelineItem.title === '1ª Consultoria Social: Soñar Despierto (Monterrey, Mexico).'){
-      console.log('Mexico', this.timelineItem, this.timelineItem.galeryImagesLeft);
-    }
   }
 
   ecodeToUrl(text: string): string {
@@ -61,9 +58,6 @@ export class TimelineGaleryItemComponent implements OnInit {
     const numberOfElements = this.timelineItem.galeryImagesLeft + this.lastUsedImage;
 
     const tempArray = [];
-    if(this.timelineItem.title === '1ª Consultoria Social: Soñar Despierto (Monterrey, Mexico).'){
-      console.log('last used left', this.lastUsedImage, numberOfElements);
-    }
     for (let index = this.lastUsedImage; index < numberOfElements; index++) {
       tempArray.push(this.timelineItemsImages[index]);
       this.lastUsedImage = index;
@@ -103,9 +97,6 @@ export class TimelineGaleryItemComponent implements OnInit {
     const numberOfElements = this.timelineItem.galeryImagesDown + this.lastUsedImage;
     const tempArray = [];
 
-    if(this.timelineItem.title === '1ª Consultoria Social: Soñar Despierto (Monterrey, Mexico).'){
-      console.log('last used down', this.lastUsedImage, numberOfElements);
-    }
     for (let index = this.lastUsedImage; index < numberOfElements; index++) {
       tempArray.push(this.timelineItemsImages[index]);
       this.lastUsedImage = index;

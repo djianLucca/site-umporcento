@@ -17,7 +17,6 @@ export class InformativeNavigationComponent implements OnInit {
   }
 
   getRouterLinkBasedOnPageSection(pageSection: PageSectionStatus): string {
-    console.log('section', pageSection);
     switch (pageSection) {
       case PageSectionStatus.Morning:
         return '/manha';

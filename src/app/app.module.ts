@@ -83,6 +83,8 @@ import { ColabBrandingSliderItemComponent } from './components/molecules/colab-b
 import { ColabArtSliderComponent } from './components/organisms/colab-art-slider/colab-art-slider.component';
 import { OpenMenuContentComponent } from './components/templates/open-menu-content/open-menu-content.component';
 import { MenuMidleRowComponent } from './components/organisms/menu-midle-row/menu-midle-row.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -169,7 +171,8 @@ import { MenuMidleRowComponent } from './components/organisms/menu-midle-row/men
     NgImageSliderModule,
     NgxMaskModule.forRoot(),
     NgxUsefulSwiperModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

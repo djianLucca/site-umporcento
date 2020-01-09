@@ -11,6 +11,7 @@
                 [svg]="item.image"
                 [class]="this.pageStatus + ' floatingIcon'" 
                 routerLink={{this.getRouterLinkPasedOnLabel(item.title)}}
+                [state]="item.image"
             ></app-load-svg>
             <app-load-svg *ngIf="item.title === 'GABW'"
             [svg]="item.image"

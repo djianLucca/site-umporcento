@@ -1,30 +1,25 @@
 import { trigger, transition, query, style, animate, group } from '@angular/animations';
-export const fader =
-  trigger('routeAnimations', [
-    transition('* <=> *', [
-      // Set a default  style for enter and leave
-      query(':enter, :leave', [
-        style({
-          position: 'absolute',
-          left: 0,
-          width: '100%',
-          opacity: 0,
-          transform: 'scale(0) translateY(100%)',
-        }),
-      ]),
-      // Animate the new page in
-      query(':enter', [
-        animate('600ms ease', style({ opacity: 1, transform: 'scale(1) translateY(0)' })),
-      ])
-    ]),
+
+export const scaler = trigger('myTest', [
+  transition(':enter', [
+      style({ transform: 'scale(0)' }),
+      animate('2s', style({ transform: 'scale(1)' }))
+  ]),
+  transition(':leave', [
+      style({ transform: 'scale(1)' }),
+      animate('2s', style({ transform: 'scale(0)' }))
+  ])
 ]);
 
 export const slider =
   trigger('routeAnimations', [
-    transition('* => isLeft', slideTo('left') ),
-    transition('* => isRight', slideTo('right') ),
-    transition('isRight => *', slideTo('left') ),
-    transition('isLeft => *', slideTo('right') )
+    transition('morningPage => afternoonPage', slideTo('right')),
+    transition('afternoonPage => nightPage', slideTo('right')),
+    transition('nightPage => afternoonPage', slideTo('left')),
+    transition('afternoonPage => morningPage', slideTo('left')),
+    transition('nightPage => morningPage', slideTo('left')),
+    transition('morningPage => nightPage', slideTo('right')),
+    transition('informativePage => morningPage', slideTo('right'))
   ]);
 
 function slideTo(direction: string) {
@@ -48,10 +43,6 @@ function slideTo(direction: string) {
         query(':enter', [
           animate('600ms ease', style({ [direction]: '0%'}))
         ])
-      ]),
-      // Normalize the page style... Might not be necessary
-      // Required only if you have child animations on the page
-      // query(':leave', animateChild()),
-      // query(':enter', animateChild()),
+      ])
     ];
   }
