@@ -3,3 +3,7 @@
     padding-right: 5%;
     display: flex;
 }
+.social_icon:hover{
+    transform: scale(1.2);
+    transition: 400ms all;
+}
