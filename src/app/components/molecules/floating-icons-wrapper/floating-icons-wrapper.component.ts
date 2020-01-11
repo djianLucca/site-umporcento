@@ -2,6 +2,7 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { FloatingIconsService } from 'src/app/services/floating-icons.service';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { FloatingIconImage } from 'src/app/services/enums/floatingiconimageenum';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-floating-icons-wrapper',
@@ -15,19 +16,30 @@ export class FloatingIconsWrapperComponent implements OnChanges {
   showLabel: boolean;
   defaultClass: string;
   defaultClassBuilt!: string;
+  animIcon: boolean;
 
-  constructor() {
+  constructor(private router: Router) {
     this.imageSrc = '/assets/img/selo.jpg';
     this.floatingIcons = [];
     this.pageStatus = PageSectionStatus.Night;
     this.showLabel = false;
     this.defaultClass = 'contianer_icon';
+    this.animIcon = false;
   }
 
   ngOnChanges() {
     this.defaultClassBuilt = this.defaultClass + ' ' + this.pageStatus;
   }
 
+  animateIcon(){
+    console.log('aqui');
+    this.animIcon = true;
+    console.log(this.animIcon);
+  }
+  navigateTo(route: string){
+    
+    setTimeout(() => {this.router.navigate([route])}, 800);
+  }
   getRouterLinkPasedOnLabel(label: string){
     switch (label) {
       case 'bússola':
