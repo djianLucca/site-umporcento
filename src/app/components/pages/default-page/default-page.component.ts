@@ -103,7 +103,7 @@ export class DefaultPageComponent implements OnInit {
     this.state = this.stateManipulator.changePage(page);
   }
   changeBackground(pageSection: PageSectionStatus) {
-    this.state = this.stateManipulator.changePageBackground(pageSection);
+      this.state = this.stateManipulator.changePageBackground(pageSection);
   }
 
   switchToMorning() {

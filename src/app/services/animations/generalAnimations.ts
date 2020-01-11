@@ -1,13 +1,11 @@
 import { trigger, transition, query, style, animate, group } from '@angular/animations';
 
-export const scaler = trigger('myTest', [
+export const scaler = trigger('scaleIn', [
   transition(':enter', [
-      style({ transform: 'scale(0)' }),
-      animate('2s', style({ transform: 'scale(1)' }))
-  ]),
-  transition(':leave', [
-      style({ transform: 'scale(1)' }),
-      animate('2s', style({ transform: 'scale(0)' }))
+      style({ transform: 'scale(0)', opacity: 0 }),
+      group([
+        animate('380ms', style({ transform: 'scale(1)', opacity: 1 }))
+      ])
   ])
 ]);
 

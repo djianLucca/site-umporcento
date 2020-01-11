@@ -1,11 +1,11 @@
-<section id="Guardians_wrapper" @myTest>
+<section id="Guardians_wrapper">
     <div class='flex-row'>
         <app-icon-page-top-row
         [pageSection]="this.pageSection"
         ></app-icon-page-top-row>
     </div>
     <div class='flex-row'>
-        <app-guardians-page-midle-row
+        <app-guardians-page-midle-row @scaleIn
             [pageSection]="this.pageSection"
             [page]="this.page"
             [menuAction]="this.menuAction"
