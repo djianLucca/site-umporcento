@@ -3,14 +3,9 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
 import { SocialIconsService } from 'src/app/services/social-icons.service';
 import { Page } from 'src/app/services/enums/pageenum';
 import {Router} from "@angular/router"
-import { scaler } from 'src/app/services/animations/generalAnimations';
-
 @Component({
   selector: 'app-informative-page-content',
   templateUrl: './informative-page-content.component.html',
-  animations: [
-    scaler
-  ],
   styleUrls: ['./informative-page-content.component.scss']
 })
 export class InformativePageContentComponent implements OnInit {

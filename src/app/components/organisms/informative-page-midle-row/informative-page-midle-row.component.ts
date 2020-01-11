@@ -2,10 +2,14 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { Page } from 'src/app/services/enums/pageenum';
 import { PageLocationHelperService } from 'src/app/services/helper/page-location-helper.service';
+import { scaler } from 'src/app/services/animations/generalAnimations';
 
 @Component({
   selector: 'app-informative-page-midle-row',
   templateUrl: './informative-page-midle-row.component.html',
+  animations: [
+    scaler
+  ],
   styleUrls: ['./informative-page-midle-row.component.scss']
 })
 export class InformativePageMidleRowComponent implements OnInit {
