@@ -77,7 +77,7 @@ export class StateManipulatorService implements IstateManipulator {
 
   setTimelineInitalStatus(){
     this.setTimelineYears();
-    this.setTimelineItems();
+    this.setTimelineItems(1);
   }
 
   setTimelineYears(){
@@ -87,9 +87,9 @@ export class StateManipulatorService implements IstateManipulator {
       this.state.timelineYears = years
     });
   }
-  setTimelineItems(){
+  setTimelineItems(page: number){
     this.timelineApi
-    .getItems()
+    .getItems(page)
     .subscribe((items: TimelineItemService[]) =>{
       this.state.timelineItems = items;
     });

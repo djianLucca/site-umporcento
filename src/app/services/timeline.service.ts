@@ -12,10 +12,10 @@ export class TimelineService implements ITimeline {
     this.yearItems = [];
   }
 
-  orderItems(
+  async orderItems(
     items: TimelineItemService[],
     years: YearService[]
-  ): YearService[] {
+  ): Promise<YearService[]> {
     const orderedYears = this.orderItemsByYear(items, years);
     orderedYears.forEach(orderedYear => {
       if (orderedYear.yearItems.length > 0) {

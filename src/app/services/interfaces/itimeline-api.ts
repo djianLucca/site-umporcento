@@ -5,5 +5,5 @@ import { Observable } from 'rxjs';
 export interface ItimelineApi {
     apiUrl: string;
     getYears(): Observable<YearService[]>;
-    getItems(): Observable<TimelineItemService[]>;
+    getItems(page: number, year?: number, text?: string, title?: string): Observable<TimelineItemService[]>;
 }

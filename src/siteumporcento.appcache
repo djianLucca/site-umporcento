@@ -1,6 +1,11 @@
 CACHE MANIFEST
 index.html
 *.png
+*.jpg
+*.svg
 *.js
 *.mp4
 *.css
+NETWORK
+/years
+/items

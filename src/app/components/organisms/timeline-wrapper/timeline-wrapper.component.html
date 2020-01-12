@@ -19,5 +19,9 @@
         [row]="year.lowerItems">
         </app-timeline-item-row>
     </div>
+    <div id="load_items" snInViewport
+    (inViewportChange)="loadNewItems($event)">
+      <app-load-timeline-items></app-load-timeline-items>
+    </div>
   </div>
 </div>

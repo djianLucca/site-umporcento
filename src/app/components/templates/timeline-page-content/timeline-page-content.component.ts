@@ -3,14 +3,10 @@ import { Page } from 'src/app/services/enums/pageenum';
 import { SocialIconsService } from 'src/app/services/social-icons.service';
 import { YearService } from 'src/app/services/year.service';
 import { TimelineItemService } from 'src/app/services/timeline-item.service';
-import { scaler } from 'src/app/services/animations/generalAnimations';
 
 @Component({
   selector: 'app-timeline-page-content',
   templateUrl: './timeline-page-content.component.html',
-  animations: [
-    scaler
-  ],
   styleUrls: ['./timeline-page-content.component.scss']
 })
 export class TimelinePageContentComponent implements OnInit {

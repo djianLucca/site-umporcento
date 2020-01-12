@@ -13,6 +13,12 @@ app-timeline-item-row{
     display: flex;
     flex-wrap: wrap;
 }
+#load_items{
+    display: flex;
+    app-load-timeline-items{
+        align-self: center;
+    }
+}
 .timeline_midle_year_item__wrapper{
     display: flex;
     .year{

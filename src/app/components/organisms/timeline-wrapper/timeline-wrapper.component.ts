@@ -2,6 +2,8 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { YearService } from 'src/app/services/year.service';
 import { TimelineItemService } from 'src/app/services/timeline-item.service';
 import { TimelineService } from 'src/app/services/timeline.service';
+import { TimelineApiService } from 'src/app/services/timeline-api.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-timeline-wrapper',
@@ -11,21 +13,60 @@ import { TimelineService } from 'src/app/services/timeline.service';
 export class TimelineWrapperComponent implements OnChanges {
   @Input() timelineYears!: YearService[];
   @Input() timelineItems!: TimelineItemService[];
+  years!: YearService[];
+  items!:  TimelineItemService[];
   timeline: TimelineService;
   testItem: TimelineItemService | undefined;
-  constructor() {
+  isLoaderOnView: boolean;
+  lastShownPage: number;
+  apiTimeline: TimelineApiService;
+
+  constructor(private httpService: HttpClient) {
     this.timeline = new TimelineService();
+    this.apiTimeline = new TimelineApiService(this.httpService);
+    this.isLoaderOnView = false;
+    this.lastShownPage = 1;
   }
-  orderItems() {
-    this.timelineYears = this.timeline.orderItems(this.timelineItems, this.timelineYears);
+  async orderItems(timelineItems: TimelineItemService[], timelineYears: YearService[]) {
+    this.timelineYears = await this.timeline.orderItems(timelineItems, timelineYears);
+    if(this.isTimelineReady()){
+      this.timelineYears = await this.removeEmptyYears(this.timelineYears);
+    }
   }
 
   ngOnChanges() {
-    this.orderItems();
+    this.years = this.timelineYears;
+    this.items = this.timelineItems;
+    this.orderItems(this.timelineItems, this.timelineYears);
+  }
+
+  async removeEmptyYears(years: YearService[]){
+    return years.filter((element) => {
+        return element.yearItems.length > 0;
+      })
   }
 
   isTimelineReady(){
     return (this.timelineYears[1] !== undefined && this.timelineYears[1].lowerItems !== undefined);
   }
 
+  async loadNewItems(status: boolean){
+    if(status){
+      this.lastShownPage++;
+      this.apiTimeline.getItems(this.lastShownPage)
+      .subscribe((items: TimelineItemService[]) =>{
+        this.timelineItems = this.timelineItems.concat(items);
+        this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{
+          this.timelineYears = this.mergeTimelineYearState(this.timelineYears, element);
+        })
+      });
+    }
+  }
+
+  mergeTimelineYearState(oldState:  YearService[], newObjects: YearService[]): YearService[]{
+    return [...oldState.concat(newObjects) // concat the arrays
+      .reduce((m, o) => m.set(o.year, Object.assign(m.get(o.year) || {}, o)), // use a map to collect similar objects
+      new Map()
+    ).values()];
+  }
 }

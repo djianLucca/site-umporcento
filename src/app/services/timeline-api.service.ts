@@ -21,10 +21,27 @@ export class TimelineApiService implements ItimelineApi {
   }
 
   getYears(): Observable<YearService[]> {
-    return this.httpService.get<YearService[]>(this.apiUrl + '/years');
+    return this.httpService.get<YearService[]>(this.apiUrl + '/years?page');
   }
-  getItems(): Observable<TimelineItemService[]> {
-    return this.httpService.get<TimelineItemService[]>(this.apiUrl + '/items');
+  buildParameters(page:number, year?: number, text?: string, title?: string, type?: string): string {
+    let parameters = `?page=${page}`;
+    if(year){
+      parameters += `&idYear=${year}`;
+    }
+    if(text){
+      parameters += `&text=${text}`;
+    }
+    if(title){
+      parameters += `&title=${title}`;
+    }
+    if(type){
+      parameters += `&type=${type}`;
+    }
+    return parameters;
+  }
+  getItems(page: number, year?: number, text?: string, title?: string): Observable<TimelineItemService[]> {
+    const parameters = this.buildParameters(page, year, text, title);
+    return this.httpService.get<TimelineItemService[]>(this.apiUrl + '/items'+ parameters);
   }
   sendMail(email: string, body:string): Observable<EmailResponseApiService>{
    return this.httpService.post<EmailResponseApiService>(this.apiUrl + '/send_mail',{"email":email, "text":body});

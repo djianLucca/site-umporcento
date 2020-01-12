@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
@@ -85,6 +86,7 @@ import { OpenMenuContentComponent } from './components/templates/open-menu-conte
 import { MenuMidleRowComponent } from './components/organisms/menu-midle-row/menu-midle-row.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LoadTimelineItemsComponent } from './components/atoms/load-timeline-items/load-timeline-items.component';
 
 @NgModule({
   declarations: [
@@ -161,6 +163,7 @@ import { environment } from '../environments/environment';
     ColabArtSliderComponent,
     OpenMenuContentComponent,
     MenuMidleRowComponent,
+    LoadTimelineItemsComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -172,7 +175,8 @@ import { environment } from '../environments/environment';
     NgxMaskModule.forRoot(),
     NgxUsefulSwiperModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    InViewportModule
   ],
   providers: [],
   bootstrap: [AppComponent]
