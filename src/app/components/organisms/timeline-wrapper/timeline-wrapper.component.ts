@@ -13,12 +13,13 @@ import { HttpClient } from '@angular/common/http';
 export class TimelineWrapperComponent implements OnChanges {
   @Input() timelineYears!: YearService[];
   @Input() timelineItems!: TimelineItemService[];
+  @Input() selectedItemType: string | undefined;
   years!: YearService[];
   items!:  TimelineItemService[];
   timeline: TimelineService;
   fullPageItem!: TimelineItemService;
   isLoaderOnView: boolean;
-  lastShownPage: number;
+  @Input() lastShownPage: number;
   apiTimeline: TimelineApiService;
   showFullItem: boolean;
 
@@ -55,7 +56,7 @@ export class TimelineWrapperComponent implements OnChanges {
   async loadNewItems(status: boolean){
     if(status){
       this.lastShownPage++;
-      this.apiTimeline.getItems(this.lastShownPage)
+      this.apiTimeline.getItems(this.lastShownPage, undefined, undefined, undefined, this.selectedItemType)
       .subscribe((items: TimelineItemService[]) =>{
         this.timelineItems = this.timelineItems.concat(items);
         this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{

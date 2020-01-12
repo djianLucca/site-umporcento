@@ -1,7 +1,7 @@
-<app-timeline-menu-icon [label]="'Selo 1%'" [id]="'stamp'"></app-timeline-menu-icon>
-<app-timeline-menu-icon [label]="'Mensagem recebida'" [id]="'message'"></app-timeline-menu-icon>
-<app-timeline-menu-icon [label]="'Palestras'" [id]="'talk'"></app-timeline-menu-icon>
-<app-timeline-menu-icon [label]="'Conexões'" [id]="'connection'"></app-timeline-menu-icon>
-<app-timeline-menu-icon [label]="'Co-lab'" [id]="'network'"></app-timeline-menu-icon>
-<app-timeline-menu-icon [label]="'Base de apoio'" [id]="'partnership'"></app-timeline-menu-icon>
-<app-timeline-menu-icon [label]="'Projetos'" [id]="'project'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('stamp')" [label]="'Selo 1%'" [id]="'stamp'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('message')" [label]="'Mensagem recebida'" [id]="'message'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('talk')" [label]="'Palestras'" [id]="'talk'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('connection')" [label]="'Conexões'" [id]="'connection'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('network')" [label]="'Co-lab'" [id]="'network'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('partnership')" [label]="'Base de apoio'" [id]="'partnership'"></app-timeline-menu-icon>
+<app-timeline-menu-icon (click)="this.changeItemType('project')" [label]="'Projetos'" [id]="'project'"></app-timeline-menu-icon>

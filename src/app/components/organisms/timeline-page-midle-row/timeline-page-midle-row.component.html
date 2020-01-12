@@ -2,10 +2,14 @@
         <app-side-line-midle-page>   
         </app-side-line-midle-page>
         <div id="midle_page_content__wrapper" @scaleIn>
-            <app-timeline-icons-menu></app-timeline-icons-menu>
+            <app-timeline-icons-menu
+                [changeItemType]="this.changeItemType.bind(this)"
+            ></app-timeline-icons-menu>
             <app-timeline-wrapper
                 [timelineItems]="this.tinelineItems"
                 [timelineYears]="this.timelineYears"
+                [selectedItemType]="this.selectedItemType"
+                [lastShownPage]="this.lastShownPage"
             ></app-timeline-wrapper>
         </div>
         <app-menu-icon 

@@ -39,8 +39,8 @@ export class TimelineApiService implements ItimelineApi {
     }
     return parameters;
   }
-  getItems(page: number, year?: number, text?: string, title?: string): Observable<TimelineItemService[]> {
-    const parameters = this.buildParameters(page, year, text, title);
+  getItems(page: number, year?: number, text?: string, title?: string, type?: string): Observable<TimelineItemService[]> {
+    const parameters = this.buildParameters(page, year, text, title, type);
     return this.httpService.get<TimelineItemService[]>(this.apiUrl + '/items'+ parameters);
   }
   sendMail(email: string, body:string): Observable<EmailResponseApiService>{
