@@ -14,14 +14,15 @@ export class TimelineWrapperComponent implements OnChanges {
   @Input() timelineYears!: YearService[];
   @Input() timelineItems!: TimelineItemService[];
   @Input() selectedItemType: string | undefined;
+  @Input() lastShownPage: number;
   years!: YearService[];
   items!:  TimelineItemService[];
   timeline: TimelineService;
   fullPageItem!: TimelineItemService;
   isLoaderOnView: boolean;
-  @Input() lastShownPage: number;
   apiTimeline: TimelineApiService;
   showFullItem: boolean;
+  search: string | undefined;
 
   constructor(private httpService: HttpClient) {
     this.timeline = new TimelineService();
@@ -62,12 +63,14 @@ export class TimelineWrapperComponent implements OnChanges {
   async loadNewItems(status: boolean){
     if(status){
       this.lastShownPage++;
-      this.apiTimeline.getItems(this.lastShownPage, undefined, undefined, undefined, this.selectedItemType)
+      this.apiTimeline.getItems(this.lastShownPage, undefined, this.search, this.search, this.selectedItemType)
       .subscribe((items: TimelineItemService[]) =>{
-        this.timelineItems = this.timelineItems.concat(items);
-        this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{
-          this.timelineYears = this.mergeTimelineYearState(this.timelineYears, element);
-        })
+        if(items.length > 0){
+          this.timelineItems = this.timelineItems.concat(items);
+          this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{
+            this.timelineYears = this.mergeTimelineYearState(this.timelineYears, element);
+          })
+        }
       });
     }
   }
@@ -80,6 +83,7 @@ export class TimelineWrapperComponent implements OnChanges {
   }
 
   searchText(text: string){
+    this.search = text;
     this.apiTimeline.getItems(1, undefined, text, text, undefined)
       .subscribe((items: TimelineItemService[]) =>{
         this.timelineItems = items;
