@@ -1,6 +1,6 @@
 <div class="year_row__wrapper">
   <div class="row row{{itemsRow[0].rowPosition}}" *ngFor="let itemsRow of this.row">
-      <div class="item id{{item.id}} line{{item.linePosition}}" *ngFor="let item of itemsRow">
+      <div class="item id{{item.id}} line{{item.linePosition}}" *ngFor="let item of itemsRow" (click)="this.openItemFullPage(item)">
           <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'" [timelineItem]="this.item">
           </app-timeline-simple-image-text>
           <app-timeline-simple-image-left-text *ngIf="item.style === 'simple-image-left-text'"

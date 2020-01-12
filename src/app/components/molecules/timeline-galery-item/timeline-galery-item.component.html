@@ -1,7 +1,8 @@
-<div *ngIf="this.timelineItem !== undefined">
+<div *ngIf="this.timelineItem !== undefined" class={{this.class}}>
   <div
     class="timeline_item galery_image_text__wrapper"
     id="{{ this.timelineItem.id }}"
+    @jackInTheBoxOnEnter
   >
     <div class="timeline_item__images">
       <img

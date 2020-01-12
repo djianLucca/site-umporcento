@@ -87,6 +87,7 @@ import { MenuMidleRowComponent } from './components/organisms/menu-midle-row/men
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoadTimelineItemsComponent } from './components/atoms/load-timeline-items/load-timeline-items.component';
+import { TimelineFullPageItemComponent } from './components/molecules/timeline-full-page-item/timeline-full-page-item.component';
 
 @NgModule({
   declarations: [
@@ -164,6 +165,7 @@ import { LoadTimelineItemsComponent } from './components/atoms/load-timeline-ite
     OpenMenuContentComponent,
     MenuMidleRowComponent,
     LoadTimelineItemsComponent,
+    TimelineFullPageItemComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

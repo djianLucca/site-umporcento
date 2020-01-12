@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TimelineItemIconsWrapperComponent implements OnInit {
   @Input() itemType: string;
+  @Input() class!: string;
   timelineIconType: string[];
   constructor() { 
     this.timelineIconType = [];

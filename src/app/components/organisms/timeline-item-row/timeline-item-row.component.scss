@@ -17,3 +17,13 @@
 .row27{
     margin-left: 500px;
 }
+.item{
+    transition: box-shadow .5s ease-in-out;
+    border: 0 solid grey;
+    box-shadow: 13px 14px 26px 0px rgba(128, 128, 128, 0);
+    cursor: pointer;
+}
+.item:hover{
+    border: 1px solid gray;
+    box-shadow: 13px 14px 26px 10px rgba(128, 128, 128, .74);
+}

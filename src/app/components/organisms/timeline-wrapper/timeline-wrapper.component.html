@@ -1,27 +1,38 @@
 <div id="timeline_wrapper">
-  <div *ngIf="this.isTimelineReady()" id="internal_timeline_wrapper">
-    <div class="timeline_year__wrapper" *ngFor="let year of this.timelineYears">
-        <app-timeline-item-row class="timeline_upper_items"
-        [row]="year.upperItems">
-        </app-timeline-item-row>
-        <div class="timeline_midle_year_item__wrapper">
-          <div class="text_div">
-            <p class="year">
-              <strong>{{ year.year }}</strong>
-            </p>
+  <div *ngIf="!this.showFullItem" >
+    <div *ngIf="this.isTimelineReady()" id="internal_timeline_wrapper">
+      <div class="timeline_year__wrapper" *ngFor="let year of this.timelineYears">
+          <app-timeline-item-row class="timeline_upper_items"
+          [openItemFullPage]="this.openItemFullPage.bind(this)"
+          [row]="year.upperItems">
+          </app-timeline-item-row>
+          <div class="timeline_midle_year_item__wrapper">
+            <div class="text_div">
+              <p class="year">
+                <strong>{{ year.year }}</strong>
+              </p>
+            </div>
+            <div class="hr_div">
+              <hr />
+            </div>
           </div>
-          <div class="hr_div">
-            <hr />
-          </div>
-        </div>
-        <p class="mantra"><i>{{year.mantra}}</i></p>
-        <app-timeline-item-row class="timeline_lower_items"
-        [row]="year.lowerItems">
-        </app-timeline-item-row>
-    </div>
-    <div id="load_items" snInViewport
-    (inViewportChange)="loadNewItems($event)">
-      <app-load-timeline-items></app-load-timeline-items>
+          <p class="mantra"><i>{{year.mantra}}</i></p>
+          <app-timeline-item-row
+            class="timeline_lower_items"
+            [row]="year.lowerItems"
+            [openItemFullPage]="this.openItemFullPage.bind(this)">
+          </app-timeline-item-row>
+      </div>
+      <div id="load_items" snInViewport
+      (inViewportChange)="loadNewItems($event)">
+        <app-load-timeline-items></app-load-timeline-items>
+      </div>
     </div>
   </div>
+  <app-timeline-full-page-item
+    *ngIf="this.showFullItem"
+    [item]="this.fullPageItem"
+    [close]="this.closeItemFullPage.bind(this)"
+    >
+  </app-timeline-full-page-item>
 </div>

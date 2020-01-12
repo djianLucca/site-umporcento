@@ -1,0 +1,26 @@
+<div id="full_page_item_wrapper">
+    <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text'"
+    [class]="'full_page'"
+    [timelineItem]="this.item">
+    </app-timeline-simple-image-text>
+    <app-timeline-simple-image-left-text *ngIf="item.style === 'simple-image-left-text'"
+    [timelineItem]="this.item"></app-timeline-simple-image-left-text>
+    <app-timeline-simple-person-image-text *ngIf="item.style === 'simple-person-image-text'"
+    [timelineItem]="this.item">
+    </app-timeline-simple-person-image-text>
+    <app-timeline-galery-item *ngIf="item.style === 'galery'"
+    [timelineItem]="this.item">
+    </app-timeline-galery-item>
+    <app-timeline-group-galery-section *ngIf="item.style === 'group-galery-section'"
+    [timelineItem]="this.item">
+    </app-timeline-group-galery-section>
+    <app-timeline-group-seal *ngIf="item.style === 'group-seal'"
+    [timelineItem]="this.item"></app-timeline-group-seal>
+    <app-timline-group-conversions *ngIf="item.style === 'group-conversions'"
+    [timelineItem]="this.item">
+    </app-timline-group-conversions>
+    <app-icon-tag
+        [name]="'times'"
+        (click)="this.close()"
+    ></app-icon-tag>
+</div>

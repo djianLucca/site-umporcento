@@ -1,13 +1,18 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TimelineItemService } from 'src/app/services/timeline-item.service';
+import { jackInTheBoxOnEnterAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-timeline-galery-item',
   templateUrl: './timeline-galery-item.component.html',
+  animations:[
+    jackInTheBoxOnEnterAnimation()
+  ],
   styleUrls: ['./timeline-galery-item.component.scss']
 })
 export class TimelineGaleryItemComponent implements OnInit {
   @Input() timelineItem!: TimelineItemService;
+  @Input() class!: string;
   timelineIconType: string[];
   timelineItemsImages: string[];
   galeryImagesLeft: string[];

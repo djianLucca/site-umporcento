@@ -1,0 +1,19 @@
+#full_page_item_wrapper{
+    display: flex;
+    width: 100%;
+    app-timeline-simple-image-text,
+    app-timeline-simple-image-left-text,
+    app-timeline-simple-person-image-text,
+    app-timeline-galery-item,
+    app-timeline-group-galery-section,
+    app-timeline-group-seal,
+    app-timline-group-conversions{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    app-icon-tag{
+        margin-right: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}

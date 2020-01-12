@@ -16,16 +16,18 @@ export class TimelineWrapperComponent implements OnChanges {
   years!: YearService[];
   items!:  TimelineItemService[];
   timeline: TimelineService;
-  testItem: TimelineItemService | undefined;
+  fullPageItem!: TimelineItemService;
   isLoaderOnView: boolean;
   lastShownPage: number;
   apiTimeline: TimelineApiService;
+  showFullItem: boolean;
 
   constructor(private httpService: HttpClient) {
     this.timeline = new TimelineService();
     this.apiTimeline = new TimelineApiService(this.httpService);
     this.isLoaderOnView = false;
     this.lastShownPage = 1;
+    this.showFullItem = false;
   }
   async orderItems(timelineItems: TimelineItemService[], timelineYears: YearService[]) {
     this.timelineYears = await this.timeline.orderItems(timelineItems, timelineYears);
@@ -68,5 +70,13 @@ export class TimelineWrapperComponent implements OnChanges {
       .reduce((m, o) => m.set(o.year, Object.assign(m.get(o.year) || {}, o)), // use a map to collect similar objects
       new Map()
     ).values()];
+  }
+
+  openItemFullPage(item: TimelineItemService){
+    this.fullPageItem = item;
+    this.showFullItem = true;
+  }
+  closeItemFullPage(){
+    this.showFullItem = false;
   }
 }
