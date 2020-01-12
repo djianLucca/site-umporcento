@@ -1,4 +1,4 @@
-import { trigger, transition, query, style, animate, group } from '@angular/animations';
+import { trigger, transition, query, style, animate, group, animateChild } from '@angular/animations';
 
 export const borderFader = trigger('fadeBorder',[
   transition('false => true', [
@@ -12,7 +12,8 @@ export const scaler = trigger('scaleIn', [
       style({ transform: 'scale(0)', opacity: 0 }),
       group([
         animate('380ms', style({ transform: 'scale(1)', opacity: 1 }))
-      ])
+      ]),
+      query(':enter', animateChild()),
   ])
 ]);
 

@@ -88,6 +88,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoadTimelineItemsComponent } from './components/atoms/load-timeline-items/load-timeline-items.component';
 import { TimelineFullPageItemComponent } from './components/molecules/timeline-full-page-item/timeline-full-page-item.component';
+import { TimelineSearchBarComponent } from './components/molecules/timeline-search-bar/timeline-search-bar.component';
 
 @NgModule({
   declarations: [
@@ -166,6 +167,7 @@ import { TimelineFullPageItemComponent } from './components/molecules/timeline-f
     MenuMidleRowComponent,
     LoadTimelineItemsComponent,
     TimelineFullPageItemComponent,
+    TimelineSearchBarComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -19,6 +19,10 @@ app-timeline-item-row{
         align-self: center;
     }
 }
+app-timeline-search-bar{
+    width: 100%;
+    display: block;
+}
 .timeline_midle_year_item__wrapper{
     display: flex;
     .year{

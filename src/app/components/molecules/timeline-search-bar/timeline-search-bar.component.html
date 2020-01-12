@@ -1,0 +1,4 @@
+<div class="search_wrapper" (mouseenter)="this.toggleInput()">
+    <app-icon-tag (click)="this.searchText(this.inputValue)" [name]="'search'" [class]="'search_icon'"></app-icon-tag>
+    <input (keyup)="this.handleInput($event)" (keyup.enter)="this.searchText(this.inputValue)" value={{this.inputValue}} type="text" class="showInput{{this.showInput}}" [@expandWidth]="this.showInput"/>
+</div>

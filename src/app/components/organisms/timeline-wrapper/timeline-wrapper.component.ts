@@ -49,8 +49,14 @@ export class TimelineWrapperComponent implements OnChanges {
       })
   }
 
+  removeEmptyYearsSync(years: YearService[]){
+    return years.filter((element) => {
+        return element.yearItems.length > 0;
+      })
+  }
+
   isTimelineReady(){
-    return (this.timelineYears[1] !== undefined && this.timelineYears[1].lowerItems !== undefined);
+    return (this.timelineYears[0] !== undefined && this.timelineYears[0].lowerItems !== undefined || this.timelineYears[0] !== undefined && this.timelineYears[0].upperItems !== undefined);
   }
 
   async loadNewItems(status: boolean){
@@ -71,6 +77,17 @@ export class TimelineWrapperComponent implements OnChanges {
       .reduce((m, o) => m.set(o.year, Object.assign(m.get(o.year) || {}, o)), // use a map to collect similar objects
       new Map()
     ).values()];
+  }
+
+  searchText(text: string){
+    this.apiTimeline.getItems(1, undefined, text, text, undefined)
+      .subscribe((items: TimelineItemService[]) =>{
+        this.timelineItems = items;
+        this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{
+          
+          this.timelineYears =  this.removeEmptyYearsSync(element);
+        })
+      });
   }
 
   openItemFullPage(item: TimelineItemService){

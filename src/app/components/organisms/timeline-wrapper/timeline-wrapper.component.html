@@ -1,3 +1,6 @@
+<app-timeline-search-bar
+[searchText]="this.searchText.bind(this)"
+></app-timeline-search-bar>
 <div id="timeline_wrapper">
   <div *ngIf="!this.showFullItem" >
     <div *ngIf="this.isTimelineReady()" id="internal_timeline_wrapper">
