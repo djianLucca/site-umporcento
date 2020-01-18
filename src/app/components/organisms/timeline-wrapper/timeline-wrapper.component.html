@@ -28,7 +28,8 @@
       </div>
       <div id="load_items" snInViewport
       (inViewportChange)="loadNewItems($event)">
-        <app-load-timeline-items></app-load-timeline-items>
+        <app-load-timeline-items *ngIf="!this.showRefresh"></app-load-timeline-items>
+        <app-refresh-timeline-btn [refreshComponent]="this.setTimelineInitalStatus.bind(this)" *ngIf="this.showRefresh"></app-refresh-timeline-btn>
       </div>
     </div>
   </div>

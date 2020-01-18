@@ -23,6 +23,7 @@ export class TimelineWrapperComponent implements OnChanges {
   apiTimeline: TimelineApiService;
   showFullItem: boolean;
   search: string | undefined;
+  showRefresh: boolean;
 
   constructor(private httpService: HttpClient) {
     this.timeline = new TimelineService();
@@ -30,6 +31,7 @@ export class TimelineWrapperComponent implements OnChanges {
     this.isLoaderOnView = false;
     this.lastShownPage = 1;
     this.showFullItem = false;
+    this.showRefresh = false;
   }
   async orderItems(timelineItems: TimelineItemService[], timelineYears: YearService[]) {
     this.timelineYears = await this.timeline.orderItems(timelineItems, timelineYears);
@@ -56,6 +58,10 @@ export class TimelineWrapperComponent implements OnChanges {
       })
   }
 
+  refreshTimeline(){
+    this.timelineYears = this.years;
+  }
+
   isTimelineReady(){
     return (this.timelineYears[0] !== undefined && this.timelineYears[0].lowerItems !== undefined || this.timelineYears[0] !== undefined && this.timelineYears[0].upperItems !== undefined);
   }
@@ -63,15 +69,18 @@ export class TimelineWrapperComponent implements OnChanges {
   async loadNewItems(status: boolean){
     if(status){
       this.lastShownPage++;
+
       this.apiTimeline.getItems(this.lastShownPage, undefined, this.search, this.search, this.selectedItemType)
       .subscribe((items: TimelineItemService[]) =>{
         if(items.length > 0){
-          this.timelineItems = this.timelineItems.concat(items);
+          this.timelineItems = this.mergeTimelineItemsState(this.timelineItems, items);
           this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{
             this.timelineYears = this.mergeTimelineYearState(this.timelineYears, element);
           })
         }
       });
+    }else{
+      this.showRefresh = true;
     }
   }
 
@@ -82,11 +91,21 @@ export class TimelineWrapperComponent implements OnChanges {
     ).values()];
   }
 
+  mergeTimelineItemsState(oldState:  TimelineItemService[], newObjects: TimelineItemService[]): TimelineItemService[]{
+    return [...oldState.concat(newObjects) // concat the arrays
+      .reduce((m, o) => m.set(o.id, Object.assign(m.get(o.id) || {}, o)), // use a map to collect similar objects
+      new Map()
+    ).values()];
+  }
+
   searchText(text: string){
     this.search = text;
     this.apiTimeline.getItems(1, undefined, text, text, undefined)
       .subscribe((items: TimelineItemService[]) =>{
         this.timelineItems = items;
+        if(this.timelineYears.length < 24){
+          this.showRefresh = true;
+        }
         this.timeline.orderItems(this.timelineItems, this.years).then((element)=>{
           
           this.timelineYears =  this.removeEmptyYearsSync(element);
@@ -100,5 +119,28 @@ export class TimelineWrapperComponent implements OnChanges {
   }
   closeItemFullPage(){
     this.showFullItem = false;
+  }
+
+  setTimelineInitalStatus(){
+   this.setTimelineYears();
+   this.setTimelineItems(1);
+  }
+
+  setTimelineYears(){
+    this.apiTimeline
+    .getYears()
+    .subscribe((years: YearService[]) =>{
+      this.timelineYears = years
+    });
+  }
+  setTimelineItems(page: number){
+    this.apiTimeline
+    .getItems(page)
+    .subscribe((items: TimelineItemService[]) =>{
+      console.log(items);
+      this.timelineItems = items;
+      this.orderItems(this.timelineItems, this.timelineYears);
+      this.showRefresh = false;
+    });
   }
 }

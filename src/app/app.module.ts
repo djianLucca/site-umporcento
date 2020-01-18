@@ -89,6 +89,7 @@ import { environment } from '../environments/environment';
 import { LoadTimelineItemsComponent } from './components/atoms/load-timeline-items/load-timeline-items.component';
 import { TimelineFullPageItemComponent } from './components/molecules/timeline-full-page-item/timeline-full-page-item.component';
 import { TimelineSearchBarComponent } from './components/molecules/timeline-search-bar/timeline-search-bar.component';
+import { RefreshTimelineBtnComponent } from './components/atoms/refresh-timeline-btn/refresh-timeline-btn.component';
 
 @NgModule({
   declarations: [
@@ -168,6 +169,7 @@ import { TimelineSearchBarComponent } from './components/molecules/timeline-sear
     LoadTimelineItemsComponent,
     TimelineFullPageItemComponent,
     TimelineSearchBarComponent,
+    RefreshTimelineBtnComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
