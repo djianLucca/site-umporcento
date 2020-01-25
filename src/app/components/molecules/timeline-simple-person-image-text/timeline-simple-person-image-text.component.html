@@ -1,5 +1,5 @@
 <div *ngIf="this.timelineItem !== undefined" class={{this.class}}>
-  <div class="timeline_item simple_image_text__wrapper" id={{this.timelineItem.id}} @jackInTheBoxOnEnter>
+  <div class="timeline_item simple_image_text__wrapper" id="idInternal{{this.timelineItem.id}}" @jackInTheBoxOnEnter>
     <div id="timeline_item_content">
       <div id="timeline_item__images">
         <img *ngFor="let image of this.timelineItemsImages" src="/assets/img/timeline/{{ecodeToUrl(image)}}.jpg" alt="">

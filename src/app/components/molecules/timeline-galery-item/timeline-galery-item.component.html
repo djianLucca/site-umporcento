@@ -1,16 +1,18 @@
 <div *ngIf="this.timelineItem !== undefined" class={{this.class}}>
   <div
     class="timeline_item galery_image_text__wrapper"
-    id="{{ this.timelineItem.id }}"
+    id="idInternal{{ this.timelineItem.id }}"
     @jackInTheBoxOnEnter
   >
     <div class="timeline_item__images">
-      <img
+      <div class="image_wrapper">
+        <img
         *ngFor="let image of this.galeryImagesLeft"
         class="left"
         src="/assets/img/timeline/{{ ecodeToUrl(image) }}.jpg"
         alt=""
-      />
+        />
+      </div>
     </div>
     <div id="midle_column">
       <div class="timeline_item__images">
@@ -21,9 +23,15 @@
           alt=""
         />
       </div>
-      <app-timeline-item-icons-wrapper
+      <div class="icons">
+        <app-timeline-item-icons-wrapper
         [itemType]="this.timelineItem.type"
-      ></app-timeline-item-icons-wrapper>
+        ></app-timeline-item-icons-wrapper>
+        <app-timeline-item-icons-wrapper *ngIf="this.timelineItem.flag"
+          [itemType]="this.timelineItem.flag"
+          [class]="'flag'"
+        ></app-timeline-item-icons-wrapper>
+      </div>
       <p class="timeline_item__title">{{ this.timelineItem.title }}</p>
       <p class="timeline_item__text">{{ this.timelineItem.text }}</p>
       <div class="timeline_item__images">

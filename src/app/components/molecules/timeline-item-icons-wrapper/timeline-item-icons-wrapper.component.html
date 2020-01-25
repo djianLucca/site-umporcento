@@ -1,5 +1,5 @@
 <div *ngIf="this.itemType !== 'none'" class="timeline_item_icons_wrapper {{this.class}}">
-        <div *ngFor="let image of this.timelineIconType">
+<div *ngFor="let image of this.timelineIconType" class="image_wrapper {{this.class}}">
             <app-image-tag
                 [imgSrc]="image"
                 [imgAlt]="image"

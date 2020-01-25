@@ -1,3 +1,9 @@
-.timeline_item_icons_wrapper{
+.timeline_item_icons_wrapper, .image_wrapper{
     display: flex;
+    app-image-tag{
+        margin-left: 10px;
+    }
+    .flag{
+        margin-top: 10px;
+    }
 }

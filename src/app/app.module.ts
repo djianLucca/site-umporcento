@@ -90,6 +90,7 @@ import { LoadTimelineItemsComponent } from './components/atoms/load-timeline-ite
 import { TimelineFullPageItemComponent } from './components/molecules/timeline-full-page-item/timeline-full-page-item.component';
 import { TimelineSearchBarComponent } from './components/molecules/timeline-search-bar/timeline-search-bar.component';
 import { RefreshTimelineBtnComponent } from './components/atoms/refresh-timeline-btn/refresh-timeline-btn.component';
+import { TimelineOpeningItemComponent } from './components/molecules/timeline-opening-item/timeline-opening-item.component';
 
 @NgModule({
   declarations: [
@@ -170,6 +171,7 @@ import { RefreshTimelineBtnComponent } from './components/atoms/refresh-timeline
     TimelineFullPageItemComponent,
     TimelineSearchBarComponent,
     RefreshTimelineBtnComponent,
+    TimelineOpeningItemComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

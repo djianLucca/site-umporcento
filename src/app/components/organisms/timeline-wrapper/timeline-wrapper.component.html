@@ -5,6 +5,7 @@
   <div *ngIf="!this.showFullItem" >
     <div *ngIf="this.isTimelineReady()" id="internal_timeline_wrapper">
       <div class="timeline_year__wrapper" *ngFor="let year of this.timelineYears">
+          <app-timeline-opening-item *ngIf="year.year === 2007"> </app-timeline-opening-item>
           <app-timeline-item-row class="timeline_upper_items"
           [openItemFullPage]="this.openItemFullPage.bind(this)"
           [row]="year.upperItems">

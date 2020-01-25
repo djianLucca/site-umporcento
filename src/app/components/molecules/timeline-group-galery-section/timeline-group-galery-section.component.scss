@@ -3,9 +3,16 @@
 }
 #image_wrapper{
     img{
-        max-width: 50%;
+        width: 175px;
     }
+}
+#text_content{
+    width: 242px;
+    padding-right: 1em;
 }
 .row{
     display:flex;
+}
+.galery_wrapper{
+    padding: 2em;
 }

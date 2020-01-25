@@ -16,17 +16,15 @@
         }
     }
     #timeline_item_content{
-        max-width: 100%;
+        max-width: 65%;
     }
     max-width: 600px;
     display: flex;
     padding: 2em 1em;
 }
-.simple_image_text__wrapper:hover{
-    border: 1px solid grey;
-    transition: border 10s linear;
+.image2008_3{
+    border-radius: 50%;
 }
-
 .full_page{
     display: flex;
     height: 100%;
@@ -35,5 +33,10 @@
         align-self: center;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+#idInternal121{
+    #timeline_item__images:nth-child(1){
+        padding-right: 1em;
     }
 }

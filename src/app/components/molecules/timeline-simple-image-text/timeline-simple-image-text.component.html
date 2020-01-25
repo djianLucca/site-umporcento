@@ -1,8 +1,13 @@
 <div *ngIf="this.timelineItem !== undefined" class={{this.class}}>
-    <div class="timeline_item simple_image_text__wrapper" id={{this.timelineItem.id}} @jackInTheBoxOnEnter>
-        <app-timeline-item-icons-wrapper
-        [itemType]="this.timelineItem.type"
-        ></app-timeline-item-icons-wrapper>
+    <div class="timeline_item simple_image_text__wrapper" id="idInternal{{this.timelineItem.id}}" @jackInTheBoxOnEnter>
+        <div class="icons">
+            <app-timeline-item-icons-wrapper
+            [itemType]="this.timelineItem.type"
+            ></app-timeline-item-icons-wrapper>
+            <app-timeline-item-icons-wrapper *ngIf="this.timelineItem.flag"
+            [itemType]="this.timelineItem.flag"
+            ></app-timeline-item-icons-wrapper>
+        </div>
         <p class="timeline_item__title">{{this.timelineItem.title}}</p>
         <p class="timeline_item__text">{{this.timelineItem.text}}</p>
         <div class="timeline_item__images">

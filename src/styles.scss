@@ -31,3 +31,7 @@ body{
     height: 15px !important;
     margin-left: 5px !important;
 }
+
+app-timeline-item-row.timeline_upper_items:nth-child(2) > div:nth-child(1){
+    height: 1122px;
+}
