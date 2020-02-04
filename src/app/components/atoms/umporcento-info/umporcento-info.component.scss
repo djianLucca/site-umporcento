@@ -3,16 +3,28 @@
     div{
         border-right: 1px solid #12D9E1;
         display: flex;
+        min-width: 530px;
     }
     div:last-child{
         border-right: 0px solid black;
     }
 }
 p{
-    font-size: 12px;
+    font-size: 15px;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 1366px) {
+    #container{
+        div{
+            border-right: 1px solid #12D9E1;
+            display: flex;
+            min-width: 330px;
+        }
+    }
 }

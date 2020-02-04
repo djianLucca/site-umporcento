@@ -18,6 +18,9 @@
 #video_selo{
   max-width: 100%;
 }
+video.controlersfalse::-webkit-media-controls-enclosure {
+  display:none !important;
+}
 
 @media only screen and (min-width : 3000px) {
     #backgroundVideo{

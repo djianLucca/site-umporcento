@@ -19,6 +19,7 @@ export class IconTagComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.class += ` ${this.name}`
   }
 
 }

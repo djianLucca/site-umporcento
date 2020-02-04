@@ -10,12 +10,16 @@ export class VideoTagComponent implements OnInit {
   @Input() loop: boolean;
   @Input() id: string | undefined;
   @Input() controled: boolean;
+  class: string;
+  
   constructor() {
     this.loop = false;
     this.controled = false;
+    this.class = '';
   }
 
   ngOnInit() {
+    this.class = 'controlers'+this.controled
   }
 
 }

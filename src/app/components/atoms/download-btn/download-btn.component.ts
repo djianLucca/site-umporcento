@@ -40,6 +40,8 @@ export class DownloadBtnComponent implements OnInit {
         return '/assets/pdf/umporcento_dez_anos.pdf';
       case Page.Colab:
         return this.getFileBasedOnColab();
+      case Page.Guardians:
+        return '/assets/pack/';
     }
     return '';
   }

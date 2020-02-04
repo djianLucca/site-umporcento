@@ -16,11 +16,11 @@
    style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
    viewBox="0 0 137.78004 137.7741"
    id="svg10"
-   sodipodi:docname="culture_guide.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   sodipodi:docname="brand_manual.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
    id="metadata14"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -29,20 +29,26 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="1920"
-   inkscape:window-height="1015"
+   inkscape:window-width="1366"
+   inkscape:window-height="715"
    id="namedview12"
    showgrid="false"
    units="px"
-   inkscape:zoom="1.9325989"
-   inkscape:cx="41.541744"
-   inkscape:cy="68.755706"
-   inkscape:window-x="1920"
-   inkscape:window-y="0"
+   inkscape:zoom="5.6568543"
+   inkscape:cx="36.898186"
+   inkscape:cy="34.969978"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg10" />
  <defs
-   id="defs4">
+   id="defs4"><inkscape:perspective
+   sodipodi:type="inkscape:persp3d"
+   inkscape:vp_x="0 : 68.88705 : 1"
+   inkscape:vp_y="0 : 1000 : 0"
+   inkscape:vp_z="137.78004 : 68.88705 : 1"
+   inkscape:persp3d-origin="68.89002 : 45.9247 : 1"
+   id="perspective3841" />
   <style
    type="text/css"
    id="style2">
@@ -54,7 +60,7 @@
  <g
    id="Layer_x0020_1"
    transform="matrix(2.1598157,0,0,2.1598157,20.26177,31.101074)"
-   style="fill:#12d9e1;fill-opacity:1">
+   style="fill:#03292a;fill-opacity:1">
   <metadata
    id="CorelCorpID_0Corel-Layer" />
   <path
@@ -62,6 +68,6 @@
    d="m 44.09,0.92 h -7.1 v 33.15 h 7.1 z M 8.94,17.04 h 3.09 V 0.46 C 12.03,0.21 12.24,0 12.49,0 h 8.02 c 0.25,0 0.46,0.21 0.46,0.46 v 16.58 h 3.09 V 0.46 C 24.06,0.21 24.27,0 24.52,0 h 8.02 C 32.79,0 33,0.21 33,0.46 v 16.58 h 3.09 V 0.46 C 36.09,0.21 36.3,0 36.55,0 h 8.02 c 0.25,0 0.46,0.21 0.46,0.46 v 34.07 c 0,0.25 -0.21,0.46 -0.46,0.46 h -8.02 c -0.25,0 -0.46,-0.21 -0.46,-0.46 V 17.95 H 33 v 16.58 c 0,0.25 -0.21,0.46 -0.46,0.46 h -8.02 c -0.25,0 -0.46,-0.21 -0.46,-0.46 V 17.95 h -3.09 v 16.58 c 0,0.25 -0.21,0.46 -0.46,0.46 h -8.02 c -0.25,0 -0.46,-0.21 -0.46,-0.46 V 17.95 H 8.94 v 16.58 c 0,0.25 -0.21,0.46 -0.46,0.46 H 0.46 C 0.21,34.99 0,34.78 0,34.53 V 0.46 C 0,0.21 0.21,0 0.46,0 H 8.48 C 8.73,0 8.94,0.21 8.94,0.46 Z M 32.07,0.92 h -7.1 c 0,11.05 0,22.1 0,33.15 h 7.1 c 0,-11.05 0,-22.1 0,-33.15 z m -12.02,0 h -7.1 c 0,11.05 0,22.1 0,33.15 h 7.1 c 0,-11.05 0,-22.1 0,-33.15 z m -12.02,0 h -7.1 v 33.15 h 7.1 z"
    id="path7"
    inkscape:connector-curvature="0"
-   style="fill:#12d9e1;fill-opacity:1;fill-rule:nonzero" />
+   style="fill:#03292a;fill-opacity:1;fill-rule:nonzero" />
  </g>
 </svg>
