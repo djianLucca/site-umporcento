@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DropdownCounterComponent implements OnInit {
   @Input() maxCounter: number;
+  @Input() class: string;
   lastNumber: number;
   nextNumber: number;
   flipcardClassOne: string;
@@ -14,6 +15,7 @@ export class DropdownCounterComponent implements OnInit {
   flipNumber: number;
   flipNumberTwo: number;
   constructor() { 
+    this.class = '';
     this.maxCounter = 10;
     this.lastNumber = 0;
     this.nextNumber = 0;

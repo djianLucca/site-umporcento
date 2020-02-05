@@ -6,7 +6,7 @@
 .flipUnitContainer {
   display: block;
   position: relative;
-  width: 50px;
+  width: 35px;
   height: 40px;
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%;
@@ -32,6 +32,10 @@
   font-family: "Droid Sans Mono", monospace;
   font-weight: bold;
   color: #12D9E1;
+}
+
+.whiteCounter .upperCard span,.whiteCounter .lowerCard span {
+  color: #ffffff;
 }
 
 .upperCard {
@@ -72,6 +76,9 @@
   font-size: 2em;
   font-weight: bold;
   color: #12D9E1;
+}
+.whiteCounter .flipCard span{
+  color: #ffffff;
 }
 .flipCard.unfold {
   top: 50%;
