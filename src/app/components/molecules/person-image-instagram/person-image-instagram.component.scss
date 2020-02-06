@@ -25,14 +25,24 @@
 }
 
 .us .instagram_name__wrapper{
-    margin-top: -19%;
+    margin-top: -73.8% !important;
+    text-align: center;
     a{
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        color: #fff;
         font-size: 10px;
     }
 }
 app-image-tag{
     margin-bottom: 8.6%;
 }
+.us .instagram_name__wrapper{
+    margin-top: -12.6%;
+}
+
 
 @media only screen and (max-width : 1366px) {
     .person_instagam_image_wrapper{
