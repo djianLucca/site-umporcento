@@ -1,6 +1,6 @@
 <div class="person_instagam_image_wrapper {{this.class}}" (mouseover)="changeLabelVisibility('show')" (mouseleave)="changeLabelVisibility('hide')">
     <app-image-tag
-        [imgSrc]="'/assets/img/'+this.image"
+        [imgSrc]="'/assets/img/'+this.image+'.jpg'"
         [imgAlt]="this.instagram"
         [class]="'person_instagram_image active'+this.active"
     ></app-image-tag>

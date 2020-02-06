@@ -11,6 +11,7 @@
     padding: 1em;
     margin: 3.2em;
     margin-top: 0px;
+    width: 100%;
 }
 #top_identifier__wrapper{
   display:flex;
@@ -38,78 +39,78 @@ app-menu-icon{
     margin-right: auto;
     max-height: 577px;
 }
-app-person-image-instagram{
+.person_image{
     max-height: 143px;
     max-width: 143px;
 }
-app-person-image-instagram:nth-child(1){
+.person_image:nth-child(1){
     grid-area: 1 / 1 / 2 / 2;
 }
-app-person-image-instagram:nth-child(2){
+.person_image:nth-child(2){
     grid-area: 1 / 2 / 2 / 3;
 }
-app-person-image-instagram:nth-child(3){
+.person_image:nth-child(3){
     grid-area: 1 / 3 / 2 / 4;
 }
-app-person-image-instagram:nth-child(4){
+.person_image:nth-child(4){
     grid-area: 1 / 4 / 2 / 5;
 }
-app-person-image-instagram:nth-child(5){
+.person_image:nth-child(5){
     grid-area: 1 / 5 / 2 / 6;
 }
-app-person-image-instagram:nth-child(6){
+.person_image:nth-child(6){
     grid-area: 1 / 6 / 2 / 7;
 }
-app-person-image-instagram:nth-child(7){
+.person_image:nth-child(7){
     grid-area: 1 / 7 / 2 / 8;
 }
-app-person-image-instagram:nth-child(8){
+.person_image:nth-child(8){
     grid-area: 2 / 1 / 3 / 2;
 }
-app-person-image-instagram:nth-child(9){
+.person_image:nth-child(9){
     grid-area: 2 / 2 / 3 / 3;
 }
-app-person-image-instagram:nth-child(10){
+.person_image:nth-child(10){
     grid-area: 2 / 3 / 3 / 4;
 }
-app-person-image-instagram:nth-child(11){
-    grid-area: 2 / 4 / 3 / 5;
+.person_image:nth-child(11){
+    grid-area: 2 / 5 / 3 / 5;
 }
-app-video-tag{
+.person_image:nth-child(12){
+    grid-area: 3 / 1 / 4 / 2;
+}
+.person_image:nth-child(13){
+    grid-area: 3 / 2 / 4 / 3;
+}
+.person_image:nth-child(14){
+    grid-area: 3 / 3 / 4 / 4;
+}
+.person_image:nth-child(15){
+    grid-area: 3 / 4 / 4 / 5;
+}
+.person_image:nth-child(16){
+    grid-area: 4 / 1 / 5 / 2;
+}
+.person_image:nth-child(17){
+    grid-area: 4 / 2 / 5 / 3;
+}
+.person_image:nth-child(18){
+    grid-area: 4 / 3 / 5 / 4;
+}
+.person_image:nth-child(20){
+    grid-area: 4 / 4 / 5 / 5;
+}
+.person_image:nth-child(21){
+    grid-area: 4 / 5 / 5 / 6;
+}
+.person_image:nth-child(22){
+    grid-area: 4 / 6 / 5 / 7;
+}
+.person_image:nth-child(23){
+    grid-area: 4 / 7 / 5 / 8;
+}
+app-video-tag:parent{
     max-width: 429px;
     max-height: 286px;
     grid-area: 2 / 5 / 4 / 8;
-}
-app-person-image-instagram:nth-child(12){
-    grid-area: 3 / 1 / 4 / 2;
-}
-app-person-image-instagram:nth-child(13){
-    grid-area: 3 / 2 / 4 / 3;
-}
-app-person-image-instagram:nth-child(14){
-    grid-area: 3 / 3 / 4 / 4;
-}
-app-person-image-instagram:nth-child(15){
-    grid-area: 3 / 4 / 4 / 5;
-}
-app-person-image-instagram:nth-child(16){
-    grid-area: 4 / 1 / 5 / 2;
-}
-app-person-image-instagram:nth-child(17){
-    grid-area: 4 / 2 / 5 / 3;
-}
-app-person-image-instagram:nth-child(18){
-    grid-area: 4 / 3 / 5 / 4;
-}
-app-person-image-instagram:nth-child(20){
-    grid-area: 4 / 4 / 5 / 5;
-}
-app-person-image-instagram:nth-child(21){
-    grid-area: 4 / 5 / 5 / 6;
-}
-app-person-image-instagram:nth-child(22){
-    grid-area: 4 / 6 / 5 / 7;
-}
-app-person-image-instagram:nth-child(23){
-    grid-area: 4 / 7 / 5 / 8;
 }
