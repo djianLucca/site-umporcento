@@ -28,6 +28,22 @@ app-menu-icon{
    margin-left: auto;
    margin-right: 20px;
 }
+#download_element_wrapper{
+    width: 100%;
+}
+#downoadSection{
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    app-download-btn{
+        max-width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -1%;
+    }
+}
 #us_images__wrapper{
     background-color: black;
     display: grid;

@@ -59,6 +59,14 @@ app-image-tag{
         margin-bottom: 10%;
     }
 }
+#downoadSection{
+    width: 100%;
+    display: flex;
+    app-download-btn{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media only screen and (max-width : 1366px) {
     #midle_content__wrapper{
         height: 76vh;
