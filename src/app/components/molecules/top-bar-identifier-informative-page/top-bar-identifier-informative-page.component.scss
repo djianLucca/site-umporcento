@@ -3,11 +3,12 @@
     max-height: 59px;
 }
 app-svg-tag{
-    width: 84%;
+    width: calc(100% - 230px);
     align-self: center;
 }
 app-informative-navigation{
     align-self: center;
+    min-width: 155px;
 }
 app-image-tag{
     align-self: center;

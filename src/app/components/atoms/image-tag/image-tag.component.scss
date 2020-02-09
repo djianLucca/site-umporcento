@@ -4,7 +4,8 @@
 .inforativePageImage{
     margin-left: auto;
     margin-right: auto;
-    max-height: 450px;
+    max-height: auto;
+    max-width: 100%;
 }
 #topIconInformativePage{
     width: 55px;
@@ -22,6 +23,10 @@
 .art_slider{
     max-width: 500px;
     max-height: 400px;
+}
+.person_instagram_image{
+    width: 100%;
+    height: auto;
 }
 @media only screen and (max-width : 1366px) {
     .person_instagram_image{

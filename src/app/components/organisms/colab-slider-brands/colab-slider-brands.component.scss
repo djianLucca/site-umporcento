@@ -1,5 +1,6 @@
 .swiper-wrapper{
-    max-width: 605px;
+    width: 605px;
+    max-width: 100%;
     .swiper-slide{
         opacity: 1;
         transition: opacity 1s ease-in-out;

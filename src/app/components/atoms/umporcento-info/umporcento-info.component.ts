@@ -12,4 +12,12 @@ export class UmporcentoInfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  downloadFile() {
+      window.open('/assets/pdf/dados_cadastrais_umporcento.pdf', '_blank');
+  }
+
+  callWpp(){
+    window.open('https://wa.me/5551997186040', '_blank')
+  }
+
 }

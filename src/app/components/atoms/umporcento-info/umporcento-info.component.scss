@@ -9,7 +9,7 @@
         border-right: 0px solid black;
     }
 }
-p{
+p, a{
     font-size: 15px;
     margin: 0;
     margin-left: auto;
@@ -17,6 +17,8 @@ p{
     padding-right: 3em;
     padding-left: 3em;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 @media only screen and (max-width : 1366px) {
