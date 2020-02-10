@@ -4,6 +4,7 @@
     </div>
     <app-palets-page-status-wrapper
         [pageStatus]="this.pageSection"
+        (paletsPosition)="this.handlePaletsPosition($event)"
     ></app-palets-page-status-wrapper>
     <div class="bottom-line end {{this.pageSection}}">
 

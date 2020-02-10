@@ -91,6 +91,8 @@ import { TimelineFullPageItemComponent } from './components/molecules/timeline-f
 import { TimelineSearchBarComponent } from './components/molecules/timeline-search-bar/timeline-search-bar.component';
 import { RefreshTimelineBtnComponent } from './components/atoms/refresh-timeline-btn/refresh-timeline-btn.component';
 import { TimelineOpeningItemComponent } from './components/molecules/timeline-opening-item/timeline-opening-item.component';
+import { ConnectionLineComponent } from './components/atoms/connection-line/connection-line.component';
+import { MenuContentComponent } from './components/molecules/menu-content/menu-content.component';
 
 @NgModule({
   declarations: [
@@ -172,6 +174,8 @@ import { TimelineOpeningItemComponent } from './components/molecules/timeline-op
     TimelineSearchBarComponent,
     RefreshTimelineBtnComponent,
     TimelineOpeningItemComponent,
+    ConnectionLineComponent,
+    MenuContentComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

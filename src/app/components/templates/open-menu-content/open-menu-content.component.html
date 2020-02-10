@@ -9,12 +9,16 @@
             [pageSection]="this.pageSection"
             [menuAction]="this.menuAction"
             [menuContent]="this.menuContent"
+            [paletsPosition]="this.paletPosition"
+            (menuTitlePosition)="this.setMenuTitlePosition($event)"
+            (mouseenter)="this.showLine(true)"
         >
         </app-menu-midle-row>
     </div>
     <div class='flex-row'>
         <app-icon-page-bottom-row
             [pageSection]="this.pageSection"
+            (paletsPosition)="this.setPaletPosition($event)"
         ></app-icon-page-bottom-row>
     </div>
     <div class='flex-row' id='social'>

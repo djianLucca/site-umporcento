@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { MenuGroupService } from 'src/app/services/menu-group.service';
 import { trigger, transition, style, group, animate } from '@angular/animations';
+import { MenuTitlePositionService } from 'src/app/services/menu-title-position.service';
+import { PaletPositionService } from 'src/app/services/palet-position.service';
 
 @Component({
   selector: 'app-menu-midle-row',
@@ -18,18 +20,16 @@ import { trigger, transition, style, group, animate } from '@angular/animations'
   ],
   styleUrls: ['./menu-midle-row.component.scss']
 })
-export class MenuMidleRowComponent implements OnInit {
+export class MenuMidleRowComponent {
   @Input() pageSection!: PageSectionStatus;
   @Input() menuContent!: MenuGroupService[];
   @Input() menuAction!: () => void;
+  @Input() paletsPosition!: PaletPositionService;
+  @Input() menuTitlePosition!: MenuTitlePositionService;
 
   constructor() { }
 
-  ngOnInit() {
+  handleMenuPosition(position: MenuTitlePositionService){
+    this.menuTitlePosition = position;
   }
-
-  openGabw(){
-    window.open('https://gabw.cc/', "_blank");
-  }
-
 }

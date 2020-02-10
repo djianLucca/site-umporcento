@@ -33,50 +33,6 @@ app-menu-icon{
    margin-left: auto;
    margin-right: 20px;
 }
-.menu_row{
-    width: 33%;
-    text-align: center;
-    align-self: center;
-    height: 310px;
-}
-.item{
-    width: 100%;
-    display: block;
-}
-h2{
-    font-size: 38px;
-    margin-bottom: 0;
-}
-.label{
-    color:#12D9E1;
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 2.5em;
-    font-weight: bold;
-}
-a{
-    color:black;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 20px;
-}
-.line_wrapper{
-    position:relative;
-    display:inline-block;
-}
-.line{
-    position:absolute;
-    left:0;
-    top:50%;
-    width:0;
-    border-top:2px solid #12D9E1;
-    transition: width 0.3s ease-in-out;
-}
-.line_wrapper:hover .line{
-    width:100%; 
-}
 .umporcento_info{
     display: flex;
     width: 100%;
@@ -86,11 +42,10 @@ a{
         margin-right: auto;
     }
 }
-.menu_row:nth-child(1),
-.menu_row:nth-child(2){
-    border-right: 1px solid black;
+app-menu-content{
+    width: 100%;
+    display: flex;
 }
-
 @media only screen and (max-width : 1366px) {
     .umporcento_info{
         padding-top: 5%;

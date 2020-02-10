@@ -1,0 +1,14 @@
+<div id="wrapper" #wrapper>
+    <div class="menu_row" *ngFor="let group of this.menuContent">
+        <div class="group_identifier">
+            <h2>{{this.group.title}}</h2>
+            <p class="label" [innerHTML]="this.group.label"></p>
+        </div>
+        <div class="group_items" >
+            <div *ngFor="let item of group.items">
+                <a class="item" *ngIf="item.title !== 'gabw'"  routerLink={{item.url}}><span class="line_wrapper"><span class="line"></span>{{item.title}}</span></a>
+                <a class="item" *ngIf="item.title === 'gabw'"  (click)="this.openGabw()"><span class="line_wrapper"><span class="line"></span>{{item.title}}</span></a>
+            </div>
+        </div>
+    </div>
+</div>

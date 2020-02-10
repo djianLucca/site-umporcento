@@ -55,4 +55,36 @@ export class PageLocationHelperService implements IPageLocationHelper{
     }
     return '';
   }
+
+  getRouterLinkPasedOnLabel(label: string){
+    switch (label) {
+      case 'bússola':
+        return '/manha/bussola';
+      case 'Manual da marca':
+        return '/manha/manual-da-marca';
+      case 'dez anos':
+        return '/manha/dez-anos';
+      case 'árvore':
+            return '/manha/arvore'
+      case 'guia de cultura':
+        return '/manha/guia-de-cultura';
+      case 'Guardiões':
+        return '/manha/guardioes';
+      case 'Linha do Tempo':
+        return '/tarde/linha-do-tempo';
+      case 'Contato':
+        return '/noite/contato';
+      case 'Nós':
+        return '/noite/nos';
+      case 'Rede':
+        return '/noite/rede';
+      case 'Selo':
+        return '/noite/selo';
+      case 'Palestras':
+        return '/noite/palestras';
+      case 'Co.lab':
+        return '/noite/colab';
+    }
+    return '/';
+  }
 }

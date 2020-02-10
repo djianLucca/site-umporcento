@@ -41,7 +41,7 @@ export class DownloadBtnComponent implements OnInit {
       case Page.Colab:
         return this.getFileBasedOnColab();
       case Page.Guardians:
-        return '/assets/pdf/manifesto.pdf';
+        return '/assets/img/MANIFESTO.jpg';
       case Page.Us:
         return '/assets/pdf/quem-somos.pdf';
     }

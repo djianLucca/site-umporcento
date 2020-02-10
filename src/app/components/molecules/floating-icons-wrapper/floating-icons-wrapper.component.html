@@ -10,7 +10,7 @@
             <app-load-svg *ngIf="item.title !== 'GABW'"
                 [svg]="item.image"
                 [class]="this.pageStatus + ' floatingIcon'" 
-                (click)="this.navigateTo(this.getRouterLinkPasedOnLabel(item.title))"
+                (click)="this.navigateTo(this.pageLocationHelper.getRouterLinkPasedOnLabel(item.title))"
             ></app-load-svg>
             <app-load-svg *ngIf="item.title === 'GABW'"
                 [svg]="item.image"
