@@ -1,7 +1,6 @@
 import { Component, Input, ViewChild, ElementRef, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { MenuGroupService } from 'src/app/services/menu-group.service';
 import { MenuTitlePositionService } from 'src/app/services/menu-title-position.service';
-import { TwoDPositionService } from 'src/app/services/2d-position.service';
 
 @Component({
   selector: 'app-menu-content',
@@ -21,15 +20,10 @@ export class MenuContentComponent implements AfterViewInit {
     const secondTitle = this.wrapper.nativeElement.children[1].children[0].children[0] as HTMLElement;
     const thirdTitle = this.wrapper.nativeElement.children[2].children[0].children[0] as HTMLElement;
     this.menuTitlePosition.emit(new MenuTitlePositionService(
-      this.getAbsolutePosition(firstTitle),
-      this.getAbsolutePosition(secondTitle),
-      this.getAbsolutePosition(thirdTitle)
+      firstTitle,
+      secondTitle,
+      thirdTitle
     ));
-  }
-
-  getAbsolutePosition(node: HTMLElement): TwoDPositionService{
-    const element = node.getBoundingClientRect() as DOMRect;
-    return new TwoDPositionService(element.x, element.y);
   }
 
   openGabw(){

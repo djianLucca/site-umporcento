@@ -15,6 +15,12 @@
 h2{
     font-size: 38px;
     margin-bottom: 0;
+    background-image: none !important;
+    background-color: #fff !important;
+}
+h2:hover{
+    background-color: #fff !important;
+    
 }
 .label{
     color:#12D9E1;

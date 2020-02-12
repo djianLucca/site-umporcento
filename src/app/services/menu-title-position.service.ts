@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
 import { ImenuTitlePosition } from './interfaces/imenu-title-position';
-import { TwoDPositionService } from './2d-position.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuTitlePositionService implements ImenuTitlePosition {
-  morning: TwoDPositionService;
-  afternoon: TwoDPositionService;
-  night: TwoDPositionService;
+  morning: HTMLElement;
+  afternoon: HTMLElement;
+  night: HTMLElement;
   constructor(
-    morning: TwoDPositionService,
-    afternoon: TwoDPositionService,
-    night: TwoDPositionService) {
+    morning: HTMLElement,
+    afternoon: HTMLElement,
+    night: HTMLElement) {
       this.morning = morning;
       this.afternoon = afternoon;
       this.night = night;

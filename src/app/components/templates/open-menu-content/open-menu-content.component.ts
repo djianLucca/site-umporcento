@@ -4,7 +4,6 @@ import { SocialIconsService } from 'src/app/services/social-icons.service';
 import { MenuGroupService } from 'src/app/services/menu-group.service';
 import { PaletPositionService } from 'src/app/services/palet-position.service';
 import { MenuTitlePositionService } from 'src/app/services/menu-title-position.service';
-import { TwoDPositionService } from 'src/app/services/2d-position.service';
 
 @Component({
   selector: 'app-open-menu-content',
@@ -22,14 +21,14 @@ export class OpenMenuContentComponent {
   constructor() { 
     this.mustShowCanvas = false;
     this.menuTitlePosition = new MenuTitlePositionService(
-      new TwoDPositionService(0,0),
-      new TwoDPositionService(0,0),
-      new TwoDPositionService(0,0)
+      document.createElement('div'),
+      document.createElement('div'),
+      document.createElement('div')
     )
     this.paletPosition = new PaletPositionService(
-      new TwoDPositionService(0,0),
-      new TwoDPositionService(0,0),
-      new TwoDPositionService(0,0)
+      document.createElement('div'),
+      document.createElement('div'),
+      document.createElement('div')
     )
   }
 

@@ -1,7 +1,6 @@
 import { Component, Input, AfterContentInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { PaletPositionService } from 'src/app/services/palet-position.service';
-import { TwoDPositionService } from 'src/app/services/2d-position.service';
 
 @Component({
   selector: 'app-palets-page-status-wrapper',
@@ -26,15 +25,10 @@ export class PaletsPageStatusWrapperComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     this.paletsPosition.emit(new PaletPositionService(
-      this.getAbsolutePosition(this.wrapper.nativeElement.childNodes[0]),
-      this.getAbsolutePosition(this.wrapper.nativeElement.childNodes[1]),
-      this.getAbsolutePosition(this.wrapper.nativeElement.childNodes[2])
+      this.wrapper.nativeElement.childNodes[0],
+      this.wrapper.nativeElement.childNodes[1],
+      this.wrapper.nativeElement.childNodes[2]
     ));
-  }
-
-  getAbsolutePosition(node: HTMLElement): TwoDPositionService{
-    const element = node.getBoundingClientRect() as DOMRect;
-    return new TwoDPositionService(element.x, element.y);
   }
 
 }

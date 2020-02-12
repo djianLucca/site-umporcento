@@ -1,6 +1,8 @@
-import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { MenuTitlePositionService } from 'src/app/services/menu-title-position.service';
 import { PaletPositionService } from 'src/app/services/palet-position.service';
+import 'leader-line';
+declare let LeaderLine: any;
 
 @Component({
   selector: 'app-connection-line',
@@ -10,26 +12,52 @@ import { PaletPositionService } from 'src/app/services/palet-position.service';
 export class ConnectionLineComponent implements AfterViewInit {
   @Input() menuPosition!: MenuTitlePositionService;
   @Input() paletsPosition!: PaletPositionService;
-  @ViewChild('canvas', {static:false}) canvas!: ElementRef<HTMLCanvasElement>;
-  
+  styleMorning: {};
   constructor() {
+    this.styleMorning = {};
    }
 
    ngAfterViewInit(){
-      this.drawLine();
+    const morningMenuElement = this.menuPosition.morning as HTMLElement;
+    const morningPaletElement = this.paletsPosition.morning as HTMLElement;
+    const afternoonMenuElement = this.menuPosition.afternoon as HTMLElement;
+    const afternoonletElement = this.paletsPosition.afternoon as HTMLElement;
+    const nightMenuElement = this.menuPosition.night as HTMLElement;
+    const nightletElement = this.paletsPosition.night as HTMLElement;
+
+    new LeaderLine(
+      LeaderLine.mouseHoverAnchor({element: morningMenuElement, showEffectName: 'draw', style: {backgroundColor: 'white', outlineColor: ''}}),
+      morningPaletElement,
+      {
+        color: '#12D9E1',
+        size: 2,
+        path: 'fluid',
+        startSocket: 'bottom',
+        endSocket: 'left',
+      }
+    )
+
+    new LeaderLine(
+      LeaderLine.mouseHoverAnchor({element: afternoonMenuElement, showEffectName: 'draw', style: {backgroundColor: 'white', outlineColor: ''}}),
+      afternoonletElement,
+      {
+        color: '#12D9E1',
+        size: 2,
+        path: 'fluid',
+        startSocket: 'bottom',
+        endSocket: 'top',
+      }
+    )
+    new LeaderLine(
+      LeaderLine.mouseHoverAnchor({element: nightMenuElement, showEffectName: 'draw', style: {backgroundColor: 'white', outlineColor: ''}}),
+      nightletElement,
+      {
+        color: '#12D9E1',
+        size: 2,
+        path: 'fluid',
+        startSocket: 'bottom',
+        endSocket: 'right',
+      }
+    )
    }
-
-  drawLine(){
-     const canvasElement = this.canvas.nativeElement as HTMLCanvasElement;
-     const context = canvasElement.getContext('2d') as CanvasRenderingContext2D;
-     context.canvas.width  = window.innerWidth;
-     context.canvas.height = window.innerHeight;
-     context.beginPath();
-     context.moveTo(this.menuPosition.morning.x, this.menuPosition.morning.y);
-     context.lineTo(this.paletsPosition.morning.x, this.paletsPosition.morning.y);
-     context.stroke();
-     console.log('menu', this.menuPosition);
-     console.log('palet', this.paletsPosition);
-  }
-
 }
