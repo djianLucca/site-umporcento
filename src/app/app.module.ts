@@ -93,6 +93,7 @@ import { RefreshTimelineBtnComponent } from './components/atoms/refresh-timeline
 import { TimelineOpeningItemComponent } from './components/molecules/timeline-opening-item/timeline-opening-item.component';
 import { ConnectionLineComponent } from './components/atoms/connection-line/connection-line.component';
 import { MenuContentComponent } from './components/molecules/menu-content/menu-content.component';
+import { ColabAreaSliderInputGroupComponent } from './components/molecules/colab-area-slider-input-group/colab-area-slider-input-group.component';
 
 @NgModule({
   declarations: [
@@ -176,6 +177,7 @@ import { MenuContentComponent } from './components/molecules/menu-content/menu-c
     TimelineOpeningItemComponent,
     ConnectionLineComponent,
     MenuContentComponent,
+    ColabAreaSliderInputGroupComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

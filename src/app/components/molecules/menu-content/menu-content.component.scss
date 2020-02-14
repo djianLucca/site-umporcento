@@ -12,16 +12,6 @@
     width: 100%;
     display: block;
 }
-h2{
-    font-size: 38px;
-    margin-bottom: 0;
-    background-image: none !important;
-    background-color: #fff !important;
-}
-h2:hover{
-    background-color: #fff !important;
-    
-}
 .label{
     color:#12D9E1;
     font-size: 18px;
@@ -51,6 +41,17 @@ a{
 }
 .line_wrapper:hover .line{
     width:100%; 
+}
+
+h2{
+    font-size: 38px;
+    margin-bottom: 0;
+    background-image: none !important;
+    background-color: #fff !important;
+}
+h2:hover{
+    background-color: #fff !important;
+    
 }
 .menu_row:nth-child(1),
 .menu_row:nth-child(2){

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { SearchResultsService } from 'src/app/services/search-results.service';
+import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 
 @Component({
   selector: 'app-timeline-search-bar',
@@ -18,6 +20,8 @@ export class TimelineSearchBarComponent implements OnInit {
   showInput: boolean;
   @Input() searchText!: (text: string) => {};
   @Input() inputValue: string;
+  @Input() results: SearchResultsService[] | undefined;
+  @Input() pageSection!: PageSectionStatus;
 
   constructor() {
     this.showInput = false;

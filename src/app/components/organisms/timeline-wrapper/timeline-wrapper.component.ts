@@ -4,6 +4,7 @@ import { TimelineItemService } from 'src/app/services/timeline-item.service';
 import { TimelineService } from 'src/app/services/timeline.service';
 import { TimelineApiService } from 'src/app/services/timeline-api.service';
 import { HttpClient } from '@angular/common/http';
+import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 
 @Component({
   selector: 'app-timeline-wrapper',
@@ -24,6 +25,7 @@ export class TimelineWrapperComponent implements OnChanges {
   showFullItem: boolean;
   search: string | undefined;
   showRefresh: boolean;
+  pageSection: PageSectionStatus;
 
   constructor(private httpService: HttpClient) {
     this.timeline = new TimelineService();
@@ -32,6 +34,7 @@ export class TimelineWrapperComponent implements OnChanges {
     this.lastShownPage = 1;
     this.showFullItem = false;
     this.showRefresh = false;
+    this.pageSection = PageSectionStatus.Afternoon;
   }
   async orderItems(timelineItems: TimelineItemService[], timelineYears: YearService[]) {
     this.timelineYears = await this.timeline.orderItems(timelineItems, timelineYears);

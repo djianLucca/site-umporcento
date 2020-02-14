@@ -6,7 +6,7 @@ export enum MenuItemTitle {
     Guardians = 'guardioes',
     Magazine = 'dez-anos',
     Colab = 'colab',
-    Us = 'nos',
+    Us = 'nós',
     Stamp = 'selo',
     Network = 'rede',
     Talks = 'palestras',

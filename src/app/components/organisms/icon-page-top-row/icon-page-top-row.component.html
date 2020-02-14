@@ -1,4 +1,7 @@
 <app-timeline-search-bar
+    [searchText]="this.searchSite.bind(this)"
+    [results]="this.searchResults"
+    [pageSection]="this.pageSection"
 ></app-timeline-search-bar>
 <div id="top-wrapper" class="{{this.pageSection}}">
     <app-image-tag routerLink="/"  [imgSrc]="this.logoUmporcento" [imgAlt]="this.logoUmporcentoAlt" [id]="this.logoUmporcentoId">

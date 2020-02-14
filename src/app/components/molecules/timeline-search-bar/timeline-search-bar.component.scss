@@ -16,10 +16,42 @@ input{
     border-bottom: 1px solid white;
     color: white;
 }
+.morning input{
+    background-color: transparent;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+    border-top: 0px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+}
 .showInputtrue{
     width: 18em; 
     opacity: 1; 
 }
 .search_wrapper{
     display: flex;
+}
+#results{
+    position: relative;
+    width: 24.7em;
+    margin-left: auto;
+    z-index: 999;
+}
+.results_wrapper{
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    background-color: white;
+    margin-top: -12px;
+    p{
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4; 
+        margin: 0;
+    }
+    p:hover{
+        background-color: #e9e9e9; 
+    }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { SiteWideSearchService } from 'src/app/services/site-wide-search.service';
+import { SearchResultsService } from 'src/app/services/search-results.service';
 
 @Component({
   selector: 'app-icon-page-top-row',
@@ -16,6 +17,8 @@ export class IconPageTopRowComponent implements OnInit {
   svgHeight: number;
   elementYTransform: number;
   searchService: SiteWideSearchService;
+  searchResults: SearchResultsService[] | undefined;
+
   constructor() {
     this.logoUmporcento = '/assets/img/logo_umporcento.jpg';
     this.logoUmporcentoAlt = '1%';
@@ -36,6 +39,9 @@ export class IconPageTopRowComponent implements OnInit {
     return 'rgba(256,256,256, 1)';
   }
 
-  
+  searchSite(text: string){
+    this.searchResults = this.searchService.searchPage(text);
+    console.log(text, this.searchResults);
+  }
 
 }
