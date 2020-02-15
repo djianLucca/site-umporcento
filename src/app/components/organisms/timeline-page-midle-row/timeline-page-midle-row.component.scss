@@ -13,14 +13,14 @@
     padding: 1em;
     margin: 4em;
     margin-top: 0px;
-    width: 100%;
+    width: 85%;
 }
 app-menu-icon{
    margin-left: auto;
    margin-right: 20px;
 }
 app-timeline-wrapper{
-    width: 1175px;
+    width: 85%;
     max-width: 85%;
 }
 app-timeline-icons-menu{
@@ -36,9 +36,6 @@ app-image-slider{
     }
     #endLineSvg{
         margin-top: -3.1%;
-    }
-    app-timeline-wrapper{
-        max-width: 830px
     }
 }
 @media only screen and (min-width : 2000px) {
