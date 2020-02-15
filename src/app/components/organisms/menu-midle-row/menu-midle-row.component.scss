@@ -2,6 +2,7 @@
     height: 74vh;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
 }
 #midle_page_content__wrapper{
     position: relative;
@@ -17,7 +18,7 @@
 #menu_row_wrapper{
     display: flex;
     flex-flow: row wrap;
-    width: 96%
+    width: 95%
 }
 #top_identifier__wrapper{
   display:flex;
@@ -41,6 +42,7 @@ app-menu-icon{
     app-umporcento-info{
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
     }
 }
 app-menu-content{

@@ -1,24 +1,30 @@
 #container{
-    display: flex;
-    div{
-        border-right: 1px solid #12D9E1;
-        display: flex;
-        min-width: 530px;
-    }
-    div:last-child{
-        border-right: 0px solid black;
-    }
+    width: 100%;
+    text-align: center;
 }
 p, a{
     font-size: 15px;
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 3em;
-    padding-left: 3em;
     cursor: pointer;
     text-decoration: none;
     color: black;
+}
+
+ul > li {
+    display: inline-block;
+    padding-left: .3em;
+    padding-right: .3em;
+    zoom:1;
+    border-right: 1px solid #12D9E1;
+}
+ul > li:last-child{
+    border-right: 0px solid black;
+}
+ul > li:first-child{
+    padding-left: 0;
+}
+ul{
+    padding: 0;
 }
 
 @media only screen and (max-width : 1366px) {

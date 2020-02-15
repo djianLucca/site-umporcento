@@ -1,6 +1,7 @@
 #IconWrapper{
     padding: 6%;
-    padding-top: 4.3%;
+padding-top: 3.3%;
+align-self: center;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -36,7 +37,8 @@ app-social-icons-wrapper{
 
 @media only screen and (max-width : 1366px) {
     #IconWrapper{
-        padding-top: 3%;
+    padding-top: 3.3%;
+align-self: center;
     }
     app-icon-page-midle-row{
         height: 76vh;
