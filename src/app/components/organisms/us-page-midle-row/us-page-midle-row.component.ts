@@ -29,133 +29,133 @@ export class UsPageMidleRowComponent implements OnInit {
         image: '01',
         active: true,
         instagram: 'angelmirapalheta',
-        class: 'us'
+        class: 'us responsive'
       },
       {
         image: '02',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '03',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '04',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '05',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '06',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '07',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '08',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '09',
         active: true,
         instagram: 'oterolima',
-        class: 'us'
+        class: 'us responsive'
       },
       {
         image: '10',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '11',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '12',
         active: true,
         instagram: 'vanjavasconcelospereira',
-        class: 'us'
+        class: 'us responsive'
       },
       {
         image: '13',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '14',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '15',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '16',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '17',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '18',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '19',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '20',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '21',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       },
       {
         image: '22',
         active: false,
         instagram: '',
-        class: ''
+        class: 'responsive'
       }
     ]
     this.imagesColection = this.shuffleArray(this.imagesColection);

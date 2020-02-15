@@ -12,8 +12,8 @@
     transition: 1s opacity;
 }
 #us_video{
-  max-width: 429px;
-    max-height: 286px;
+  max-width: 100%;
+  max-height: auto;
 }
 #video_selo{
   max-width: 100%;
@@ -21,7 +21,10 @@
 video.controlersfalse::-webkit-media-controls-enclosure {
   display:none !important;
 }
-
+.responsive{
+  max-width: 100%;
+  height: auto;
+}
 @media only screen and (min-width : 3000px) {
     #backgroundVideo{
       top: 0%;
