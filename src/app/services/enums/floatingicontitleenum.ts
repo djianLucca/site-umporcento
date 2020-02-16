@@ -8,7 +8,7 @@ export enum FloatingIconTitle {
     Colab = 'Co.lab',
     Us = 'Nós',
     Stamp = 'Selo',
-    Network = 'Rede',
+    Network = 'Rede', 
     Talks = 'Palestras',
     Gabw = 'earth',
     Contact = 'Contato',
