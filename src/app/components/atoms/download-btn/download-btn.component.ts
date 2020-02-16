@@ -9,10 +9,12 @@ import { Page } from 'src/app/services/enums/pageenum';
 export class DownloadBtnComponent implements OnInit {
   @Input() page!: Page;
   @Input() colab: string;
+  @Input() btnText: string;
   file: string;
   constructor() {
     this.file = '';
     this.colab = '';
+    this.btnText = 'Download';
   }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 #downloadElement{
     display: flex;
     align-content: flex-end;
+    
     fa{
         align-self: center;
         margin-left: 10px;
@@ -10,6 +11,7 @@
     p{
         margin-left: auto;
         cursor: pointer;
+        width: 100%;
     }
 }
 
