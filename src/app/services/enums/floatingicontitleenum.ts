@@ -10,7 +10,7 @@ export enum FloatingIconTitle {
     Stamp = 'Selo',
     Network = 'Rede',
     Talks = 'Palestras',
-    Gabw = 'GABW',
+    Gabw = 'earth',
     Contact = 'Contato',
     Timeline = 'Linha do Tempo'
 }
