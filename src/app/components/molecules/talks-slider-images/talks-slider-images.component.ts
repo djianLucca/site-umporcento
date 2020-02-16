@@ -15,11 +15,10 @@ export class TalksSliderImagesComponent implements OnInit {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
-      spaceBetween: 10,
-      slidesPerColumn: 1,
-      slidesPerView: 1,
-      centeredSlides: true,
-      centerInsufficientSlides: true
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      centeredSlides: true
     };
   }
 
