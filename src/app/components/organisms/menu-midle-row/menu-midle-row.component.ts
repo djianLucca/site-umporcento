@@ -8,16 +8,6 @@ import { PaletPositionService } from 'src/app/services/palet-position.service';
 @Component({
   selector: 'app-menu-midle-row',
   templateUrl: './menu-midle-row.component.html',
-  animations:[
-    trigger('Yscale', [
-      transition(':enter', [
-          style({ transform: 'scaleY(0)', opacity: 0 }),
-          group([
-            animate('280ms', style({ transform: 'scaleY(1)', opacity: 1 }))
-          ])
-      ])
-    ])
-  ],
   styleUrls: ['./menu-midle-row.component.scss']
 })
 export class MenuMidleRowComponent {

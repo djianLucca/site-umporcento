@@ -28,4 +28,7 @@ export class MenuIconComponent implements OnChanges {
       this.menuIconName = 'times';
     }
   }
+  menuAction(){
+    setTimeout(()=>{ this.action(); }, 280);
+  }
 }
