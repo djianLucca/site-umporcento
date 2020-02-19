@@ -18,6 +18,6 @@
                 (click)="this.openGabw();"
         ></app-load-svg>
         </div>
-        <label [ngStyle]="item.labelStyle">{{item.title}}</label>
+        <label  (click)="this.navigateTo(this.pageLocationHelper.getRouterLinkPasedOnLabel(item.title))" [ngStyle]="item.labelStyle">{{item.title}}</label>
     </div>
 </div>

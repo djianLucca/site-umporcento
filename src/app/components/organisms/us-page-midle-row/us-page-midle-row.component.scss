@@ -39,12 +39,14 @@ app-person-image-instagram{
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    
     app-download-btn{
         max-width: 80px;
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: -1%;
+        min-width: 10%;
     }
 }
 #us_images__wrapper{

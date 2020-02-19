@@ -38,8 +38,7 @@ export class FloatingIconsWrapperComponent implements OnChanges {
     this.animIcon = true;
   }
   navigateTo(route: string){
-    
-    setTimeout(() => {this.router.navigate([route])}, 800);
+    this.router.navigate([route]);
   }
 
   toggleLabel(image: FloatingIconImage, value: string) {

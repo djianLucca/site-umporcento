@@ -3,6 +3,11 @@
     div{
         width: 33%;
         text-align: center;
+        border-right: 1px solid #12D9E1;
+        display: flex;
+    }
+    div:last-child{
+        border-right: 0px solid black;
     }
 
     .item{
@@ -16,13 +21,47 @@
         margin-bottom: 2.5em;
         font-weight: bold;
     }
-    a{
-        color:black;
-        text-decoration: none;
-        font-style: normal;
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
         font-weight: 500;
-        cursor: pointer;
         font-size: 20px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: .3em;
+        padding-bottom: .3em;
+        background-color: rgb(243, 243, 243);
+        border: 1px solid white;
+        cursor: pointer;
+
+        // Using inset box-shadow instead of border for sizing simplicity
+        box-shadow: inset 0 0 0 0px transparent;
+        color: black;
+
+        // Required, since we're setting absolute on pseudo-elements
+        position: relative;
+        vertical-align: middle;
+      
+        &::before,
+        &::after {
+          box-sizing: inherit;
+          content: '';
+          position: absolute;
+          width: 50%;
+          height: 100%;
+        }
+    }
+    button.active{
+        background-color: rgb(243, 243, 243);
+        box-shadow: none;
+        border: 1px solid transparent;
+        padding-top: .3em;
+        padding-bottom: .3em;
     }
     .line_wrapper{
         position:relative;
@@ -39,4 +78,72 @@
     .line_wrapper:hover .line, .active .line{
         width:100%; 
     }
+    .draw:not(.active) {
+        transition: color 0.25s;
+    
+      &::before,
+      &::after {
+        // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+        border: 1px solid transparent;
+        width: 0;
+        height: 0;
+      }
+    
+      // This covers the top & right borders (expands right, then down)
+      &::before {
+        top: 0;
+        left: 0;
+      }
+    
+      // And this the bottom & left borders (expands left, then up)
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+    
+      // Hover styles
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+        height: 100%;
+
+      }
+    
+      &:hover::before {
+        border-top-color: cyan; // Make borders visible
+        border-right-color: cyan;
+        border-left-color: cyan;
+        transition:
+          width 0.25s ease-out, // Width expands first
+          height 0.25s ease-out 0.25s; // And then height
+      }
+    
+      &:hover::after {
+        border-bottom-color: cyan; // Make borders visible
+        border-left-color: cyan;
+        transition:
+          border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+          width 0.25s ease-out 0.5s, // And then exanding width
+          height 0.25s ease-out 0.75s; // And finally height
+      }
+    }
+    
+  
+      .animated {
+        background-image:
+          linear-gradient(white, white),
+          linear-gradient(180deg, #12D9E1, blue 50%, #12D9E1);
+  
+        background-repeat: no-repeat;
+        background-size: 100% 100%, 100% 200%;
+        background-position: 0 0, 0 100%;
+        background-origin: padding-box, border-box;
+        animation: highlight 1s infinite alternate;
+      }
+  
+      @keyframes highlight {
+        100% {
+          background-position: 0 0, 0 0;
+        }
+      }
 }
