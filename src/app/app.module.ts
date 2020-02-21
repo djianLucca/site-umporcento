@@ -94,6 +94,7 @@ import { TimelineOpeningItemComponent } from './components/molecules/timeline-op
 import { ConnectionLineComponent } from './components/atoms/connection-line/connection-line.component';
 import { MenuContentComponent } from './components/molecules/menu-content/menu-content.component';
 import { ColabAreaSliderInputGroupComponent } from './components/molecules/colab-area-slider-input-group/colab-area-slider-input-group.component';
+import { MenuContentWrapperComponent } from './components/organisms/menu-content-wrapper/menu-content-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -178,6 +179,7 @@ import { ColabAreaSliderInputGroupComponent } from './components/molecules/colab
     ConnectionLineComponent,
     MenuContentComponent,
     ColabAreaSliderInputGroupComponent,
+    MenuContentWrapperComponent,
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -1,0 +1,20 @@
+<div id="midle_page_content__wrapper" (mouseenter)="this.showCanvas(true)">
+    <div id="menu_row_wrapper">
+        <app-menu-content 
+            [menuContent]="this.menuContent"
+            (menuTitlePosition)="this.handleMenuPosition($event)"
+        ></app-menu-content>
+    </div>
+    <app-menu-icon
+        [pageLayout]="this.pageSection"
+        [open]="true"
+        [action]="this.menuAction"
+    ></app-menu-icon>
+    <div class="umporcento_info">
+        <app-umporcento-info></app-umporcento-info>
+    </div>
+</div>
+<app-connection-line *ngIf="this.showLine"
+    [paletsPosition]="this.paletsPosition"
+    [menuPosition]="this.menuTitlePosition"
+></app-connection-line>

@@ -18,6 +18,8 @@ export class ConnectionLineComponent implements AfterViewInit {
    }
 
    ngAfterViewInit(){
+     console.log('menu', this.menuPosition);
+     console.log('palets', this.paletsPosition);
     const morningMenuElement = this.menuPosition.morning as HTMLElement;
     const morningPaletElement = this.paletsPosition.morning as HTMLElement;
     const afternoonMenuElement = this.menuPosition.afternoon as HTMLElement;
@@ -29,11 +31,15 @@ export class ConnectionLineComponent implements AfterViewInit {
       LeaderLine.mouseHoverAnchor({element: morningMenuElement, showEffectName: 'draw', style: {backgroundColor: 'white', outlineColor: ''}}),
       morningPaletElement,
       {
-        color: '#12D9E1',
-        size: 2,
+        color: '#fff',
+        outline: true,
+        outlineColor:'#000',
+        size: 3,
+        dropShadow: true,
         path: 'fluid',
         startSocket: 'bottom',
         endSocket: 'left',
+        endPlug: 'behind'
       }
     )
 
@@ -42,21 +48,29 @@ export class ConnectionLineComponent implements AfterViewInit {
       afternoonletElement,
       {
         color: '#12D9E1',
-        size: 2,
+        outline: true,
+        outlineColor:'#000',
+        size: 3,
+        dropShadow: true,
         path: 'fluid',
         startSocket: 'bottom',
         endSocket: 'top',
+        endPlug: 'behind'
       }
     )
     new LeaderLine(
       LeaderLine.mouseHoverAnchor({element: nightMenuElement, showEffectName: 'draw', style: {backgroundColor: 'white', outlineColor: ''}}),
       nightletElement,
       {
-        color: '#12D9E1',
-        size: 2,
+        color: '#000',
+        outline: true,
+        outlineColor:'#fff',
+        size: 3,
+        dropShadow: true,
         path: 'fluid',
         startSocket: 'bottom',
         endSocket: 'right',
+        endPlug: 'behind'
       }
     )
    }

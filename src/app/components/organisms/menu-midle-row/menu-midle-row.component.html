@@ -1,26 +1,9 @@
 <div id="midle_content__wrapper">
-    <app-side-line-midle-page [pageSection]="this.pageSection">
-    </app-side-line-midle-page>
-    <div id="midle_page_content__wrapper" (mouseenter)="this.showCanvas(true)">
-        <div id="menu_row_wrapper">
-            <app-menu-content 
-                [menuContent]="this.menuContent"
-                (menuTitlePosition)="this.handleMenuPosition($event)"
-            ></app-menu-content>
-        </div>
-        <app-menu-icon
-            [pageLayout]="this.pageSection"
-            [open]="true"
-            [action]="this.menuAction"
-        ></app-menu-icon>
-        <div class="umporcento_info">
-            <app-umporcento-info></app-umporcento-info>
-        </div>
-    </div>
-    <app-side-line-midle-page [endLine]="true" [pageSection]="this.pageSection">
-    </app-side-line-midle-page>
-    <app-connection-line *ngIf="this.showLine"
+    <app-menu-content-wrapper
         [paletsPosition]="this.paletsPosition"
-        [menuPosition]="this.menuTitlePosition"
-    ></app-connection-line>
+        [menuTitlePosition]="this.menuTitlePosition"
+        [menuContent]="this.menuContent"
+        [menuAction]="this.menuAction"
+    >
+    </app-menu-content-wrapper>
 </div>

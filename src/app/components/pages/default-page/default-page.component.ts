@@ -8,10 +8,21 @@ import { InternalRoutesHandlerService } from 'src/app/services/internal-routes-h
 import { Page } from 'src/app/services/enums/pageenum';
 import { HttpClient } from '@angular/common/http';
 import { ContactFormService } from 'src/app/services/contact-form.service';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-default-page',
   templateUrl: './default-page.component.html',
+  animations:[trigger('scaleFadeIn', [
+    transition(':enter', [
+        style({ transform: 'scale(0,0)', opacity: 0 }),
+        animate('500ms', style({ transform: 'scale(1,1)', opacity: 1 }))
+        
+    ]),
+    transition(':leave', [
+      animate('280ms', style({ transform: 'scale(0,0)', opacity: 0 }))
+    ])
+  ])], 
   styleUrls: ['./default-page.component.scss']
 })
 export class DefaultPageComponent implements OnInit {

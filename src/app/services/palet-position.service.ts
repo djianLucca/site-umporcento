@@ -5,14 +5,14 @@ import { IpaletPosition } from './interfaces/ipalet-position';
   providedIn: 'root'
 })
 export class PaletPositionService implements IpaletPosition {
-  morning: HTMLElement;
-  afternoon: HTMLElement;
-  night: HTMLElement;
+  morning: HTMLElement | null;
+  afternoon: HTMLElement | null;
+  night: HTMLElement | null;
 
   constructor(
-    morning: HTMLElement, 
-    afternoon: HTMLElement, 
-    night: HTMLElement) { 
+    morning: HTMLElement | null, 
+    afternoon: HTMLElement | null, 
+    night: HTMLElement | null) { 
       this.morning = morning;
       this.afternoon = afternoon;
       this.night = night;

@@ -1,7 +1,7 @@
 <app-page-background 
     [backgroundVideo]="this.state.pageBackground"
 ></app-page-background>
-<app-open-menu-content *ngIf="this.state.isMenuOpen"
+<app-open-menu-content *ngIf="this.state.isMenuOpen" [@scaleFadeIn]
     [pageSection]="this.state.pageSection"
     [socialIcons]="this.state.socialIcons"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"

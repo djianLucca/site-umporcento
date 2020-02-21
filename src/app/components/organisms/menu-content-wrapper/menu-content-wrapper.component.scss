@@ -1,0 +1,39 @@
+#midle_page_content__wrapper{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    height: 100%;
+    padding: 0em;
+    width: 100%;
+}
+#menu_row_wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    width: 95%
+}
+
+.umporcento_info{
+    display: flex;
+    width: 100%;
+    padding-top: 10%;
+    app-umporcento-info{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 1366px) {
+    .umporcento_info{
+        padding-top: 5%;
+    }
+}
+app-menu-icon{
+    margin-left: auto;
+    margin-right: 20px;
+ }
+ app-menu-content{
+     width: 100%;
+     display: flex;
+ }

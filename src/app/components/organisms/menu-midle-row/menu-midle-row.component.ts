@@ -1,9 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { MenuGroupService } from 'src/app/services/menu-group.service';
-import { trigger, transition, style, group, animate } from '@angular/animations';
-import { MenuTitlePositionService } from 'src/app/services/menu-title-position.service';
 import { PaletPositionService } from 'src/app/services/palet-position.service';
+import { MenuTitlePositionService } from 'src/app/services/menu-title-position.service';
 
 @Component({
   selector: 'app-menu-midle-row',
@@ -13,13 +12,11 @@ import { PaletPositionService } from 'src/app/services/palet-position.service';
 export class MenuMidleRowComponent {
   @Input() pageSection!: PageSectionStatus;
   @Input() menuContent!: MenuGroupService[];
-  @Input() menuAction!: () => void;
   @Input() paletsPosition: PaletPositionService;
   @Input() menuTitlePosition: MenuTitlePositionService;
-  showLine: boolean;
+  @Input() menuAction!: () => void;
 
-  constructor() { 
-    this.showLine = false;
+  constructor() {
     this.menuTitlePosition = new MenuTitlePositionService(
       document.createElement('div'),
       document.createElement('div'),
@@ -30,13 +27,5 @@ export class MenuMidleRowComponent {
       document.createElement('div'),
       document.createElement('div')
     )
-  }
-
-  showCanvas(show: boolean){
-    this.showLine = show;
-  }
-
-  handleMenuPosition(position: MenuTitlePositionService){
-    this.menuTitlePosition = position;
   }
 }
