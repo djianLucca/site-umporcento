@@ -1,19 +1,25 @@
 <div id="palets_status__wrapper" #wrapper>
-    <app-palet-page-status 
+    <app-palet-page-status [@pulse]=this.hoverMorning
+        (mouseenter)="this.toggleHoverMorning(true)"
+        (mouseleave)="this.toggleHoverMorning(false)"
         [name]="this.nameCircleIcon"
         [paletPageStatus]="this.pageStatusMorning"
         [pageStatus]="this.pageStatus"
         [class]="'morning'"
         routerLink="/manha"
     ></app-palet-page-status>
-    <app-palet-page-status 
+    <app-palet-page-status [@pulse]=this.hoverAfternoon
+    (mouseenter)="this.toggleHoverAfternoon(true)"
+    (mouseleave)="this.toggleHoverAfternoon(false)"
         [name]="this.nameCircleIcon"
         [paletPageStatus]="this.pageStatusAfternoon"
         [pageStatus]="this.pageStatus"
         [class]="'afternoon'"
         routerLink="/tarde"
     ></app-palet-page-status>
-    <app-palet-page-status 
+    <app-palet-page-status [@pulse]=this.hoverNight
+    (mouseenter)="this.toggleHoverNight(true)"
+    (mouseleave)="this.toggleHoverNight(false)"
         [name]="this.nameCircleIcon"
         [paletPageStatus]="this.pageStatusNight"
         [pageStatus]="this.pageStatus"

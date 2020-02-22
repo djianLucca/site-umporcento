@@ -1,6 +1,6 @@
 #network_page__wrapper{
     padding: 6%;
-padding-top: 3.3%;
+padding-top: 4%;
 align-self: center;
     display: flex;
     align-content: flex-start;
@@ -34,6 +34,9 @@ app-icon-page-top-row{
 app-social-icons-wrapper{
     padding-right: 1.5%;
 }
+app-network-page-midle-row{
+    width: 100%;
+}
 
 @media only screen and (max-width : 1366px) {
     app-informative-page-midle-row{
@@ -41,7 +44,7 @@ app-social-icons-wrapper{
     }
     #Informative_wrapper{
         padding: 6%;
-    padding-top: 3.3%;
+    padding-top: 4%;
 align-self: center;
         padding-bottom: 3%;
     }
