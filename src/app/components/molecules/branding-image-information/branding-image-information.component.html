@@ -5,7 +5,7 @@
             [imgAlt]="this.imageAlt"
             [class]="'responsive'"
         ></app-image-tag>
-        <div class="brand_information_internal__wrapper" [ngStyle]="{'visibility':isLabelVisible ? 'visible' : 'hidden'}">
+        <div class="brand_information_internal__wrapper" *ngIf="this.isLabelVisible" [@fadeInLeftOnEnter] [@fadeOutLeftOnLeave]>
             <p class="title">{{this.title}}</p>
             <p class="brand_name">{{this.brandName}}</p>
             <a class="social" href="{{this.socialUrl}}" target="_blank" rel="noopener noreferrer">@{{this.social}}</a>

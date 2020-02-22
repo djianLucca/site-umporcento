@@ -4,8 +4,13 @@
         [imgAlt]="this.instagram"
         [class]="'person_instagram_image active'+this.active"
     ></app-image-tag>
-    <div class="instagram_name__wrapper" [ngStyle]="{'visibility':isLabelVisible ? 'visible' : 'hidden'}">
-        <div class="instagam_wrapper_interno">
+    <div class="instagram_name__wrapper" *ngIf="this.page === this.usPage">
+        <div class="instagam_wrapper_interno" *ngIf="this.isLabelVisible" [@flipInXOnEnter] [@flipOutXOnLeave]>
+            <a href="{{this.instagramLink}}" target="_blank" rel="noopener noreferrer">@{{this.instagram}}</a>
+        </div>
+    </div>
+    <div class="instagram_name__wrapper" *ngIf="this.page === this.guardianPage">
+        <div class="instagam_wrapper_interno" *ngIf="this.isLabelVisible" [@slideInUpOnEnter] [@slideOutDownOnLeave]>
             <a href="{{this.instagramLink}}" target="_blank" rel="noopener noreferrer">@{{this.instagram}}</a>
         </div>
     </div>

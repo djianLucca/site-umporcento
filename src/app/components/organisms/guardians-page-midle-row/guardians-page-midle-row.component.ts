@@ -19,11 +19,13 @@ export class GuardiansPageMidleRowComponent implements OnInit {
   @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
   @Input() openMenu: boolean = false;
+  guardianPage: Page;
   
   constructor() { 
     this.pageSection = PageSectionStatus.Morning;
     this.page = Page.Guardians;
     this.pageLocationHelper = new PageLocationHelperService();
+    this.guardianPage = Page.Guardians;
   }
 
   ngOnInit() {
