@@ -28,8 +28,11 @@ export class GuardiansPageContentComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
-    if(event.target === document.querySelector('#Guardians_wrapper')){
-      this.router.navigate(['/manha'])
+    if(event.target === document.querySelector('#Guardians_wrapper') || 
+      event.target === document.querySelector('#midle_content__wrapper') || 
+      event.target === document.querySelector('.search_wrapper')         || 
+      event.target === document.querySelector('#top-wrapper')){
+      this.router.navigate(['/noite'])
     }
   }
 

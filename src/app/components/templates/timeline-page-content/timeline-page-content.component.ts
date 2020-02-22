@@ -30,8 +30,11 @@ export class TimelinePageContentComponent implements OnInit {
   
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
-    if(event.target === document.querySelector('#timeline_wrapper')){
-      this.router.navigate(['/tarde'])
+    if(event.target === document.querySelector('#timeline_wrapper') || 
+      event.target === document.querySelector('#midle_content__wrapper') || 
+      event.target === document.querySelector('.search_wrapper')         || 
+      event.target === document.querySelector('#top-wrapper')){
+      this.router.navigate(['/noite'])
     }
   }
 

@@ -26,7 +26,10 @@ export class NetworkPageContentComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
-    if(event.target === document.querySelector('#network_page__wrapper')){
+    if(event.target === document.querySelector('#network_page__wrapper') || 
+      event.target === document.querySelector('#midle_content__wrapper') || 
+      event.target === document.querySelector('.search_wrapper')         || 
+      event.target === document.querySelector('#top-wrapper')){
       this.router.navigate(['/noite'])
     }
   }
