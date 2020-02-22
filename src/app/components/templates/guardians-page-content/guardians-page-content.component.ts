@@ -15,6 +15,7 @@ export class GuardiansPageContentComponent implements OnInit {
   @Input() socialIcons: SocialIconsService[];
   @Input() page: Page;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean = false;
 
   constructor(private router: Router) {
     this.pageSection = PageSectionStatus.Morning;

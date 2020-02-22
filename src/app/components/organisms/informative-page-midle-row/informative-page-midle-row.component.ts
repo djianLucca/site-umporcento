@@ -17,6 +17,7 @@ export class InformativePageMidleRowComponent implements OnInit {
   @Input() pageLayout!: PageSectionStatus;
   @Input() pageTitle: string;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   sectionImage: string;
   svgHeight: string;
   pageLocationHelper: PageLocationHelperService;
@@ -26,6 +27,7 @@ export class InformativePageMidleRowComponent implements OnInit {
     this.pageTitle = 'No Title';
     this.sectionImage = '';
     this.pageLocationHelper = new PageLocationHelperService();
+    this.openMenu = false;
   }
   ngOnInit() {
   }

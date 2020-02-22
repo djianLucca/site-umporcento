@@ -18,7 +18,9 @@ export class ContactPageMidleRowComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
   @Input() action = (email:string, text: string) => {};
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   constructor() {
+    this.openMenu = false;
     this.pageLocationHelper = new PageLocationHelperService();
     this.page = Page.Contact;
     this.pageSection = PageSectionStatus.Night;

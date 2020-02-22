@@ -17,6 +17,7 @@ export class UsPageMidleRowComponent implements OnInit {
   @Input() page: Page;
   @Input() pageSection: PageSectionStatus;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean = false;
   pageLocationHelper: PageLocationHelperService;
   imagesColection: {image: string, active: boolean, instagram: string, class: string}[]
 

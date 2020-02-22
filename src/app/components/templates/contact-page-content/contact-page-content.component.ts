@@ -14,9 +14,11 @@ export class ContactPageContentComponent implements OnInit {
   @Input() socialIcons: SocialIconsService[];
   @Input() contactFormAction!: (email:string, text: string) => {};
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   pageLocationHelper: PageLocationHelperService;
   
   constructor(private router: Router) { 
+    this.openMenu = false;
     this.pageSection = PageSectionStatus.Night;
     this.socialIcons = [];
     this.pageLocationHelper = new PageLocationHelperService();

@@ -1,4 +1,6 @@
-<app-icon-tag 
+<app-icon-tag *ngIf="!this.openMenu"
+        [@bounceOutOnLeave]
+        [@bounceInOnEnter]
         id="menuIconWrapper" 
         [name]='this.menuIconName' 
         [id]='this.menuIconId' 

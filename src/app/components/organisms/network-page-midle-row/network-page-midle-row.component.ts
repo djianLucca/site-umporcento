@@ -17,6 +17,7 @@ export class NetworkPageMidleRowComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean = false;
   pageLocationHelper: PageLocationHelperService;
   
   constructor() { 

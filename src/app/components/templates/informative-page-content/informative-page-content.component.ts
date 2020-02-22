@@ -13,10 +13,12 @@ export class InformativePageContentComponent implements OnInit {
   @Input() pageSection!: PageSectionStatus;
   @Input() socialIcons: SocialIconsService[];
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   sectionId: string;
   constructor(private router: Router) {
     this.socialIcons = [];
     this.sectionId = 'Informative_wrapper';
+    this.openMenu = false;
    }
 
   ngOnInit() {

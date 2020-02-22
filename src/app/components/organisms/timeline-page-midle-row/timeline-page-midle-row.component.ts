@@ -20,12 +20,14 @@ export class TimelinePageMidleRowComponent implements OnInit {
   @Input() timelineYears!: YearService[];
   @Input() tinelineItems!: TimelineItemService[];
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   selectedItemType: string | undefined;
   apiTimeline: TimelineApiService;
   timeline: TimelineService;
   lastShownPage: number;
 
   constructor(private httpService: HttpClient) {
+    this.openMenu = false;
     this.apiTimeline = new TimelineApiService(this.httpService);
     this.timeline = new TimelineService();
     this.lastShownPage = 0;

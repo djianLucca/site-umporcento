@@ -13,12 +13,14 @@
     [floatingIcons]="this.state.floatingIcons"
     [socialIcons]="this.state.socialIcons"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 ></app-icon-page-content>
 <app-informative-page-content *ngIf="this.isInformativePage()"
     [pageSection]="this.morningPage"
     [socialIcons]="this.state.socialIcons"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 ></app-informative-page-content>
 <app-timeline-page-content *ngIf="this.isTimelinePage()"
     [pageSection]="this.state.pageSection"
@@ -27,6 +29,7 @@
     [tinelineItems]="this.state.timelineItems"
     [updateApi]="this.updateTimeline.bind(this)"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 >
 </app-timeline-page-content>
 <app-contact-page-content *ngIf="this.isContactPage()"
@@ -34,18 +37,21 @@
     [pageSection]="this.state.pageSection"
     [contactFormAction]="this.contactForm.sendMessage.bind(this)"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 ></app-contact-page-content>
 <app-guardians-page-content *ngIf="this.isGuardiansPage()"
     [pageSection]="this.morningPage"
     [socialIcons]="this.state.socialIcons"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 ></app-guardians-page-content>
 <app-us-page-content *ngIf="this.isUsPage()"
     [socialIcons]="this.state.socialIcons"
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 >
 </app-us-page-content>
 <app-network-page-content *ngIf="this.isNetworkPage()"
@@ -53,6 +59,7 @@
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 >
 </app-network-page-content>
 <app-stamp-page-content *ngIf="this.isStampPage()"
@@ -60,6 +67,7 @@
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 >
 </app-stamp-page-content>
 <app-talks-page-content *ngIf="this.isTalksPage()"
@@ -67,6 +75,7 @@
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 >
 </app-talks-page-content>
 <app-colab-page-content *ngIf="this.isColabPage()"
@@ -74,6 +83,7 @@
     [pageSection]="this.state.pageSection"
     [page]="this.state.page"
     [menuAction]="this.stateManipulator.toggleMenu.bind(this)"
+    [openMenu]="this.state.isMenuOpen"
 >
 </app-colab-page-content>
 <router-outlet></router-outlet>

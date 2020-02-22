@@ -14,6 +14,7 @@ export class ColabPageContentComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean = false;
   
   constructor(private router: Router) {
     this.pageSection = PageSectionStatus.Night;

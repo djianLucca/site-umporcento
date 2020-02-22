@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-icon-tag',
   templateUrl: './icon-tag.component.html',
@@ -10,7 +11,7 @@ export class IconTagComponent implements OnInit {
   @Input() class: string;
   @Input() name: string;
   @Input() animation: string;
-
+  
   constructor() {
     this.id = '';
     this.class = '';

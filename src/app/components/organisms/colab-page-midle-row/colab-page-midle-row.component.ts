@@ -16,6 +16,7 @@ export class ColabPageMidleRowComponent implements OnInit {
   @Input() pageSection: PageSectionStatus;
   @Input() page: Page;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean = false;
   pageLocationHelper: PageLocationHelperService;
   activeColab: string;
   constructor() { 

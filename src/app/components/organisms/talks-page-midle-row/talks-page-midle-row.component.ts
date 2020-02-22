@@ -16,6 +16,7 @@ export class TalksPageMidleRowComponent implements OnInit {
   @Input() page: Page;
   @Input() pageSection: PageSectionStatus;
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean = false;
   pageLocationHelper: PageLocationHelperService;
   
   constructor() {

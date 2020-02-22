@@ -18,12 +18,14 @@ export class IconPageContentComponent implements OnInit {
   @Input() socialIcons: SocialIconsService[];
   @Input() floatingIcons: FloatingIconsService[];
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   sectionId: string;
 
   constructor() {
     this.sectionId = 'IconWrapper';
     this.floatingIcons = [];
     this.socialIcons = [];
+    this.openMenu = false;
    }
 
   ngOnInit() {

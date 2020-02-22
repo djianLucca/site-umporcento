@@ -17,8 +17,10 @@ export class TimelinePageContentComponent implements OnInit {
   @Input() tinelineItems!: TimelineItemService[];
   @Input() updateApi!: () => {};
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   constructor(private router: Router) { 
     this.socialIcons = [];
+    this.openMenu = false;
   }
 
   ngOnInit() {

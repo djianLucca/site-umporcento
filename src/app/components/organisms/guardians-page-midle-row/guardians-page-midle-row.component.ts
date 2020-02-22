@@ -18,6 +18,7 @@ export class GuardiansPageMidleRowComponent implements OnInit {
   @Input() page: Page;
   @Input() menuAction!: () => void;
   pageLocationHelper: PageLocationHelperService;
+  @Input() openMenu: boolean = false;
   
   constructor() { 
     this.pageSection = PageSectionStatus.Morning;

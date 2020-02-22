@@ -11,6 +11,7 @@ export class IconPageMidleRowComponent implements OnChanges {
   @Input() pageLayout: PageSectionStatus;
   @Input() floatingIcons: FloatingIconsService[];
   @Input() menuAction!: () => void;
+  @Input() openMenu: boolean;
   
   imageSrc: string;
   svgHeightEnd: string;
@@ -25,6 +26,7 @@ export class IconPageMidleRowComponent implements OnChanges {
     this.svgWidthEnd = this.getsvgWidthEndBasedOnScreen(window.outerWidth);
     this.svgHeightStart = this.getSvgHeightBasedOnScreenSizeStart(window.outerWidth);
     this.elementXtransformEnd = this.getElementXtransformEndBasedOnScreen(window.outerWidth);
+    this.openMenu = false;
   }
 
   getElementXtransformEndBasedOnScreen(screenWidth: number): number {
