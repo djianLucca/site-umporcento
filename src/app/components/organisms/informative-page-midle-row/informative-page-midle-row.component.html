@@ -18,7 +18,8 @@
       [page]="this.page"
     ></app-informative-text-wrapper>
     <div id="slider_download__wrapper">
-      <app-image-tag *ngIf="this.page !== 'morning_magazine'"
+      <app-image-tag *ngIf="this.page === 'morning_culture-guide' ||
+                      this.page === 'morning_tree'"
         [imgSrc]="this.pageLocationHelper.getImagesBasedOnPage(this.page)"
         [imgAlt]="this.pageLocationHelper.getPageLabelBasedOnPage(this.page)"
         [class]="'inforativePageImage'"
@@ -28,6 +29,10 @@
       [video]="'/assets/video/dez-anos.mp4'"
       >
       </app-video-tag>
+      <app-pdf-viewer *ngIf="this.page === 'morning_compass' || this.page === 'morning_brand-manual'"
+      [page]="this.page"
+      >
+      </app-pdf-viewer>
       <div class="downloadSection">
         <app-download-btn 
         [page]="this.page">
