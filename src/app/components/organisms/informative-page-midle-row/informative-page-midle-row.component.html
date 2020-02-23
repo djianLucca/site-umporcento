@@ -18,12 +18,16 @@
       [page]="this.page"
     ></app-informative-text-wrapper>
     <div id="slider_download__wrapper">
-      <app-image-tag
+      <app-image-tag *ngIf="this.page !== 'morning_magazine'"
         [imgSrc]="this.pageLocationHelper.getImagesBasedOnPage(this.page)"
         [imgAlt]="this.pageLocationHelper.getPageLabelBasedOnPage(this.page)"
         [class]="'inforativePageImage'"
       >
       </app-image-tag>
+      <app-video-tag *ngIf="this.page === 'morning_magazine'"
+      [video]="'/assets/video/dez-anos.mp4'"
+      >
+      </app-video-tag>
       <div class="downloadSection">
         <app-download-btn 
         [page]="this.page">

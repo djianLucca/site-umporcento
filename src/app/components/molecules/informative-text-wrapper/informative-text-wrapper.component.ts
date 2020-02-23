@@ -63,6 +63,6 @@ export class InformativeTextWrapperComponent implements OnInit {
     return `<p>Uma analogia apresentada através de uma metodologia de cartas.</p><p>Uma <strong>ferramenta</strong> que tem como inspiração, um fragmento da inteligência natural, da consciência divina. <i>Clareza, organização, movimento, conectividade, impermanência, ciclicidade.</i></p>`;
   }
   getMagazineText(): string{
-    return `<p>Só tivemos a oportunidade de celebrar os nossos 10 anos de história, porque centenas (quiçá milhares) de mãos entregaram a sua energia e o seu tempo em prol do nosso ‘campo’. </p><p>12/12/2017: um dia atípico, único e intenso.</p><p>Esse ícone aqui, é para <strong>agradecer a todas as pessoas</strong> que já deixaram um pouco (e um muito) de si, em nossa casa.</p>`;
+    return `<p>só tivemos a oportunidade de celebrar 10 anos de história, porque centenas (quiçá milhares) de mãos entregaram a sua energia e o seu tempo em prol do nosso 'campo'. </p><p>12/12/2017: um dia atípico, único e intenso. </p><p>maktub.</p><p>esse ícone, é para <u>agradecer a todos os seres</u> que já deixaram um pouco (e um muito) de si, em nossa casa.</p><p>aqui, você poderá baixar todas as <a href="">fotos</a> desse lindo dia que tivemos. um registro sensível e amoroso da nossa querida amiga @sa.gabana.</p><p>caso queira conhecer a <a href="">revista</a> que criamos para celebrar a nossa primeira década, é só baixar livremente também. Material criado com o irmão @angeloborges, da @meteorabrands.</p><p>em missão, seguimos.</p>`;
   }
 }
