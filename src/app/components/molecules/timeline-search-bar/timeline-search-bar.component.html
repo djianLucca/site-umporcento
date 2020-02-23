@@ -1,5 +1,5 @@
-<div class="search_wrapper {{this.pageSection}}" (mouseenter)="this.toggleInput()">
-    <app-icon-tag (click)="this.searchText(this.inputValue)" [name]="'search'" [class]="'search_icon ' + this.pageSection"></app-icon-tag>
+<div class="search_wrapper {{this.pageSection}}">
+    <app-icon-tag (mouseenter)="this.toggleInput()" (click)="this.searchText(this.inputValue)" [name]="'search'" [class]="'search_icon ' + this.pageSection"></app-icon-tag>
     <input (keyup)="this.handleInput($event)" (keyup.enter)="this.searchText(this.inputValue)" value={{this.inputValue}} type="text" class="showInput{{this.showInput}}" [@expandWidth]="this.showInput"/>
 </div>
 <div id="results">

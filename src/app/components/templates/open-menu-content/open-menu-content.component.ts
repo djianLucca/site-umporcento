@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { SocialIconsService } from 'src/app/services/social-icons.service';
 import { MenuGroupService } from 'src/app/services/menu-group.service';
@@ -40,7 +40,16 @@ export class OpenMenuContentComponent {
   }
   setMenuTitlePosition(position: MenuTitlePositionService){
     this.menuTitlePosition = position;
-    console.log(position);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    if(event.target === document.querySelector('#menu_section__wrapper') || 
+      event.target === document.querySelector('app-menu-midle-row')      ||
+      event.target === document.querySelector('.search_wrapper')         || 
+      event.target === document.querySelector('#top-wrapper')){
+        this.menuAction();
+    }
   }
 
 }
