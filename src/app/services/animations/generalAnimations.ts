@@ -19,36 +19,37 @@ export const scaler = trigger('scaleIn', [
 
 export const slider =
   trigger('routeAnimations', [
-    transition('morningPage => afternoonPage', slideTo('right')),
-    transition('afternoonPage => nightPage', slideTo('right')),
-    transition('nightPage => afternoonPage', slideTo('left')),
-    transition('afternoonPage => morningPage', slideTo('left')),
-    transition('nightPage => morningPage', slideTo('left')),
-    transition('morningPage => nightPage', slideTo('right')),
-    transition('informativePage => morningPage', slideTo('right'))
+    transition('morningPage => afternoonPage', scaleInOut()),
+    transition('afternoonPage => nightPage', scaleInOut()),
+    transition('nightPage => afternoonPage', scaleInOut()),
+    transition('afternoonPage => morningPage', scaleInOut()),
+    transition('nightPage => morningPage', scaleInOut()),
+    transition('morningPage => nightPage', scaleInOut()),
+    transition('informativePage => morningPage', scaleInOut())
   ]);
 
-function slideTo(direction: string) {
+  function scaleInOut(){
     const optional = { optional: true };
     return [
-      query(':enter, :leave', [
+      query(':enter, :leave',[
         style({
           position: 'absolute',
-          top: 0,
-          [direction]: 0,
           width: '100%'
         })
-      ], optional),
+      ]),
       query(':enter', [
-        style({ [direction]: '-100%'})
+        style({ transform: 'scale(0)', opacity: 0})
+      ]),
+      query(':leave', [
+        style({ transform: 'scale(1)', opacity: 1})
       ]),
       group([
-        query(':leave', [
-          animate('600ms ease', style({ [direction]: '100%'}))
-        ], optional),
         query(':enter', [
-          animate('600ms ease', style({ [direction]: '0%'}))
-        ])
+          animate('800ms ease-in-out', style({ transform: 'scale(1)', opacity: 1}))
+        ]),
+        query(':leave', [
+          animate('600ms ease-in-out', style({ transform: 'scale(3)', opacity: 0}))
+        ], optional)
       ])
-    ];
+    ]
   }
