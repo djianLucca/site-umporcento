@@ -4,8 +4,11 @@
     [pageSection]="this.pageSection"
 ></app-timeline-search-bar>
 <div id="top-wrapper" class="{{this.pageSection}}">
-    <app-image-tag routerLink="/"  [imgSrc]="this.logoUmporcento" [imgAlt]="this.logoUmporcentoAlt" [id]="this.logoUmporcentoId">
-    </app-image-tag>
+    <app-umporcento-main-logo
+        [logoUmporcento]="this.logoUmporcento"
+        [logoUmporcentoAlt]="this.logoUmporcentoAlt"
+        [logoUmporcentoId]="this.logoUmporcentoId"
+    ></app-umporcento-main-logo>
     <div id='top-line' class="{{this.pageSection}}">
     </div>
 </div>

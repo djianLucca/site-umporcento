@@ -1,0 +1,22 @@
+<div id="wrapper">
+    <div class="logo_wrapper">
+        <app-image-tag routerLink="/"  
+            [imgSrc]="this.logoUmporcento" 
+            [imgAlt]="this.logoUmporcentoAlt" 
+            [id]="this.logoUmporcentoId"
+            (mouseenter)="this.toggleAnimation(true)"
+            (mouseleave)="this.toggleAnimation(false)"
+            >
+        </app-image-tag>
+    </div>
+    <div class="wrapper_externo" *ngIf="this.showAnimation" [@expandWidth]>
+        <div></div>
+        <p><span [ng-typed]="{speed: 40, timeout: 1000}">externamente: uma empresa social</span></p>
+    </div>
+</div>
+<div class="wrapper_down" *ngIf="this.showAnimation" [@expandHeight]>
+    <div class="line_wrapper">
+        <div class="line"></div>
+    </div>
+    <p><span [ng-typed]="{speed: 40, timeout: 1000}">internamente: um campo, para que cada um de nós possa descobrir, acessar e manifestar os seus dons e talentos pessoais, a serviço do coletivo</span></p>
+</div>

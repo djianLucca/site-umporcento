@@ -21,10 +21,11 @@
   left: 0;
 }
 
-app-image-tag {
+app-umporcento-main-logo {
     margin-top: -2%;
     margin-left: -2%;
     cursor: pointer;
+    z-index: 4;
 }
 
 #top-line.night::before, #top-line.afternoon::before{

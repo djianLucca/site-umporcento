@@ -20,7 +20,7 @@ export class IconPageTopRowComponent implements OnInit {
   searchResults: SearchResultsService[] | undefined;
 
   constructor() {
-    this.logoUmporcento = '/assets/img/logo_umporcento.jpg';
+    this.logoUmporcento = '/assets/img/umporcento_logo.svg';
     this.logoUmporcentoAlt = '1%';
     this.logoUmporcentoId = 'logoUmporcento';
     this.lineWidth = '100%';

@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
+import { NgTypedModule } from 'ng-typed'
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { InlineSVGModule } from 'ng-inline-svg';
@@ -95,6 +96,7 @@ import { ConnectionLineComponent } from './components/atoms/connection-line/conn
 import { MenuContentComponent } from './components/molecules/menu-content/menu-content.component';
 import { ColabAreaSliderInputGroupComponent } from './components/molecules/colab-area-slider-input-group/colab-area-slider-input-group.component';
 import { MenuContentWrapperComponent } from './components/organisms/menu-content-wrapper/menu-content-wrapper.component';
+import { UmporcentoMainLogoComponent } from './components/molecules/umporcento-main-logo/umporcento-main-logo.component';
 
 @NgModule({
   declarations: [
@@ -180,6 +182,7 @@ import { MenuContentWrapperComponent } from './components/organisms/menu-content
     MenuContentComponent,
     ColabAreaSliderInputGroupComponent,
     MenuContentWrapperComponent,
+    UmporcentoMainLogoComponent
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -192,7 +195,8 @@ import { MenuContentWrapperComponent } from './components/organisms/menu-content
     NgxUsefulSwiperModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    InViewportModule
+    InViewportModule,
+    NgTypedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

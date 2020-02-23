@@ -39,6 +39,7 @@
     "leader-line": "^1.0.5",
     "ng-image-slider": "^2.3.0",
     "ng-inline-svg": "^9.2.0",
+    "ng-typed": "^1.2.0",
     "ngx-mask": "^8.1.7",
     "ngx-useful-swiper": "^9.0.0",
     "rxjs": "~6.5.4",
