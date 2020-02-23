@@ -38,7 +38,7 @@ export class UmporcentoMainLogoComponent implements OnInit {
     this.logoUmporcento = '';
     this.logoUmporcentoAlt = '';
     this.logoUmporcentoId = '';
-    this.showAnimation = true;
+    this.showAnimation = false;
   }
 
   ngOnInit() {
