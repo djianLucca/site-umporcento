@@ -32,3 +32,10 @@ video.controlersfalse::-webkit-media-controls-enclosure {
       transform: translateX(0%) translateY(0%);
     }
   }
+
+  .informativePageVideo{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    max-width: 100%;
+}

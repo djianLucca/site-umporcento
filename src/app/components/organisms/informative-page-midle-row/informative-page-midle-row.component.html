@@ -14,22 +14,24 @@
     <div id="section-title">
       <app-section-title [page]="this.page"> </app-section-title>
     </div>
+    <div id="middle_page_text_downloader__wrapper">
     <app-informative-text-wrapper
       [page]="this.page"
     ></app-informative-text-wrapper>
     <div id="slider_download__wrapper">
       <app-image-tag *ngIf="this.page === 'morning_culture-guide' ||
-                      this.page === 'morning_tree'"
+                      this.page === 'morning_tree' || 
+                      this.page === 'morning_brand-manual'" 
         [imgSrc]="this.pageLocationHelper.getImagesBasedOnPage(this.page)"
         [imgAlt]="this.pageLocationHelper.getPageLabelBasedOnPage(this.page)"
-        [class]="'inforativePageImage'"
-      >
+        [class]="'inforativePageImage'">
       </app-image-tag>
       <app-video-tag *ngIf="this.page === 'morning_magazine'"
       [video]="'/assets/video/dez-anos.mp4'"
+      [class] ="'informativePageVideo'"
       >
       </app-video-tag>
-      <app-pdf-viewer *ngIf="this.page === 'morning_compass' || this.page === 'morning_brand-manual'"
+      <app-pdf-viewer *ngIf="this.page === 'morning_compass' "
       [page]="this.page"
       >
       </app-pdf-viewer>
@@ -38,7 +40,7 @@
         [page]="this.page">
         </app-download-btn>
       </div>
-      
+      </div>
     </div>
   </div>
   <app-menu-icon 

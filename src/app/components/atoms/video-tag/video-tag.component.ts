@@ -10,7 +10,7 @@ export class VideoTagComponent implements OnInit {
   @Input() loop: boolean;
   @Input() id: string | undefined;
   @Input() controled: boolean;
-  class: string;
+  @Input() class: string | undefined;
   
   constructor() {
     this.loop = false;
@@ -19,7 +19,7 @@ export class VideoTagComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.class = 'controlers'+this.controled
+    this.class = this.class + ' controlers'+this.controled
   }
 
 }
