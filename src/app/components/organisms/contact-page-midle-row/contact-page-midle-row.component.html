@@ -11,9 +11,29 @@
           >
           </app-top-bar-identifier-informative-page>
         </div>
-        <div id="contact_form__wrapper">
-          <app-contact-form
+        <div id="contact_information_wrapper" [@fadeInDownOnEnter] *ngIf="!this.showContactForm">
+          <div>
+            <a href="mailto:contato@umporcento.cc"><strong>contato@umporcento.cc</strong></a>
+          </div>
+          <div>
+            <span class="line_wrapper" (click)="this.toggleShowContact(true)">
+              <span class="line">                    
+              </span>
+                envie uma mensagem
+            </span>
+          </div>
+          <div id="social_icon_wrapper">
+            <app-social-icons-wrapper
+            [socialIcons]="this.socialIcons"
+            [pageStatus]="'morning'"
+            >
+            </app-social-icons-wrapper>
+          </div>
+        </div>
+        <div id="contact_form__wrapper" [@fadeInLeftOnEnter] *ngIf="this.showContactForm">
+          <app-contact-form 
           [action]="this.action"
+          [togglemenu]="this.toggleShowContact.bind(this)"
           >
           </app-contact-form>
         </div>

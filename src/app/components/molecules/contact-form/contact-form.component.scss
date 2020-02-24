@@ -19,7 +19,11 @@ app-image-tag{
     opacity: 0;
     margin-right: 3%;
 }
-
+#return_icon_wrapper{
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
 .animateFadeIn{
     animation: fadeInFromNone 1s ease-out;
     opacity: 1;

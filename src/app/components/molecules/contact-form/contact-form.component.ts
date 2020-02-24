@@ -10,6 +10,7 @@ import { EmailResponseApiService } from 'src/app/services/email-response-api.ser
 })
 export class ContactFormComponent implements OnInit {
   @Input() action!: (email:string, text: string) => {};
+  @Input() togglemenu!: () => void;
   apiService: TimelineApiService;
   name: string | null;
   email: string;

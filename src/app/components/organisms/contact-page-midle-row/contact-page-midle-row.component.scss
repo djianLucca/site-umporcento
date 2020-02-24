@@ -46,3 +46,42 @@ app-contact-form{
     margin-right: auto;
     align-self: center;
 }
+#contact_information_wrapper{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+    div{
+        width: 100%;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.line_wrapper{
+    position:relative;
+    display:inline-block;
+    cursor: pointer;
+}
+.line{
+    position:absolute;
+    left:0;
+    top:50%;
+    width:0;
+    border-top:2px solid #12D9E1;
+    transition: width 0.3s ease-in-out;
+}
+.line_wrapper:hover .line, .active .line{
+    width:100%; 
+}
+#social_icon_wrapper{
+    width: 100%;
+    display: flex;
+}
+app-social-icons-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+}
