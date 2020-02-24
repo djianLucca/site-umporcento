@@ -27,8 +27,12 @@ app-menu-icon{
    margin-left: auto;
    margin-right: 20px;
 }
+app-section-title{
+    width: 100%;
+}
 #stamp_information__wrapper{
     display: flex;
+    flex-wrap: wrap;
     align-content: space-around;
     padding-left: 2em;
     padding-right: 2em;

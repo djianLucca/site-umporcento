@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum';
 import { MenuGroupService } from 'src/app/services/menu-group.service';
 import { PaletPositionService } from 'src/app/services/palet-position.service';
@@ -9,7 +9,7 @@ import { MenuTitlePositionService } from 'src/app/services/menu-title-position.s
   templateUrl: './menu-midle-row.component.html',
   styleUrls: ['./menu-midle-row.component.scss']
 })
-export class MenuMidleRowComponent {
+export class MenuMidleRowComponent implements OnInit {
   @Input() pageSection!: PageSectionStatus;
   @Input() menuContent!: MenuGroupService[];
   @Input() paletsPosition: PaletPositionService;
@@ -27,5 +27,8 @@ export class MenuMidleRowComponent {
       document.createElement('div'),
       document.createElement('div')
     )
+  }
+  ngOnInit(){
+    alert('width: '+window.innerWidth+' '+'height: '+window.innerHeight+' pixel:'+window.devicePixelRatio)
   }
 }

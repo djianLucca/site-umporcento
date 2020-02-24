@@ -11,6 +11,10 @@
       </app-top-bar-identifier-informative-page>
     </div>
     <div id="informative_section__wrapper">
+        <app-section-title
+          [page]="this.page"
+          [class]="'colab'"
+        ></app-section-title>
         <app-colab-area-slider-input-group></app-colab-area-slider-input-group>
         <app-informative-text-wrapper
             [page]="this.page"

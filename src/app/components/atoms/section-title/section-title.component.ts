@@ -8,8 +8,11 @@ import { Page } from 'src/app/services/enums/pageenum';
 })
 export class SectionTitleComponent implements OnInit {
   @Input() page!: Page;
+  @Input() class: string;
 
-  constructor() { }
+  constructor() {
+    this.class = '';
+   }
 
   ngOnInit() {
   }
@@ -26,27 +29,35 @@ export class SectionTitleComponent implements OnInit {
         return this.getTreeTitle();
       case Page.Magazine:
         return this.getMagazine();
+      case Page.Stamp:
+        return this.getStampTitle();
+      case Page.Colab:{
+        return this.getColabTitle();
+      }
     }
     return 'No Title';
   }
 
   getCompassTitle(): string {
-    return 'Integração de corpo, alma e destino.';
+    return 'a.cor.dar, dar cor ao mundo.';
   }
   getCultureGuideTitle(): string{
-    return 'Guia de Cultura';
+    return 'frequência, energia, matéria.';
   }
   getBrandManualTitle(): string{
-    return 'Manual da Marca';
+    return 'persistencia, audácia e amor.';
   }
   getTreeTitle(): string{
-    return 'Árvore';
+    return 'biomimética a serviço do fluir';
   }
   getStampTitle(): string{
-    return 'Selo';
+    return 'a chave.';
   }
   getMagazine(): string{
-    return '10 anos';
+    return '12x12=144';
+  }
+  getColabTitle(): string{
+    return 'co.criar para lab.oratoriar';
   }
 
 }
