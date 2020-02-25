@@ -58,6 +58,10 @@ export class DefaultPageComponent implements OnInit {
 
   ngOnInit() {
     this.internalRouter.takeAction(window.location.pathname);
+    setTimeout(() => {
+      const video = document.getElementById('backgroundVideo') as HTMLVideoElement;
+      video.play();
+    }, 2000)
   }
   updateTimeline(){
     this.stateManipulator.setTimelineInitalStatus()

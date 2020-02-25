@@ -15,10 +15,12 @@
       <app-section-title [page]="this.page"> </app-section-title>
     </div>
     <div id="middle_page_text_downloader__wrapper">
-    <app-informative-text-wrapper
-      [page]="this.page"
-    ></app-informative-text-wrapper>
-    <div id="slider_download__wrapper">
+      <div id="informative_wrapper">
+        <app-informative-text-wrapper
+          [page]="this.page"
+        ></app-informative-text-wrapper>
+      </div>
+      <div id="slider_download__wrapper">
       <app-image-tag *ngIf="this.page === 'morning_culture-guide' ||
                       this.page === 'morning_tree' || 
                       this.page === 'morning_brand-manual'" 
