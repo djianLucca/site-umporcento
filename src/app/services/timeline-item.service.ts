@@ -21,6 +21,7 @@ export class TimelineItemService implements ITimelineItem {
   galeryImagesUp: number;
   galeryImagesDown: number;
   galeryImagesRight: number;
+  video: string | undefined;
 
   constructor(
     id: number,
@@ -36,7 +37,8 @@ export class TimelineItemService implements ITimelineItem {
     galeryImagesLeft: number,
     galeryImagesUp: number,
     galeryImagesDown: number,
-    galeryImagesRight: number
+    galeryImagesRight: number,
+    video: string | undefined
   ) {
     this.id = id;
     this.images = images;
@@ -52,5 +54,6 @@ export class TimelineItemService implements ITimelineItem {
     this.galeryImagesUp = galeryImagesUp;
     this.galeryImagesDown = galeryImagesDown;
     this.galeryImagesRight = galeryImagesRight;
+    this.video = video
   }
 }

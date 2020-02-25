@@ -1,6 +1,8 @@
 #full_page_item_wrapper{
     display: flex;
     width: 100%;
+    height: 100%;
+    overflow: auto;
     app-timeline-simple-image-text,
     app-timeline-simple-image-left-text,
     app-timeline-simple-person-image-text,
@@ -15,5 +17,12 @@
         margin-right: 20px;
         margin-top: 10px;
         cursor: pointer;
+    }
+    app-video-tag{
+        max-width: 650px;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
     }
 }

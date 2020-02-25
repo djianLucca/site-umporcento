@@ -25,6 +25,9 @@ video.controlersfalse::-webkit-media-controls-enclosure {
   max-width: 100%;
   height: auto;
 }
+.full_page_timeline_item{
+  max-width: 100%;
+}
 @media only screen and (min-width : 3000px) {
     #backgroundVideo{
       top: 0%;
