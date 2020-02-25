@@ -3,9 +3,13 @@
     text-align: justify;
 }
 
-@media only screen and (max-width : 1366px) {
+@media only screen and (max-width : 1440px) {
     #informative_section__wrapper{
-        height: 300px;
         overflow-y: scroll;
+    }
+    .morning_colab{
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 205px;
     }
 }

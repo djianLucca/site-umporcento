@@ -14,3 +14,9 @@
 .branding_slider_item.inactive{
     cursor: default;
 }
+
+@media only screen and (max-width : 1440px) {
+    .branding_slider_item{
+        max-width: 132px;
+    }
+}

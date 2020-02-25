@@ -22,8 +22,7 @@ export class StampImageSliderComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('width', window.outerWidth)
-    console.log('height', window.outerHeight)
+
   }
 
 }

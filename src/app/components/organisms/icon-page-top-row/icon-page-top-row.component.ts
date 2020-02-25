@@ -41,7 +41,6 @@ export class IconPageTopRowComponent implements OnInit {
 
   searchSite(text: string){
     this.searchResults = this.searchService.searchPage(text);
-    console.log(text, this.searchResults);
   }
 
 }

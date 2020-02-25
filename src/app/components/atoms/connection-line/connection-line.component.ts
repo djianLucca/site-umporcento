@@ -18,8 +18,6 @@ export class ConnectionLineComponent implements AfterViewInit {
    }
 
    ngAfterViewInit(){
-     console.log('menu', this.menuPosition);
-     console.log('palets', this.paletsPosition);
     const morningMenuElement = this.menuPosition.morning as HTMLElement;
     const morningPaletElement = this.paletsPosition.morning as HTMLElement;
     const afternoonMenuElement = this.menuPosition.afternoon as HTMLElement;
@@ -32,8 +30,6 @@ export class ConnectionLineComponent implements AfterViewInit {
       morningPaletElement,
       {
         color: '#fff',
-        outline: true,
-        outlineColor:'#000',
         size: 3,
         dropShadow: true,
         path: 'fluid',
@@ -48,10 +44,7 @@ export class ConnectionLineComponent implements AfterViewInit {
       afternoonletElement,
       {
         color: '#12D9E1',
-        outline: true,
-        outlineColor:'#000',
         size: 3,
-        dropShadow: true,
         path: 'fluid',
         startSocket: 'bottom',
         endSocket: 'top',
@@ -63,10 +56,7 @@ export class ConnectionLineComponent implements AfterViewInit {
       nightletElement,
       {
         color: '#000',
-        outline: true,
-        outlineColor:'#fff',
         size: 3,
-        dropShadow: true,
         path: 'fluid',
         startSocket: 'bottom',
         endSocket: 'right',

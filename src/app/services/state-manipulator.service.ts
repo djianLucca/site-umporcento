@@ -31,7 +31,6 @@ export class StateManipulatorService implements IstateManipulator {
   }
 
   changePageBackground(pageSection: PageSectionStatus): StateService {
-    console.log(pageSection, pageSection === this.state.pageSection);
     switch (pageSection) {
       case PageSectionStatus.Morning:
         if(this.state.pageBackground !== PageSectionBackground.Morning){

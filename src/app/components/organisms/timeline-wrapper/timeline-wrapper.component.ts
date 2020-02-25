@@ -140,7 +140,6 @@ export class TimelineWrapperComponent implements OnChanges {
     this.apiTimeline
     .getItems(page)
     .subscribe((items: TimelineItemService[]) =>{
-      console.log(items);
       this.timelineItems = items;
       this.orderItems(this.timelineItems, this.timelineYears);
       this.showRefresh = false;

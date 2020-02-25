@@ -33,7 +33,7 @@
     width: 100%;
     height: auto;
 }
-@media only screen and (max-width : 1366px) {
+@media only screen and (max-width : 1440px) {
     .person_instagram_image{
         max-width: 350px;
     }
@@ -42,5 +42,8 @@
     }
     .inforativePageImage{
         max-height: 295px;
+    }
+    .colab_branding{
+        max-width: 132px;
     }
 }

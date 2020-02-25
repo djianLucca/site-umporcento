@@ -29,6 +29,5 @@ export class MenuMidleRowComponent implements OnInit {
     )
   }
   ngOnInit(){
-    alert('width: '+window.innerWidth+' '+'height: '+window.innerHeight+' pixel:'+window.devicePixelRatio)
   }
 }
