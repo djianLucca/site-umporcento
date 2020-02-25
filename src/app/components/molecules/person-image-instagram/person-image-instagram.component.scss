@@ -29,27 +29,50 @@
 }
 
 .us .instagram_name__wrapper{
-    position: fixed;
+    position: absolute;
     text-align: center;
+    .instagam_wrapper_interno{
+        top: 30%;
+    }
     a{
         margin-left: auto;
         margin-right: auto;
         padding-top: 3em;
         padding-bottom: 3em;
         color: #fff;
-        font-size: 10px;
+        font-size: 7px;
     }
+}
+.person_instagam_image_wrapper.us_off.responsive, .person_instagam_image_wrapper.us.responsive{
+    margin-bottom: 0 !important;
+    app-image-tag{
+        margin-bottom: 0 !important;
+    }   
 }
 app-image-tag{
     margin-bottom: 8.6%;
 }
 
 
-@media only screen and (max-width : 1440x) {
+@media only screen and (max-width : 1440px) {
     .person_instagam_image_wrapper{
         max-width: 330px;
     }
-    .instagram_name__wrapper{
+    .person_instagam_image_wrapper.us_off.responsive, .person_instagam_image_wrapper.us.responsive{
+        margin-bottom: 0 !important;
+        app-image-tag{
+            margin-bottom: 0 !important;
+        }   
+    }
+    .instagram_name__wrapper.us{
+        .instagam_wrapper_interno{
+            top: 30%;
+            a{
+                font-size: 6px;
+            }
+        }
+    }
+    .instagram_name__wrapper.guardian{
         .instagam_wrapper_interno{
             top: 87%;
         }

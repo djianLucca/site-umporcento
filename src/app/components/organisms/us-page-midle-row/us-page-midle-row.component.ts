@@ -36,43 +36,43 @@ export class UsPageMidleRowComponent implements OnInit {
         image: '02',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '03',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '04',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '05',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '06',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '07',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '08',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '09',
@@ -84,13 +84,13 @@ export class UsPageMidleRowComponent implements OnInit {
         image: '10',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '11',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '12',
@@ -102,61 +102,61 @@ export class UsPageMidleRowComponent implements OnInit {
         image: '13',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '14',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '15',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '16',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '17',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '18',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '19',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '20',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '21',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       },
       {
         image: '22',
         active: false,
         instagram: '',
-        class: 'responsive'
+        class: 'us_off responsive'
       }
     ]
     this.imagesColection = this.shuffleArray(this.imagesColection);
