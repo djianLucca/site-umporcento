@@ -38,17 +38,17 @@ export const slider =
         })
       ]),
       query(':enter', [
-        style({ transform: 'scale(0)', opacity: 0})
+        style({ opacity: 0})
       ]),
       query(':leave', [
-        style({ transform: 'scale(1)', opacity: 1})
+        style({ opacity: 1})
       ]),
       group([
         query(':enter', [
-          animate('800ms ease-in-out', style({ transform: 'scale(1)', opacity: 1}))
+          animate('800ms ease-in-out', style({ opacity: 1}))
         ]),
         query(':leave', [
-          animate('600ms ease-in-out', style({ transform: 'scale(3)', opacity: 0}))
+          animate('600ms ease-in-out', style({ opacity: 0}))
         ], optional)
       ])
     ]

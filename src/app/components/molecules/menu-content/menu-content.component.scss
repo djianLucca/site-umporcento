@@ -18,6 +18,7 @@
     margin-top: 0;
     margin-bottom: 2.5em;
     font-weight: bold;
+    text-align: center;
 }
 a{
     color:black;
@@ -53,7 +54,13 @@ h2:hover{
     background-color: transparent !important;
     
 }
-.menu_row:nth-child(1),
-.menu_row:nth-child(2){
+.group_items{
+    min-height: 168px;
+}
+.menu_row:nth-child(1) .group_items{
     border-right: 1px solid black;
+
+}
+.menu_row:nth-child(3) .group_items{
+    border-left: 1px solid black;
 }

@@ -57,6 +57,7 @@ export class ConnectionLineComponent implements AfterViewInit {
       {
         color: '#000',
         size: 3,
+        dropShadow: {color: '#fff'},
         path: 'fluid',
         startSocket: 'bottom',
         endSocket: 'right',

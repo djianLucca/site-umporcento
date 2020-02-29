@@ -50,7 +50,8 @@ app-colab-slider-brands .swiper-button-next{
 .swiper-button-prev::before, .swiper-button-prev::after,
 .swiper-button-next::before, .swiper-button-next::after{
     font-size: 26px !important;
-    font-weight: bold !important;
+    font-weight: 300 !important;
+    color: #12D9E1;
 }
 .swiper-slide.swiper-slide-next{
     color: white !important;
@@ -61,4 +62,7 @@ app-colab-slider-brands .swiper-button-next{
 }
 #Email{
     padding-right: 0;
+}
+a, a:active, a:visited{
+    color: blue;
 }

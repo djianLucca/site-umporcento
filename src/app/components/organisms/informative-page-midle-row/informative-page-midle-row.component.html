@@ -38,7 +38,7 @@
       >
       </app-pdf-viewer>
       <div class="downloadSection">
-        <app-download-btn 
+        <app-download-btn *ngIf="this.page != 'morning_magazine'"
         [page]="this.page">
         </app-download-btn>
       </div>
