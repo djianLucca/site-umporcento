@@ -3,7 +3,7 @@ export enum MenuItemTitle {
     BrandManual = 'manual da marca',
     Compass = 'bussola',
     Tree = 'árvore',
-    Guardians = 'guardioes',
+    Guardians = 'guardiões',
     Magazine = 'dez anos',
     Colab = 'colab',
     Us = 'nós',

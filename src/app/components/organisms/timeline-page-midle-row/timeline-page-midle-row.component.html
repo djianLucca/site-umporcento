@@ -1,7 +1,7 @@
 <div id="midle_content__wrapper">
         <app-side-line-midle-page>   
         </app-side-line-midle-page>
-        <div id="midle_page_content__wrapper" @scaleIn>
+        <div id="midle_page_content__wrapper" class={{this.pageSection}} @scaleIn>
             <app-timeline-icons-menu
                 [changeItemType]="this.changeItemType.bind(this)"
             ></app-timeline-icons-menu>

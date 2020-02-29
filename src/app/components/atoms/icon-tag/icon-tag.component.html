@@ -1,1 +1,2 @@
-<fa name={{this.name}} animation={{this.animation}} id={{this.id}} class={{this.class}}></fa>
+<fa *ngIf="this.name != 'times'" name={{this.name}} animation={{this.animation}} id={{this.id}} class={{this.class}}></fa>
+<img *ngIf="this.name == 'times'" class="times" src="/assets/icons/x.svg" alt="">

@@ -11,6 +11,9 @@ body{
     p, h1, h2, h3, h4, h5, h6, a, span, strong, label{
         text-transform: lowercase !important;
     }
+    p{
+        text-align: justify;
+    }
 }
 #floating_icons_2__icon > div:nth-child(1) > app-load-svg:nth-child(1) > div:nth-child(1) > svg:nth-child(1) > g:nth-child(2) > path,
 #floating_icons_4__icon > div:nth-child(1) > app-load-svg:nth-child(1) > div:nth-child(1) > svg:nth-child(1) > g:nth-child(2) > path,

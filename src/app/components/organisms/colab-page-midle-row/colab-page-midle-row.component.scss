@@ -11,6 +11,10 @@
     padding: 1em;
     margin: 3.2em;
     margin-top: 0px;
+    box-shadow: rgba(0,0,0,.2) 0 4px 16px;
+}
+#midle_page_content__wrapper.night{
+    box-shadow: rgba(255,255,255,.4) 0 4px 16px;
 }
 #top_identifier__wrapper{
   display:flex;
@@ -18,7 +22,8 @@
   max-height: 59px;
 }
 #informative_section__wrapper{
-    width: 40%;
+    width: 38%;
+    padding-left: 10px;
 }
 #slider_art_section__wrappper{
     width: 60%;
