@@ -13,16 +13,16 @@ import { trigger, transition, style, animate } from '@angular/animations';
 @Component({
   selector: 'app-default-page',
   templateUrl: './default-page.component.html',
-  animations:[trigger('scaleFadeIn', [
+  animations: [trigger('scaleFadeIn', [
     transition(':enter', [
-        style({ transform: 'scale(0,0)', opacity: 0 }),
-        animate('500ms', style({ transform: 'scale(1,1)', opacity: 1 }))
-        
+      style({ transform: 'scale(0,0)', opacity: 0 }),
+      animate('500ms', style({ transform: 'scale(1,1)', opacity: 1 }))
+
     ]),
     transition(':leave', [
       animate('280ms', style({ transform: 'scale(0,0)', opacity: 0 }))
     ])
-  ])], 
+  ])],
   styleUrls: ['./default-page.component.scss']
 })
 export class DefaultPageComponent implements OnInit {
@@ -60,10 +60,13 @@ export class DefaultPageComponent implements OnInit {
     this.internalRouter.takeAction(window.location.pathname);
     setTimeout(() => {
       const video = document.getElementById('backgroundVideo') as HTMLVideoElement;
-      video.play();
+      video.oncanplaythrough = function () {
+        video.muted = true;
+        video.play();
+      }
     }, 2000)
   }
-  updateTimeline(){
+  updateTimeline() {
     this.stateManipulator.setTimelineInitalStatus()
   }
 
@@ -75,42 +78,42 @@ export class DefaultPageComponent implements OnInit {
     }
     return false;
   }
-  isInformativePage(): boolean{
+  isInformativePage(): boolean {
     return this.state.page === Page.Compass || this.state.page === Page.BrandManual || this.state.page === Page.Magazine || this.state.page === Page.CultureGuide || this.state.page === Page.Tree;
   }
 
-  isTimelinePage(): boolean{
+  isTimelinePage(): boolean {
     return this.state.page === Page.Timeline;
   }
 
-  isContactPage(): boolean{
+  isContactPage(): boolean {
     return this.state.page === Page.Contact;
   }
-  
-  isGuardiansPage(): boolean{
+
+  isGuardiansPage(): boolean {
     return this.state.page === Page.Guardians;
   }
 
-  isUsPage(): boolean{
+  isUsPage(): boolean {
     return this.state.page === Page.Us;
   }
 
-  isNetworkPage(): boolean{
+  isNetworkPage(): boolean {
     return this.state.page === Page.Network;
   }
 
-  isStampPage(): boolean{
+  isStampPage(): boolean {
     return this.state.page === Page.Stamp;
   }
 
-  isTalksPage(): boolean{
+  isTalksPage(): boolean {
     return this.state.page === Page.Talks;
   }
 
-  isColabPage() :boolean{
+  isColabPage(): boolean {
     return this.state.page === Page.Colab;
   }
-  
+
   changeSection(pageSection: PageSectionStatus) {
     this.state = this.stateManipulator.changePageSection(pageSection);
   }
@@ -118,7 +121,7 @@ export class DefaultPageComponent implements OnInit {
     this.state = this.stateManipulator.changePage(page);
   }
   changeBackground(pageSection: PageSectionStatus) {
-      this.state = this.stateManipulator.changePageBackground(pageSection);
+    this.state = this.stateManipulator.changePageBackground(pageSection);
   }
 
   switchToMorning() {
@@ -147,12 +150,12 @@ export class DefaultPageComponent implements OnInit {
     this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
-  switchToCultureGuide(){
+  switchToCultureGuide() {
     this.changePage(Page.CultureGuide);
     this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
   }
-  switchToTree(){
+  switchToTree() {
     this.changePage(Page.Tree);
     this.switchToMorning();
     this.changeBackground(PageSectionStatus.Morning);
@@ -181,25 +184,25 @@ export class DefaultPageComponent implements OnInit {
     this.changeBackground(PageSectionStatus.Night);
   }
 
-  switchToNetwork(){
+  switchToNetwork() {
     this.changePage(Page.Network);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night);
   }
 
-  switchToStamp(){
+  switchToStamp() {
     this.changePage(Page.Stamp);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night);
   }
 
-  switchToTalks(){
+  switchToTalks() {
     this.changePage(Page.Talks);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night);
   }
 
-  switchToColab(){
+  switchToColab() {
     this.changePage(Page.Colab);
     this.switchToNight();
     this.changeBackground(PageSectionStatus.Night);
