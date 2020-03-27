@@ -1,5 +1,5 @@
 app-icon-tag{
-    margin-right: .6em;
+    margin-right: 20px;
     margin-bottom: .6em;
     margin-left: auto;
     cursor: pointer;
@@ -30,6 +30,7 @@ input{
 }
 .search_wrapper{
     display: flex;
+    padding-right: 2px;
 }
 #results{
     position: relative;

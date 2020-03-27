@@ -34,7 +34,7 @@ export class TimelineSearchBarComponent implements OnInit {
   toggleInput(){
     this.showInput = true;
   }
-
+  
   handleInput(event: KeyboardEvent){
     const target = event.target as HTMLInputElement;
     this.inputValue = target.value;

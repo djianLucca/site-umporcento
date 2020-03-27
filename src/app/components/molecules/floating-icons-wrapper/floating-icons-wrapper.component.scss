@@ -5,9 +5,10 @@
 .contianer_icon{
     height: 100%;
     display: flex;
+    align-items: flex-start;
     label{
-        align-self: center;
         margin-left: 10px;
+        align-self: flex-start;
     }
 }
 label{
@@ -85,7 +86,8 @@ div.contianer_icon.afternoon > .floating_icon__bg{
         height: 100%;
         display: flex;
         label{
-            align-self: center;
+            align-self: flex-start;
+            margin-top: 15px;
             margin-left: 0px;
         }
     }

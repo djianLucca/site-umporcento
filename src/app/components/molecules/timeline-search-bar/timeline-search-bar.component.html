@@ -1,9 +1,9 @@
 <div class="search_wrapper {{this.pageSection}}">
     <app-icon-tag (click)="this.toggleInput()" [name]="'search'" [class]="'search_icon ' + this.pageSection" *ngIf="!this.showInput"></app-icon-tag>
     <app-icon-tag (mouseenter)="this.toggleInput()" (click)="this.searchText(this.inputValue)" [name]="'search'" [class]="'search_icon ' + this.pageSection" *ngIf="this.showInput"></app-icon-tag>
-    <input (focus)="this.searchText(this.inputValue)" (keyup)="this.handleInput($event)" (keyup.enter)="this.searchText(this.inputValue)" value={{this.inputValue}} type="text" class="showInput{{this.showInput}}" [@expandWidth]="this.showInput"/>
+    <input (focus)="this.searchText(this.inputValue)" (focusout)="this.searchText(false)" (keyup)="this.handleInput($event)" (keyup.enter)="this.searchText(this.inputValue)" value={{this.inputValue}} type="text" class="showInput{{this.showInput}}" [@expandWidth]="this.showInput"/>
 </div>
-<div id="results">
+<div id="results" *ngIf="this.results">
     <div class="results_wrapper" >
         <div class="result" *ngFor="let result of this.results">
             <p [routerLink]="this.result.url">{{this.result.name}}</p>

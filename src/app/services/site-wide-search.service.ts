@@ -73,7 +73,9 @@ export class SiteWideSearchService implements IsitewideSearch {
         )
       ]
   }
-  searchPage(searchString: string): SearchResultsService[] | undefined {
+  searchPage(searchString: string | boolean): SearchResultsService[] | undefined {
+    if(searchString === false) return undefined;
+
     const regexp = new RegExp(`${searchString}.*`);
     let result: SearchResultsService[] = [];
     this.availablePages().forEach((element: SearchResultsService) =>{

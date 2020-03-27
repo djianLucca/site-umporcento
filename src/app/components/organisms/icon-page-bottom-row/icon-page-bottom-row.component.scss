@@ -20,7 +20,7 @@
     white-space: pre;
     width: calc(100% - 55px);
     height: 1px;
-    top: 0;
+    top: -1px;
     left: 0;
 }
 .bottom-line.end::before{
