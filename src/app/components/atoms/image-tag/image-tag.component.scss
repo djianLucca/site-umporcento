@@ -28,6 +28,12 @@
 .person_instagram_image{
     width: 100%;
     height: auto;
+    filter: grayscale(1);
+    transition: all .2s ease-in-out;
+
+    &.isHovering {
+        filter: grayscale(0);
+    }
 }
 .responsive{
     width: 100%;
@@ -39,7 +45,7 @@
 }
 @media only screen and (max-width : 1440px) {
     .person_instagram_image{
-        max-width: 350px;
+        // max-width: 350px;
     }
     .slider_talk_images{
         max-height: 250px;

@@ -2,11 +2,13 @@
     max-width: 100%;
     margin-bottom: 8.6%;
     position: relative;
+    overflow: hidden;
 }
 .instagram_name__wrapper{
     display: flex;
     font-weight: bold;
     position: absolute;
+    justify-content: center;
     width: 100%;
     height: 100%;
     top: 0;
@@ -15,8 +17,8 @@
         position: absolute;
         display: -webkit-box;
         display: flex;
-        top: 87%;
-        width: 100%;
+        bottom: 0%;
+        width: 80%;
         background-color:rgba(0, 0, 0, 0.8);
     }
     a{
@@ -57,6 +59,12 @@ app-image-tag{
 @media only screen and (max-width : 1440px) {
     .person_instagam_image_wrapper{
         max-width: 330px;
+
+        &:hover {
+            .instagram_name__wrapper.guardian .instagam_wrapper_interno{
+                bottom: 1rem;
+            }
+        }
     }
     .person_instagam_image_wrapper.us_off.responsive, .person_instagam_image_wrapper.us.responsive{
         margin-bottom: 0 !important;
@@ -74,7 +82,8 @@ app-image-tag{
     }
     .instagram_name__wrapper.guardian{
         .instagam_wrapper_interno{
-            top: 87%;
+            transition: all .3s ease-in;
+            bottom: -4rem;
         }
     }
 

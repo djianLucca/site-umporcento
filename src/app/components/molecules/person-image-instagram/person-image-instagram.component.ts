@@ -37,17 +37,9 @@ export class PersonImageInstagramComponent implements OnInit {
 
   ngOnInit() {
     this.instagramLink += this.instagram;
-    this.image = this.defaultImage;
+    this.image = this.defaultImage + '_colored';
   }
-
-  changeDefaultImage(){
-    if(this.isLabelVisible){
-      this.image = this.defaultImage + '_colored';
-    }else{
-      this.image = this.defaultImage;
-    }
-  }
-
+  
   changeLabelVisibility(action: string){
     if(!this.active){
       return;
@@ -57,7 +49,6 @@ export class PersonImageInstagramComponent implements OnInit {
     }else{
       this.isLabelVisible = true;
     }
-    this.changeDefaultImage();
   }
 
 }

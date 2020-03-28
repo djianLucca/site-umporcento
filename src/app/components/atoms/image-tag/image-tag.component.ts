@@ -10,6 +10,7 @@ export class ImageTagComponent implements OnInit {
   @Input() imgAlt: string | undefined;
   @Input() id: string | undefined;
   @Input() class: string | undefined;
+  @Input() isHovering: boolean | undefined;
   constructor() {
     this.imgSrc = '';
    }

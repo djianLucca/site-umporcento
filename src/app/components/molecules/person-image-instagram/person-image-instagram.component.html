@@ -3,6 +3,7 @@
         [imgSrc]="'/assets/img/'+this.image+'.jpg'"
         [imgAlt]="this.instagram"
         [class]="'person_instagram_image active'+this.active"
+        [isHovering]="this.isLabelVisible"
     ></app-image-tag>
     <div class="instagram_name__wrapper us" *ngIf="this.page === this.usPage">
         <div class="instagam_wrapper_interno" *ngIf="this.isLabelVisible" [@flipInXOnEnter] [@flipOutXOnLeave]>
@@ -10,7 +11,7 @@
         </div>
     </div>
     <div class="instagram_name__wrapper guardian" *ngIf="this.page === this.guardianPage">
-        <div class="instagam_wrapper_interno" *ngIf="this.isLabelVisible" [@slideInUpOnEnter] [@slideOutDownOnLeave]>
+        <div class="instagam_wrapper_interno">
             <a href="{{this.instagramLink}}" target="_blank" rel="noopener noreferrer">@{{this.instagram}}</a>
         </div>
     </div>
