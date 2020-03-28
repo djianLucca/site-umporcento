@@ -12,7 +12,8 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "ssr": "npm run build:client-and-server-bundles --watch && npm run compile:server && node dist/server",
-    "build:client-and-server-bundles": "ng build --prod && ng run site-umporcento:server:production --bundleDependencies all"
+    "build:client-and-server-bundles": "ng build --prod && ng run site-umporcento:server:production --bundleDependencies all",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
