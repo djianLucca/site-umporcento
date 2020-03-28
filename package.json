@@ -72,5 +72,9 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
     "webpack-cli": "^3.3.10"
+  },
+  "engines": {
+    "node": "13.8.0",
+    "npm": "6.13.6"
   }
 }
