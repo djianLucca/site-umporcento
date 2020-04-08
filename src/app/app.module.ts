@@ -1,3 +1,4 @@
+import { SpotifyButtonComponent } from './components/atoms/spotify-button/spotify-button.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -185,7 +186,8 @@ import { PdfViewerComponent } from './components/atoms/pdf-viewer/pdf-viewer.com
     ColabAreaSliderInputGroupComponent,
     MenuContentWrapperComponent,
     UmporcentoMainLogoComponent,
-    PdfViewerComponent
+    PdfViewerComponent,
+    SpotifyButtonComponent
   ],
   imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

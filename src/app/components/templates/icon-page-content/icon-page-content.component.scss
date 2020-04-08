@@ -1,6 +1,6 @@
 #IconWrapper{
     padding: 6%;
-padding-top: 4%;
+padding-top: 1.5rem;
 align-self: center;
     display: flex;
     align-content: flex-start;
@@ -35,7 +35,7 @@ app-icon-page-bottom-row{
 
 @media only screen and (max-width : 1366px) {
     #IconWrapper{
-    padding-top: 4%;
+    padding-top: 1.5rem;
 align-self: center;
     }
     app-icon-page-midle-row{

@@ -1,14 +1,15 @@
 #top_identifier__wrapper{
     display:flex;
+    justify-content: space-between;
     max-height: 59px;
 }
 app-svg-tag{
-    width: calc(100% - 230px);
+    width: 100%;
+    flex-grow: 2;
     align-self: center;
 }
 app-informative-navigation{
     align-self: center;
-    min-width: 155px;
 }
 app-image-tag{
     align-self: center;

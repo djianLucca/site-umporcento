@@ -1,6 +1,6 @@
 #informative_page_navigation__wrapper{
     display: flex;
-    align-content: flex-end;
+    align-items: center;
     app-icon-tag{
         align-self: center;
         margin-left: 10px;
@@ -9,6 +9,6 @@
     p{
         margin-left: 10px;
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 4px;
     }
 }

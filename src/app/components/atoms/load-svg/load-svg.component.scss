@@ -17,3 +17,23 @@
         height: 40px;
     }
 }
+.icon-animado {
+    width: 85px;
+    height: 85px;
+    background-size: 190% auto;
+    background-image: url('/assets/animations/contato/86.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: changeBg 3.7s infinite linear;
+}
+
+@keyframes changeBg {
+    @for $i from 0 through 110 {
+      #{$i * ((100/111) * 1%)} {
+        background-image: url('/assets/animations/contato/#{$i + 86}.png');
+      } 
+    }
+    100% {
+        background-image: url("/assets/animations/contato/86.png");
+    }
+}

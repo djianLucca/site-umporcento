@@ -28,7 +28,7 @@ export const slider =
     transition('informativePage => morningPage', scaleInOut())
   ]);
 
-  function scaleInOut(){
+  export function scaleInOut() {
     const optional = { optional: true };
     return [
       query(':enter, :leave',[
