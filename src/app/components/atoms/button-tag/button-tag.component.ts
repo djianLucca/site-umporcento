@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ButtonTagComponent implements OnInit {
   @Input() btnText: string;
-  @Input() btnAction: () => void;
+  @Input() btnAction: (event: any) => void;
   @Input() id: string | undefined;
   @Input() class: string;
   @Input() disabled: boolean;

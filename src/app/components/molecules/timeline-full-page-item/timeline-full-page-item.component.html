@@ -3,24 +3,24 @@
         [video]="item.video"
         [class]="'full_page_timeline_item'"
     ></app-video-tag>
-    <app-timeline-simple-image-text *ngIf="item.style === 'simple-image-text' && !this.item.video"
+    <app-timeline-simple-image-text *ngIf="item.style == 'simple-image-text' && !this.item.video"
     [class]="'full_page'"
     [timelineItem]="this.item">
     </app-timeline-simple-image-text>
-    <app-timeline-simple-image-left-text *ngIf="item.style === 'simple-image-left-text' && !this.item.video"
+    <app-timeline-simple-image-left-text *ngIf="item.style == 'simple-image-left-text' && !this.item.video"
     [timelineItem]="this.item"></app-timeline-simple-image-left-text>
-    <app-timeline-simple-person-image-text *ngIf="item.style === 'simple-person-image-text' && !this.item.video"
+    <app-timeline-simple-person-image-text *ngIf="item.style == 'simple-person-image-text' && !this.item.video"
     [timelineItem]="this.item">
     </app-timeline-simple-person-image-text>
-    <app-timeline-galery-item *ngIf="item.style === 'galery' && !this.item.video"
+    <app-timeline-galery-item *ngIf="item.style == 'galery' && !this.item.video"
     [timelineItem]="this.item">
     </app-timeline-galery-item>
-    <app-timeline-group-galery-section *ngIf="item.style === 'group-galery-section' && !this.item.video"
+    <app-timeline-group-galery-section *ngIf="item.style == 'group-galery-section' && !this.item.video"
     [timelineItem]="this.item">
     </app-timeline-group-galery-section>
-    <app-timeline-group-seal *ngIf="item.style === 'group-seal' && !this.item.video"
+    <app-timeline-group-seal *ngIf="item.style == 'group-seal' && !this.item.video"
     [timelineItem]="this.item"></app-timeline-group-seal>
-    <app-timline-group-conversions *ngIf="item.style === 'group-conversions' && !this.item.video"
+    <app-timline-group-conversions *ngIf="item.style == 'group-conversions' && !this.item.video"
     [timelineItem]="this.item">
     </app-timline-group-conversions>
     <app-icon-tag

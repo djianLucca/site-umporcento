@@ -18,7 +18,7 @@ import { PageSectionStatus } from 'src/app/services/enums/pageSectionStatusenum'
 })
 export class TimelineSearchBarComponent implements OnInit {
   showInput: boolean;
-  @Input() searchText!: (text: string) => {};
+  @Input() searchText!: (text: string | boolean) => {};
   @Input() inputValue: string;
   @Input() results: SearchResultsService[] | undefined;
   @Input() pageSection!: PageSectionStatus;

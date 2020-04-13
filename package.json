@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --watch",
+    "dev": "ng serve --watch",
     "build": "ng build",
     "test": "ng test --code-coverage",
     "lint": "ng lint",
@@ -13,6 +13,7 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "ssr": "npm run build:client-and-server-bundles --watch && npm run compile:server && node dist/server",
     "build:client-and-server-bundles": "ng build --prod && ng run site-umporcento:server:production --bundleDependencies all",
+    "start": "node server.js",
     "postinstall": "ng build --aot --prod"
   },
   "private": true,

@@ -1,12 +1,9 @@
-import { Injectable } from '@angular/core';
 import { IsocialIcon } from './interfaces/isocial-icon';
 import { SocialIconTitle } from './enums/socialicontitleenum ';
 import { SocialIconClass } from './enums/socialiconclassenum';
 import { SocialIconUrl } from './enums/socialiconurlenum';
 
-@Injectable({
-  providedIn: 'root'
-})
+
 export class SocialIconsService implements IsocialIcon {
   _title: SocialIconTitle;
   _cssClass: SocialIconClass;

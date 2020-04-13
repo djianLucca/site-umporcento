@@ -1,7 +1,4 @@
 import {
-  Injectable
-} from '@angular/core';
-import {
   IFloatingIcon
 } from './interfaces/ifloating-icon';
 import {
@@ -14,19 +11,16 @@ import {
   FloatingIconUrl
 } from './enums/floatingiconurlenum';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class FloatingIconsService implements IFloatingIcon {
   _image: FloatingIconImage;
   _title: FloatingIconTitle;
   _url: FloatingIconUrl;
-  _labelStyle: {visibility: string};
+  _labelStyle: { visibility: string };
   constructor(image: FloatingIconImage, title: FloatingIconTitle, url: FloatingIconUrl) {
     this._image = image;
     this._title = title;
     this._url = url;
-    this._labelStyle = {visibility: 'hidden'};
+    this._labelStyle = { visibility: 'hidden' };
   }
 
   public get image(): FloatingIconImage {
@@ -53,11 +47,11 @@ export class FloatingIconsService implements IFloatingIcon {
     this._url = value;
   }
 
-  public get labelStyle(): {visibility: string} {
+  public get labelStyle(): { visibility: string } {
     return this._labelStyle;
   }
 
-  public set labelStyle(value: {visibility: string}) {
+  public set labelStyle(value: { visibility: string }) {
     this._labelStyle = value;
   }
 

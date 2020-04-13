@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TimelineItemService } from 'src/app/services/timeline-item.service';
 
 @Component({
   selector: 'app-timeline-full-page-item',
@@ -7,7 +6,7 @@ import { TimelineItemService } from 'src/app/services/timeline-item.service';
   styleUrls: ['./timeline-full-page-item.component.scss']
 })
 export class TimelineFullPageItemComponent implements OnInit {
-  @Input() item!: TimelineItemService;
+  @Input() item!: any;
   @Input() close!: () => {};
   constructor() { }
 

@@ -1,11 +1,7 @@
-import { Injectable } from '@angular/core';
 import { ImenuItem } from './interfaces/imenu-item';
 import { MenuItemTitle } from './enums/menuitemtitleenum';
 import { MenuItemUrl } from './enums/menuitemurlnum ';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class MenuItemService implements ImenuItem {
   _title: MenuItemTitle;
   _url: MenuItemUrl;

@@ -15,6 +15,7 @@ export class SpotifyButtonComponent implements OnInit {
   }
 
   toggleVisibility() {
+    console.log('Heey')
     this.isVisible = true
   }
 
