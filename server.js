@@ -35,5 +35,5 @@ app.get('/*', function(req, res) {
 // Heroku port
 console.log("Server up :)");
 console.log("Listen to port", process.env.PORT || 8080)
-console.log("Current path is ", path.join(__dirname + '/dist/index.html'));
+console.log("Current path is", path.join(__dirname + '/dist/index.html'));
 app.listen(process.env.PORT || 8080);
