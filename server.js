@@ -33,4 +33,7 @@ app.get('/*', function(req, res) {
 
 // Start the app by listening on the default
 // Heroku port
+console.log("Server up :)");
+console.log("Listen to port", process.env.PORT || 8080)
+console.log("Current path is ", path.join(__dirname + '/dist/index.html'));
 app.listen(process.env.PORT || 8080);
