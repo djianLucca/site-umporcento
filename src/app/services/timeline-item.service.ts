@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+
 import { ITimelineItem } from './interfaces/itimeline-item';
 import { TimelineItemStyle } from './enums/timelineitemstyleenum';
 import { TimelineItemFlag } from './enums/timelineitemflag';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class TimelineItemService implements ITimelineItem {
   id: number;
   images: string;

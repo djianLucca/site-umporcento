@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+
 import { IState } from './interfaces/istate';
 import { Page } from './enums/pageenum';
 import { PageSectionStatus } from './enums/pageSectionStatusenum';
@@ -10,9 +10,9 @@ import { YearService } from './year.service';
 import { TimelineItemService } from './timeline-item.service';
 import { MenuGroupService } from './menu-group.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class StateService implements IState {
   page: Page;
   title: string;

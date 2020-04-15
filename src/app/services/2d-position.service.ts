@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { I2DPosition } from './interfaces/i2d-position';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class TwoDPositionService implements I2DPosition {
   x: number;
   y: number;

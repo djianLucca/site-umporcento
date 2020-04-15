@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { ImenuTitlePosition } from './interfaces/imenu-title-position';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class MenuTitlePositionService implements ImenuTitlePosition {
   morning: HTMLElement;
   afternoon: HTMLElement;

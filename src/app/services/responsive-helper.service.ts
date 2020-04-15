@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { IresposiveHelper } from './interfaces/iresposive-helper';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class ResponsiveHelperService implements IresposiveHelper {
 
   constructor() { }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+
 import { IstateManipulator } from './interfaces/istate-manipulator';
 import { StateService } from './state.service';
 import { Page } from './enums/pageenum';
@@ -11,9 +11,9 @@ import { TimelineApiService } from './timeline-api.service';
 import { HttpClient } from '@angular/common/http';
 import { TimelineItemService } from './timeline-item.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class StateManipulatorService implements IstateManipulator {
 
   state: StateService;

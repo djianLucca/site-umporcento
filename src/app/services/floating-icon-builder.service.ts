@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+
 import { IFloattingIconBuilder } from './interfaces/ifloatting-icon-builder';
 import { FloatingIconsService } from './floating-icons.service';
 import { FloatingIconImage } from './enums/floatingiconimageenum';
 import { FloatingIconTitle } from './enums/floatingicontitleenum';
 import { FloatingIconUrl } from './enums/floatingiconurlenum';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class FloatingIconBuilderService implements IFloattingIconBuilder {
 
   constructor() { }

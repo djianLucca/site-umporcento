@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { IsearchResults } from './interfaces/isearch-results';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class SearchResultsService implements IsearchResults {
   url: string;
   name: string;

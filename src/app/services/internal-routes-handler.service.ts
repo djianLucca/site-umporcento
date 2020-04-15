@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+
 import { IinternalRouteHandler } from './interfaces/iinternal-route-handler';
 import { InternalRoutesService } from './internal-routes.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class InternalRoutesHandlerService implements IinternalRouteHandler {
 
   _internalRoutes: InternalRoutesService[];

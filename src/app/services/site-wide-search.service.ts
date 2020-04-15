@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
+
 import { IsitewideSearch } from './interfaces/isite-wide-search';
 import { SearchResultsService } from './search-results.service';
 import { FloatingIconTitle } from './enums/floatingicontitleenum';
 import { PageLocationHelperService } from './helper/page-location-helper.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class SiteWideSearchService implements IsitewideSearch {
   pageLocationHelper: PageLocationHelperService;
   constructor() {

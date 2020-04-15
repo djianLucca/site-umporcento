@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+
 import { Iyear } from './interfaces/iyear';
 import { TimelineItemService } from './timeline-item.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class YearService implements Iyear {
   id: number;
   mantra: string;

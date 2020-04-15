@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+
 import { ItimelineApi } from './interfaces/itimeline-api';
 import { HttpClient } from '@angular/common/http';
 import { YearService } from './year.service';
@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
 import { TimelineItemService } from './timeline-item.service';
 import { EmailResponseApiService } from './email-response-api.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class TimelineApiService implements ItimelineApi {
   apiUrl: string;
 

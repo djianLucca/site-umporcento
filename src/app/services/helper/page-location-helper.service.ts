@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+
 import { Page } from '../enums/pageenum';
 import { FloatingIconTitle } from '../enums/floatingicontitleenum';
 import { IPageLocationHelper } from '../interfaces/ipage-location-helper';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class PageLocationHelperService implements IPageLocationHelper{
 
   constructor() { }

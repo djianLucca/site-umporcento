@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+
 import { Imenu } from './interfaces/imenu';
 import { MenuItemService } from './menu-item.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class MenuService implements Imenu {
   _open: boolean;
   _items: MenuItemService[];

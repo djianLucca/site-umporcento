@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { IInternalRoute } from './interfaces/iinternal-route';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class InternalRoutesService implements IInternalRoute {
   url: string;
   action: () => void;

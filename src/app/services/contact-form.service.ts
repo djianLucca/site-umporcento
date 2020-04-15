@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
 import { TimelineApiService } from './timeline-api.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class ContactFormService {
   themeApi: TimelineApiService
   constructor(private http: HttpClient) { 

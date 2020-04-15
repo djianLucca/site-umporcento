@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { IpaletPosition } from './interfaces/ipalet-position';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class PaletPositionService implements IpaletPosition {
   morning: HTMLElement | null;
   afternoon: HTMLElement | null;

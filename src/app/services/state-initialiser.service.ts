@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+
 import { IStateInitialiser } from './interfaces/istate-initialiser';
 import { MenuItemService } from './menu-item.service';
 import { SocialIconsService } from './social-icons.service';
@@ -10,9 +10,9 @@ import { SocialIconClass } from './enums/socialiconclassenum';
 import { SocialIconUrl } from './enums/socialiconurlenum';
 import { MenuGroupService } from './menu-group.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class StateInitialiserService implements IStateInitialiser {
 
   menu: MenuGroupService[];
